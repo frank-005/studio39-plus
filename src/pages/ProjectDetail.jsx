@@ -28,29 +28,33 @@ function ProjectDetail() {
 
   return (
     <div className="pt-32 pb-28 md:pt-36 md:pb-32 lg:pt-40 lg:pb-36">
-      <section className="relative overflow-hidden bg-ivory pb-16 dark:bg-charcoal md:pb-20">
-        <div className="content-container grid gap-14 lg:grid-cols-[1.25fr_.75fr] lg:items-end lg:py-24 xl:gap-20">
+      <section className="relative overflow-hidden bg-ivory light-surface-overlay pb-16 dark:bg-charcoal md:pb-20">
+        <div className="content-container grid gap-14 lg:grid-cols-[1.25fr_.75fr] lg:items-start lg:py-24 xl:gap-20">
           <div>
             <p className="text-sm uppercase tracking-[0.45em] text-charcoal/70 dark:text-sand">{project.category}</p>
             <h1 className="mt-6 text-5xl font-semibold tracking-tight text-charcoal sm:text-6xl dark:text-ivory">{project.name}</h1>
             <p className="mt-10 max-w-2xl text-lg leading-10 text-charcoal/70 dark:text-sand">{project.excerpt}</p>
           </div>
           <div className="rounded-[32px] border border-mist bg-sand p-12 dark:border-neutral-700 dark:bg-charcoal md:p-14">
-            <div className="space-y-4 text-sm uppercase tracking-[0.45em] text-charcoal/70 dark:text-sand">
-              <span>Location</span>
-              <span>Year</span>
-              <span>Category</span>
-            </div>
-            <div className="mt-8 space-y-4 text-base leading-8 text-charcoal dark:text-ivory">
-              <p>{project.location}</p>
-              <p>{project.year}</p>
-              <p>{project.category}</p>
+            <div className="space-y-8">
+              {[
+                ['Location', project.location],
+                ['Year', project.year],
+                ['Category', project.category]
+              ].map(([label, value]) => (
+                <div key={label}>
+                  <p className="text-sm uppercase tracking-[0.45em] text-charcoal/70 dark:text-sand">{label}</p>
+                  <p className="mt-4 text-base leading-8 text-charcoal dark:text-ivory">{value}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-16 h-[560px] overflow-hidden rounded-[36px] bg-charcoal">
-          <img src={project.hero} alt={project.name} className="h-full w-full object-cover" />
+        <div className="content-container mt-16">
+          <div className="project-feature-media overflow-hidden rounded-[36px] bg-charcoal">
+            <img src={project.hero} alt={project.name} className="h-full w-full object-cover" />
+          </div>
         </div>
       </section>
 
@@ -78,7 +82,7 @@ function ProjectDetail() {
         </aside>
       </section>
 
-      <section className="content-container pb-28">
+      <section className="content-container pt-12 pb-28 md:pt-16">
         <div className="grid gap-10 sm:grid-cols-2 xl:gap-12">
           {gallery.map((image, index) => (
             <div key={index} className="h-80 overflow-hidden rounded-[28px] bg-mist dark:bg-charcoal">

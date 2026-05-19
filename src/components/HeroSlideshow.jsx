@@ -52,9 +52,9 @@ function HeroSlideshow() {
             <img
               src={slides[active].image}
               alt={slides[active].label}
-              className="h-full w-full object-cover object-center opacity-40 transition duration-1000"
+              className="h-full w-full object-cover object-center opacity-60 transition duration-1000"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-ivory/90 via-ivory/72 to-ivory/90 dark:from-charcoal/90 dark:via-charcoal/70 dark:to-charcoal/90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-ivory/80 via-ivory/60 to-ivory/80 dark:from-charcoal/90 dark:via-charcoal/70 dark:to-charcoal/90" />
           </motion.div>
         </AnimatePresence>
       </div>

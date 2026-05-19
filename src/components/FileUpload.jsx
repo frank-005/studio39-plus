@@ -112,7 +112,7 @@ function FileUpload({ files = [], onFilesChange }) {
   return (
     <div className="space-y-4">
       <div
-        className={`group rounded-[28px] border border-dashed border-mist bg-ivory/80 p-8 transition duration-300 ${
+        className={`group rounded-[28px] border border-dashed border-mist bg-ivory/90 p-8 transition duration-300 ${
           dragActive ? 'border-sage bg-sand/70' : 'hover:border-sage hover:bg-sand/60'
         } dark:border-neutral-700 dark:bg-charcoal/80 dark:hover:border-sage dark:hover:bg-charcoal/90`}
         onDragEnter={(event) => {
