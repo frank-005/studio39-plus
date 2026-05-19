@@ -48,6 +48,10 @@ a:hover {
   padding: 0 1.75rem;
 }
 
+.project-feature-media {
+  height: clamp(360px, 42vw, 500px);
+}
+
 @media (min-width: 1280px) {
   .content-container {
     padding: 0 2.5rem;
