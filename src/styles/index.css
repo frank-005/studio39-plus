@@ -73,3 +73,17 @@ a:hover {
       transparent 28%
     );
 }
+
+html:not(.dark) .light-surface-overlay {
+  background-image:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.68),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(47, 44, 40, 0.05),
+      transparent 28%
+    );
+}

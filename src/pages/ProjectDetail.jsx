@@ -28,7 +28,7 @@ function ProjectDetail() {
 
   return (
     <div className="pt-32 pb-28 md:pt-36 md:pb-32 lg:pt-40 lg:pb-36">
-      <section className="relative overflow-hidden bg-ivory pb-16 dark:bg-charcoal md:pb-20">
+      <section className="relative overflow-hidden bg-ivory light-surface-overlay pb-16 dark:bg-charcoal md:pb-20">
         <div className="content-container grid gap-14 lg:grid-cols-[1.25fr_.75fr] lg:items-end lg:py-24 xl:gap-20">
           <div>
             <p className="text-sm uppercase tracking-[0.45em] text-charcoal/70 dark:text-sand">{project.category}</p>
