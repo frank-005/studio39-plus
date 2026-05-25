@@ -9,7 +9,7 @@ function About() {
         title="About Studio 39+ | Nairobi Architecture Studio"
         description="Learn about Studio 39+, a Nairobi architecture studio creating luxury residential, hospitality, interior architecture, and visualization work across Kenya."
       />
-      <section className="content-container space-y-12 py-14 sm:py-18 md:py-20">
+      <section className="content-container space-y-12 py-14 sm:py-16 md:py-20">
         <SectionHeading as="h1" eyebrow="About" title="A Nairobi studio shaped by architectural restraint, editorial rigor, and atmospheric detail." copy="Studio 39+ brings a modern African sensibility to residential, hospitality, and visualization projects that are calm, precise, and grounded in place." />
         <div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] xl:gap-16">
           <div className="space-y-8 border border-mist bg-sand p-7 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-10 md:p-12">
@@ -35,7 +35,7 @@ function About() {
         </div>
       </section>
 
-      <section className="content-container space-y-12 py-14 sm:py-18 md:py-20">
+      <section className="content-container space-y-12 py-14 sm:py-16 md:py-20">
         <SectionHeading eyebrow="Narrative" title="A studio story built around thoughtful geometry and calm atmospheres." />
         <div className="grid gap-6 md:grid-cols-3">
           <div className="border-t border-charcoal/15 pt-7 dark:border-ivory/15">

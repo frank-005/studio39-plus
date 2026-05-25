@@ -20,7 +20,7 @@ function Projects() {
         title="Architecture Portfolio | Studio 39+ Case Studies"
         description="Browse Studio 39+ architecture case studies across Nairobi residences, safari lodge architecture, hospitality design, interior architecture, and visualization."
       />
-      <section className="content-container space-y-10 py-14 sm:py-18 md:py-20">
+      <section className="content-container space-y-10 py-14 sm:py-16 md:py-20">
         <SectionHeading
           as="h1"
           eyebrow="Projects"
