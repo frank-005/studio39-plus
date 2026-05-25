@@ -14,7 +14,7 @@ function Footer() {
               Architects in Nairobi for crafted residences, boutique hospitality, safari camp concepts, interiors, and architectural visualization across Kenya and East Africa.
             </p>
             <p className="mt-7 max-w-md text-base leading-8 text-ivory">
-              Currently accepting selected residential and hospitality projects across East Africa.
+              Currently accepting selected hospitality and residential projects across East Africa.
             </p>
           </div>
 

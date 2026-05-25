@@ -7,6 +7,7 @@ const projects = [
     year: '2025',
     status: 'Design development',
     hero: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    imagePosition: 'center 46%',
     excerpt: 'A calm luxury residence in Nairobi organized around shaded courts, privacy, and expansive daylight.',
     overview:
       'A private residence for a family seeking a composed retreat within Nairobi, balancing generous entertaining spaces with quiet daily rituals.',
@@ -35,6 +36,7 @@ const projects = [
     year: '2024',
     status: 'Concept design',
     hero: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    imagePosition: 'center 54%',
     excerpt: 'A safari lodge concept for East Africa with low-impact planning, shaded decks, and immersive landscape views.',
     overview:
       'A boutique hospitality concept designed for owners developing an intimate lodge experience rooted in landscape, silence, and guest comfort.',
@@ -63,6 +65,7 @@ const projects = [
     year: '2026',
     status: 'Visualization study',
     hero: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    imagePosition: 'center 48%',
     excerpt: 'A conceptual gallery and architectural visualization study with airy volumes and sculptural geometry.',
     overview:
       'A visual research project exploring how gallery architecture in Nairobi can combine civic calm, controlled light, and flexible exhibition space.',
@@ -91,6 +94,7 @@ const projects = [
     year: '2025',
     status: 'Completed visualization',
     hero: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    imagePosition: 'center 50%',
     excerpt: 'A Nairobi interior architecture project with custom joinery, quiet texture, and contemporary spatial rhythm.',
     overview:
       'A compact city apartment reworked through interior architecture, lighting, and custom storage to feel larger, calmer, and more considered.',

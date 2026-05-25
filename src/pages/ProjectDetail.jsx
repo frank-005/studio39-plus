@@ -77,7 +77,7 @@ function ProjectDetail() {
         schema={projectSchema(project)}
       />
       <section className="relative overflow-hidden bg-ivory light-surface-overlay pb-12 dark:bg-charcoal md:pb-16">
-        <div className="content-container grid gap-10 py-14 sm:py-18 md:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+        <div className="content-container grid gap-10 py-14 sm:py-16 md:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
           <div>
             <p className="eyebrow">{project.category} Case Study</p>
             <h1 className="mt-6 max-w-4xl text-balance text-4xl font-semibold tracking-tight text-charcoal sm:text-5xl lg:text-6xl dark:text-ivory">{project.name}</h1>

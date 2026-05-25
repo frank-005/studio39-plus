@@ -6,10 +6,11 @@ function WhatsAppButton() {
       href={site.whatsapp}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-5 right-5 z-40 inline-flex min-h-12 items-center justify-center rounded-full border border-charcoal bg-charcoal px-5 text-xs font-semibold uppercase tracking-[0.2em] text-ivory shadow-soft hover:bg-[#3a372f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage dark:border-sand dark:bg-sand dark:text-charcoal"
+      className="whatsapp-float fixed z-40 inline-flex items-center justify-center rounded-full border border-charcoal bg-charcoal text-xs font-semibold uppercase tracking-[0.18em] text-ivory shadow-soft hover:bg-[#3a372f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage dark:border-sand dark:bg-sand dark:text-charcoal"
       aria-label="Contact Studio 39+ on WhatsApp"
     >
-      WhatsApp
+      <span aria-hidden="true" className="whatsapp-mark">WA</span>
+      <span>WhatsApp</span>
     </a>
   );
 }
