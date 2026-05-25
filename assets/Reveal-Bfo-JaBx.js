@@ -1,0 +1,1 @@
+import{h as u,m as o,j as c}from"./index-1c0wT6N7.js";function p({children:t,className:i="",as:n="div",delay:s=0,...a}){const e=u(),r=o[n]||o.div;return c.jsx(r,{initial:e?!1:{opacity:0,y:18},whileInView:e?void 0:{opacity:1,y:0},viewport:{once:!0,amount:.16},transition:{duration:.65,ease:"easeOut",delay:s},className:i,...a,children:t})}export{p as R};
