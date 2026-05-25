@@ -4,6 +4,11 @@
   <url><loc>https://www.studio39ke.com/about</loc><priority>0.7</priority></url>
   <url><loc>https://www.studio39ke.com/projects</loc><priority>0.9</priority></url>
   <url><loc>https://www.studio39ke.com/services</loc><priority>0.8</priority></url>
+  <url><loc>https://www.studio39ke.com/services/residential-architecture</loc><priority>0.75</priority></url>
+  <url><loc>https://www.studio39ke.com/services/hospitality-architecture</loc><priority>0.75</priority></url>
+  <url><loc>https://www.studio39ke.com/services/safari-camp-design</loc><priority>0.75</priority></url>
+  <url><loc>https://www.studio39ke.com/services/interior-architecture</loc><priority>0.7</priority></url>
+  <url><loc>https://www.studio39ke.com/services/architectural-visualization</loc><priority>0.7</priority></url>
   <url><loc>https://www.studio39ke.com/contact</loc><priority>0.9</priority></url>
   <url><loc>https://www.studio39ke.com/projects/nairobi-courtyard-house</loc><priority>0.75</priority></url>
   <url><loc>https://www.studio39ke.com/projects/safari-lodge-retreat</loc><priority>0.75</priority></url>
