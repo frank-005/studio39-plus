@@ -69,7 +69,7 @@ function HeroSlideshow() {
               style={{ objectPosition: slides[active].position }}
               className="h-full w-full object-cover opacity-68 transition duration-1000"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-ivory/92 via-ivory/68 to-ivory/88 dark:from-[#050505]/94 dark:via-charcoal/78 dark:to-[#050505]/94" />
+            <div className="hero-overlay absolute inset-0 bg-gradient-to-br from-ivory/92 via-ivory/68 to-ivory/88 dark:from-[#050505]/94 dark:via-charcoal/78 dark:to-[#050505]/94" />
           </motion.div>
         </AnimatePresence>
       </div>
