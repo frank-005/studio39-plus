@@ -122,7 +122,11 @@ function Navbar() {
             aria-controls="mobile-navigation"
             aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           >
-            {open ? 'Close' : 'Menu'}
+            <span aria-hidden="true" className={`menu-icon ${open ? 'is-open' : ''}`}>
+              <span />
+              <span />
+              <span />
+            </span>
           </button>
         </div>
       </div>
@@ -139,16 +143,18 @@ function Navbar() {
           aria-label="Mobile navigation"
         >
           <div className="content-container flex min-h-[calc(100svh-4rem)] flex-col justify-between gap-8 py-8">
-            <div className="flex flex-col gap-1">
-            {navigation.map((item) => (
-              <NavLink key={item.label} to={item.href} className={({ isActive }) => `site-nav-mobile-link ${isActive ? 'is-active' : ''}`} onClick={() => setOpen(false)}>
-                {item.label}
-              </NavLink>
-            ))}
+            <div className="site-nav-mobile-card">
+              <div className="flex flex-col gap-1">
+                {navigation.map((item) => (
+                  <NavLink key={item.label} to={item.href} className={({ isActive }) => `site-nav-mobile-link ${isActive ? 'is-active' : ''}`} onClick={() => setOpen(false)}>
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
+              <Link to="/contact" className="site-nav-mobile-book">
+                Book Consultation
+              </Link>
             </div>
-            <Link to="/contact" className="site-nav-mobile-book">
-              Book Consultation
-            </Link>
           </div>
         </motion.nav>
       )}

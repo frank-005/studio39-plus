@@ -24,7 +24,7 @@ function Home() {
       />
       <HeroSlideshow />
 
-      <motion.section initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.65 }} className="content-container space-y-10 py-16 sm:py-20 md:py-24">
+      <motion.section initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.65 }} className="mobile-section content-container space-y-10 py-16 sm:py-20 md:py-24">
         <SectionHeading
           eyebrow="Featured Projects"
           title="Architecture case studies shaped by light, climate, and quiet luxury."
@@ -37,7 +37,7 @@ function Home() {
         </div>
       </motion.section>
 
-      <section className="content-container py-16 sm:py-20 md:py-24">
+      <section className="services-section mobile-section content-container py-16 sm:py-20 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
             eyebrow="Services"
@@ -52,7 +52,7 @@ function Home() {
         </div>
       </section>
 
-      <Reveal as="section" className="content-container py-16 sm:py-20 md:py-24">
+      <Reveal as="section" className="mobile-section content-container py-16 sm:py-20 md:py-24">
         <div className="grid gap-8 border-y border-charcoal/15 py-12 dark:border-ivory/15 md:grid-cols-3">
           {[
             ['Project Locations', 'Nairobi, Karen, Westlands, Maasai Mara, and selected East African sites.'],
@@ -67,7 +67,7 @@ function Home() {
         </div>
       </Reveal>
 
-      <section className="content-container py-16 sm:py-20 md:py-24">
+      <section className="mobile-section content-container py-16 sm:py-20 md:py-24">
         <SectionHeading
           eyebrow="Process"
           title="A calm architectural workflow from first brief to delivery."
