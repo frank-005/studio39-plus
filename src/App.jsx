@@ -8,6 +8,7 @@ const About = lazy(() => import('./pages/About'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
 const Services = lazy(() => import('./pages/Services'));
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 const pageTransition = {
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/:projectId" element={<ProjectDetail />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services/:serviceId" element={<ServiceDetail />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </Suspense>

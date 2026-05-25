@@ -21,6 +21,28 @@ function ListBlock({ title, items }) {
   );
 }
 
+function DetailTable({ project }) {
+  const rows = [
+    ['Project', project.name],
+    ['Location', project.location],
+    ['Typology', project.category],
+    ['Year', project.year],
+    ['Status', project.status],
+    ['Studio role', 'Architecture, visualization, material direction, documentation strategy']
+  ];
+
+  return (
+    <dl className="divide-y divide-charcoal/12 border-y border-charcoal/12 dark:divide-ivory/12 dark:border-ivory/12">
+      {rows.map(([label, value]) => (
+        <div key={label} className="grid gap-2 py-4 sm:grid-cols-[0.38fr_0.62fr]">
+          <dt className="eyebrow text-[0.68rem]">{label}</dt>
+          <dd className="text-sm leading-7 text-charcoal/76 dark:text-sand">{value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
@@ -84,19 +106,29 @@ function ProjectDetail() {
           <SectionHeading eyebrow="Project Overview" title="A detailed architectural story from brief to spatial concept." />
           <p className="text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
           <div>
+            <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Client Brief</h2>
+            <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{project.brief}</p>
+          </div>
+          <div>
             <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Design Concept</h2>
             <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{project.concept}</p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Client Goals</h2>
-            <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{project.clientGoals}</p>
+            <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Site / Context</h2>
+            <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{project.context}</p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Challenges</h2>
+            <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Challenges Solved</h2>
             <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{project.challenges}</p>
           </div>
         </div>
         <aside className="space-y-10 border border-mist bg-sand p-7 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-10">
+          <div>
+            <h3 className="eyebrow">Project Details</h3>
+            <div className="mt-6">
+              <DetailTable project={project} />
+            </div>
+          </div>
           <ListBlock title="Materials" items={project.materials} />
           <ListBlock title="Renders" items={project.renders} />
           <ListBlock title="Floor Plans" items={project.floorPlans} />

@@ -12,7 +12,7 @@ function Services() {
         description="Studio 39+ offers architectural design, residential design, hospitality architecture, safari lodge concepts, interiors, documentation, and architectural visualization in Kenya."
       />
       <section className="content-container space-y-12 py-14 sm:py-18 md:py-20">
-        <SectionHeading as="h1" eyebrow="Services" title="Architecture, interiors, and visualization services for considered projects." copy="Services are structured for clients seeking architects in Nairobi, luxury architects Kenya, hospitality architects East Africa, and architectural visualization Kenya." />
+        <SectionHeading as="h1" eyebrow="Services" title="Architecture, interiors, and visualization services for considered projects." copy="Dedicated service paths for clients seeking architects in Nairobi, residential architects Kenya, hospitality architects East Africa, safari lodge architects, and architectural visualization Kenya." />
       </section>
 
       <section className="content-container grid gap-x-10 pb-16 md:grid-cols-2 lg:grid-cols-3">
