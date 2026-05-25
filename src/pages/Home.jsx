@@ -1,64 +1,98 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
 import ServiceCard from '../components/ServiceCard';
 import HeroSlideshow from '../components/HeroSlideshow';
+import CTASection from '../components/CTASection';
+import TestimonialSection from '../components/TestimonialSection';
 import projects from '../data/projects';
 import services from '../data/services';
 import workflow from '../data/workflow';
+import { site } from '../data/site';
+import { architecturalFirmSchema, localBusinessSchema, professionalServiceSchema } from '../utils/schema';
 
 function Home() {
   return (
-    <div className="pt-32 pb-28 md:pt-36 md:pb-32 lg:pt-40 lg:pb-36">
+    <div className="pt-20">
+      <SEO
+        title="Architects in Nairobi for Luxury Homes, Lodges and Visualization"
+        description="Studio 39+ is a Nairobi architecture studio for luxury residences, safari lodge design, hospitality interiors, and architectural visualization across Kenya and East Africa."
+        schema={[architecturalFirmSchema, localBusinessSchema, professionalServiceSchema]}
+      />
       <HeroSlideshow />
 
-      <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75 }} className="content-container space-y-16 py-24 md:py-28">
-        <SectionHeading eyebrow="Featured Projects" title="Selected work that feels sculptural, calm, and atmospheric." copy="A carefully curated collection of recent studio projects across residential, hospitality, and interior design." />
-        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4 xl:gap-12">
+      <motion.section initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.65 }} className="content-container space-y-10 py-16 sm:py-20 md:py-24">
+        <SectionHeading
+          eyebrow="Featured Projects"
+          title="Architecture case studies shaped by light, climate, and quiet luxury."
+          copy="Explore selected residential architects Nairobi work, safari lodge concepts, hospitality architecture, and visualization studies from Studio 39+."
+        />
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </motion.section>
 
-      <section className="content-container py-24 md:py-28">
-        <SectionHeading eyebrow="Services" title="How Studio 39+ shapes built environments." copy="A tailored suite of architecture, visualization, and interior architecture services for thoughtful clients." />
-        <div className="mt-12 grid gap-10 lg:grid-cols-2 xl:gap-12">
-          {services.slice(0, 4).map((service) => (
-            <ServiceCard key={service.title} service={service} />
-          ))}
+      <section className="content-container py-16 sm:py-20 md:py-24">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <SectionHeading
+            eyebrow="Services"
+            title="Architectural services for homes, lodges, interiors, and visual decisions."
+            copy="Built for clients looking for luxury architects Kenya, hospitality architects East Africa, safari lodge architects, and architectural visualization Kenya."
+          />
+          <div className="grid gap-x-8 md:grid-cols-2">
+            {services.slice(0, 6).map((service) => (
+              <ServiceCard key={service.title} service={service} />
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="content-container py-24 md:py-28">
-        <SectionHeading eyebrow="Process" title="A calm architectural workflow from idea to delivery." copy="Our process is structured around research, concept development, visualization, and meticulous documentation." />
-        <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-12">
-          {workflow.map((step) => (
-            <article key={step.title} className="rounded-[26px] border border-mist bg-sand p-10 shadow-soft dark:border-neutral-700 dark:bg-charcoal">
-              <p className="text-sm uppercase tracking-[0.45em] text-charcoal/70 dark:text-sand">{step.title}</p>
-              <p className="mt-6 text-base leading-9 text-charcoal/70 dark:text-sand">{step.description}</p>
+      <section className="content-container py-16 sm:py-20 md:py-24">
+        <SectionHeading
+          eyebrow="Process"
+          title="A calm architectural workflow from first brief to delivery."
+          copy="The process is structured to reduce uncertainty, improve decision quality, and keep design intent clear from concept through documentation."
+        />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {workflow.map((step, index) => (
+            <article key={step.title} className="border-t border-charcoal/15 pt-7 dark:border-ivory/15">
+              <p className="text-xs uppercase tracking-[0.24em] text-charcoal/60 dark:text-sand/70">0{index + 1}</p>
+              <h3 className="mt-4 text-xl font-semibold text-charcoal dark:text-ivory">{step.title}</h3>
+              <p className="mt-4 text-sm leading-7 text-charcoal/70 dark:text-sand">{step.description}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="content-container mb-32 rounded-[32px] border border-mist bg-sand p-8 sm:p-12 lg:px-20 lg:py-20 shadow-soft dark:border-neutral-700 dark:bg-charcoal">
-        <div className="grid gap-16 lg:grid-cols-[1.3fr_.7fr] lg:items-center">
-          <div className="space-y-10 lg:space-y-12">
-            <p className="text-sm uppercase tracking-[0.45em] text-charcoal/70 dark:text-sand">Contact</p>
-            <h2 className="text-4xl font-semibold leading-tight text-charcoal dark:text-ivory">Let’s begin a calm, considered project conversation.</h2>
-            <p className="max-w-2xl text-lg leading-9 text-charcoal/70 dark:text-sand">Whether you are beginning a residential program or an experiential hospitality project, we welcome inquiries grounded in atmosphere, craft, and clarity.</p>
+      <TestimonialSection />
+
+      <section className="content-container py-16 sm:py-20 md:py-24" aria-labelledby="studio-nairobi">
+        <div className="grid gap-10 border-y border-charcoal/15 py-12 dark:border-ivory/15 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Nairobi Studio</p>
+            <h2 id="studio-nairobi" className="mt-4 text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
+              Architecture with local intelligence and East African hospitality sensitivity.
+            </h2>
           </div>
-          <div className="flex flex-col items-center justify-between gap-6 text-sm uppercase tracking-[0.3em] text-charcoal dark:text-sand sm:text-base">
-            <Link to="/contact" className="inline-flex w-full max-w-[280px] items-center justify-center rounded-full border border-charcoal bg-charcoal px-7 py-4 text-ivory hover:bg-[#3a372f] dark:border-sand dark:bg-sand dark:text-charcoal dark:hover:bg-[#d5cabc]">Say Hello</Link>
-            <div className="space-y-3 text-center">
-              <span className="block font-semibold text-charcoal dark:text-ivory">studio39ke@gmail.com</span>
-              <span className="block font-semibold text-charcoal dark:text-ivory">+254 703 906 562</span>
-            </div>
+          <div className="space-y-6 text-base leading-8 text-charcoal/72 dark:text-sand">
+            <p>
+              Studio 39+ works from Nairobi for clients planning homes, boutique hospitality, safari lodges, interiors, and visual packages that need strong spatial storytelling.
+            </p>
+            <Link className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand" to="/about">
+              Read studio philosophy
+            </Link>
           </div>
         </div>
       </section>
+
+      <CTASection
+        title="Ready to test an architectural idea before it becomes expensive?"
+        copy={`Send a brief or book a consultation with Studio 39+. You can also reach us directly on ${site.displayPhone}.`}
+      />
     </div>
   );
 }

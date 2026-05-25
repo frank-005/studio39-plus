@@ -1,19 +1,29 @@
 import { Link } from 'react-router-dom';
+import { site } from '../data/site';
 
 function Footer() {
   return (
     <footer className="bg-charcoal text-sand">
       <div className="content-container border-t border-mist pt-10 pb-20 sm:pt-12 sm:pb-24">
-        <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between">
+        <div className="grid gap-12 md:grid-cols-[1.2fr_.8fr_.8fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.45em] text-sand/80">Studio 39+</p>
-            <p className="mt-4 max-w-lg text-sm leading-8 text-sand/80">A modern architecture studio focused on crafted spaces, material clarity, and thoughtful atmospheres.</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-sand/80">Studio 39+</p>
+            <p className="mt-4 max-w-lg text-sm leading-8 text-sand/80">
+              Architects in Nairobi for crafted residences, boutique hospitality, safari lodge concepts, interiors, and architectural visualization across Kenya.
+            </p>
           </div>
-          <div className="flex flex-col gap-3 text-sm text-sand/80">
+          <nav className="flex flex-col gap-3 text-sm text-sand/80" aria-label="Footer navigation">
+            <Link to="/projects" className="hover:text-ivory">Architecture Portfolio</Link>
+            <Link to="/services" className="hover:text-ivory">Services</Link>
+            <Link to="/about" className="hover:text-ivory">About</Link>
             <Link to="/contact" className="hover:text-ivory">Contact</Link>
-            <a href="mailto:studio39ke@gmail.com" className="hover:text-ivory">studio39ke@gmail.com</a>
-            <a href="tel:+254703906562" className="hover:text-ivory">+254 703 906 562</a>
-          </div>
+          </nav>
+          <address className="not-italic text-sm leading-8 text-sand/80">
+            Imaara Mall<br />
+            Nairobi, Kenya<br />
+            <a href={`mailto:${site.email}`} className="hover:text-ivory">{site.email}</a><br />
+            <a href={`tel:${site.phone}`} className="hover:text-ivory">{site.displayPhone}</a>
+          </address>
         </div>
         <p className="mt-12 text-xs text-sand/60">© 2026 Studio 39+. Designed with intention for architecture, visualization, and editorial experiences.</p>
       </div>
