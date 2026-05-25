@@ -7,6 +7,7 @@ import ServiceCard from '../components/ServiceCard';
 import HeroSlideshow from '../components/HeroSlideshow';
 import CTASection from '../components/CTASection';
 import TestimonialSection from '../components/TestimonialSection';
+import Reveal from '../components/Reveal';
 import projects from '../data/projects';
 import services from '../data/services';
 import workflow from '../data/workflow';
@@ -44,12 +45,27 @@ function Home() {
             copy="Built for clients looking for luxury architects Kenya, hospitality architects East Africa, safari lodge architects, and architectural visualization Kenya."
           />
           <div className="grid gap-x-8 md:grid-cols-2">
-            {services.slice(0, 6).map((service) => (
+            {services.map((service) => (
               <ServiceCard key={service.title} service={service} />
             ))}
           </div>
         </div>
       </section>
+
+      <Reveal as="section" className="content-container py-16 sm:py-20 md:py-24">
+        <div className="grid gap-8 border-y border-charcoal/15 py-12 dark:border-ivory/15 md:grid-cols-3">
+          {[
+            ['Project Locations', 'Nairobi, Karen, Westlands, Maasai Mara, and selected East African sites.'],
+            ['Typologies', 'Private residences, boutique hospitality, safari camps, interiors, galleries, and visualization studies.'],
+            ['Client Outcomes', 'Clearer decisions, stronger spatial narrative, buildable design direction, and presentation-ready imagery.']
+          ].map(([title, copy]) => (
+            <article key={title}>
+              <p className="eyebrow">{title}</p>
+              <p className="mt-5 text-base leading-8 text-charcoal/72 dark:text-sand">{copy}</p>
+            </article>
+          ))}
+        </div>
+      </Reveal>
 
       <section className="content-container py-16 sm:py-20 md:py-24">
         <SectionHeading

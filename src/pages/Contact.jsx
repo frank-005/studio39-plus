@@ -12,10 +12,11 @@ const initialFormState = {
   location: '',
   projectType: 'Residential',
   budget: '',
+  timeline: '',
   message: ''
 };
 
-const projectTypes = ['Residential', 'Commercial', 'Hospitality', 'Interior Design', 'Renovation', 'Conceptual'];
+const projectTypes = ['Residential Architecture', 'Hospitality Architecture', 'Safari Camp Design', 'Interior Architecture', 'Architectural Visualization', 'Renovation', 'Conceptual'];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
@@ -41,6 +42,7 @@ function Contact() {
     if (!formData.phone.trim()) nextErrors.phone = 'Please provide a phone number.';
     if (!formData.location.trim()) nextErrors.location = 'Please share the project location.';
     if (!formData.budget.trim()) nextErrors.budget = 'Please share an estimated budget.';
+    if (!formData.timeline.trim()) nextErrors.timeline = 'Please share the expected timeline.';
     if (!formData.message.trim()) nextErrors.message = 'Tell us a little more about the project.';
 
     setErrors(nextErrors);
@@ -79,8 +81,8 @@ function Contact() {
         <SectionHeading
           as="h1"
           eyebrow="Contact"
-          title="Book a focused architecture consultation with Studio 39+."
-          copy="Share your site, project type, timeline, and visual ambition. We will respond with thoughtful guidance for your residential, hospitality, or visualization brief."
+          title="Tell us about your project."
+          copy="Begin a conversation with Studio 39+. Share your site, project type, timeline, and visual ambition so we can respond with a considered next step."
         />
       </section>
 
@@ -118,6 +120,10 @@ function Contact() {
               </Field>
             </div>
 
+            <Field id="timeline" label="Expected Timeline" error={errors.timeline}>
+              <input id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} type="text" placeholder="e.g. Concept in 6 weeks, build in 2027" className="form-field" aria-invalid={Boolean(errors.timeline)} aria-describedby={errors.timeline ? 'timeline-error' : undefined} />
+            </Field>
+
             <Field id="message" label="Message / Project Brief" error={errors.message}>
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about your vision, timeline, and any special priorities." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
             </Field>
@@ -138,7 +144,7 @@ function Contact() {
             )}
 
             <button type="submit" disabled={state.submitting} className="btn-primary disabled:cursor-not-allowed disabled:opacity-60">
-              {state.submitting ? 'Preparing inquiry...' : 'Send inquiry'}
+              {state.submitting ? 'Preparing inquiry...' : 'Begin a conversation'}
             </button>
           </form>
         </div>

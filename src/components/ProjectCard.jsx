@@ -21,9 +21,10 @@ function ProjectCard({ project }) {
       <div className="space-y-4 p-6 sm:p-8">
         <div className="flex items-center justify-between gap-4 text-[0.68rem] uppercase tracking-[0.24em] text-charcoal/70 dark:text-sand">
           <span>{project.category}</span>
-          <span>{project.year}</span>
+          <span>{project.status}</span>
         </div>
         <h3 className="text-xl font-semibold text-charcoal dark:text-ivory">{project.name}</h3>
+        <p className="text-xs uppercase tracking-[0.2em] text-charcoal/55 dark:text-sand/70">{project.location} / {project.year}</p>
         <p className="text-sm leading-7 text-charcoal/70 dark:text-sand">{project.excerpt}</p>
         <Link to={`/projects/${project.id}`} className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand" aria-label={`View case study for ${project.name}`}>
           View case study

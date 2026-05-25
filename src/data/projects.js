@@ -10,8 +10,12 @@ const projects = [
     excerpt: 'A calm luxury residence in Nairobi organized around shaded courts, privacy, and expansive daylight.',
     overview:
       'A private residence for a family seeking a composed retreat within Nairobi, balancing generous entertaining spaces with quiet daily rituals.',
+    brief:
+      'The client needed a private family house that could host guests generously while keeping bedrooms, service areas, and garden rooms discreetly separated.',
     concept:
       'The plan uses a sequence of courtyards to filter light, frame gardens, and create a modern Kenyan home with privacy and climatic intelligence.',
+    context:
+      'Set within a leafy Karen plot, the house responds to neighboring boundaries, mature planting, and Nairobi daylight with shaded thresholds and inward-facing garden rooms.',
     clientGoals: 'Create a refined family home with warm materiality, strong indoor-outdoor flow, and discreet service planning.',
     challenges: 'Manage privacy from neighboring plots while preserving openness, cross ventilation, and large social spaces.',
     materials: ['textured concrete', 'local stone', 'timber screens', 'lime-washed plaster', 'bronze-toned metalwork'],
@@ -34,8 +38,12 @@ const projects = [
     excerpt: 'A safari lodge concept for East Africa with low-impact planning, shaded decks, and immersive landscape views.',
     overview:
       'A boutique hospitality concept designed for owners developing an intimate lodge experience rooted in landscape, silence, and guest comfort.',
+    brief:
+      'The brief called for a memorable East African lodge concept with private suites, a strong arrival sequence, and an operational plan that would remain discreet to guests.',
     concept:
       'Guest suites are placed as a light-touch constellation, allowing each unit to hold a private horizon while shared spaces anchor the lodge.',
+    context:
+      'The project is imagined as a landscape-first retreat, where views, shade, service access, and low visual impact guide every planning decision.',
     clientGoals: 'Develop a luxury safari lodge identity with strong arrival, high comfort, and a restrained architectural language.',
     challenges: 'Balance premium guest experience with climate response, low visual impact, and efficient back-of-house circulation.',
     materials: ['rammed earth', 'canvas screens', 'reclaimed timber', 'stone plinths', 'brushed brass details'],
@@ -58,8 +66,12 @@ const projects = [
     excerpt: 'A conceptual gallery and architectural visualization study with airy volumes and sculptural geometry.',
     overview:
       'A visual research project exploring how gallery architecture in Nairobi can combine civic calm, controlled light, and flexible exhibition space.',
+    brief:
+      'The study explores a compact cultural venue that can support exhibitions, gatherings, and architectural visualization for early stakeholder conversations.',
     concept:
       'Rigid geometry is softened by top light, textured walls, and a procession that compresses and releases through exhibition rooms.',
+    context:
+      'The gallery is conceived for an urban Nairobi setting where a quiet civic interior can offer contrast to the speed and density of the city.',
     clientGoals: 'Test spatial identity, render atmosphere, and create a compelling visualization package for early stakeholder review.',
     challenges: 'Create drama without visual noise and design gallery rooms that remain flexible for changing exhibitions.',
     materials: ['mineral plaster', 'polished concrete', 'blackened steel', 'oak thresholds'],
@@ -82,8 +94,12 @@ const projects = [
     excerpt: 'A Nairobi interior architecture project with custom joinery, quiet texture, and contemporary spatial rhythm.',
     overview:
       'A compact city apartment reworked through interior architecture, lighting, and custom storage to feel larger, calmer, and more considered.',
+    brief:
+      'The client wanted a more refined apartment interior with better storage, a warmer atmosphere, and visuals that could confirm finishes before procurement.',
     concept:
       'Continuous joinery lines organize the apartment while a restrained material palette brings depth without visual clutter.',
+    context:
+      'Located in Westlands, the apartment needed to feel calm despite its compact footprint and dense urban setting.',
     clientGoals: 'Improve everyday functionality, create a premium visual identity, and use renders to validate finishes before procurement.',
     challenges: 'Increase perceived space within a tight footprint while keeping storage, lighting, and circulation intuitive.',
     materials: ['oak veneer', 'microcement', 'linen upholstery', 'warm stone', 'matte black ironmongery'],
