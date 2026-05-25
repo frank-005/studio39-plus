@@ -111,7 +111,7 @@ function Navbar() {
           <ThemeToggle theme={theme} onToggle={toggleTheme} className="ml-3" />
         </nav>
 
-        <div className="site-nav-mobile-controls flex items-center lg:hidden">
+        <div className={`site-nav-mobile-controls flex items-center lg:hidden ${open ? 'hidden' : ''}`}>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <button
             ref={menuButtonRef}
@@ -122,7 +122,7 @@ function Navbar() {
             aria-controls="mobile-navigation"
             aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           >
-            <span aria-hidden="true" className={`menu-icon ${open ? 'is-open' : ''}`}>
+            <span aria-hidden="true" className="menu-icon">
               <span />
               <span />
               <span />
@@ -135,25 +135,51 @@ function Navbar() {
         <motion.nav
           ref={menuRef}
           id="mobile-navigation"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
           className="site-nav-mobile lg:hidden"
           aria-label="Mobile navigation"
         >
-          <div className="content-container flex min-h-[calc(100svh-4rem)] flex-col justify-between gap-8 py-8">
-            <div className="site-nav-mobile-card">
-              <div className="flex flex-col gap-1">
-                {navigation.map((item) => (
-                  <NavLink key={item.label} to={item.href} className={({ isActive }) => `site-nav-mobile-link ${isActive ? 'is-active' : ''}`} onClick={() => setOpen(false)}>
-                    {item.label}
-                  </NavLink>
-                ))}
+          <div className="content-container relative flex min-h-[100svh] flex-col">
+            <div className="site-nav-mobile-header relative flex items-center justify-center py-8 px-4">
+              <div className="site-nav-mobile-brand-group flex flex-col items-center gap-2">
+                <Link
+                  to="/"
+                  onClick={() => setOpen(false)}
+                  className="site-nav-mobile-brand"
+                  aria-label="Studio 39+ home"
+                >
+                  Studio 39+
+                </Link>
+                <span className="site-nav-mobile-tagline">Architecture Studio</span>
               </div>
-              <Link to="/contact" className="site-nav-mobile-book">
-                Book Consultation
-              </Link>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="site-nav-mobile-close"
+                aria-label="Close navigation menu"
+              >
+                <span aria-hidden="true" className={`menu-icon ${open ? 'is-open' : ''}`}>
+                  <span />
+                  <span />
+                  <span />
+                </span>
+              </button>
+            </div>
+
+            <div className="site-nav-mobile-links flex flex-1 flex-col items-center justify-center gap-10 text-center px-6">
+              {navigation.map((item) => (
+                <NavLink
+                  key={item.label}
+                  to={item.href}
+                  className={({ isActive }) => `site-nav-mobile-link ${isActive ? 'is-active' : ''}`}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
             </div>
           </div>
         </motion.nav>
