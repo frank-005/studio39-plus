@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import navigation from '../data/navigation';
 
@@ -12,22 +12,10 @@ function ThemeToggle({ theme, onToggle, className = '' }) {
       onClick={onToggle}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       aria-pressed={isDark}
-      className={`inline-flex items-center rounded-full transition hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage focus-visible:ring-offset-2 focus-visible:ring-offset-ivory dark:focus-visible:ring-offset-charcoal ${className}`}
+      className={`theme-toggle inline-flex items-center ${isDark ? 'is-dark' : ''} ${className}`}
     >
-      <span
-        className={`relative h-8 w-16 rounded-full border transition duration-300 ${
-          isDark
-            ? 'border-neutral-700 bg-neutral-900 shadow-[inset_0_0_8px_rgba(255,255,255,0.08)]'
-            : 'border-neutral-300 bg-neutral-200 shadow-[inset_0_0_4px_rgba(47,44,40,0.14)]'
-        }`}
-      >
-        <span
-          className={`absolute top-1 h-6 w-6 rounded-full transition duration-300 ${
-            isDark
-              ? 'left-9 bg-neutral-600 shadow-[0_2px_8px_rgba(0,0,0,0.35)]'
-              : 'left-1 bg-white shadow-[0_2px_6px_rgba(47,44,40,0.2)]'
-          }`}
-        />
+      <span className="theme-toggle-track">
+        <span className="theme-toggle-thumb" />
       </span>
     </button>
   );
@@ -36,6 +24,7 @@ function ThemeToggle({ theme, onToggle, className = '' }) {
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState('light');
+  const location = useLocation();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
@@ -53,40 +42,66 @@ function Navbar() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
   };
 
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-20 border-t border-charcoal/80 border-b border-charcoal/15 bg-ivory/85 backdrop-blur-lg dark:border-t-sand/70 dark:border-b-ivory/10 dark:bg-charcoal/80">
-      <div className="content-container flex h-full items-center justify-between">
-        <Link to="/" className="text-sm font-semibold tracking-[0.35em] uppercase text-charcoal dark:text-ivory">
+    <header className="site-nav fixed inset-x-0 top-0 z-50">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-charcoal focus:px-5 focus:py-3 focus:text-sm focus:uppercase focus:tracking-[0.2em] focus:text-ivory">
+        Skip to content
+      </a>
+      <div className="content-container flex min-h-20 items-center justify-between">
+        <Link to="/" className="site-nav-brand" aria-label="Studio 39+ home">
           Studio 39+
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-[0.25em] text-charcoal dark:text-ivory">
+        <nav className="hidden md:flex items-center gap-10" aria-label="Primary navigation">
           {navigation.map((item) => (
-            <Link key={item.label} to={item.href} className="hover:text-sage">
+            <NavLink key={item.label} to={item.href} className={({ isActive }) => `site-nav-link ${isActive ? 'is-active' : ''}`}>
               {item.label}
-            </Link>
+            </NavLink>
           ))}
-          <ThemeToggle theme={theme} onToggle={toggleTheme} className="ml-5" />
+          <Link to="/contact" className="site-nav-book" aria-label="Book an architecture consultation">
+            Book
+          </Link>
+          <ThemeToggle theme={theme} onToggle={toggleTheme} className="ml-3" />
         </nav>
 
         <div className="flex items-center gap-4 md:hidden">
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
-          <button onClick={() => setOpen(!open)} className="text-sm uppercase tracking-[0.25em] text-charcoal dark:text-ivory">
+          <button
+            type="button"
+            onClick={() => setOpen(!open)}
+            className="site-nav-menu-button"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+          >
             {open ? 'Close' : 'Menu'}
           </button>
         </div>
       </div>
 
       {open && (
-        <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} className="border-t border-mist bg-sand/95 dark:border-neutral-800 dark:bg-charcoal/95 md:hidden">
-          <div className="content-container flex flex-col gap-4 py-6 text-sm uppercase tracking-[0.25em] text-charcoal dark:text-ivory">
+        <motion.nav
+          id="mobile-navigation"
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="site-nav-mobile md:hidden"
+          aria-label="Mobile navigation"
+        >
+          <div className="content-container flex flex-col gap-2 py-5">
             {navigation.map((item) => (
-              <Link key={item.label} to={item.href} onClick={() => setOpen(false)}>
+              <NavLink key={item.label} to={item.href} className={({ isActive }) => `site-nav-mobile-link ${isActive ? 'is-active' : ''}`} onClick={() => setOpen(false)}>
                 {item.label}
-              </Link>
+              </NavLink>
             ))}
+            <Link to="/contact" className="site-nav-mobile-book">
+              Book Consultation
+            </Link>
           </div>
-        </motion.div>
+        </motion.nav>
       )}
     </header>
   );
