@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import navigation from '../data/navigation';
+import { site } from '../data/site';
 
 function ThemeToggle({ theme, onToggle, className = '' }) {
   const isDark = theme === 'dark';
@@ -180,6 +181,16 @@ function Navbar() {
                   {item.label}
                 </NavLink>
               ))}
+            </div>
+            <div className="site-nav-mobile-footer grid gap-3 border-t border-charcoal/10 py-7 text-center text-xs uppercase tracking-[0.22em] text-charcoal/68 dark:border-ivory/10 dark:text-sand">
+              <Link to="/contact" onClick={() => setOpen(false)} className="site-nav-mobile-book">
+                Start a Project
+              </Link>
+              <div className="flex items-center justify-center gap-5 pt-2">
+                <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
+                <a href={`tel:${site.phone}`}>Call</a>
+                <a href={`mailto:${site.email}`}>Email</a>
+              </div>
             </div>
           </div>
         </motion.nav>

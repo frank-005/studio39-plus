@@ -11,11 +11,11 @@ function Services() {
         title="Architecture Services in Nairobi | Homes, Lodges and Visualization"
         description="Studio 39+ offers architectural design, residential design, hospitality architecture, safari lodge concepts, interiors, documentation, and architectural visualization in Kenya."
       />
-      <section className="content-container space-y-12 py-14 sm:py-16 md:py-20">
-        <SectionHeading as="h1" eyebrow="Services" title="Architecture, interiors, and visualization services for considered projects." copy="Dedicated service paths for clients seeking architects in Nairobi, residential architects Kenya, hospitality architects East Africa, safari lodge architects, and architectural visualization Kenya." />
+      <section className="content-container space-y-12 py-16 sm:py-20 md:py-28">
+        <SectionHeading as="h1" eyebrow="Services" title="Architecture, planning, interiors, and visualization for considered environments." copy="Dedicated service paths for clients seeking a design-led studio for residences, hospitality, safari lodge concepts, boutique developments, and presentation-ready visual direction." />
       </section>
 
-      <section className="content-container grid gap-x-10 pb-16 md:grid-cols-2 lg:grid-cols-3">
+      <section className="content-container grid gap-x-10 pb-20 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}

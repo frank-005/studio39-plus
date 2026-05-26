@@ -2,20 +2,17 @@ import { site } from '../data/site';
 
 function WhatsAppButton() {
   return (
-    <a
-      href={site.whatsapp}
-      target="_blank"
-      rel="noreferrer"
-      className="whatsapp-float fixed z-40 inline-flex items-center justify-center rounded-full"
-      aria-label="Chat on WhatsApp"
-    >
-      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false" className="whatsapp-icon">
-        <path
-          fill="currentColor"
-          d="M16.04 3.2c-7.05 0-12.78 5.72-12.78 12.76 0 2.25.59 4.45 1.72 6.39L3.16 29l6.81-1.79a12.7 12.7 0 0 0 6.07 1.55h.01c7.04 0 12.77-5.73 12.77-12.77S23.09 3.2 16.04 3.2Zm0 23.4h-.01c-1.88 0-3.72-.5-5.33-1.46l-.38-.23-4.04 1.06 1.08-3.94-.25-.4a10.54 10.54 0 0 1-1.62-5.67c0-5.81 4.73-10.54 10.55-10.54 2.82 0 5.47 1.1 7.46 3.09a10.48 10.48 0 0 1 3.09 7.47c0 5.81-4.73 10.54-10.55 10.54Zm5.78-7.9c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57a9.55 9.55 0 0 1-1.77-2.2c-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65 0 1.56 1.14 3.07 1.3 3.28.16.21 2.24 3.42 5.42 4.79.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.15-1.51.26-.74.26-1.38.18-1.51-.08-.13-.29-.21-.61-.37Z"
-        />
-      </svg>
-    </a>
+    <div className="mobile-contact-rail fixed z-40">
+      <a href={site.whatsapp} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+        WhatsApp
+      </a>
+      <a href={`tel:${site.phone}`} aria-label="Call Studio 39+">
+        Call
+      </a>
+      <a href={`mailto:${site.email}`} aria-label="Email Studio 39+">
+        Email
+      </a>
+    </div>
   );
 }
 

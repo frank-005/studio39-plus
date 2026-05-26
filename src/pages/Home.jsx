@@ -16,35 +16,35 @@ import { architecturalFirmSchema, localBusinessSchema, professionalServiceSchema
 
 function Home() {
   return (
-    <div className="pt-20">
+    <div>
       <SEO
-        title="Architects in Nairobi for Luxury Homes, Lodges and Visualization"
-        description="Studio 39+ is a Nairobi architecture studio for luxury residences, safari lodge design, hospitality interiors, and architectural visualization across Kenya and East Africa."
+        title="Luxury Hospitality & Residential Architecture in East Africa"
+        description="Studio 39+ designs refined residential, hospitality, safari lodge, and experiential environments across East Africa from Nairobi."
         schema={[architecturalFirmSchema, localBusinessSchema, professionalServiceSchema]}
       />
       <HeroSlideshow />
 
-      <motion.section initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.65 }} className="mobile-section content-container space-y-10 py-16 sm:py-20 md:py-24">
+      <motion.section initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.65 }} className="mobile-section content-container space-y-12 py-20 sm:py-24 md:py-32">
         <SectionHeading
           eyebrow="Featured Projects"
-          title="Architecture case studies shaped by light, climate, and quiet luxury."
-          copy="Explore selected residential architects Nairobi work, safari lodge concepts, hospitality architecture, and visualization studies from Studio 39+."
+          title="Selected environments shaped through light, climate, material, and restraint."
+          copy="A curated view of residential, hospitality, interior, and visual studies developed with architectural clarity and a strong sense of place."
         />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="project-gallery grid gap-7 md:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </motion.section>
 
-      <section className="services-section mobile-section content-container py-16 sm:py-20 md:py-24">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <section className="services-section mobile-section border-y border-charcoal/10 bg-neutral-100/40 dark:border-ivory/10 dark:bg-black/10">
+        <div className="content-container grid gap-12 py-20 sm:py-24 md:py-32 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <SectionHeading
             eyebrow="Services"
-            title="Architectural services for homes, lodges, interiors, and visual decisions."
-            copy="Built for clients looking for luxury architects Kenya, hospitality architects East Africa, safari lodge architects, and architectural visualization Kenya."
+            title="Design services for projects that need atmosphere, order, and commercial intelligence."
+            copy="From early site strategy to architectural design, hospitality planning, interiors, and visualization, each service is structured around decisions that matter."
           />
-          <div className="grid gap-x-8 md:grid-cols-2">
+          <div className="grid gap-x-10 md:grid-cols-2">
             {services.map((service) => (
               <ServiceCard key={service.title} service={service} />
             ))}
@@ -52,8 +52,8 @@ function Home() {
         </div>
       </section>
 
-      <Reveal as="section" className="mobile-section content-container py-16 sm:py-20 md:py-24">
-        <div className="grid gap-8 border-y border-charcoal/15 py-12 dark:border-ivory/15 md:grid-cols-3">
+      <Reveal as="section" className="mobile-section content-container py-20 sm:py-24 md:py-32">
+        <div className="grid gap-8 border-y border-charcoal/15 py-14 dark:border-ivory/15 md:grid-cols-3">
           {[
             ['Project Locations', 'Nairobi, Karen, Westlands, Maasai Mara, and selected East African sites.'],
             ['Typologies', 'Private residences, boutique hospitality, safari camps, interiors, galleries, and visualization studies.'],
@@ -67,7 +67,7 @@ function Home() {
         </div>
       </Reveal>
 
-      <section className="mobile-section content-container py-16 sm:py-20 md:py-24">
+      <section className="mobile-section content-container py-20 sm:py-24 md:py-32">
         <SectionHeading
           eyebrow="Process"
           title="A calm architectural workflow from first brief to delivery."
@@ -86,7 +86,7 @@ function Home() {
 
       <TestimonialSection />
 
-      <section className="content-container py-16 sm:py-20 md:py-24" aria-labelledby="studio-nairobi">
+      <section className="content-container py-20 sm:py-24 md:py-32" aria-labelledby="studio-nairobi">
         <div className="grid gap-10 border-y border-charcoal/15 py-12 dark:border-ivory/15 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
             <p className="eyebrow">Nairobi Studio</p>

@@ -43,6 +43,24 @@ function DetailTable({ project }) {
   );
 }
 
+function DrawingPanel({ title, items }) {
+  return (
+    <article className="drawing-panel border border-charcoal/12 bg-sand/70 p-6 dark:border-ivory/12 dark:bg-black/10">
+      <p className="eyebrow">{title}</p>
+      <div className="mt-8 space-y-4" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <ul className="mt-8 space-y-3 text-sm leading-7 text-charcoal/70 dark:text-sand">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </article>
+  );
+}
+
 function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
@@ -101,7 +119,7 @@ function ProjectDetail() {
         </div>
       </section>
 
-      <section className="content-container grid gap-12 py-16 md:py-20 lg:grid-cols-[1.1fr_.9fr]">
+      <section className="content-container grid gap-12 py-20 md:py-28 lg:grid-cols-[1.1fr_.9fr]">
         <div className="space-y-10">
           <SectionHeading eyebrow="Project Overview" title="A detailed architectural story from brief to spatial concept." />
           <p className="text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
@@ -144,7 +162,18 @@ function ProjectDetail() {
         </aside>
       </section>
 
-      <section className="content-container pb-16 md:pb-20" aria-labelledby="gallery-title">
+      <section className="content-container pb-20 md:pb-28" aria-labelledby="process-title">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <SectionHeading eyebrow="Process" title="Drawings, diagrams, palettes, and decision tools that make the design legible." />
+          <div className="grid gap-5 sm:grid-cols-3">
+            <DrawingPanel title="Plans" items={project.floorPlans} />
+            <DrawingPanel title="Diagrams" items={['arrival sequence', 'privacy gradient', 'light and view strategy']} />
+            <DrawingPanel title="Palette" items={project.materials.slice(0, 4)} />
+          </div>
+        </div>
+      </section>
+
+      <section className="content-container pb-20 md:pb-28" aria-labelledby="gallery-title">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 id="gallery-title" className="text-3xl font-semibold text-charcoal dark:text-ivory">Renders and Visual Studies</h2>
           <Link to="/projects" className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand">

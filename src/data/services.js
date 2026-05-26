@@ -1,7 +1,33 @@
 const services = [
   {
+    id: 'architectural-design',
+    title: 'Architectural Design',
+    shortTitle: 'Architecture',
+    description: 'Concept-led architectural design from first spatial strategy through refined documentation and visual direction.',
+    seoTitle: 'Architectural Design Studio Nairobi',
+    seoDescription:
+      'Architectural design studio in Nairobi for residential, hospitality, cultural, and boutique commercial projects across East Africa.',
+    audience: 'For clients who need a design-led architecture partner to translate site, brief, atmosphere, and delivery into one clear spatial direction.',
+    keywords: ['architectural design Nairobi', 'architects in Nairobi', 'luxury architects Kenya'],
+    process: ['Brief and site intelligence', 'Concept architecture', 'Spatial and material development', 'Documentation and visual coordination'],
+    projectIds: ['nairobi-courtyard-house', 'safari-lodge-retreat', 'studio-gallery']
+  },
+  {
+    id: 'master-planning',
+    title: 'Master Planning',
+    shortTitle: 'Planning',
+    description: 'Site strategy, phasing, guest journeys, privacy, access, and landscape-led planning for larger developments.',
+    seoTitle: 'Master Planning East Africa',
+    seoDescription:
+      'Master planning services for hospitality, residential, lodge, and boutique development sites across Kenya and East Africa.',
+    audience: 'For developers, landowners, and hospitality teams shaping a site before committing to buildings, infrastructure, or phased investment.',
+    keywords: ['master planning Kenya', 'hospitality architects East Africa', 'safari lodge architects'],
+    process: ['Site and access analysis', 'Program and phasing strategy', 'View, privacy, and movement diagrams', 'Development framework'],
+    projectIds: ['safari-lodge-retreat', 'nairobi-courtyard-house']
+  },
+  {
     id: 'residential-architecture',
-    title: 'Residential Architecture',
+    title: 'Residential Design',
     shortTitle: 'Residential',
     description: 'Tailored homes across Kenya shaped around privacy, climate, daylight, and calm everyday rituals.',
     seoTitle: 'Residential Architects Kenya',
@@ -14,7 +40,7 @@ const services = [
   },
   {
     id: 'hospitality-architecture',
-    title: 'Hospitality Architecture',
+    title: 'Hospitality Design',
     shortTitle: 'Hospitality',
     description: 'Boutique hospitality environments with clear guest journeys, atmospheric public spaces, and strong operational logic.',
     seoTitle: 'Hospitality Architects East Africa',

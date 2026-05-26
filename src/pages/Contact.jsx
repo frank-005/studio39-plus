@@ -13,10 +13,12 @@ const initialFormState = {
   projectType: 'Residential',
   budget: '',
   timeline: '',
-  message: ''
+  message: '',
+  servicesRequired: []
 };
 
 const projectTypes = ['Residential Architecture', 'Hospitality Architecture', 'Safari Camp Design', 'Interior Architecture', 'Architectural Visualization', 'Renovation', 'Conceptual'];
+const serviceOptions = ['Architectural Design', 'Master Planning', 'Hospitality Design', 'Residential Design', 'Visualization', 'Interior Architecture'];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
@@ -31,6 +33,16 @@ function Contact() {
     const { name, value } = event.target;
     setFormData((current) => ({ ...current, [name]: value }));
     setErrors((current) => ({ ...current, [name]: '' }));
+  };
+
+  const handleServiceToggle = (event) => {
+    const { value, checked } = event.target;
+    setFormData((current) => ({
+      ...current,
+      servicesRequired: checked
+        ? [...current.servicesRequired, value]
+        : current.servicesRequired.filter((service) => service !== value)
+    }));
   };
 
   const validateForm = () => {
@@ -77,7 +89,7 @@ function Contact() {
         title="Book an Architecture Consultation in Nairobi"
         description="Contact Studio 39+ to discuss residential architecture, hospitality design, safari lodge concepts, interiors, and architectural visualization in Kenya."
       />
-      <section className="content-container space-y-12 py-14 md:py-20">
+      <section className="content-container space-y-12 py-16 md:py-24">
         <SectionHeading
           as="h1"
           eyebrow="Contact"
@@ -128,6 +140,19 @@ function Contact() {
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about your vision, timeline, and any special priorities." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
             </Field>
 
+            <fieldset>
+              <legend className="eyebrow">Services Required</legend>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {serviceOptions.map((service) => (
+                  <label key={service} className="contact-check flex min-h-12 items-center gap-3 border border-charcoal/12 px-4 py-3 text-sm text-charcoal/72 dark:border-ivory/12 dark:text-sand">
+                    <input type="checkbox" name="servicesRequired" value={service} checked={formData.servicesRequired.includes(service)} onChange={handleServiceToggle} />
+                    <span>{service}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            <input type="hidden" name="servicesRequiredSummary" value={formData.servicesRequired.join(', ')} />
             <input type="hidden" name="fileNames" value={files.map((file) => file.name).join(', ')} />
             <div>
               <p className="eyebrow">Reference Files</p>

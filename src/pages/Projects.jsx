@@ -20,12 +20,12 @@ function Projects() {
         title="Architecture Portfolio | Studio 39+ Case Studies"
         description="Browse Studio 39+ architecture case studies across Nairobi residences, safari lodge architecture, hospitality design, interior architecture, and visualization."
       />
-      <section className="content-container space-y-10 py-14 sm:py-16 md:py-20">
+      <section className="content-container space-y-12 py-16 sm:py-20 md:py-28">
         <SectionHeading
           as="h1"
           eyebrow="Projects"
-          title="A refined architecture portfolio of residences, lodges, interiors, and visual studies."
-          copy="Each case study includes project overview, location, design concept, client goals, challenges, materials, renders, floor plans, and build status."
+          title="A curated project archive of residences, lodges, interiors, and spatial studies."
+          copy="Each case study moves beyond imagery into design intent, site response, material language, scope, process, and spatial narrative."
         />
         <div className="flex gap-3 overflow-x-auto pb-3 text-xs uppercase tracking-[0.2em] text-charcoal/70 dark:text-sand" role="list" aria-label="Filter projects by category">
           {categories.map((category) => (
@@ -46,7 +46,7 @@ function Projects() {
         </div>
       </section>
 
-      <section className="content-container grid gap-6 pb-16 md:grid-cols-2 xl:grid-cols-4">
+      <section className="project-gallery content-container grid gap-7 pb-20 md:grid-cols-2 xl:grid-cols-4">
         {filtered.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
