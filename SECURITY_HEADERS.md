@@ -1,0 +1,28 @@
+# Security headers
+
+The production site is currently deployed from GitHub Actions to the `gh-pages` branch for GitHub Pages. GitHub Pages does not support custom HTTP response headers from repository files, so the security headers cannot be fixed on GitHub Pages alone.
+
+The practical production-ready path is to deploy the same Vite build to a static host that supports response headers, such as Cloudflare Pages or Netlify. This repository includes `public/_headers`, which Vite copies into `dist/_headers` during `npm run build`.
+
+## Recommended deployment
+
+Use Cloudflare Pages with these settings:
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Custom domain: `studio39ke.com`
+- Also attach `www.studio39ke.com` if it remains public
+
+Cloudflare Pages will read `dist/_headers` and apply the security headers to every route.
+
+If the site must stay on GitHub Pages behind Cloudflare DNS, add the same headers with Cloudflare Response Header Transform Rules instead. GitHub Pages will still not read `_headers` directly.
+
+## External services allowed by CSP
+
+The Content Security Policy is intentionally scoped to current site behavior:
+
+- Images: HTTPS image sources, including Unsplash Open Graph and project images
+- Fonts and styles: Google Fonts
+- Forms: Formspree submissions
+- Frames: the embedded Google Maps location iframe
+- Links: WhatsApp, email, phone, and social links are normal navigations and do not need CSP exceptions
