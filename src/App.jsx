@@ -1,7 +1,8 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { AnimatePresence, MotionConfig, motion, useReducedMotion } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import DefaultLayout from './layouts/DefaultLayout';
+import { initAnalytics, trackPageView } from './utils/analytics';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -17,12 +18,27 @@ const pageTransition = {
   exit: { opacity: 0, y: -24, transition: { duration: 0.4, ease: 'easeInOut' } }
 };
 
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(`${location.pathname}${location.search}${location.hash}`);
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   const location = useLocation();
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <MotionConfig reducedMotion="user">
+      <AnalyticsTracker />
       <DefaultLayout>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div key={location.pathname} variants={pageTransition} initial={prefersReducedMotion ? false : 'initial'} animate="animate" exit={prefersReducedMotion ? undefined : 'exit'} className="min-h-screen">

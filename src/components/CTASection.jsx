@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { site } from '../data/site';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 function CTASection({
   eyebrow = 'Book Consultation',
@@ -21,7 +22,7 @@ function CTASection({
             <Link className="btn-primary" to="/contact">
               Book Consultation
             </Link>
-            <a className="btn-secondary" href={site.whatsapp} target="_blank" rel="noreferrer">
+            <a className="btn-secondary" href={site.whatsapp} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick('cta_section')}>
               WhatsApp
             </a>
           </div>

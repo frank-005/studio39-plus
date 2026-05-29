@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { site } from '../data/site';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 function WhatsAppIcon() {
   return (
@@ -33,6 +34,7 @@ function FloatingWhatsAppButton() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat with Studio 39+ on WhatsApp"
+        onClick={() => trackWhatsAppClick('floating_button')}
       >
         <span className="floating-whatsapp-label">Chat with us</span>
         <span className="floating-whatsapp-button">

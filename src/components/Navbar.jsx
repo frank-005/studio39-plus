@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import navigation from '../data/navigation';
 import { site } from '../data/site';
+import { trackEmailClick, trackPhoneClick, trackWhatsAppClick } from '../utils/analytics';
 
 function ThemeToggle({ theme, onToggle, className = '' }) {
   const isDark = theme === 'dark';
@@ -187,9 +188,9 @@ function Navbar() {
                 Start a Project
               </Link>
               <div className="flex items-center justify-center gap-5 pt-2">
-                <a href={site.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
-                <a href={`tel:${site.phone}`}>Call</a>
-                <a href={`mailto:${site.email}`}>Email</a>
+                <a href={site.whatsapp} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick('mobile_nav')}>WhatsApp</a>
+                <a href={`tel:${site.phone}`} onClick={() => trackPhoneClick('mobile_nav')}>Call</a>
+                <a href={`mailto:${site.email}`} onClick={() => trackEmailClick('mobile_nav')}>Email</a>
               </div>
             </div>
           </div>

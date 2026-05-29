@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { site } from '../data/site';
 import services from '../data/services';
 import projects from '../data/projects';
+import { trackEmailClick, trackWhatsAppClick } from '../utils/analytics';
 
 function Footer() {
   return (
@@ -40,8 +41,8 @@ function Footer() {
             <address className="not-italic text-sm leading-8 text-sand/82">
               <p className="eyebrow mb-3 text-sand">Contact</p>
               Nairobi, Kenya<br />
-              <a href={`mailto:${site.email}`} className="hover:text-ivory">{site.email}</a><br />
-              <a href={site.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp / {site.displayPhone}</a>
+              <a href={`mailto:${site.email}`} className="hover:text-ivory" onClick={() => trackEmailClick('footer')}>{site.email}</a><br />
+              <a href={site.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory" onClick={() => trackWhatsAppClick('footer')}>WhatsApp / {site.displayPhone}</a>
             </address>
             <nav className="flex flex-col gap-3 text-sm text-sand/82" aria-label="Footer sitemap">
               <p className="eyebrow text-sand">Sitemap</p>

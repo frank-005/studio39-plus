@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { trackContactFileUploadAttempt } from '../utils/analytics';
 
 const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'application/pdf'];
 const MAX_FILE_SIZE = 12 * 1024 * 1024;
@@ -47,12 +48,22 @@ function FileUpload({ files = [], onFilesChange }) {
     return null;
   };
 
-  const handleFiles = (incomingFiles) => {
+  const handleFiles = (incomingFiles, source) => {
     const next = [...files];
     const newUploads = [];
     let message = '';
+    const attemptedFiles = Array.from(incomingFiles);
+    const trackedFiles = attemptedFiles.filter((file) => ACCEPTED_TYPES.includes(file.type));
 
-    Array.from(incomingFiles).forEach((file) => {
+    if (trackedFiles.length > 0) {
+      trackContactFileUploadAttempt({
+        count: trackedFiles.length,
+        types: [...new Set(trackedFiles.map((file) => file.type))],
+        source
+      });
+    }
+
+    attemptedFiles.forEach((file) => {
       if (next.length >= MAX_FILES) {
         message = `Please upload up to ${MAX_FILES} files.`;
         return;
@@ -82,7 +93,7 @@ function FileUpload({ files = [], onFilesChange }) {
   const handleDrop = (event) => {
     event.preventDefault();
     setDragActive(false);
-    handleFiles(event.dataTransfer.files);
+    handleFiles(event.dataTransfer.files, 'drag_drop');
   };
 
   const removeFile = (index) => {
@@ -107,7 +118,7 @@ function FileUpload({ files = [], onFilesChange }) {
         onDragLeave={() => setDragActive(false)}
         onDrop={handleDrop}
       >
-        <input ref={inputRef} type="file" multiple accept="image/jpeg,image/png,image/webp,application/pdf" className="hidden" onChange={(event) => handleFiles(event.target.files)} />
+        <input ref={inputRef} type="file" multiple accept="image/jpeg,image/png,image/webp,application/pdf" className="hidden" onChange={(event) => handleFiles(event.target.files, 'file_picker')} />
         <div className="flex min-h-[220px] flex-col items-center justify-center gap-4 text-center">
           <div className="rounded-full border border-mist bg-white/80 px-4 py-3 text-sm uppercase tracking-[0.18em] text-sage shadow-soft dark:border-neutral-700 dark:bg-neutral-950/80 dark:text-sand" aria-hidden="true">
             Upload

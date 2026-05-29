@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
 import FileUpload from '../components/FileUpload';
 import { site } from '../data/site';
+import { trackContactFormSubmission, trackEmailClick, trackPhoneClick, trackWhatsAppClick } from '../utils/analytics';
 
 const initialFormState = {
   fullName: '',
@@ -63,6 +64,7 @@ function Contact() {
 
   useEffect(() => {
     if (state.succeeded) {
+      trackContactFormSubmission();
       setStatusType('success');
       setStatusMessage('Thank you - your inquiry has been submitted successfully. We will reply shortly.');
       setFormData(initialFormState);
@@ -175,11 +177,11 @@ function Contact() {
         </div>
 
         <aside className="space-y-10 border border-mist bg-sand p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
-          <ContactItem label="Email" href={`mailto:${site.email}`} value={site.email} />
-          <ContactItem label="Phone" href={`tel:${site.phone}`} value={site.displayPhone} />
+          <ContactItem label="Email" href={`mailto:${site.email}`} value={site.email} onClick={() => trackEmailClick('contact_sidebar')} />
+          <ContactItem label="Phone" href={`tel:${site.phone}`} value={site.displayPhone} onClick={() => trackPhoneClick('contact_sidebar')} />
           <div>
             <p className="eyebrow">Quick Contact</p>
-            <a href={site.whatsapp} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand">
+            <a href={site.whatsapp} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick('contact_sidebar')} className="mt-4 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand">
               WhatsApp Studio 39+
             </a>
           </div>
@@ -217,11 +219,11 @@ function Field({ id, label, error, children }) {
   );
 }
 
-function ContactItem({ label, href, value }) {
+function ContactItem({ label, href, value, onClick }) {
   return (
     <div>
       <p className="eyebrow">{label}</p>
-      <a href={href} className="mt-3 block text-lg font-semibold text-charcoal dark:text-ivory">{value}</a>
+      <a href={href} onClick={onClick} className="mt-3 block text-lg font-semibold text-charcoal dark:text-ivory">{value}</a>
     </div>
   );
 }
