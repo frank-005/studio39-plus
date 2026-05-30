@@ -12,10 +12,10 @@ function Footer() {
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-ivory">Studio 39+</p>
             <p className="mt-5 max-w-lg text-sm leading-8 text-sand/82">
-              Architects in Nairobi for crafted residences, boutique hospitality, safari camp concepts, interiors, and architectural visualization across Kenya and East Africa.
+              Luxury residential architects in Nairobi for private homes, coastal villas, family estates, interiors, and bespoke living environments across Kenya and East Africa.
             </p>
             <p className="mt-7 max-w-md text-base leading-8 text-ivory">
-              Currently accepting selected hospitality and residential projects across East Africa.
+              Currently accepting selected private residential commissions across East Africa.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <p className="mt-14 border-t border-ivory/10 pt-8 text-xs text-sand/60">© 2026 Studio 39+. Architecture, visualization, and editorial spatial experiences.</p>
+        <p className="mt-14 border-t border-ivory/10 pt-8 text-xs text-sand/60">© 2026 Studio 39+. Luxury residential architecture and bespoke living environments.</p>
       </div>
     </footer>
   );

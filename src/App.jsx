@@ -32,6 +32,17 @@ function AnalyticsTracker() {
   return null;
 }
 
+function ScrollToTop() {
+  const { pathname, search, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) return;
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname, search, hash]);
+
+  return null;
+}
+
 function App() {
   const location = useLocation();
   const prefersReducedMotion = useReducedMotion();
@@ -39,6 +50,7 @@ function App() {
   return (
     <MotionConfig reducedMotion="user">
       <AnalyticsTracker />
+      <ScrollToTop />
       <DefaultLayout>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div key={location.pathname} variants={pageTransition} initial={prefersReducedMotion ? false : 'initial'} animate="animate" exit={prefersReducedMotion ? undefined : 'exit'} className="min-h-screen">

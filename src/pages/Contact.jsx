@@ -11,15 +11,15 @@ const initialFormState = {
   email: '',
   phone: '',
   location: '',
-  projectType: 'Residential',
+  projectType: 'Private Residence',
   budget: '',
   timeline: '',
   message: '',
   servicesRequired: []
 };
 
-const projectTypes = ['Residential Architecture', 'Hospitality Architecture', 'Safari Camp Design', 'Interior Architecture', 'Architectural Visualization', 'Renovation', 'Conceptual'];
-const serviceOptions = ['Architectural Design', 'Master Planning', 'Hospitality Design', 'Residential Design', 'Visualization', 'Interior Architecture'];
+const projectTypes = ['Private Residence', 'Coastal Villa', 'Safari Residence', 'Family Estate', 'Luxury Retreat', 'Renovation / Extension', 'Residential Development'];
+const serviceOptions = ['Bespoke Residential Architecture', 'Luxury Villa Design', 'Interior Architecture', 'Landscape Integration', 'Architectural Visualization', 'Residential Master Planning', 'Renovation & Extensions'];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
@@ -88,20 +88,20 @@ function Contact() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
-        title="Book an Architecture Consultation in Nairobi"
-        description="Contact Studio 39+ to discuss residential architecture, hospitality design, safari lodge concepts, interiors, and architectural visualization in Kenya."
+        title="Begin Your Luxury Residential Project in Kenya"
+        description="Contact Studio 39+ to discuss luxury homes, villas, private residences, family estates, renovations, and bespoke residential architecture in Kenya."
       />
       <section className="content-container space-y-12 py-16 md:py-24">
         <SectionHeading
           as="h1"
-          eyebrow="Contact"
-          title="Tell us about your project."
-          copy="Begin a conversation with Studio 39+. Share your site, project type, timeline, and visual ambition so we can respond with a considered next step."
+          eyebrow="Begin Your Project"
+          title="A considered inquiry for a private residential commission."
+          copy="Share your location, project type, timeline, and budget range so Studio 39+ can respond with a thoughtful next step."
         />
       </section>
 
       <section className="content-container grid gap-10 pb-16 lg:grid-cols-[1.1fr_.9fr] xl:gap-14">
-        <div className="border border-mist bg-sand p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
+        <div className="border border-mist bg-sand/70 p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
           <form className="space-y-9" onSubmit={handleSubmit} noValidate>
             <div className="grid gap-6 md:grid-cols-2">
               <Field id="fullName" label="Full Name" error={errors.fullName}>
@@ -117,7 +117,7 @@ function Contact() {
                 <input id="phone" name="phone" value={formData.phone} onChange={handleChange} type="tel" autoComplete="tel" placeholder="+254 700 000 000" className="form-field" aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? 'phone-error' : undefined} />
               </Field>
               <Field id="location" label="Project Location" error={errors.location}>
-                <input id="location" name="location" value={formData.location} onChange={handleChange} type="text" autoComplete="street-address" placeholder="City, region or landmark" className="form-field" aria-invalid={Boolean(errors.location)} aria-describedby={errors.location ? 'location-error' : undefined} />
+                <input id="location" name="location" value={formData.location} onChange={handleChange} type="text" autoComplete="street-address" placeholder="Karen, Diani, Naivasha, Nanyuki..." className="form-field" aria-invalid={Boolean(errors.location)} aria-describedby={errors.location ? 'location-error' : undefined} />
               </Field>
             </div>
 
@@ -129,17 +129,31 @@ function Contact() {
                   ))}
                 </select>
               </Field>
-              <Field id="budget" label="Estimated Budget" error={errors.budget}>
-                <input id="budget" name="budget" value={formData.budget} onChange={handleChange} type="text" placeholder="e.g. $45k - $80k" className="form-field" aria-invalid={Boolean(errors.budget)} aria-describedby={errors.budget ? 'budget-error' : undefined} />
+              <Field id="budget" label="Estimated Budget Range" error={errors.budget}>
+                <select id="budget" name="budget" value={formData.budget} onChange={handleChange} className="form-field" aria-invalid={Boolean(errors.budget)} aria-describedby={errors.budget ? 'budget-error' : undefined}>
+                  <option value="">Select a range</option>
+                  <option value="KES 25M - 50M">KES 25M - 50M</option>
+                  <option value="KES 50M - 100M">KES 50M - 100M</option>
+                  <option value="KES 100M - 250M">KES 100M - 250M</option>
+                  <option value="KES 250M+">KES 250M+</option>
+                  <option value="To be discussed privately">To be discussed privately</option>
+                </select>
               </Field>
             </div>
 
-            <Field id="timeline" label="Expected Timeline" error={errors.timeline}>
-              <input id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} type="text" placeholder="e.g. Concept in 6 weeks, build in 2027" className="form-field" aria-invalid={Boolean(errors.timeline)} aria-describedby={errors.timeline ? 'timeline-error' : undefined} />
+            <Field id="timeline" label="Estimated Timeline" error={errors.timeline}>
+              <select id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} className="form-field" aria-invalid={Boolean(errors.timeline)} aria-describedby={errors.timeline ? 'timeline-error' : undefined}>
+                <option value="">Select a timeline</option>
+                <option value="Immediate consultation">Immediate consultation</option>
+                <option value="Design within 3 months">Design within 3 months</option>
+                <option value="Design within 6 months">Design within 6 months</option>
+                <option value="Building in 2027">Building in 2027</option>
+                <option value="Exploratory / land planning">Exploratory / land planning</option>
+              </select>
             </Field>
 
             <Field id="message" label="Message / Project Brief" error={errors.message}>
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about your vision, timeline, and any special priorities." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about the site, lifestyle, family needs, atmosphere, and any private priorities." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
             </Field>
 
             <fieldset>
@@ -160,7 +174,7 @@ function Contact() {
               <p className="eyebrow">Reference Files</p>
               <div className="mt-4">
                 <FileUpload files={files} onFilesChange={setFiles} />
-                <p className="mt-3 text-xs leading-6 text-charcoal/60 dark:text-sand/60">Optional: add sketches, site photos, inspiration imagery, PDFs, or project information. File names are included with the inquiry.</p>
+                <p className="mt-3 text-xs leading-6 text-charcoal/60 dark:text-sand/60">Optional: add title deeds, survey drawings, site photos, inspiration imagery, sketches, or PDFs. File names are included with the inquiry.</p>
               </div>
             </div>
 
@@ -171,12 +185,12 @@ function Contact() {
             )}
 
             <button type="submit" disabled={state.submitting} className="btn-primary disabled:cursor-not-allowed disabled:opacity-60">
-              {state.submitting ? 'Preparing inquiry...' : 'Begin a conversation'}
+              {state.submitting ? 'Preparing inquiry...' : 'Begin Your Project'}
             </button>
           </form>
         </div>
 
-        <aside className="space-y-10 border border-mist bg-sand p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
+        <aside className="space-y-10 border border-mist bg-sand/70 p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
           <ContactItem label="Email" href={`mailto:${site.email}`} value={site.email} onClick={() => trackEmailClick('contact_sidebar')} />
           <ContactItem label="Phone" href={`tel:${site.phone}`} value={site.displayPhone} onClick={() => trackPhoneClick('contact_sidebar')} />
           <div>

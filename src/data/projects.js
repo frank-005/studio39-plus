@@ -1,118 +1,118 @@
 const projects = [
   {
-    id: 'nairobi-courtyard-house',
-    name: 'Nairobi Courtyard House',
-    category: 'Residential',
+    id: 'karen-courtyard-residence',
+    name: 'Karen Courtyard Residence',
+    category: 'Private Residence',
     location: 'Karen, Nairobi, Kenya',
-    year: '2025',
-    status: 'Design development',
-    hero: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    imagePosition: 'center 46%',
-    excerpt: 'A calm luxury residence in Nairobi organized around shaded courts, privacy, and expansive daylight.',
-    overview:
-      'A private residence for a family seeking a composed retreat within Nairobi, balancing generous entertaining spaces with quiet daily rituals.',
-    brief:
-      'The client needed a private family house that could host guests generously while keeping bedrooms, service areas, and garden rooms discreetly separated.',
-    concept:
-      'The plan uses a sequence of courtyards to filter light, frame gardens, and create a modern Kenyan home with privacy and climatic intelligence.',
-    context:
-      'Set within a leafy Karen plot, the house responds to neighboring boundaries, mature planting, and Nairobi daylight with shaded thresholds and inward-facing garden rooms.',
-    clientGoals: 'Create a refined family home with warm materiality, strong indoor-outdoor flow, and discreet service planning.',
-    challenges: 'Manage privacy from neighboring plots while preserving openness, cross ventilation, and large social spaces.',
-    materials: ['textured concrete', 'local stone', 'timber screens', 'lime-washed plaster', 'bronze-toned metalwork'],
-    renders: ['arrival court', 'double-height lounge', 'garden terrace'],
-    floorPlans: ['ground floor zoning', 'private wing plan', 'courtyard relationship diagram'],
-    details: [
-      'The home is organized as a series of framed rooms that move between garden, shaded veranda, and interior volume.',
-      'Material contrast keeps the residence quiet but tactile, with stone and timber softening the sculptural concrete shell.',
-      'A controlled arrival sequence gives the house a cinematic sense of reveal while supporting privacy and family life.'
-    ]
-  },
-  {
-    id: 'safari-lodge-retreat',
-    name: 'Safari Lodge Retreat',
-    category: 'Hospitality',
-    location: 'Maasai Mara, Kenya',
-    year: '2024',
-    status: 'Concept design',
-    hero: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    imagePosition: 'center 54%',
-    excerpt: 'A safari lodge concept for East Africa with low-impact planning, shaded decks, and immersive landscape views.',
-    overview:
-      'A boutique hospitality concept designed for owners developing an intimate lodge experience rooted in landscape, silence, and guest comfort.',
-    brief:
-      'The brief called for a memorable East African lodge concept with private suites, a strong arrival sequence, and an operational plan that would remain discreet to guests.',
-    concept:
-      'Guest suites are placed as a light-touch constellation, allowing each unit to hold a private horizon while shared spaces anchor the lodge.',
-    context:
-      'The project is imagined as a landscape-first retreat, where views, shade, service access, and low visual impact guide every planning decision.',
-    clientGoals: 'Develop a luxury safari lodge identity with strong arrival, high comfort, and a restrained architectural language.',
-    challenges: 'Balance premium guest experience with climate response, low visual impact, and efficient back-of-house circulation.',
-    materials: ['rammed earth', 'canvas screens', 'reclaimed timber', 'stone plinths', 'brushed brass details'],
-    renders: ['main deck', 'guest suite terrace', 'dining pavilion'],
-    floorPlans: ['site strategy', 'suite module', 'service circulation'],
-    details: [
-      'The lodge frames the savannah through deep roof overhangs, recessed terraces, and carefully edited sightlines.',
-      'Hospitality spaces are designed for slow transitions, with arrival, dining, lounge, and fire deck forming a natural guest journey.',
-      'A natural palette helps the architecture recede into the landscape while still feeling polished and memorable.'
-    ]
-  },
-  {
-    id: 'studio-gallery',
-    name: 'Studio Gallery',
-    category: 'Conceptual',
-    location: 'Nairobi, Kenya',
     year: '2026',
-    status: 'Visualization study',
-    hero: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    status: 'Design development',
+    hero: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80&fm=webp',
     imagePosition: 'center 48%',
-    excerpt: 'A conceptual gallery and architectural visualization study with airy volumes and sculptural geometry.',
+    excerpt: 'A composed family estate shaped by shaded courtyards, garden rooms, and quiet ceremonial arrival.',
     overview:
-      'A visual research project exploring how gallery architecture in Nairobi can combine civic calm, controlled light, and flexible exhibition space.',
+      'A private Nairobi residence conceived as a refined retreat for family life, entertaining, and the daily rituals of indoor-outdoor living.',
     brief:
-      'The study explores a compact cultural venue that can support exhibitions, gatherings, and architectural visualization for early stakeholder conversations.',
+      'The client wanted a highly personal home with generous entertaining spaces, discreet private wings, and a strong relationship to mature landscape.',
     concept:
-      'Rigid geometry is softened by top light, textured walls, and a procession that compresses and releases through exhibition rooms.',
+      'A sequence of courts, verandas, and deep thresholds filters daylight and frames the garden while maintaining privacy from neighboring plots.',
     context:
-      'The gallery is conceived for an urban Nairobi setting where a quiet civic interior can offer contrast to the speed and density of the city.',
-    clientGoals: 'Test spatial identity, render atmosphere, and create a compelling visualization package for early stakeholder review.',
-    challenges: 'Create drama without visual noise and design gallery rooms that remain flexible for changing exhibitions.',
-    materials: ['mineral plaster', 'polished concrete', 'blackened steel', 'oak thresholds'],
-    renders: ['main hall', 'light well', 'threshold gallery'],
-    floorPlans: ['visitor route', 'gallery modules', 'lighting diagram'],
+      'Set within leafy Karen, the residence responds to Nairobi light, seasonal rain, privacy, and the relaxed formality of contemporary Kenyan living.',
+    clientGoals: 'Create a timeless private home with calm arrival, natural light, warm materiality, and effortless entertaining.',
+    challenges: 'Balance openness with privacy while coordinating service routes, guest movement, cross ventilation, and garden continuity.',
+    materials: ['local stone', 'lime plaster', 'timber screens', 'bronze metalwork', 'travertine'],
+    renders: ['arrival court', 'double-height salon', 'garden veranda'],
+    floorPlans: ['arrival sequence', 'family wing plan', 'courtyard and veranda diagram'],
     details: [
-      'Rigid geometry is softened by generous light wells.',
-      'A spatially rich circulation path guides visitors through exhibition rooms.',
-      'Strong visual order is drawn from artisanal facade patterns.'
+      'The home unfolds gradually from a quiet entry court into a generous garden-facing living volume.',
+      'Stone, timber, and mineral plaster create a tactile palette that feels calm rather than decorative.',
+      'Deep overhangs and shaded outdoor rooms allow the house to live comfortably between interior and landscape.'
     ]
   },
   {
-    id: 'urban-loft',
-    name: 'Urban Loft',
-    category: 'Interior Design',
-    location: 'Westlands, Nairobi, Kenya',
+    id: 'diani-coastal-villa',
+    name: 'Diani Coastal Villa',
+    category: 'Coastal Villa',
+    location: 'Diani, Kenya',
     year: '2025',
-    status: 'Completed visualization',
-    hero: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    status: 'Concept design',
+    hero: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80&fm=webp',
     imagePosition: 'center 50%',
-    excerpt: 'A Nairobi interior architecture project with custom joinery, quiet texture, and contemporary spatial rhythm.',
+    excerpt: 'A breezy coastal villa with carved shade, tactile stone, and slow transitions toward the Indian Ocean.',
     overview:
-      'A compact city apartment reworked through interior architecture, lighting, and custom storage to feel larger, calmer, and more considered.',
+      'A luxury coastal home for private holidays and intimate hosting, designed around shade, sea breeze, and relaxed elegance.',
     brief:
-      'The client wanted a more refined apartment interior with better storage, a warmer atmosphere, and visuals that could confirm finishes before procurement.',
+      'The villa needed to feel effortless and durable, with privacy for guests, generous outdoor rooms, and a strong sense of coastal ease.',
     concept:
-      'Continuous joinery lines organize the apartment while a restrained material palette brings depth without visual clutter.',
+      'Layered pavilions open to courtyards, water, and wind, creating a house that can shift from quiet family use to hosting.',
     context:
-      'Located in Westlands, the apartment needed to feel calm despite its compact footprint and dense urban setting.',
-    clientGoals: 'Improve everyday functionality, create a premium visual identity, and use renders to validate finishes before procurement.',
-    challenges: 'Increase perceived space within a tight footprint while keeping storage, lighting, and circulation intuitive.',
-    materials: ['oak veneer', 'microcement', 'linen upholstery', 'warm stone', 'matte black ironmongery'],
-    renders: ['living room', 'kitchen wall', 'primary suite'],
-    floorPlans: ['furniture layout', 'joinery elevation', 'lighting plan'],
+      'The design draws from Swahili coastal thresholds, Mediterranean calm, and contemporary tropical planning.',
+    clientGoals: 'Build a private coastal sanctuary with high comfort, low visual noise, and generous exterior living.',
+    challenges: 'Resolve humidity, salt air, privacy, and large openings without losing architectural restraint.',
+    materials: ['coral stone', 'white limewash', 'teak', 'woven screens', 'sand-toned terrazzo'],
+    renders: ['pool terrace', 'master suite deck', 'open dining pavilion'],
+    floorPlans: ['guest wing plan', 'pool and garden strategy', 'breeze and shade diagram'],
     details: [
-      'Custom joinery and tonal finishes anchor the living space.',
-      'An open-plan arrangement creates refined material transitions.',
-      'Intentional use of shadow, texture, and proportion gives the apartment a quieter rhythm.'
+      'The villa relies on deep shade, operable screens, and courtyard planting to soften coastal heat.',
+      'A restrained material palette allows the landscape and ocean light to carry the atmosphere.',
+      'Bedrooms are arranged as private suites connected by shaded garden walks.'
+    ]
+  },
+  {
+    id: 'mara-safari-residence',
+    name: 'Mara Safari Residence',
+    category: 'Safari Residence',
+    location: 'Maasai Mara, Kenya',
+    year: '2025',
+    status: 'Private retreat concept',
+    hero: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    imagePosition: 'center 52%',
+    excerpt: 'A low-impact private retreat where wide horizons, silence, and deep verandas define the experience.',
+    overview:
+      'A landscape-led private residence for extended stays in the Mara, combining retreat-level comfort with the intimacy of a home.',
+    brief:
+      'The project called for a discreet family retreat with private suites, contemplative shared spaces, and a light visual presence in the landscape.',
+    concept:
+      'The house is planned as a quiet constellation of pavilions, each oriented toward view, shade, privacy, and evening gathering.',
+    context:
+      'Architecture is kept low and horizontal, allowing the horizon and vegetation to remain the primary experience.',
+    clientGoals: 'Create an intimate safari home with private retreat comfort and an understated environmental attitude.',
+    challenges: 'Balance remoteness, service access, heat, wind, guest comfort, and the need for a minimal footprint.',
+    materials: ['rammed earth', 'reclaimed timber', 'canvas screens', 'stone plinths', 'brushed brass'],
+    renders: ['horizon lounge', 'family fire deck', 'private suite'],
+    floorPlans: ['pavilion plan', 'arrival and service route', 'view corridor study'],
+    details: [
+      'Shared rooms gather around a fire terrace, while suites sit apart for privacy and uninterrupted views.',
+      'Natural materials help the residence recede into the landscape without feeling rustic.',
+      'The architectural language is quiet, horizontal, and deeply tied to the horizon.'
+    ]
+  },
+  {
+    id: 'rosslyn-family-estate',
+    name: 'Rosslyn Family Estate',
+    category: 'Family Estate',
+    location: 'Rosslyn, Nairobi, Kenya',
+    year: '2026',
+    status: 'Residential master planning',
+    hero: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80&fm=webp',
+    imagePosition: 'center 47%',
+    excerpt: 'A multi-generational estate organized around gardens, wellness, guest privacy, and long-term family life.',
+    overview:
+      'A private estate framework for a family planning phased construction across a large Nairobi site.',
+    brief:
+      'The owners needed a master plan that could support a main house, guest suites, staff areas, garden rooms, and future expansion.',
+    concept:
+      'Buildings are arranged as a loose garden composition, separating quiet private life from social spaces and service movement.',
+    context:
+      'The estate responds to mature trees, arrival hierarchy, slope, privacy, and the desire for a resort-like domestic atmosphere.',
+    clientGoals: 'Plan a refined family compound with flexible phasing, high privacy, and a calm landscape-led identity.',
+    challenges: 'Coordinate multiple buildings, security, service access, family privacy, and future development without cluttering the site.',
+    materials: ['cut stone', 'aged timber', 'olive-toned metal', 'textured render', 'natural clay tile'],
+    renders: ['main house veranda', 'guest pavilion', 'wellness court'],
+    floorPlans: ['estate framework', 'privacy zoning', 'phasing strategy'],
+    details: [
+      'The estate is conceived as a sequence of gardens rather than a single oversized building.',
+      'Guest and family zones remain connected but independent, supporting both privacy and gathering.',
+      'A consistent material language gives the compound coherence across phases.'
     ]
   }
 ];

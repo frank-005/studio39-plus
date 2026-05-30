@@ -16,18 +16,18 @@ export const site = {
     longitude: 36.8797
   },
   keywords: [
-    'Architects in Nairobi',
-    'Luxury architects Kenya',
-    'Hospitality architects East Africa',
-    'Safari lodge architects',
-    'Residential architects Nairobi',
-    'Architectural visualization Kenya'
+    'Luxury Residential Architect Kenya',
+    'Modern Villa Architect Nairobi',
+    'High-End Residential Design Kenya',
+    'Contemporary Home Architect East Africa',
+    'Bespoke Villa Design Kenya',
+    'Private Residence Architect Nairobi'
   ],
   social: ['https://www.instagram.com/', 'https://www.behance.net/', 'https://www.linkedin.com/']
 };
 
 export const defaultImage =
-  'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80&fm=webp';
+  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80&fm=webp';
 
 export function absoluteUrl(path = '/') {
   if (path.startsWith('http')) return path;

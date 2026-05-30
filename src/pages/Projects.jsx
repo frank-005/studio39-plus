@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 import CTASection from '../components/CTASection';
 import projects from '../data/projects';
 
-const categories = ['All', 'Residential', 'Hospitality', 'Conceptual', 'Interior Design'];
+const categories = ['All', 'Private Residence', 'Coastal Villa', 'Safari Residence', 'Family Estate'];
 
 function Projects() {
   const [active, setActive] = useState('All');
@@ -17,15 +17,15 @@ function Projects() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
-        title="Architecture Portfolio | Studio 39+ Case Studies"
-        description="Browse Studio 39+ architecture case studies across Nairobi residences, safari lodge architecture, hospitality design, interior architecture, and visualization."
+        title="Featured Residences | Luxury Homes and Villas in Kenya"
+        description="Browse Studio 39+ luxury residential architecture studies across private homes, coastal villas, safari residences, and family estates in Kenya."
       />
       <section className="content-container space-y-12 py-16 sm:py-20 md:py-28">
         <SectionHeading
           as="h1"
-          eyebrow="Projects"
-          title="A curated project archive of residences, lodges, interiors, and spatial studies."
-          copy="Each case study moves beyond imagery into design intent, site response, material language, scope, process, and spatial narrative."
+          eyebrow="Featured Residences"
+          title="A curated portfolio of homes, villas, retreats, and private estates."
+          copy="Each residence study moves beyond imagery into design intent, site response, material atmosphere, lifestyle, and spatial narrative."
         />
         <div className="flex gap-3 overflow-x-auto pb-3 text-xs uppercase tracking-[0.2em] text-charcoal/70 dark:text-sand" role="list" aria-label="Filter projects by category">
           {categories.map((category) => (
@@ -51,7 +51,7 @@ function Projects() {
           <ProjectCard key={project.id} project={project} />
         ))}
       </section>
-      <CTASection title="Need a case-study approach for your own site or hospitality brief?" />
+      <CTASection title="Planning a private residence, villa, or estate in Kenya?" />
     </div>
   );
 }

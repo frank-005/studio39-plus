@@ -28,19 +28,19 @@ export const architecturalFirmSchema = {
   ...baseBusiness,
   '@type': 'ArchitecturalFirm',
   description:
-    'Studio 39+ is a Nairobi architecture studio for residential, hospitality, safari lodge, interior architecture, and architectural visualization projects.'
+    'Studio 39+ is a Nairobi architecture studio for luxury homes, villas, private residences, family estates, interiors, and bespoke residential environments.'
 };
 
 export const localBusinessSchema = {
   ...baseBusiness,
   '@type': 'LocalBusiness',
-  description: 'Architects in Nairobi creating luxury residential, hospitality, and visualization work across Kenya and East Africa.'
+  description: 'Luxury residential architects in Nairobi creating private homes, villas, estates, and bespoke living environments across Kenya and East Africa.'
 };
 
 export const professionalServiceSchema = {
   ...baseBusiness,
   '@type': 'ProfessionalService',
-  serviceType: 'Architecture, interior architecture, hospitality design, and architectural visualization'
+  serviceType: 'Luxury residential architecture, villa design, interior architecture, landscape integration, residential master planning, and architectural visualization'
 };
 
 export function projectSchema(project) {

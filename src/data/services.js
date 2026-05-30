@@ -1,94 +1,101 @@
 const services = [
   {
-    id: 'architectural-design',
-    title: 'Architectural Design',
-    shortTitle: 'Architecture',
-    description: 'Concept-led architectural design from first spatial strategy through refined documentation and visual direction.',
-    seoTitle: 'Architectural Design Studio Nairobi',
+    id: 'bespoke-residential-architecture',
+    title: 'Bespoke Residential Architecture',
+    shortTitle: 'Residences',
+    icon: '01',
+    description: 'Tailored private homes shaped around family rituals, privacy, climate, materiality, and a refined sense of arrival.',
+    seoTitle: 'Luxury Residential Architect Kenya',
     seoDescription:
-      'Architectural design studio in Nairobi for residential, hospitality, cultural, and boutique commercial projects across East Africa.',
-    audience: 'For clients who need a design-led architecture partner to translate site, brief, atmosphere, and delivery into one clear spatial direction.',
-    keywords: ['architectural design Nairobi', 'architects in Nairobi', 'luxury architects Kenya'],
-    process: ['Brief and site intelligence', 'Concept architecture', 'Spatial and material development', 'Documentation and visual coordination'],
-    projectIds: ['nairobi-courtyard-house', 'safari-lodge-retreat', 'studio-gallery']
+      'Bespoke residential architecture in Kenya for private homes, family estates, and high-end residences across Nairobi and East Africa.',
+    audience: 'For private clients seeking a calm, highly personal design process for a contemporary home rooted in site and lifestyle.',
+    keywords: ['Luxury Residential Architect Kenya', 'High-End Residential Design Kenya', 'Private Residence Architect Nairobi'],
+    process: ['Lifestyle and site brief', 'Concept architecture', 'Material and spatial development', 'Documentation and coordination'],
+    projectIds: ['karen-courtyard-residence', 'rosslyn-family-estate']
   },
   {
-    id: 'master-planning',
-    title: 'Master Planning',
-    shortTitle: 'Planning',
-    description: 'Site strategy, phasing, guest journeys, privacy, access, and landscape-led planning for larger developments.',
-    seoTitle: 'Master Planning East Africa',
+    id: 'luxury-villa-design',
+    title: 'Luxury Villa Design',
+    shortTitle: 'Villas',
+    icon: '02',
+    description: 'Contemporary tropical and coastal villas with shaded outdoor rooms, guest privacy, and resort-level ease.',
+    seoTitle: 'Bespoke Villa Design Kenya',
     seoDescription:
-      'Master planning services for hospitality, residential, lodge, and boutique development sites across Kenya and East Africa.',
-    audience: 'For developers, landowners, and hospitality teams shaping a site before committing to buildings, infrastructure, or phased investment.',
-    keywords: ['master planning Kenya', 'hospitality architects East Africa', 'safari lodge architects'],
-    process: ['Site and access analysis', 'Program and phasing strategy', 'View, privacy, and movement diagrams', 'Development framework'],
-    projectIds: ['safari-lodge-retreat', 'nairobi-courtyard-house']
-  },
-  {
-    id: 'residential-architecture',
-    title: 'Residential Design',
-    shortTitle: 'Residential',
-    description: 'Tailored homes across Kenya shaped around privacy, climate, daylight, and calm everyday rituals.',
-    seoTitle: 'Residential Architects Kenya',
-    seoDescription:
-      'Studio 39+ designs refined residential architecture in Nairobi and across Kenya, from concept design and visualization to documentation.',
-    audience: 'For private clients, families, and developers planning contemporary homes, villas, townhouses, or residential compounds.',
-    keywords: ['architects in Nairobi', 'residential architects Kenya', 'luxury architects Kenya'],
-    process: ['Site and lifestyle brief', 'Concept massing and spatial planning', 'Material and atmosphere studies', 'Visualization and documentation'],
-    projectIds: ['nairobi-courtyard-house', 'urban-loft']
-  },
-  {
-    id: 'hospitality-architecture',
-    title: 'Hospitality Design',
-    shortTitle: 'Hospitality',
-    description: 'Boutique hospitality environments with clear guest journeys, atmospheric public spaces, and strong operational logic.',
-    seoTitle: 'Hospitality Architects East Africa',
-    seoDescription:
-      'Hospitality architects in East Africa for lodges, retreats, boutique hotels, restaurants, and destination guest experiences.',
-    audience: 'For hospitality owners, developers, and operators creating lodges, retreats, boutique hotels, restaurants, or guest experiences.',
-    keywords: ['hospitality architects East Africa', 'luxury architects Kenya', 'architects in Nairobi'],
-    process: ['Guest experience strategy', 'Site planning and arrival sequence', 'Room and amenity concept design', 'Visualization for stakeholder alignment'],
-    projectIds: ['safari-lodge-retreat', 'studio-gallery']
-  },
-  {
-    id: 'safari-camp-design',
-    title: 'Safari Camp Design',
-    shortTitle: 'Safari Camps',
-    description: 'Low-impact safari lodge and camp concepts that balance landscape sensitivity, luxury, and buildable detail.',
-    seoTitle: 'Safari Lodge Architects',
-    seoDescription:
-      'Safari lodge architects for East African camps, retreats, guest suites, dining pavilions, and landscape-led hospitality concepts.',
-    audience: 'For lodge developers and landowners planning intimate safari camps, guest suites, dining pavilions, or phased retreat concepts.',
-    keywords: ['safari lodge architects', 'hospitality architects East Africa', 'luxury architects Kenya'],
-    process: ['Landscape and view analysis', 'Guest suite module studies', 'Back-of-house and service planning', 'Material, shading, and climate response'],
-    projectIds: ['safari-lodge-retreat']
+      'Luxury villa design in Kenya for coastal homes, private retreats, and modern villas in Nairobi, Diani, and East Africa.',
+    audience: 'For homeowners, diaspora clients, and villa developers creating private retreats with a strong lifestyle experience.',
+    keywords: ['Bespoke Villa Design Kenya', 'Modern Villa Architect Nairobi', 'Contemporary Home Architect East Africa'],
+    process: ['Villa brief and precedent study', 'Site and climate strategy', 'Pavilion and suite planning', 'Lifestyle visualization'],
+    projectIds: ['diani-coastal-villa', 'mara-safari-residence']
   },
   {
     id: 'interior-architecture',
     title: 'Interior Architecture',
     shortTitle: 'Interiors',
-    description: 'Interior architecture with precise layouts, tactile material palettes, lighting logic, and custom joinery.',
-    seoTitle: 'Interior Architecture Nairobi',
+    icon: '03',
+    description: 'Integrated interiors, joinery, lighting, finishes, and spatial detailing for homes that feel resolved from inside out.',
+    seoTitle: 'Luxury Interior Architecture Nairobi',
     seoDescription:
-      'Interior architecture in Nairobi for refined residences, apartments, hospitality spaces, and visualization-led interior decisions.',
-    audience: 'For clients who need spatial upgrades, interior planning, joinery direction, finish studies, or premium visual coordination.',
-    keywords: ['architects in Nairobi', 'residential architects Kenya', 'architectural visualization Kenya'],
-    process: ['Spatial audit and brief', 'Furniture and joinery planning', 'Material and lighting palette', 'Rendered validation before procurement'],
-    projectIds: ['urban-loft', 'nairobi-courtyard-house']
+      'Interior architecture in Nairobi for luxury residences, private apartments, villas, and bespoke living environments.',
+    audience: 'For clients who want architecture, interiors, lighting, and material atmosphere developed as one coherent experience.',
+    keywords: ['High-End Residential Design Kenya', 'Luxury Interior Architecture Nairobi', 'Private Residence Architect Nairobi'],
+    process: ['Interior brief', 'Furniture and joinery planning', 'Lighting and material palette', 'Rendered validation'],
+    projectIds: ['karen-courtyard-residence', 'rosslyn-family-estate']
+  },
+  {
+    id: 'landscape-integration',
+    title: 'Landscape Integration',
+    shortTitle: 'Landscape',
+    icon: '04',
+    description: 'Garden rooms, terraces, courtyards, pools, and outdoor living spaces composed as part of the architecture.',
+    seoTitle: 'Indoor Outdoor Home Design Kenya',
+    seoDescription:
+      'Landscape-integrated residential architecture in Kenya for courtyards, gardens, pools, terraces, and indoor-outdoor living.',
+    audience: 'For homeowners who want the garden, arrival, pool terrace, and outdoor rooms to feel intentional and connected.',
+    keywords: ['Contemporary Home Architect East Africa', 'High-End Residential Design Kenya', 'Luxury Residential Architect Kenya'],
+    process: ['Site reading', 'Outdoor room strategy', 'Pool and garden coordination', 'Threshold detailing'],
+    projectIds: ['diani-coastal-villa', 'karen-courtyard-residence']
   },
   {
     id: 'architectural-visualization',
     title: 'Architectural Visualization',
     shortTitle: 'Visualization',
-    description: 'Cinematic stills, visual narratives, and concept imagery that make design intent clear before construction.',
-    seoTitle: 'Architectural Visualization Kenya',
+    icon: '05',
+    description: 'Cinematic renderings and visual narratives that clarify atmosphere, finishes, light, and lifestyle before construction.',
+    seoTitle: 'Luxury Residential Visualization Kenya',
     seoDescription:
-      'Architectural visualization in Kenya for residences, hospitality concepts, interiors, stakeholder presentations, and marketing imagery.',
-    audience: 'For architects, developers, and private clients who need persuasive visuals to make decisions, fundraise, market, or refine a concept.',
-    keywords: ['architectural visualization Kenya', 'architects in Nairobi', 'hospitality architects East Africa'],
-    process: ['Visual brief and references', 'Model and camera direction', 'Material and light studies', 'Final renders and presentation assets'],
-    projectIds: ['studio-gallery', 'urban-loft', 'safari-lodge-retreat']
+      'Architectural visualization for luxury homes, villas, private residences, and residential developments in Kenya.',
+    audience: 'For private clients and developers who need confidence in the experience of a home before major decisions are made.',
+    keywords: ['Bespoke Villa Design Kenya', 'High-End Residential Design Kenya', 'Architectural Visualization Kenya'],
+    process: ['Visual brief', 'Camera and light studies', 'Material atmosphere', 'Final presentation imagery'],
+    projectIds: ['diani-coastal-villa', 'mara-safari-residence']
+  },
+  {
+    id: 'residential-master-planning',
+    title: 'Residential Master Planning',
+    shortTitle: 'Master Planning',
+    icon: '06',
+    description: 'Long-range planning for family estates, private compounds, villa developments, access, privacy, and phasing.',
+    seoTitle: 'Residential Master Planning Kenya',
+    seoDescription:
+      'Residential master planning in Kenya for private estates, villa compounds, family residences, and phased luxury developments.',
+    audience: 'For landowners and developers shaping larger residential sites before committing to buildings and infrastructure.',
+    keywords: ['Luxury Residential Architect Kenya', 'Contemporary Home Architect East Africa', 'High-End Residential Design Kenya'],
+    process: ['Site and access analysis', 'Privacy and view strategy', 'Phasing framework', 'Development guidelines'],
+    projectIds: ['rosslyn-family-estate', 'mara-safari-residence']
+  },
+  {
+    id: 'renovation-extensions',
+    title: 'Renovation & Extensions',
+    shortTitle: 'Renovation',
+    icon: '07',
+    description: 'Sensitive upgrades, extensions, and transformations for existing homes seeking greater light, flow, and value.',
+    seoTitle: 'Luxury Home Renovation Architect Nairobi',
+    seoDescription:
+      'Architectural renovation and extension design for high-end homes, villas, and private residences in Nairobi and Kenya.',
+    audience: 'For homeowners updating an existing property with a more elegant spatial experience and stronger architectural identity.',
+    keywords: ['Modern Villa Architect Nairobi', 'Private Residence Architect Nairobi', 'High-End Residential Design Kenya'],
+    process: ['Existing condition review', 'Opportunity mapping', 'Concept upgrades', 'Detail and documentation'],
+    projectIds: ['karen-courtyard-residence']
   }
 ];
 

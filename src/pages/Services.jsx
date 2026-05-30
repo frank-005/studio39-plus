@@ -8,11 +8,11 @@ function Services() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
-        title="Architecture Services in Nairobi | Homes, Lodges and Visualization"
-        description="Studio 39+ offers architectural design, residential design, hospitality architecture, safari lodge concepts, interiors, documentation, and architectural visualization in Kenya."
+        title="Luxury Residential Architecture Services in Kenya"
+        description="Studio 39+ offers bespoke residential architecture, luxury villa design, interior architecture, landscape integration, visualization, master planning, and renovations in Kenya."
       />
       <section className="content-container space-y-12 py-16 sm:py-20 md:py-28">
-        <SectionHeading as="h1" eyebrow="Services" title="Architecture, planning, interiors, and visualization for considered environments." copy="Dedicated service paths for clients seeking a design-led studio for residences, hospitality, safari lodge concepts, boutique developments, and presentation-ready visual direction." />
+        <SectionHeading as="h1" eyebrow="Services" title="Residential architecture services for exceptional private homes." copy="Dedicated service paths for clients seeking a refined studio for private residences, coastal villas, family estates, interior architecture, renovations, and presentation-ready visual direction." />
       </section>
 
       <section className="content-container grid gap-x-10 pb-20 md:grid-cols-2 lg:grid-cols-3">
@@ -20,7 +20,7 @@ function Services() {
           <ServiceCard key={service.title} service={service} />
         ))}
       </section>
-      <CTASection title="Have a site, lodge brief, home concept, or visualization package to discuss?" />
+      <CTASection title="Have a site, residence brief, villa concept, or family estate to discuss?" />
     </div>
   );
 }

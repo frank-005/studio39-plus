@@ -3,9 +3,9 @@ import { site } from '../data/site';
 import { trackWhatsAppClick } from '../utils/analytics';
 
 function CTASection({
-  eyebrow = 'Book Consultation',
-  title = 'Bring your site, brief, or early idea into a focused studio conversation.',
-  copy = 'Studio 39+ helps residential, hospitality, and visualization clients clarify the next intelligent move before design begins.'
+  eyebrow = 'Begin Your Project',
+  title = 'Bring your site, brief, or early idea into a private studio conversation.',
+  copy = 'Studio 39+ helps residential clients clarify the next intelligent move before design begins.'
 }) {
   return (
     <section className="content-container py-16 sm:py-20 md:py-24">
@@ -20,7 +20,7 @@ function CTASection({
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <Link className="btn-primary" to="/contact">
-              Book Consultation
+              Start Your Project
             </Link>
             <a className="btn-secondary" href={site.whatsapp} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick('cta_section')}>
               WhatsApp

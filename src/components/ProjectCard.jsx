@@ -6,18 +6,18 @@ function ProjectCard({ project }) {
   const material = project.materials?.[0] || 'material study';
 
   return (
-    <motion.article whileHover={{ y: -5 }} className="project-card group overflow-hidden border border-charcoal/12 bg-sand/80 transition duration-500 hover:border-charcoal/35 dark:border-ivory/12 dark:bg-charcoal">
+    <motion.article whileHover={{ y: -6 }} className="project-card group overflow-hidden border border-charcoal/10 bg-sand/60 transition duration-700 hover:border-charcoal/35 dark:border-ivory/12 dark:bg-charcoal">
       <Link to={`/projects/${project.id}`} className="block overflow-hidden">
         <div className="project-card-media relative overflow-hidden bg-mist dark:bg-charcoal">
           <img
             src={optimizedImageUrl(project.hero, 900)}
             srcSet={imageSrcSet(project.hero, [480, 720, 960])}
             sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-            alt={`${project.name}, ${project.category.toLowerCase()} architecture project in ${project.location}`}
+            alt={`${project.name}, luxury ${project.category.toLowerCase()} by Studio 39+ in ${project.location}`}
             loading="lazy"
             decoding="async"
             style={{ objectPosition: project.imagePosition || 'center center' }}
-            className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
+            className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.045]"
           />
         </div>
       </Link>
@@ -39,8 +39,8 @@ function ProjectCard({ project }) {
             <dd>{project.status}</dd>
           </div>
         </dl>
-        <Link to={`/projects/${project.id}`} className="project-card-link inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand" aria-label={`View case study for ${project.name}`}>
-          View case study <span aria-hidden="true">-&gt;</span>
+        <Link to={`/projects/${project.id}`} className="project-card-link inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand" aria-label={`View residence study for ${project.name}`}>
+          View Residence <span aria-hidden="true">-&gt;</span>
         </Link>
       </div>
     </motion.article>

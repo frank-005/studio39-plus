@@ -50,7 +50,7 @@ function ServiceDetail() {
           <div>
             <p className="eyebrow">Process</p>
             <h2 id="service-process-title" className="mt-4 max-w-xl text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-              A restrained workflow that moves from brief to clear design decisions.
+              A restrained workflow that moves from private brief to clear residential design decisions.
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -70,11 +70,11 @@ function ServiceDetail() {
             <div>
               <p className="eyebrow">Relevant Work</p>
               <h2 id="related-projects-title" className="mt-4 text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-                Related case studies
+                Related residences
               </h2>
             </div>
             <Link to="/projects" className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand">
-              View portfolio
+              View residences
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

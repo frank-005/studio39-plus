@@ -1,15 +1,15 @@
 const testimonials = [
   {
     quote:
-      'The studio translated a loose brief into a precise architectural direction. The process felt measured, visual, and very easy to trust.',
+      'The studio translated our private brief into a home that felt calm, personal, and deeply connected to the site.',
     name: 'Private residential client',
-    context: 'Nairobi residence'
+    context: 'Karen residence'
   },
   {
     quote:
-      'Their visual storytelling helped our hospitality team understand the guest journey before major decisions were locked in.',
-    name: 'Development lead',
-    context: 'East Africa lodge concept'
+      'The design process gave our diaspora family confidence before we committed to building in Kenya.',
+    name: 'Diaspora homeowner',
+    context: 'Coastal villa concept'
   }
 ];
 
@@ -17,9 +17,9 @@ function TestimonialSection() {
   return (
     <section className="content-container py-16 sm:py-20 md:py-24" aria-labelledby="testimonials-title">
       <div className="max-w-2xl">
-        <p className="eyebrow">Client Notes</p>
+        <p className="eyebrow">Trusted Collaborations</p>
         <h2 id="testimonials-title" className="mt-4 text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-          Clear thinking, composed visuals, and a calm path from idea to decision.
+          Designed for clients who expect discretion, clarity, and a refined architectural experience.
         </h2>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">

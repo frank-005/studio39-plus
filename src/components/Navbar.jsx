@@ -108,13 +108,12 @@ function Navbar() {
             </NavLink>
           ))}
           <Link to="/contact" className="site-nav-book" aria-label="Book an architecture consultation">
-            Book
+            Inquire
           </Link>
           <ThemeToggle theme={theme} onToggle={toggleTheme} className="ml-3" />
         </nav>
 
         <div className={`site-nav-mobile-controls flex items-center lg:hidden ${open ? 'hidden' : ''}`}>
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <button
             ref={menuButtonRef}
             type="button"
@@ -129,7 +128,7 @@ function Navbar() {
               <span />
               <span />
             </span>
-          </button>
+            </button>
         </div>
       </div>
 
@@ -155,7 +154,7 @@ function Navbar() {
                 >
                   Studio 39+
                 </Link>
-                <span className="site-nav-mobile-tagline">Architecture Studio</span>
+                <span className="site-nav-mobile-tagline">Residential Architecture</span>
               </div>
               <button
                 type="button"
@@ -187,6 +186,9 @@ function Navbar() {
               <Link to="/contact" onClick={() => setOpen(false)} className="site-nav-mobile-book">
                 Start a Project
               </Link>
+              <div className="flex justify-center pt-1">
+                <ThemeToggle theme={theme} onToggle={toggleTheme} />
+              </div>
               <div className="flex items-center justify-center gap-5 pt-2">
                 <a href={site.whatsapp} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick('mobile_nav')}>WhatsApp</a>
                 <a href={`tel:${site.phone}`} onClick={() => trackPhoneClick('mobile_nav')}>Call</a>

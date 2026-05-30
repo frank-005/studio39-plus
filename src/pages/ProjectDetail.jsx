@@ -28,7 +28,7 @@ function DetailTable({ project }) {
     ['Typology', project.category],
     ['Year', project.year],
     ['Status', project.status],
-    ['Studio role', 'Architecture, visualization, material direction, documentation strategy']
+    ['Studio role', 'Architecture, interior direction, visualization, material strategy']
   ];
 
   return (
@@ -70,7 +70,7 @@ function ProjectDetail() {
   if (!project) {
     return (
       <div className="pt-32 pb-24 content-container">
-        <SEO title="Project Not Found" description="The requested Studio 39+ architecture case study could not be found." />
+        <SEO title="Residence Not Found" description="The requested Studio 39+ residence study could not be found." />
         <p className="eyebrow">Project not found</p>
         <button onClick={() => navigate('/projects')} className="btn-secondary mt-6">
           Back to projects
@@ -97,7 +97,7 @@ function ProjectDetail() {
       <section className="relative overflow-hidden bg-ivory light-surface-overlay pb-12 dark:bg-charcoal md:pb-16">
         <div className="content-container grid gap-10 py-14 sm:py-16 md:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
           <div>
-            <p className="eyebrow">{project.category} Case Study</p>
+            <p className="eyebrow">{project.category} Residence Study</p>
             <h1 className="mt-6 max-w-4xl text-balance text-4xl font-semibold tracking-tight text-charcoal sm:text-5xl lg:text-6xl dark:text-ivory">{project.name}</h1>
             <p className="mt-8 max-w-2xl text-lg leading-9 text-charcoal/72 dark:text-sand">{project.excerpt}</p>
           </div>
@@ -121,7 +121,7 @@ function ProjectDetail() {
 
       <section className="content-container grid gap-12 py-20 md:py-28 lg:grid-cols-[1.1fr_.9fr]">
         <div className="space-y-10">
-          <SectionHeading eyebrow="Project Overview" title="A detailed architectural story from brief to spatial concept." />
+          <SectionHeading eyebrow="Project Overview" title="A detailed residential story from brief to spatial concept." />
           <p className="text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
           <div>
             <h2 className="text-2xl font-semibold text-charcoal dark:text-ivory">Client Brief</h2>
@@ -156,7 +156,7 @@ function ProjectDetail() {
               <li>Architecture</li>
               <li>Interior Architecture</li>
               <li>Architectural Visualization</li>
-              <li>Technical Documentation</li>
+              <li>Documentation Strategy</li>
             </ul>
           </div>
         </aside>
@@ -175,7 +175,7 @@ function ProjectDetail() {
 
       <section className="content-container pb-20 md:pb-28" aria-labelledby="gallery-title">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <h2 id="gallery-title" className="text-3xl font-semibold text-charcoal dark:text-ivory">Renders and Visual Studies</h2>
+            <h2 id="gallery-title" className="text-3xl font-semibold text-charcoal dark:text-ivory">Residential Atmosphere Studies</h2>
           <Link to="/projects" className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand">
             All projects
           </Link>
