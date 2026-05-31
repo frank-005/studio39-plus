@@ -114,6 +114,8 @@ a:hover {
   height: auto;
   max-height: 3.35rem;
   object-fit: contain;
+  transform: scale(1.12);
+  transform-origin: center;
 }
 
 .dark .site-nav-brand {
@@ -847,6 +849,7 @@ html:not(.dark) .light-surface-overlay {
   .site-nav-logo {
     width: clamp(9rem, 40vw, 12rem);
     max-height: 3.25rem;
+    transform: none;
   }
 
   .theme-toggle-track {
