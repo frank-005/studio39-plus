@@ -2,7 +2,7 @@ export const site = {
   name: 'Studio 39+',
   legalName: 'Studio 39+ Architecture Studio',
   url: 'https://www.studio39ke.com',
-  email: 'studio39ke@gmail.com',
+  email: 'hello@studio39ke.com',
   phone: '+254703906562',
   displayPhone: '+254 703 906 562',
   whatsapp: 'https://wa.me/254703906562?text=Hello%20Studio%2039%2B%2C%20I%27d%20like%20to%20book%20an%20architecture%20consultation.',
