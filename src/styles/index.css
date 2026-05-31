@@ -108,9 +108,21 @@ a:hover {
   font-weight: 700;
 }
 
+.site-nav-logo {
+  display: block;
+  width: clamp(10.5rem, 16vw, 15rem);
+  height: auto;
+  max-height: 3.35rem;
+  object-fit: contain;
+}
+
 .dark .site-nav-brand {
   color: #f5f3ee;
   text-shadow: 0 0 16px rgb(245 243 238 / 0.16);
+}
+
+.dark .site-nav-logo {
+  filter: invert(1);
 }
 
 .site-nav-link {
@@ -306,6 +318,15 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
+}
+
+.site-nav-mobile-logo {
+  display: block;
+  width: min(13rem, 58vw);
+  height: auto;
+  max-height: 4rem;
+  object-fit: contain;
+  filter: invert(1);
 }
 
 .site-nav-mobile-tagline {
@@ -823,6 +844,11 @@ html:not(.dark) .light-surface-overlay {
     letter-spacing: 0.2em;
   }
 
+  .site-nav-logo {
+    width: clamp(9rem, 40vw, 12rem);
+    max-height: 3.25rem;
+  }
+
   .theme-toggle-track {
     width: 3rem;
     height: 1.65rem;
@@ -1337,6 +1363,10 @@ body {
   html:not(.dark) .site-nav-mobile-link,
   html:not(.dark) .site-nav-mobile-close {
     color: #2f2c28;
+  }
+
+  html:not(.dark) .site-nav-mobile-logo {
+    filter: none;
   }
 
   html:not(.dark) .site-nav-mobile-link:hover,

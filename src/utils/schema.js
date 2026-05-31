@@ -7,7 +7,7 @@ const baseBusiness = {
   legalName: site.legalName,
   url: site.url,
   image: defaultImage,
-  logo: `${site.url}/favicon.svg`,
+  logo: `${site.url}/studio39logo.png`,
   email: site.email,
   telephone: site.phone,
   priceRange: '$$$',

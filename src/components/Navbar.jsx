@@ -98,7 +98,7 @@ function Navbar() {
       </a>
       <div className="content-container site-nav-inner flex items-center justify-between">
         <Link to="/" className="site-nav-brand" aria-label="Studio 39+ home">
-          Studio 39+
+          <img src="/studio39logo-nav.png" alt="Studio 39+" className="site-nav-logo" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10" aria-label="Primary navigation">
@@ -152,7 +152,7 @@ function Navbar() {
                   className="site-nav-mobile-brand"
                   aria-label="Studio 39+ home"
                 >
-                  Studio 39+
+                  <img src="/studio39logo-nav.png" alt="Studio 39+" className="site-nav-mobile-logo" />
                 </Link>
                 <span className="site-nav-mobile-tagline">Residential Architecture</span>
               </div>
