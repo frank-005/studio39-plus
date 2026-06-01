@@ -674,6 +674,7 @@ const projects = [
   },
   {
     id: 'mara-safari-residence',
+    slug: 'mara-safari',
     name: 'Mara Safari Residence',
     category: 'Safari Residence',
     location: 'Maasai Mara, Kenya',

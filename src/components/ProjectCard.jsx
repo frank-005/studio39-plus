@@ -5,10 +5,11 @@ import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 function ProjectCard({ project }) {
   const material = project.materials?.[0] || 'material study';
   const isFeaturedLocal = ['kiserian-house', 'saika-house', 'earthen-threshold', 'ukwala-residence'].includes(project.id);
+  const projectPath = `/projects/${project.slug || project.id}`;
 
   return (
     <motion.article whileHover={{ y: -6 }} className="project-card group overflow-hidden border border-charcoal/10 bg-sand/60 transition duration-700 hover:border-charcoal/35 dark:border-ivory/12 dark:bg-charcoal">
-      <Link to={`/projects/${project.id}`} className="block overflow-hidden">
+      <Link to={projectPath} className="block overflow-hidden">
         <div className="project-card-media relative overflow-hidden bg-mist dark:bg-charcoal">
           <img
             src={optimizedImageUrl(project.hero, 900)}
@@ -47,7 +48,7 @@ function ProjectCard({ project }) {
             <dd>{project.status}</dd>
           </div>
         </dl>
-        <Link to={`/projects/${project.id}`} className="project-card-link inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand" aria-label={`View residence study for ${project.name}`}>
+        <Link to={projectPath} className="project-card-link inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand" aria-label={`View residence study for ${project.name}`}>
           View Residence <span aria-hidden="true">-&gt;</span>
         </Link>
       </div>

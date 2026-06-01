@@ -673,7 +673,10 @@ function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
 
-  const project = useMemo(() => projects.find((item) => item.id === projectId), [projectId]);
+  const project = useMemo(
+    () => projects.find((item) => item.id === projectId || item.slug === projectId || item.aliases?.includes(projectId)),
+    [projectId]
+  );
 
   if (!project) {
     return (
