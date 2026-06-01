@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 import CTASection from '../components/CTASection';
 import projects from '../data/projects';
 
-const categories = ['All', 'Private Residence', 'Coastal Villa', 'Safari Residence', 'Family Estate'];
+const categories = ['All', 'Private Residence', 'Contemporary Private Residence', 'Outdoor WC Pavilion', 'Coastal Villa', 'Safari Residence', 'Family Estate'];
 
 function Projects() {
   const [active, setActive] = useState('All');

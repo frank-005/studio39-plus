@@ -4,6 +4,7 @@ import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 
 function ProjectCard({ project }) {
   const material = project.materials?.[0] || 'material study';
+  const isFeaturedLocal = ['kiserian-house', 'saika-house', 'earthen-threshold', 'ukwala-residence'].includes(project.id);
 
   return (
     <motion.article whileHover={{ y: -6 }} className="project-card group overflow-hidden border border-charcoal/10 bg-sand/60 transition duration-700 hover:border-charcoal/35 dark:border-ivory/12 dark:bg-charcoal">
@@ -14,11 +15,18 @@ function ProjectCard({ project }) {
             srcSet={imageSrcSet(project.hero, [480, 720, 960])}
             sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
             alt={`${project.name}, luxury ${project.category.toLowerCase()} by Studio 39+ in ${project.location}`}
-            loading="lazy"
+            loading={isFeaturedLocal ? 'eager' : 'lazy'}
+            fetchPriority={isFeaturedLocal ? 'high' : 'auto'}
             decoding="async"
             style={{ objectPosition: project.imagePosition || 'center center' }}
             className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.045]"
           />
+          {isFeaturedLocal ? (
+            <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-charcoal/76 to-transparent p-5 text-ivory sm:p-6">
+              <p className="font-serif text-2xl font-medium leading-tight">{project.name}</p>
+              <p className="mt-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ivory/78">{project.cardSubtitle || 'Private Residence | Kenya'}</p>
+            </div>
+          ) : null}
         </div>
       </Link>
       <div className="project-card-body space-y-3 p-5 sm:space-y-5 sm:p-8">

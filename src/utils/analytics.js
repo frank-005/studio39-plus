@@ -52,13 +52,6 @@ export function trackEvent(eventName, parameters = {}) {
   window.gtag?.('event', eventName, parameters);
 }
 
-export function trackWhatsAppClick(source = 'unknown') {
-  trackEvent('whatsapp_click', {
-    event_category: 'contact',
-    event_label: source
-  });
-}
-
 export function trackEmailClick(source = 'unknown') {
   trackEvent('email_click', {
     event_category: 'contact',

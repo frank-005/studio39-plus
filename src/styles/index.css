@@ -55,9 +55,6 @@ a:hover {
   opacity: 0.92;
 }
 
-.floating-whatsapp:hover,
-.floating-whatsapp:focus-visible,
-.whatsapp-float:hover,
 .site-nav-menu-button:hover {
   opacity: 1;
 }
@@ -588,32 +585,6 @@ h3,
   transform: translateX(2px);
 }
 
-.whatsapp-float {
-  right: 1.25rem;
-  bottom: calc(1.25rem + env(safe-area-inset-bottom));
-  width: 3.25rem;
-  height: 3.25rem;
-  padding: 0;
-  color: #ffffff;
-  background: #25d366;
-  border: 1px solid rgb(255 255 255 / 0.18);
-  box-shadow:
-    0 12px 28px rgb(0 0 0 / 0.24),
-    inset 0 1px 0 rgb(255 255 255 / 0.2);
-}
-
-.whatsapp-float:hover {
-  background: #1ebe5d;
-  box-shadow:
-    0 14px 34px rgb(0 0 0 / 0.28),
-    inset 0 1px 0 rgb(255 255 255 / 0.24);
-}
-
-.whatsapp-icon {
-  width: 1.82rem;
-  height: 1.82rem;
-}
-
 .project-feature-media {
   height: clamp(320px, 52vw, 620px);
 }
@@ -748,14 +719,6 @@ h3,
     aspect-ratio: 4 / 3;
   }
 
-  .whatsapp-float {
-    right: max(1.25rem, env(safe-area-inset-right));
-    bottom: max(1.25rem, env(safe-area-inset-bottom));
-    width: 3.25rem;
-    height: 3.25rem;
-    min-height: 3.25rem;
-    padding: 0;
-  }
 }
 
 @media (min-width: 1600px) {
@@ -1060,8 +1023,7 @@ html:not(.dark) .light-surface-overlay {
 
   .btn-primary:active,
   .btn-secondary:active,
-  .project-card-link:active,
-  .whatsapp-float:active {
+  .project-card-link:active {
     transform: scale(0.985);
   }
 
@@ -1089,21 +1051,8 @@ html:not(.dark) .light-surface-overlay {
     line-height: 1.7;
   }
 
-  .whatsapp-float {
-    right: calc(1.25rem + env(safe-area-inset-right));
-    bottom: calc(1.25rem + env(safe-area-inset-bottom));
-    width: 3.25rem;
-    height: 3.25rem;
-    min-height: 3.25rem;
-    padding: 0;
-  }
-
   .project-card-meta {
     font-size: 0.66rem;
-  }
-
-  footer .content-container {
-    padding-bottom: calc(6.25rem + env(safe-area-inset-bottom));
   }
 }
 
@@ -1210,6 +1159,670 @@ body {
   color: rgb(213 202 188 / 0.86);
 }
 
+.ukwala-hero-image {
+  transform: scale(1.05);
+  transform-origin: center;
+  animation: ukwalaHeroDrift 18s ease-out forwards;
+}
+
+.ukwala-hero,
+.ukwala-hero .content-container {
+  min-height: min(86svh, 920px);
+}
+
+.ukwala-hero h1 {
+  max-width: min(42rem, 100%);
+}
+
+.ukwala-gallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(78%, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+}
+
+.ukwala-gallery-item {
+  position: relative;
+  display: block;
+  min-height: 22rem;
+  overflow: hidden;
+  background: #d8d1c5;
+  color: #f2eee6;
+  scroll-snap-align: start;
+  text-align: left;
+}
+
+.ukwala-gallery-item img {
+  filter: grayscale(0.32) saturate(0.92);
+}
+
+.ukwala-gallery-item:hover img,
+.ukwala-gallery-item:focus-visible img {
+  filter: grayscale(0) saturate(1);
+}
+
+.ukwala-gallery-item::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgb(47 44 40 / 0.04), rgb(47 44 40 / 0.58));
+  pointer-events: none;
+}
+
+.ukwala-gallery-item span {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.1rem;
+  left: 1.25rem;
+  z-index: 1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.ukwala-drawings {
+  display: grid;
+  gap: 1rem;
+}
+
+.ukwala-drawing-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgb(47 44 40 / 0.12);
+  background: #f7f2e8;
+  text-align: left;
+  transition:
+    border-color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.ukwala-drawing-card:hover,
+.ukwala-drawing-card:focus-visible {
+  border-color: rgb(47 44 40 / 0.35);
+  box-shadow: 0 1rem 2.5rem rgb(47 44 40 / 0.08);
+  transform: translateY(-2px);
+}
+
+.ukwala-drawing-card object {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  background: #fbf8f0;
+  pointer-events: none;
+}
+
+.ukwala-drawing-fallback {
+  display: grid;
+  height: 100%;
+  align-content: center;
+  gap: 1.4rem;
+  padding: 2rem;
+}
+
+.ukwala-drawing-fallback span {
+  display: block;
+  height: 1px;
+  background: rgb(47 44 40 / 0.24);
+}
+
+.ukwala-drawing-fallback span:nth-child(1) {
+  width: 86%;
+}
+
+.ukwala-drawing-fallback span:nth-child(2) {
+  width: 52%;
+  margin-left: auto;
+}
+
+.ukwala-drawing-fallback span:nth-child(3) {
+  width: 70%;
+}
+
+.ukwala-palette-item {
+  overflow: hidden;
+  border: 1px solid rgb(47 44 40 / 0.1);
+  background: rgb(245 239 229 / 0.68);
+}
+
+.project-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  min-height: 2.75rem;
+  border: 1px solid rgb(242 238 230 / 0.6);
+  padding: 0 1rem;
+  color: #f2eee6;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition:
+    background 250ms ease,
+    color 250ms ease;
+}
+
+.project-lightbox-close:hover,
+.project-lightbox-close:focus-visible {
+  background: #f2eee6;
+  color: #2f2c28;
+}
+
+.earthen-hero,
+.earthen-hero .content-container {
+  height: min(92svh, 940px);
+  min-height: 720px;
+}
+
+.earthen-hero {
+  background-image: url("/projects/earthen-threshold/hero.jpg");
+  background-position: center 48%;
+  background-size: cover;
+}
+
+.earthen-hero-image {
+  transform: scale(1.06);
+  transform-origin: center;
+  animation: earthenHeroDrift 20s ease-out forwards;
+}
+
+.earthen-hero h1 {
+  max-width: min(44rem, 100%);
+}
+
+.earthen-gallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(78%, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+}
+
+.earthen-gallery-item {
+  position: relative;
+  display: block;
+  min-height: 24rem;
+  overflow: hidden;
+  background: #bf6848;
+  color: #f8f0e6;
+  scroll-snap-align: start;
+  text-align: left;
+}
+
+.earthen-gallery-item img {
+  filter: saturate(0.9) contrast(0.98);
+}
+
+.earthen-gallery-item:hover img,
+.earthen-gallery-item:focus-visible img {
+  filter: saturate(1.08) contrast(1);
+}
+
+.earthen-gallery-item::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgb(31 22 17 / 0.02), rgb(31 22 17 / 0.58));
+  pointer-events: none;
+}
+
+.earthen-gallery-item span {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.1rem;
+  left: 1.25rem;
+  z-index: 1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.earthen-drawing-section {
+  background:
+    linear-gradient(rgb(47 44 40 / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(47 44 40 / 0.045) 1px, transparent 1px),
+    #f7efe3;
+  background-size: 4rem 4rem;
+}
+
+.earthen-drawings {
+  display: grid;
+  gap: 1rem;
+}
+
+.earthen-drawing-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgb(47 44 40 / 0.2);
+  background: rgb(255 252 245 / 0.82);
+  text-align: left;
+  transition:
+    border-color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.earthen-drawing-card:hover,
+.earthen-drawing-card:focus-visible {
+  border-color: rgb(47 44 40 / 0.48);
+  box-shadow: 0 1rem 2.4rem rgb(47 44 40 / 0.09);
+  transform: translateY(-2px);
+}
+
+.earthen-drawing-card object {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  background: #fbf8f0;
+  pointer-events: none;
+}
+
+.earthen-palette-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.earthen-palette-item {
+  overflow: hidden;
+  border: 1px solid rgb(47 44 40 / 0.12);
+  background: rgb(249 243 234 / 0.68);
+}
+
+.dark .earthen-drawing-section {
+  background:
+    linear-gradient(rgb(242 238 230 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(242 238 230 / 0.035) 1px, transparent 1px),
+    #241d18;
+}
+
+.dark .earthen-drawing-card,
+.dark .earthen-palette-item {
+  border-color: rgb(242 238 230 / 0.12);
+  background: rgb(255 255 255 / 0.035);
+}
+
+.saika-hero,
+.saika-hero .content-container {
+  height: min(90svh, 920px);
+  min-height: 700px;
+}
+
+.saika-hero {
+  background-image: url("/projects/saika-house/hero.jpg");
+  background-position: center 48%;
+  background-size: cover;
+}
+
+.saika-hero-image {
+  transform: scale(1.055);
+  transform-origin: center;
+  animation: saikaHeroDrift 20s ease-out forwards;
+  filter: saturate(0.94) contrast(0.98) sepia(0.05);
+}
+
+.saika-hero h1 {
+  max-width: min(42rem, 100%);
+}
+
+.saika-gallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(78%, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+}
+
+.saika-gallery-item {
+  position: relative;
+  display: block;
+  min-height: 24rem;
+  overflow: hidden;
+  background: #d7c2a5;
+  color: #fbf4ea;
+  scroll-snap-align: start;
+  text-align: left;
+}
+
+.saika-gallery-item img {
+  filter: saturate(0.94) contrast(0.99);
+}
+
+.saika-gallery-item:hover img,
+.saika-gallery-item:focus-visible img {
+  filter: saturate(1.05) contrast(1);
+}
+
+.saika-gallery-item::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgb(45 36 29 / 0.02), rgb(45 36 29 / 0.56));
+  pointer-events: none;
+}
+
+.saika-gallery-item span {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.1rem;
+  left: 1.25rem;
+  z-index: 1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.saika-drawing-section {
+  background:
+    linear-gradient(rgb(47 44 40 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(47 44 40 / 0.04) 1px, transparent 1px),
+    #f8efe2;
+  background-size: 4rem 4rem;
+}
+
+.saika-drawings {
+  display: grid;
+  gap: 1rem;
+}
+
+.saika-drawing-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgb(47 44 40 / 0.18);
+  background: rgb(255 252 245 / 0.82);
+  text-align: left;
+  transition:
+    border-color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.saika-drawing-card:hover,
+.saika-drawing-card:focus-visible {
+  border-color: rgb(47 44 40 / 0.44);
+  box-shadow: 0 1rem 2.4rem rgb(47 44 40 / 0.08);
+  transform: translateY(-2px);
+}
+
+.saika-drawing-card object {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  background: #fbf8f0;
+  pointer-events: none;
+}
+
+.saika-palette-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.saika-palette-item {
+  overflow: hidden;
+  border: 1px solid rgb(47 44 40 / 0.12);
+  background: rgb(250 243 233 / 0.72);
+}
+
+.dark .saika-drawing-section {
+  background:
+    linear-gradient(rgb(242 238 230 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(242 238 230 / 0.035) 1px, transparent 1px),
+    #27221c;
+}
+
+.dark .saika-drawing-card,
+.dark .saika-palette-item {
+  border-color: rgb(242 238 230 / 0.12);
+  background: rgb(255 255 255 / 0.035);
+}
+
+@keyframes saikaHeroDrift {
+  from {
+    transform: scale(1.08) translateY(0);
+  }
+
+  to {
+    transform: scale(1.03) translateY(-1.1%);
+  }
+}
+
+@keyframes earthenHeroDrift {
+  from {
+    transform: scale(1.08) translateY(0);
+  }
+
+  to {
+    transform: scale(1.03) translateY(-1.2%);
+  }
+}
+
+@keyframes ukwalaHeroDrift {
+  from {
+    transform: scale(1.08) translateY(0);
+  }
+
+  to {
+    transform: scale(1.03) translateY(-1.5%);
+  }
+}
+
+@media (min-width: 768px) {
+  .ukwala-gallery {
+    grid-auto-flow: initial;
+    grid-auto-columns: initial;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .ukwala-gallery-item {
+    grid-column: span 2;
+    min-height: 24rem;
+  }
+
+  .ukwala-gallery-item.is-wide {
+    grid-column: span 4;
+    min-height: 32rem;
+  }
+
+  .ukwala-drawings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .earthen-gallery {
+    grid-auto-flow: initial;
+    grid-auto-columns: initial;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .earthen-gallery-item {
+    grid-column: span 2;
+    min-height: 24rem;
+  }
+
+  .earthen-gallery-item.is-large {
+    grid-column: span 3;
+    min-height: 34rem;
+  }
+
+  .earthen-drawings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .earthen-palette-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .saika-gallery {
+    grid-auto-flow: initial;
+    grid-auto-columns: initial;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .saika-gallery-item {
+    grid-column: span 2;
+    min-height: 24rem;
+  }
+
+  .saika-gallery-item.is-large {
+    grid-column: span 3;
+    min-height: 34rem;
+  }
+
+  .saika-drawings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .saika-palette-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1180px) {
+  .ukwala-drawings {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .ukwala-drawing-card object {
+    height: 20rem;
+  }
+
+  .earthen-drawings {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .earthen-drawing-card object {
+    height: 19rem;
+  }
+
+  .saika-drawings {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .saika-drawing-card object {
+    height: 18rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ukwala-hero {
+    min-height: min(82svh, 760px);
+  }
+
+  .ukwala-hero .content-container {
+    min-height: min(82svh, 760px);
+  }
+
+  .ukwala-hero-image {
+    object-position: 48% center !important;
+  }
+
+  .ukwala-hero h1 {
+    max-width: 20rem;
+    font-size: 2.7rem;
+    line-height: 1;
+    overflow-wrap: normal;
+  }
+
+  .ukwala-case-study h2 {
+    max-width: 100%;
+    font-size: 2rem;
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  .ukwala-gallery-item {
+    min-height: 25rem;
+  }
+
+  .ukwala-drawing-card object {
+    height: 22rem;
+  }
+
+  .earthen-hero {
+    height: min(84svh, 760px);
+    min-height: 680px;
+    background-position: 54% center;
+  }
+
+  .earthen-hero .content-container {
+    height: min(84svh, 760px);
+    min-height: 680px;
+  }
+
+  .earthen-hero-image {
+    object-position: 54% center !important;
+  }
+
+  .earthen-hero h1 {
+    max-width: 21rem;
+    font-size: 2.72rem;
+    line-height: 1;
+  }
+
+  .earthen-case-study h2 {
+    max-width: 100%;
+    font-size: 2rem;
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  .earthen-gallery-item {
+    min-height: 25rem;
+  }
+
+  .earthen-drawing-card object {
+    height: 22rem;
+  }
+
+  .saika-hero {
+    height: min(84svh, 760px);
+    min-height: 680px;
+    background-position: 43% center;
+  }
+
+  .saika-hero .content-container {
+    height: min(84svh, 760px);
+    min-height: 680px;
+  }
+
+  .saika-hero-image {
+    object-position: 43% center !important;
+  }
+
+  .saika-hero h1 {
+    max-width: 20rem;
+    font-size: 2.72rem;
+    line-height: 1;
+  }
+
+  .saika-case-study h2 {
+    max-width: 100%;
+    font-size: 2rem;
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  .saika-gallery-item {
+    min-height: 25rem;
+  }
+
+  .saika-drawing-card object {
+    height: 22rem;
+  }
+}
+
 .project-gallery .project-card:nth-child(4n + 2),
 .project-gallery .project-card:nth-child(4n + 4) {
   margin-top: clamp(1.5rem, 4vw, 4rem);
@@ -1227,79 +1840,6 @@ body {
 .service-card a:hover,
 .project-card-link:hover {
   border-color: currentColor;
-}
-
-.floating-whatsapp-wrap {
-  position: fixed;
-  right: auto;
-  bottom: calc(1.15rem + env(safe-area-inset-bottom));
-  left: 0;
-  z-index: 45;
-  display: none;
-  width: 100svw;
-  max-width: 100%;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: calc(1.1rem + env(safe-area-inset-right));
-  pointer-events: none;
-}
-
-.floating-whatsapp {
-  display: inline-flex;
-  width: min(13rem, calc(100svw - 1.5rem));
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.82rem;
-  color: #20201d;
-  text-decoration: none;
-  pointer-events: auto;
-  transform-origin: right center;
-}
-
-.floating-whatsapp:hover,
-.floating-whatsapp:focus-visible {
-  transform: scale(1.035);
-}
-
-.floating-whatsapp:active {
-  transform: scale(0.985);
-}
-
-.floating-whatsapp-label {
-  display: inline-flex;
-  min-height: 2.8rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0 1.12rem;
-  background: rgb(255 255 255 / 0.96);
-  box-shadow: 0 10px 28px rgb(47 44 40 / 0.18);
-  color: #25231f;
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  white-space: nowrap;
-}
-
-.floating-whatsapp-button {
-  display: inline-flex;
-  width: 4.35rem;
-  height: 4.35rem;
-  min-width: 4.35rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: #21d366;
-  color: #ffffff;
-  box-shadow:
-    0 14px 36px rgb(33 211 102 / 0.35),
-    0 14px 30px rgb(47 44 40 / 0.18),
-    inset 0 1px 0 rgb(255 255 255 / 0.22);
-}
-
-.floating-whatsapp-icon {
-  width: 2.08rem;
-  height: 2.08rem;
 }
 
 .contact-check {
@@ -1429,27 +1969,7 @@ body {
     overflow-wrap: break-word;
   }
 
-  .floating-whatsapp-wrap {
-    display: flex;
-    padding-right: calc(4.4rem + env(safe-area-inset-right));
-  }
-
-  .floating-whatsapp-button {
-    width: 3.85rem;
-    height: 3.85rem;
-    min-width: 3.85rem;
-  }
-
-  .floating-whatsapp-icon {
-    width: 1.86rem;
-    height: 1.86rem;
-  }
-
   .project-gallery .project-card {
     margin-top: 0 !important;
-  }
-
-  footer .content-container {
-    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
   }
 }

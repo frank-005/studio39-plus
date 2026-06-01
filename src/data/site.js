@@ -5,7 +5,6 @@ export const site = {
   email: 'hello@studio39ke.com',
   phone: '+254703906562',
   displayPhone: '+254 703 906 562',
-  whatsapp: 'https://wa.me/254703906562?text=Hello%20Studio%2039%2B%2C%20I%27d%20like%20to%20book%20an%20architecture%20consultation.',
   address: {
     streetAddress: 'Imaara Mall',
     addressLocality: 'Nairobi',

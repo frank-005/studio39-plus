@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
 import FileUpload from '../components/FileUpload';
 import { site } from '../data/site';
-import { trackContactFormSubmission, trackEmailClick, trackPhoneClick, trackWhatsAppClick } from '../utils/analytics';
+import { trackContactFormSubmission, trackEmailClick, trackPhoneClick } from '../utils/analytics';
 
 const initialFormState = {
   fullName: '',
@@ -14,12 +14,10 @@ const initialFormState = {
   projectType: 'Private Residence',
   budget: '',
   timeline: '',
-  message: '',
-  servicesRequired: []
+  message: ''
 };
 
 const projectTypes = ['Private Residence', 'Coastal Villa', 'Safari Residence', 'Family Estate', 'Luxury Retreat', 'Renovation / Extension', 'Residential Development'];
-const serviceOptions = ['Bespoke Residential Architecture', 'Luxury Villa Design', 'Interior Architecture', 'Landscape Integration', 'Architectural Visualization', 'Residential Master Planning', 'Renovation & Extensions'];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
@@ -34,16 +32,6 @@ function Contact() {
     const { name, value } = event.target;
     setFormData((current) => ({ ...current, [name]: value }));
     setErrors((current) => ({ ...current, [name]: '' }));
-  };
-
-  const handleServiceToggle = (event) => {
-    const { value, checked } = event.target;
-    setFormData((current) => ({
-      ...current,
-      servicesRequired: checked
-        ? [...current.servicesRequired, value]
-        : current.servicesRequired.filter((service) => service !== value)
-    }));
   };
 
   const validateForm = () => {
@@ -156,19 +144,6 @@ function Contact() {
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about the site, lifestyle, family needs, atmosphere, and any private priorities." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
             </Field>
 
-            <fieldset>
-              <legend className="eyebrow">Services Required</legend>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {serviceOptions.map((service) => (
-                  <label key={service} className="contact-check flex min-h-12 items-center gap-3 border border-charcoal/12 px-4 py-3 text-sm text-charcoal/72 dark:border-ivory/12 dark:text-sand">
-                    <input type="checkbox" name="servicesRequired" value={service} checked={formData.servicesRequired.includes(service)} onChange={handleServiceToggle} />
-                    <span>{service}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
-            <input type="hidden" name="servicesRequiredSummary" value={formData.servicesRequired.join(', ')} />
             <input type="hidden" name="fileNames" value={files.map((file) => file.name).join(', ')} />
             <div>
               <p className="eyebrow">Reference Files</p>
@@ -193,12 +168,6 @@ function Contact() {
         <aside className="space-y-10 border border-mist bg-sand/70 p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
           <ContactItem label="Email" href={`mailto:${site.email}`} value={site.email} onClick={() => trackEmailClick('contact_sidebar')} />
           <ContactItem label="Phone" href={`tel:${site.phone}`} value={site.displayPhone} onClick={() => trackPhoneClick('contact_sidebar')} />
-          <div>
-            <p className="eyebrow">Quick Contact</p>
-            <a href={site.whatsapp} target="_blank" rel="noreferrer" onClick={() => trackWhatsAppClick('contact_sidebar')} className="mt-4 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand">
-              WhatsApp Studio 39+
-            </a>
-          </div>
           <div>
             <p className="eyebrow">Follow</p>
             <div className="mt-4 flex flex-wrap gap-4 text-sm uppercase tracking-[0.24em] text-charcoal/70 dark:text-sand">
