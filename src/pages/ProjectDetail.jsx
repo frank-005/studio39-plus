@@ -44,24 +44,6 @@ function DetailTable({ project }) {
   );
 }
 
-function DrawingPanel({ title, items }) {
-  return (
-    <article className="drawing-panel border border-charcoal/12 bg-sand/70 p-6 dark:border-ivory/12 dark:bg-black/10">
-      <p className="eyebrow">{title}</p>
-      <div className="mt-8 space-y-4" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
-      <ul className="mt-8 space-y-3 text-sm leading-7 text-charcoal/70 dark:text-sand">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </article>
-  );
-}
-
 function Lightbox({ item, onClose }) {
   if (!item) return null;
 
@@ -165,57 +147,6 @@ function UkwalaCaseStudy({ project }) {
         </div>
       </section>
 
-      <section className="bg-sand/70 py-20 md:py-28 dark:bg-black/10" aria-labelledby="architectural-drawings">
-        <div className="content-container">
-          <div className="mb-10 max-w-3xl">
-            <p className="eyebrow">Architectural Drawings</p>
-            <h2 id="architectural-drawings" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Approval drawing set: plans, elevations, sections, and roof strategy.</h2>
-          </div>
-          <div className="ukwala-drawings">
-            {project.drawings.map((drawing) => (
-              <button key={drawing.src} type="button" onClick={() => setLightboxItem(drawing)} className="ukwala-drawing-card" aria-label={`Open ${drawing.title} fullscreen`}>
-                <object data={`${drawing.src}#toolbar=0&navpanes=0`} type="application/pdf" tabIndex="-1" aria-label={drawing.alt}>
-                  <div className="ukwala-drawing-fallback">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </object>
-                <div className="flex items-center justify-between gap-4 border-t border-charcoal/10 px-5 py-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-charcoal dark:text-ivory">{drawing.title}</h3>
-                  <span aria-hidden="true" className="text-charcoal/45 dark:text-sand/60">Fullscreen</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-container py-20 md:py-28" aria-labelledby="design-language">
-        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
-          <div>
-            <p className="eyebrow">Design Language</p>
-            <h2 id="design-language" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">A minimalist palette with weight, warmth, and African light.</h2>
-            <p className="mt-7 text-base leading-9 text-charcoal/72 dark:text-sand">
-              The architecture is intentionally restrained: stone provides permanence, plaster softens the massing, timber fins filter glare, and glass opens the interior to gardens and changing daylight.
-            </p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {project.palette.map((item) => (
-              <article key={item.title} className="ukwala-palette-item">
-                <div className="aspect-[4/3] overflow-hidden bg-mist">
-                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 hover:scale-[1.035]" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-base font-semibold text-charcoal dark:text-ivory">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-charcoal/68 dark:text-sand">{item.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <CTASection title="Discuss a private residence with Studio 39+." />
       <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
     </div>
@@ -295,57 +226,6 @@ function EarthenThresholdCaseStudy({ project }) {
               <span>{image.title}</span>
             </button>
           ))}
-        </div>
-      </section>
-
-      <section className="earthen-drawing-section py-20 md:py-28" aria-labelledby="earthen-drawings">
-        <div className="content-container">
-          <div className="mb-10 grid gap-6 border-b border-charcoal/18 pb-8 md:grid-cols-[0.42fr_0.58fr] dark:border-ivory/14">
-            <p className="eyebrow text-[#8e4a32] dark:text-[#d8aa86]">Architectural Drawings</p>
-            <h2 id="earthen-drawings" className="font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">A technical set for floor, roof, elevation, and section studies.</h2>
-          </div>
-          <div className="earthen-drawings">
-            {project.drawings.map((drawing) => (
-              <button key={drawing.src} type="button" onClick={() => setLightboxItem(drawing)} className="earthen-drawing-card" aria-label={`Open ${drawing.title} fullscreen`}>
-                <object data={`${drawing.src}#toolbar=0&navpanes=0`} type="application/pdf" tabIndex="-1" aria-label={drawing.alt}>
-                  <div className="ukwala-drawing-fallback">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </object>
-                <div className="flex items-center justify-between gap-4 border-t border-charcoal/14 px-5 py-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-charcoal dark:text-ivory">{drawing.title}</h3>
-                  <span aria-hidden="true" className="text-xs uppercase tracking-[0.16em] text-charcoal/48 dark:text-sand/60">Enlarge</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-container py-20 md:py-28" aria-labelledby="earthen-material">
-        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
-          <div>
-            <p className="eyebrow text-[#8e4a32] dark:text-[#d8aa86]">Material & Atmosphere</p>
-            <h2 id="earthen-material" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Clay, aperture, privacy, and the slow movement of air.</h2>
-            <p className="mt-7 text-base leading-9 text-charcoal/72 dark:text-sand">
-              Exposed red brick becomes both enclosure and ornament. Perforated masonry turns the wall into a breathing screen, while frosted glazing and the mono-pitch roof temper direct light into a softer sensory field.
-            </p>
-          </div>
-          <div className="earthen-palette-grid">
-            {project.palette.map((item) => (
-              <article key={item.title} className="earthen-palette-item">
-                <div className="aspect-[4/3] overflow-hidden bg-[#c96b48]/20">
-                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 hover:scale-[1.03]" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-base font-semibold text-charcoal dark:text-ivory">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-charcoal/68 dark:text-sand">{item.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -434,57 +314,6 @@ function SaikaHouseCaseStudy({ project }) {
         </div>
       </section>
 
-      <section className="saika-drawing-section py-20 md:py-28" aria-labelledby="saika-drawings">
-        <div className="content-container">
-          <div className="mb-10 grid gap-6 border-b border-charcoal/16 pb-8 md:grid-cols-[0.4fr_0.6fr] dark:border-ivory/14">
-            <p className="eyebrow text-[#9a5e32] dark:text-[#d6aa7c]">Architectural Drawings</p>
-            <h2 id="saika-drawings" className="font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Construction drawing references for site planning, plans, elevations, sections, windows, and doors.</h2>
-          </div>
-          <div className="saika-drawings">
-            {project.drawings.map((drawing) => (
-              <button key={drawing.src} type="button" onClick={() => setLightboxItem(drawing)} className="saika-drawing-card" aria-label={`Open ${drawing.title} fullscreen`}>
-                <object data={`${drawing.src}#toolbar=0&navpanes=0`} type="application/pdf" tabIndex="-1" aria-label={drawing.alt}>
-                  <div className="ukwala-drawing-fallback">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </object>
-                <div className="flex items-center justify-between gap-4 border-t border-charcoal/14 px-5 py-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-charcoal dark:text-ivory">{drawing.title}</h3>
-                  <span aria-hidden="true" className="text-xs uppercase tracking-[0.16em] text-charcoal/48 dark:text-sand/60">Enlarge</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-container py-20 md:py-28" aria-labelledby="saika-material">
-        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
-          <div>
-            <p className="eyebrow text-[#9a5e32] dark:text-[#d6aa7c]">Material & Detail</p>
-            <h2 id="saika-material" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Stone, plaster, screens, roof warmth, and planted circulation.</h2>
-            <p className="mt-7 text-base leading-9 text-charcoal/72 dark:text-sand">
-              The residence uses material contrast gently: rough Mazeras stone against quiet plaster, vertical screens against garden views, terracotta roof tones above shaded paths, and planted edges that soften every movement through the site.
-            </p>
-          </div>
-          <div className="saika-palette-grid">
-            {project.palette.map((item) => (
-              <article key={item.title} className="saika-palette-item">
-                <div className="aspect-[4/3] overflow-hidden bg-[#caa57b]/20">
-                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 hover:scale-[1.03]" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-base font-semibold text-charcoal dark:text-ivory">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-charcoal/68 dark:text-sand">{item.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="content-container pb-20 md:pb-28" aria-labelledby="saika-spatial">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
@@ -522,7 +351,7 @@ function KiserianHouseCaseStudy({ project }) {
     <div className="saika-case-study bg-[#f5ecdf] text-charcoal dark:bg-[#27231f] dark:text-ivory">
       <SEO
         title="Kiserian House | Contemporary Bungalow Kenya | Studio 39+"
-        description="Kiserian House by Studio 39+: a contemporary 3-bedroom bungalow in Kajiado, Kenya, shaped by mono-pitched roofs, warm plaster, stone cladding, efficient family planning, and complete approval drawings."
+        description="Kiserian House by Studio 39+: a contemporary 3-bedroom bungalow in Kajiado, Kenya, shaped by mono-pitched roofs, warm plaster, stone cladding, efficient family planning, and calm exterior renders."
         image={project.hero}
         type="article"
         schema={projectSchema(project)}
@@ -574,60 +403,15 @@ function KiserianHouseCaseStudy({ project }) {
       <section className="content-container pb-20 md:pb-28" aria-labelledby="kiserian-gallery">
         <div className="mb-10 max-w-4xl">
           <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Featured Gallery</p>
-          <h2 id="kiserian-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Exterior atmosphere, plan clarity, roof form, elevations, and interior technical layers.</h2>
+          <h2 id="kiserian-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Exterior atmosphere, shaded arrival, garden movement, and warm material clarity.</h2>
         </div>
         <div className="saika-gallery">
           {project.gallery.map((image, index) => (
             <button key={image.src} type="button" onClick={() => setLightboxItem(image)} className={`saika-gallery-item group ${index === 0 || index === 4 ? 'is-large' : ''}`} aria-label={`Open ${image.title} image`}>
-              <img src={image.src} alt={image.alt} loading={index < 2 ? 'eager' : 'lazy'} decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
+              <img src={image.src} alt={image.alt} loading={index < 3 ? 'eager' : 'lazy'} fetchPriority={index < 3 ? 'high' : 'auto'} decoding={index < 3 ? 'sync' : 'async'} className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
               <span>{image.title}</span>
             </button>
           ))}
-        </div>
-      </section>
-
-      <section className="saika-drawing-section py-20 md:py-28" aria-labelledby="kiserian-drawings">
-        <div className="content-container">
-          <div className="mb-10 grid gap-6 border-b border-charcoal/16 pb-8 md:grid-cols-[0.4fr_0.6fr] dark:border-ivory/14">
-            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Architectural Drawings</p>
-            <h2 id="kiserian-drawings" className="font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Approval drawing references for plans, roof strategy, elevations, drainage, lighting, and interior documentation.</h2>
-          </div>
-          <div className="saika-drawings">
-            {project.drawings.map((drawing) => (
-              <button key={drawing.src} type="button" onClick={() => setLightboxItem(drawing)} className="saika-drawing-card" aria-label={`Open ${drawing.title} fullscreen`}>
-                <img src={drawing.src} alt={drawing.alt} loading="lazy" decoding="async" className="block h-72 w-full bg-ivory object-cover object-center md:h-80 lg:h-72" />
-                <div className="flex items-center justify-between gap-4 border-t border-charcoal/14 px-5 py-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-charcoal dark:text-ivory">{drawing.title}</h3>
-                  <span aria-hidden="true" className="text-xs uppercase tracking-[0.16em] text-charcoal/48 dark:text-sand/60">Enlarge</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-container py-20 md:py-28" aria-labelledby="kiserian-material">
-        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
-          <div>
-            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Material & Detail</p>
-            <h2 id="kiserian-material" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Stone, plaster, shaded openings, roof warmth, and restrained domestic detail.</h2>
-            <p className="mt-7 text-base leading-9 text-charcoal/72 dark:text-sand">
-              The house relies on quiet material contrast: stone anchors the base, textured plaster softens the walls, deep reveals control daylight, and timber-toned soffits bring warmth to the roof edge and entry threshold.
-            </p>
-          </div>
-          <div className="saika-palette-grid">
-            {project.palette.map((item) => (
-              <article key={item.title} className="saika-palette-item">
-                <div className="aspect-[4/3] overflow-hidden bg-[#c7a174]/20">
-                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 hover:scale-[1.03]" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-base font-semibold text-charcoal dark:text-ivory">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-charcoal/68 dark:text-sand">{item.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -650,8 +434,8 @@ function KiserianHouseCaseStudy({ project }) {
       <section className="bg-[#efe3d2]/70 py-20 md:py-28 dark:bg-black/10" aria-labelledby="kiserian-technical">
         <div className="content-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
-            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Technical Documentation</p>
-            <h2 id="kiserian-technical" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Studio 39+ delivers both architectural vision and technical execution.</h2>
+            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Visual Direction</p>
+            <h2 id="kiserian-technical" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Studio 39+ frames the home through material atmosphere, entry sequence, and landscape edges.</h2>
           </div>
           <div className="grid gap-5 sm:grid-cols-3">
             {project.technicalDocumentation.map((item) => (
@@ -774,9 +558,7 @@ function ProjectDetail() {
               <DetailTable project={project} />
             </div>
           </div>
-          <ListBlock title="Materials" items={project.materials} />
           <ListBlock title="Renders" items={project.renders} />
-          <ListBlock title="Floor Plans" items={project.floorPlans} />
           <div>
             <h3 className="eyebrow">Studio Scope</h3>
             <ul className="mt-5 space-y-3 text-base leading-8 text-charcoal/72 dark:text-sand">
@@ -787,17 +569,6 @@ function ProjectDetail() {
             </ul>
           </div>
         </aside>
-      </section>
-
-      <section className="content-container pb-20 md:pb-28" aria-labelledby="process-title">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHeading eyebrow="Process" title="Drawings, diagrams, palettes, and decision tools that make the design legible." />
-          <div className="grid gap-5 sm:grid-cols-3">
-            <DrawingPanel title="Plans" items={project.floorPlans} />
-            <DrawingPanel title="Diagrams" items={['arrival sequence', 'privacy gradient', 'light and view strategy']} />
-            <DrawingPanel title="Palette" items={project.materials.slice(0, 4)} />
-          </div>
-        </div>
       </section>
 
       <section className="content-container pb-20 md:pb-28" aria-labelledby="gallery-title">

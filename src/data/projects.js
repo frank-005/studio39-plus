@@ -6,7 +6,7 @@ const projects = [
     category: 'Contemporary 3-Bedroom Bungalow',
     location: 'Kiserian, Kajiado, Kenya',
     year: '2026',
-    status: 'Approval Drawings & Residential Development',
+    status: 'Residential Visualization & Development',
     studio: 'Studio 39+',
     architect: 'Franklin Ombui',
     designTeam: 'Franklin Ombui, Studio 39+',
@@ -14,7 +14,7 @@ const projects = [
     plotInformation: 'Suburban residential plot with front arrival, parking, service yard, septic zone, and garden circulation',
     spatialProgram: 'Entry porch, lounge, kitchen and dining, pantry, three bedrooms, master suite, shared bathrooms, powder room, back veranda',
     materialPalette: 'Textured plaster, warm stone cladding, charcoal frames, concrete shading devices, timber soffit tones, muted roof finish',
-    hero: '/projects/kiserian-house/hero.png',
+    hero: '/projects/kiserian-house/render-front.png',
     imagePosition: 'center 50%',
     excerpt: 'A calm contemporary Kajiado bungalow shaped by mono-pitched rooflines, warm plaster, stone grounding, and efficient family planning.',
     overview:
@@ -26,12 +26,12 @@ const projects = [
     context:
       'Located in Kiserian, Kajiado, the residence responds to suburban plot conditions, warm daylight, privacy, service planning, and the need for a durable family home that feels modern without losing its grounded domestic scale.',
     clientGoals:
-      'Create a livable contemporary bungalow with clean geometry, three bedrooms, functional planning, warm materials, calm outdoor circulation, and a complete approval drawing package.',
+      'Create a livable contemporary bungalow with clean geometry, three bedrooms, functional planning, warm materials, calm outdoor circulation, and a clear exterior visualization package.',
     challenges:
-      'Balance compact room planning with comfortable family spaces while coordinating roof drainage, foundation layout, ceiling design, services, schedules, and an exterior language that feels simple but complete.',
+      'Balance compact room planning with comfortable family spaces while coordinating roof form, shaded thresholds, garden movement, and an exterior language that feels simple but complete.',
     materials: ['stone cladding base', 'textured plaster walls', 'deep recessed openings', 'concrete window shading devices', 'timber soffit tones', 'outdoor stepping-stone circulation'],
-    renders: ['front approach render', 'entry porch', 'garden circulation', 'mono-pitch roof expression', 'material close-up studies'],
-    floorPlans: ['location plan', 'site plan', 'floor plan', 'roof plan', 'elevations', 'sections', 'foundation plan', 'drainage plan', 'ceiling plan', 'schedules'],
+    renders: ['front approach render', 'entry porch render', 'garden circulation render'],
+    floorPlans: ['front approach render', 'entry porch render', 'garden circulation render'],
     seoKeywords: [
       'Contemporary bungalow Kenya',
       'Modern house Kiserian',
@@ -43,127 +43,62 @@ const projects = [
     ],
     gallery: [
       {
-        src: '/projects/kiserian-house/hero.png',
+        src: '/projects/kiserian-house/render-front.png',
         title: 'Front approach',
         alt: 'Kiserian House contemporary 3-bedroom bungalow exterior render in Kajiado Kenya with mono-pitched roof, textured plaster, stone cladding, and warm evening light'
       },
       {
-        src: '/projects/kiserian-house/pages/page-03.jpg',
-        title: 'Plan organization',
-        alt: 'Kiserian House floor plan showing efficient 3-bedroom bungalow planning, lounge, dining, bedrooms, bathrooms, and entry porch'
+        src: '/projects/kiserian-house/render-entry.png',
+        title: 'Entry porch',
+        alt: 'Kiserian House entry porch render with mono-pitched roof, textured plaster, stepping stones, garden edge, and warm interior light'
       },
       {
-        src: '/projects/kiserian-house/pages/page-11.jpg',
-        title: 'Roof geometry',
-        alt: 'Kiserian House roof plan showing mono-pitched roof forms and drainage strategy'
-      },
-      {
-        src: '/projects/kiserian-house/pages/page-12.jpg',
-        title: 'Elevation study',
-        alt: 'Kiserian House elevation drawing with clean horizontal bungalow expression, deep window reveals, and stone base'
-      },
-      {
-        src: '/projects/kiserian-house/pages/page-28.jpg',
-        title: 'Furniture layout',
-        alt: 'Kiserian House furniture layout showing family lounge, kitchen dining relationship, bedrooms, bathrooms, and circulation'
-      },
-      {
-        src: '/projects/kiserian-house/pages/page-10.jpg',
-        title: 'Garden services',
-        alt: 'Kiserian House drainage site plan showing parking, garden circulation, septic zone, and service routing'
-      },
-      {
-        src: '/projects/kiserian-house/pages/page-31.jpg',
-        title: 'Kitchen detailing',
-        alt: 'Kiserian House kitchen cabinet drawing showing interior millwork elevations and compact residential detailing'
+        src: '/projects/kiserian-house/render-garden.png',
+        title: 'Garden circulation',
+        alt: 'Kiserian House garden circulation render showing stepping-stone paths, textured walls, shaded openings, and landscape edge'
       }
     ],
     drawings: [
       {
-        title: 'Location Plan',
-        src: '/projects/kiserian-house/pages/page-02.jpg',
-        alt: 'Location plan drawing for Kiserian House contemporary bungalow by Studio 39+'
+        title: 'Front Approach',
+        src: '/projects/kiserian-house/render-front.png',
+        alt: 'Front approach render for Kiserian House contemporary bungalow by Studio 39+'
       },
       {
-        title: 'Site Plan',
-        src: '/projects/kiserian-house/pages/page-03.jpg',
-        alt: 'Site plan and floor plan drawing for Kiserian House showing plot planning and residential layout'
+        title: 'Entry Porch',
+        src: '/projects/kiserian-house/render-entry.png',
+        alt: 'Entry porch render for Kiserian House showing sheltered arrival and stepping-stone landscape'
       },
       {
-        title: 'Floor Plan',
-        src: '/projects/kiserian-house/pages/page-04.jpg',
-        alt: 'Room area floor plan for Kiserian House 3-bedroom bungalow'
-      },
-      {
-        title: 'Foundation Plan',
-        src: '/projects/kiserian-house/pages/page-05.jpg',
-        alt: 'Foundation plan drawing for Kiserian House approval drawings'
-      },
-      {
-        title: 'Reflected Ceiling Plan',
-        src: '/projects/kiserian-house/pages/page-07.jpg',
-        alt: 'Electrical reflected ceiling plan for Kiserian House by Studio 39+'
-      },
-      {
-        title: 'Drainage Site Plan',
-        src: '/projects/kiserian-house/pages/page-10.jpg',
-        alt: 'Drainage site plan for Kiserian House showing septic tank, manholes, parking, and service routing'
-      },
-      {
-        title: 'Roof Plan',
-        src: '/projects/kiserian-house/pages/page-11.jpg',
-        alt: 'Roof plan for Kiserian House showing mono-pitched roof strategy'
-      },
-      {
-        title: 'Elevation 01',
-        src: '/projects/kiserian-house/pages/page-12.jpg',
-        alt: 'Elevation drawing for Kiserian House contemporary bungalow with warm plaster and stone base'
-      },
-      {
-        title: 'Elevation 02',
-        src: '/projects/kiserian-house/pages/page-13.jpg',
-        alt: 'Second elevation drawing for Kiserian House showing horizontal residential proportions'
-      },
-      {
-        title: 'Furniture Plan',
-        src: '/projects/kiserian-house/pages/page-28.jpg',
-        alt: 'Furniture plan for Kiserian House showing lounge, kitchen dining, bedrooms, and family planning'
-      },
-      {
-        title: 'Lighting Plan',
-        src: '/projects/kiserian-house/pages/page-30.jpg',
-        alt: 'Lighting plan for Kiserian House interior and exterior residential lighting'
-      },
-      {
-        title: 'Kitchen Cabinet Drawings',
-        src: '/projects/kiserian-house/pages/page-31.jpg',
-        alt: 'Kitchen cabinet drawings for Kiserian House technical documentation'
+        title: 'Garden Circulation',
+        src: '/projects/kiserian-house/render-garden.png',
+        alt: 'Garden circulation render for Kiserian House showing side path, wall lights, roof overhang, and planted edge'
       }
     ],
     palette: [
       {
         title: 'Stone base',
         copy: 'A low stone datum grounds the bungalow and gives the minimalist wall planes tactile weight.',
-        src: '/projects/kiserian-house/hero.png',
+        src: '/projects/kiserian-house/render-front.png',
         alt: 'Stone cladding base and textured plaster walls on Kiserian House exterior'
       },
       {
         title: 'Textured plaster',
         copy: 'Warm plaster surfaces keep the geometry calm while catching soft Kajiado daylight.',
-        src: '/projects/kiserian-house/hero.png',
+        src: '/projects/kiserian-house/render-entry.png',
         alt: 'Warm textured plaster surfaces and recessed windows at Kiserian House'
       },
       {
         title: 'Mono-pitched roof',
         copy: 'The roof line gives the home a clean horizontal expression and resolves shade, rain, and proportion.',
-        src: '/projects/kiserian-house/pages/page-11.jpg',
-        alt: 'Roof plan drawing showing mono-pitched roof forms for Kiserian House'
+        src: '/projects/kiserian-house/render-garden.png',
+        alt: 'Mono-pitched roof and deep overhang visible in Kiserian House garden render'
       },
       {
-        title: 'Technical interior layer',
-        copy: 'Ceiling, furniture, lighting, and cabinet drawings translate the calm concept into buildable domestic detail.',
-        src: '/projects/kiserian-house/pages/page-28.jpg',
-        alt: 'Furniture and interior planning drawing for Kiserian House'
+        title: 'Garden threshold',
+        copy: 'Stepping stones, low planting, wall lighting, and shaded edges shape a calm route around the home.',
+        src: '/projects/kiserian-house/render-garden.png',
+        alt: 'Garden threshold render for Kiserian House with stepping stones and textured plaster walls'
       }
     ],
     spatialExperience: [
@@ -173,14 +108,14 @@ const projects = [
       'Outdoor stepping-stone paths, garden edges, and service routes allow the house to operate comfortably between interior and exterior life.'
     ],
     technicalDocumentation: [
-      'Location, site, floor, roof, foundation, and drainage plans demonstrate a complete approval-stage architectural package.',
-      'Reflected ceiling, lighting, furniture, flooring, kitchen, wardrobe, window, and door documentation extend the project beyond concept imagery.',
-      'The drawing set communicates Studio 39+ delivering both architectural vision and technical execution.'
+      'Exterior renders communicate the bungalow massing, wall texture, roof overhangs, and landscape approach.',
+      'The entry and garden views show how daily movement, shaded thresholds, and outdoor circulation work around the compact home.',
+      'The visual set presents Studio 39+ delivering a calm residential concept with buildable architectural clarity.'
     ],
     details: [
       'The bungalow uses clean geometry and warm materials to create a calm, human-scaled residential atmosphere.',
       'Deep recessed openings and concrete shading devices control light while strengthening the facade rhythm.',
-      'Technical drawings resolve the project from spatial concept into foundations, services, ceilings, schedules, and interior details.'
+      'The render set resolves the project from spatial concept into a legible exterior character, arrival sequence, and garden atmosphere.'
     ]
   },
   {
