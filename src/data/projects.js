@@ -16,19 +16,19 @@ const projects = [
     materialPalette: 'Textured plaster, warm stone cladding, charcoal frames, concrete shading devices, timber soffit tones, muted roof finish',
     hero: '/projects/kiserian-house/render-front.png',
     imagePosition: 'center 50%',
-    excerpt: 'A calm contemporary Kajiado bungalow shaped by mono-pitched rooflines, warm plaster, stone grounding, and efficient family planning.',
+    excerpt: 'A compact Kajiado bungalow with a low roofline, stone plinth, shaded openings, and an efficient family plan.',
     overview:
-      'Kiserian House is conceived as a warm, minimalist bungalow where simple roof geometry, grounded materiality, and clear residential planning produce a quietly refined family home. The architecture balances contemporary African suburban living with tactile stone, textured plaster, recessed openings, and shaded outdoor movement.',
+      'Kiserian House is a compact family bungalow with a direct plan and a quiet street presence. A mono-pitched roof, stone base, recessed windows, and shaded paths give the home order without excess.',
     brief:
-      'The project required a compact three-bedroom home with an efficient spatial program, calm arrival, comfortable family living, and a contemporary architectural identity that remains warm, practical, and technically resolved.',
+      'The brief called for a three-bedroom home that could be practical, modest in scale, and still feel carefully composed.',
     concept:
-      'A mono-pitched roof line organizes the house as a low horizontal composition. Deep openings, shaded edges, and outdoor stepping-stone circulation soften the massing while supporting controlled daylight, cross ventilation, and a measured transition between interior rooms and the garden.',
+      'The roof sets a low horizontal line across the site. Deep reveals, side lighting, and stepping-stone paths keep the rooms protected while connecting daily movement to the garden.',
     context:
-      'Located in Kiserian, Kajiado, the residence responds to suburban plot conditions, warm daylight, privacy, service planning, and the need for a durable family home that feels modern without losing its grounded domestic scale.',
+      'In Kiserian, the design responds to strong daylight, suburban privacy, service access, and the need for a durable home with a grounded domestic scale.',
     clientGoals:
-      'Create a livable contemporary bungalow with clean geometry, three bedrooms, functional planning, warm materials, calm outdoor circulation, and a clear exterior visualization package.',
+      'Create a three-bedroom bungalow with clear planning, a sheltered entry, simple maintenance, and a strong exterior identity.',
     challenges:
-      'Balance compact room planning with comfortable family spaces while coordinating roof form, shaded thresholds, garden movement, and an exterior language that feels simple but complete.',
+      'Keep the plan compact while giving the facade depth, shade, and a complete architectural character.',
     materials: ['stone cladding base', 'textured plaster walls', 'deep recessed openings', 'concrete window shading devices', 'timber soffit tones', 'outdoor stepping-stone circulation'],
     renders: ['front approach render', 'entry porch render', 'garden circulation render'],
     floorPlans: ['front approach render', 'entry porch render', 'garden circulation render'],
@@ -78,44 +78,44 @@ const projects = [
     palette: [
       {
         title: 'Stone base',
-        copy: 'A low stone datum grounds the bungalow and gives the minimalist wall planes tactile weight.',
+        copy: 'A low stone datum anchors the walls and gives the small house visual weight.',
         src: '/projects/kiserian-house/render-front.png',
         alt: 'Stone cladding base and textured plaster walls on Kiserian House exterior'
       },
       {
         title: 'Textured plaster',
-        copy: 'Warm plaster surfaces keep the geometry calm while catching soft Kajiado daylight.',
+        copy: 'Mineral plaster softens the geometry and catches the changing Kajiado light.',
         src: '/projects/kiserian-house/render-entry.png',
         alt: 'Warm textured plaster surfaces and recessed windows at Kiserian House'
       },
       {
         title: 'Mono-pitched roof',
-        copy: 'The roof line gives the home a clean horizontal expression and resolves shade, rain, and proportion.',
+        copy: 'One roof line resolves shade, rain, and proportion with quiet efficiency.',
         src: '/projects/kiserian-house/render-garden.png',
         alt: 'Mono-pitched roof and deep overhang visible in Kiserian House garden render'
       },
       {
         title: 'Garden threshold',
-        copy: 'Stepping stones, low planting, wall lighting, and shaded edges shape a calm route around the home.',
+        copy: 'Stepping stones, low planting, and wall lights give the perimeter a measured domestic rhythm.',
         src: '/projects/kiserian-house/render-garden.png',
         alt: 'Garden threshold render for Kiserian House with stepping stones and textured plaster walls'
       }
     ],
     spatialExperience: [
-      'A compact entry porch creates a shaded pause before the lounge, giving the small bungalow a measured arrival sequence.',
-      'The lounge, kitchen, and dining areas are planned as an efficient family core with controlled views and easy daily movement.',
+      'A compact entry porch creates a shaded pause before the lounge.',
+      'The lounge, kitchen, and dining areas form an efficient family core with easy daily movement.',
       'Bedrooms are arranged along a clear corridor, separating quiet rooms from social spaces while keeping circulation simple.',
-      'Outdoor stepping-stone paths, garden edges, and service routes allow the house to operate comfortably between interior and exterior life.'
+      'Outdoor paths and service routes are kept legible, practical, and close to the garden.'
     ],
     technicalDocumentation: [
-      'Exterior renders communicate the bungalow massing, wall texture, roof overhangs, and landscape approach.',
-      'The entry and garden views show how daily movement, shaded thresholds, and outdoor circulation work around the compact home.',
-      'The visual set presents Studio 39+ delivering a calm residential concept with buildable architectural clarity.'
+      'Exterior renders clarify the massing, wall finish, roof overhangs, and landscape approach.',
+      'Entry and garden views show how the house works around a compact footprint.',
+      'The visual set establishes a clear exterior character before detailed delivery.'
     ],
     details: [
-      'The bungalow uses clean geometry and warm materials to create a calm, human-scaled residential atmosphere.',
-      'Deep recessed openings and concrete shading devices control light while strengthening the facade rhythm.',
-      'The render set resolves the project from spatial concept into a legible exterior character, arrival sequence, and garden atmosphere.'
+      'Clean geometry and durable finishes keep the bungalow modest but considered.',
+      'Recessed openings and concrete shading devices control glare and strengthen the facade.',
+      'The render set defines arrival, garden movement, and the exterior language.'
     ]
   },
   {
@@ -134,17 +134,17 @@ const projects = [
     materialPalette: 'Mazeras stone, textured plaster, timber tones, vertical screens, terracotta roof tones',
     hero: '/projects/saika-house/hero.jpg',
     imagePosition: 'center 48%',
-    excerpt: 'A warm contemporary Nairobi residence organized around landscaped circulation, stone texture, and human-scaled outdoor living.',
+    excerpt: 'A Nairobi family home organized around garden paths, stonework, verandas, and protected courtyard edges.',
     overview:
-      'Saika House is conceived as a calm suburban residence where contemporary planning is softened by tactile materials, planted movement, and a strong sense of domestic scale. Mazeras stone cladding, textured plaster, timber-toned soffits, vertical screening, and terracotta roof planes give the house a grounded character suited to Nairobi living.',
+      'Saika House turns a suburban plot into a sequence of protected garden rooms. Mazeras stone, plaster, timber-toned soffits, screens, and terracotta roofs give the house a familiar weight suited to Nairobi family life.',
     brief:
-      'The project required a refined private home that could balance family comfort, functional planning, secure arrival, garden access, and a warm contemporary African architectural identity.',
+      'The project required a private home with secure arrival, generous family rooms, garden access, and a relaxed sense of permanence.',
     concept:
-      'The house is organized as a sequence of landscaped thresholds. Courtyard paths, garden edges, verandas, and framed openings create a layered experience of arrival and daily movement, allowing rooms to remain connected to light, planting, and semi-outdoor life.',
+      'Courtyard paths, verandas, and framed openings guide movement through the site. Rooms remain close to planting and daylight while the perimeter protects privacy.',
     context:
-      'Set within Saika, Nairobi, the residence responds to the suburban plot through a protective perimeter, inward-facing courtyard life, shaded circulation, and a material palette that feels both durable and welcoming.',
-    clientGoals: 'Deliver a livable contemporary family home with warm materials, clear circulation, generous garden relationships, and a refined architectural presence.',
-    challenges: 'Balance privacy and openness while coordinating courtyard movement, garage access, service areas, pitched roofs, and a coherent material rhythm.',
+      'Set within Saika, the residence uses an inward-facing plan to manage privacy, access, service areas, and the intensity of Nairobi sun.',
+    clientGoals: 'Deliver a family home with clear circulation, usable outdoor rooms, secure access, and a composed residential presence.',
+    challenges: 'Coordinate privacy, garage access, service areas, courtyard movement, and pitched roofs without cluttering the plan.',
     materials: ['Mazeras stone cladding', 'decorative concrete columns', 'vertical screening', 'textured plaster', 'terracotta roof tones', 'courtyard landscaping'],
     renders: ['front garden elevation', 'courtyard path', 'garage approach', 'aerial view', 'landscaped circulation'],
     floorPlans: ['site plan', 'ground floor plan', 'elevations', 'sections', 'window schedule', 'door schedule'],
@@ -248,39 +248,39 @@ const projects = [
     palette: [
       {
         title: 'Mazeras stone',
-        copy: 'Layered stonework gives the home a grounded base and a quiet sense of permanence.',
+        copy: 'Layered stonework gives the house a durable base and an immediate sense of weight.',
         src: '/projects/saika-house/garden-arrival.jpg',
         alt: 'Mazeras stone cladding and landscaped garden frontage at Saika House'
       },
       {
         title: 'Vertical screens',
-        copy: 'Slender screening elements filter views and give the facade a calm residential rhythm.',
+        copy: 'Slender screens temper views, protect privacy, and add vertical order.',
         src: '/projects/saika-house/courtyard-living.jpg',
         alt: 'Vertical screening elements and garden-facing spaces at Saika House'
       },
       {
         title: 'Terracotta roof tones',
-        copy: 'Pitched roof planes introduce warmth and a subtle vernacular memory into the composition.',
+        copy: 'Pitched roof planes bring shade, familiarity, and a gentle domestic profile.',
         src: '/projects/saika-house/aerial-courtyard.jpg',
         alt: 'Terracotta pitched roof planes and courtyard organization at Saika House'
       },
       {
         title: 'Paved garden paths',
-        copy: 'Circulation is treated as landscape: planted, framed, and scaled for daily life.',
+        copy: 'Daily movement is held by planting, paving, shade, and low garden edges.',
         src: '/projects/saika-house/courtyard-path.jpg',
         alt: 'Paved courtyard circulation and landscaped paths at Saika House'
       }
     ],
     spatialExperience: [
-      'A courtyard-style layout creates protected outdoor rooms and a gentle sequence from arrival to family spaces.',
-      'Semi-outdoor verandas and screened thresholds allow the home to breathe while maintaining privacy.',
-      'Garden-facing circulation keeps daily movement connected to planting, daylight, and changing exterior views.',
-      'Human-scaled proportions, warm textures, and shaded edges make the residence feel refined without becoming formal.'
+      'A courtyard layout creates protected outdoor rooms between arrival and family spaces.',
+      'Verandas and screens allow air and shade without exposing the house.',
+      'Garden-facing routes keep daily movement close to planting and daylight.',
+      'The proportions are domestic, tactile, and intentionally informal.'
     ],
     details: [
-      'The house balances modern residential clarity with the warmth of stone, plaster, timber tones, and terracotta roof planes.',
-      'Landscaped circulation shapes the experience of arrival, movement, and everyday family life.',
-      'Vertical screens and carefully framed openings create rhythm, privacy, and a strong relationship to the courtyard.'
+      'Stone, plaster, timber tones, and terracotta roofs give the house depth without excess.',
+      'Garden paths define arrival and everyday use.',
+      'Screens and framed openings balance privacy with courtyard life.'
     ]
   },
   {
@@ -300,17 +300,17 @@ const projects = [
     area: 'TBC',
     hero: '/projects/earthen-threshold/hero.jpg',
     imagePosition: 'center 48%',
-    excerpt: 'A small outdoor WC pavilion conceived as an earthen study in brick, light, privacy, and filtered air.',
+    excerpt: 'A compact brick WC pavilion where privacy, air, and daylight are handled through mass and perforation.',
     overview:
-      'Earthen Threshold reframes a utilitarian outdoor WC as a quiet architectural pavilion. The project is shaped less as an object than as a sequence of tactile thresholds: clay brick under hand, filtered daylight through perforated masonry, softened privacy behind frosted glazing, and the slow movement from openness into enclosure.',
+      'Earthen Threshold gives a simple outdoor WC the dignity of a small pavilion. Brick mass, perforated walls, frosted glass, and narrow passages turn a service brief into a precise study of privacy and air.',
     brief:
-      'The commission called for a compact outdoor washroom structure that could remain practical while carrying the atmosphere, dignity, and spatial care of a small architectural installation.',
+      'The commission called for a compact washroom that could remain durable, private, and easy to build while carrying more presence than its size suggests.',
     concept:
-      'A monolithic brick volume is opened by a perforated masonry screen, allowing daylight and air to pass through the pavilion without dissolving its privacy. Compression and release become the main spatial devices: a compact entry, a narrow brick corridor, and intimate rooms where shadow, ventilation, and texture do the architectural work.',
+      'A brick volume is opened by a perforated screen, allowing air and daylight through without exposing the interior. The plan relies on compression: a small entry, a narrow corridor, and rooms held in shadow.',
     context:
-      'Set in Bomachoge, Kisii, the pavilion uses simple local material logic and elevates it through careful proportion, raw surfaces, and the choreography of filtered light.',
-    clientGoals: 'Create a durable outdoor WC pavilion with privacy, ventilation, sculptural presence, and a strong sense of material atmosphere.',
-    challenges: 'Turn a small service building into a calm spatial experience while balancing openness, privacy, natural ventilation, weathering, and ease of construction.',
+      'Set in Bomachoge, Kisii, the pavilion uses a direct local material logic: brick, openings, shade, and weathering.',
+    clientGoals: 'Create a durable outdoor WC pavilion with privacy, ventilation, sculptural presence, and minimal maintenance.',
+    challenges: 'Turn a small service building into a resolved piece of work while balancing openness, privacy, ventilation, and construction simplicity.',
     materials: ['exposed red brick', 'perforated masonry', 'frosted glazing', 'mono-pitch roof', 'filtered daylight', 'natural ventilation'],
     renders: ['brick threshold', 'perforated exterior screen', 'interior corridor', 'shower space', 'basin wall'],
     floorPlans: ['floor plan', 'roof plan', 'elevations', 'sections'],
@@ -394,33 +394,33 @@ const projects = [
     palette: [
       {
         title: 'Exposed red brick',
-        copy: 'The pavilion is held by clay mass: raw, warm, durable, and deliberately close to the hand.',
+        copy: 'Clay brick gives the pavilion weight, tactility, and a direct relationship to the hand.',
         src: '/projects/earthen-threshold/shower-brick-light.jpg',
         alt: 'Close view of exposed red brick walls and filtered light inside Earthen Threshold'
       },
       {
         title: 'Perforated masonry',
-        copy: 'Voids in the brickwork create privacy, air movement, and a shifting field of shadow.',
+        copy: 'Open joints admit air and shadow while keeping the interior protected.',
         src: '/projects/earthen-threshold/basin-screen.jpg',
         alt: 'Perforated masonry screen with filtered daylight and ventilation in Earthen Threshold'
       },
       {
         title: 'Frosted threshold',
-        copy: 'Translucent glazing holds privacy while keeping the entry surface soft and luminous.',
+        copy: 'Translucent glass protects the entry while keeping the surface light.',
         src: '/projects/earthen-threshold/exterior-threshold.jpg',
         alt: 'Frosted glass entry set within exposed brick at Earthen Threshold pavilion'
       },
       {
         title: 'Mono-pitch light',
-        copy: 'A simple roof geometry gathers shade, rain, and overhead daylight into one restrained gesture.',
+        copy: 'A single roof pitch gathers rain, shade, and overhead light in one move.',
         src: '/projects/earthen-threshold/corridor-filtered.jpg',
         alt: 'Perforated brick ceiling and mono-pitch roof edge filtering light inside Earthen Threshold'
       }
     ],
     details: [
-      'A utilitarian brief becomes spatially poetic through filtered light, tactility, and a precise balance of openness and privacy.',
-      'Perforated masonry allows the pavilion to breathe while preserving a calm inward atmosphere.',
-      'The project relies on minimal intervention: brick, shadow, air, and threshold are allowed to carry the experience.'
+      'A utilitarian brief becomes dignified through proportion, air, and shadow.',
+      'Perforated masonry lets the pavilion breathe without giving away privacy.',
+      'The design relies on few elements: brick, glass, roof, and carefully held openings.'
     ]
   },
   {
@@ -437,17 +437,17 @@ const projects = [
     area: 'TBC',
     hero: '/projects/ukwala/hero.jpg',
     imagePosition: 'center 48%',
-    excerpt: 'A contemporary tropical-modern residence shaped by stone, timber, glass, and carefully filtered light.',
+    excerpt: 'A tropical-modern residence in Siaya defined by a tall entry volume, stone mass, timber fins, and tempered daylight.',
     overview:
-      'Ukwala Residence is conceived as a warm, grounded family home where vertical proportion, tactile material contrast, and shaded thresholds define the architectural experience. Natural stone, timber slats, textured plaster, and large glazed openings are composed as a restrained palette: minimal in detail, yet deeply connected to the light, heat, and material culture of western Kenya.',
+      'Ukwala Residence is organized around a tall entry volume and a clear material contrast. Stone, timber fins, plaster, and large glazed openings give the house a formal presence while responding to the heat and light of western Kenya.',
     brief:
-      'The residence called for a confident private home with a ceremonial arrival, generous natural light, and a contemporary African expression that remains calm, durable, and intimate.',
+      'The residence called for a confident private home with a memorable arrival, generous daylight, durable finishes, and a controlled public face.',
     concept:
-      'A double-volume entrance anchors the composition, drawing the eye upward through tall glazed apertures and timber-lined surfaces. Slatted screens, deep overhangs, and framed openings temper the tropical sun while maintaining visual continuity between indoor rooms, terraces, gardens, and arrival spaces.',
+      'The double-height entrance anchors the composition. Screens, overhangs, and framed openings reduce glare while maintaining clear connections between rooms, terraces, and garden edges.',
     context:
-      'Located in Ukwala, Siaya, the house responds to warm daylight, prevailing breezes, privacy from the street, and the desire for a refined domestic architecture that feels both modern and rooted.',
-    clientGoals: 'Create a premium private residence with a double-volume entrance, strong material identity, natural light, privacy, and indoor-outdoor continuity.',
-    challenges: 'Balance generous glazing with passive comfort, resolve tall vertical proportions, and compose a minimal palette that feels warm rather than stark.',
+      'Located in Ukwala, Siaya, the house responds to warm daylight, prevailing breezes, street privacy, and the client’s desire for a modern home with local weight.',
+    clientGoals: 'Create a private residence with a double-height entrance, strong exterior identity, daylight, privacy, and garden connection.',
+    challenges: 'Balance generous glazing with passive comfort, resolve the tall facade, and keep the palette disciplined rather than stark.',
     materials: ['natural stone cladding', 'vertical timber fins', 'textured plaster', 'large glazed openings', 'warm earthy tones'],
     renders: ['arrival facade', 'double-volume entry', 'rear terrace screen', 'gate approach', 'material close-up'],
     floorPlans: ['ground floor plan', 'first floor plan', 'roof plan', 'elevations', 'sections'],
@@ -520,152 +520,47 @@ const projects = [
     palette: [
       {
         title: 'Natural stone',
-        copy: 'A grounded vertical mass gives the facade weight, shadow, and permanence.',
+        copy: 'A vertical stone mass gives the facade weight and a clear point of arrival.',
         src: '/projects/ukwala/arrival-wide.jpg',
         alt: 'Natural stone cladding and tall glazed opening at Ukwala Residence'
       },
       {
         title: 'Timber fins',
-        copy: 'Vertical slats filter light, soften privacy, and reinforce the facade rhythm.',
+        copy: 'Timber slats temper sun, protect privacy, and sharpen the facade rhythm.',
         src: '/projects/ukwala/material-closeup.jpg',
         alt: 'Vertical timber fins filtering light on the Ukwala Residence facade'
       },
       {
         title: 'Textured plaster',
-        copy: 'Warm mineral surfaces temper the modern geometry with a tactile, handmade quality.',
+        copy: 'Mineral plaster softens the modern geometry with a handmade surface.',
         src: '/projects/ukwala/entrance.jpg',
         alt: 'Textured plaster and timber entrance surfaces at Ukwala Residence'
       },
       {
         title: 'Glazed openings',
-        copy: 'Tall framed apertures pull daylight deep into the house while preserving clean proportions.',
+        copy: 'Tall apertures draw light deep into the house while keeping the elevations ordered.',
         src: '/projects/ukwala/rear-screen.jpg',
         alt: 'Large glazed openings and balcony screen at Ukwala Residence'
       }
     ],
     details: [
-      'The double-volume entrance gives the house a measured sense of ceremony while remaining intimate at the threshold.',
-      'Timber fins and deep reveals filter harsh sun, producing soft interior light and moderated privacy.',
-      'Openings are framed with restraint so the architecture reads as mass, shadow, texture, and carefully placed transparency.'
-    ]
-  },
-  {
-    id: 'karen-courtyard-residence',
-    name: 'Karen Courtyard Residence',
-    category: 'Private Residence',
-    location: 'Karen, Nairobi, Kenya',
-    year: '2026',
-    status: 'Design development',
-    hero: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    imagePosition: 'center 48%',
-    excerpt: 'A composed family estate shaped by shaded courtyards, garden rooms, and quiet ceremonial arrival.',
-    overview:
-      'A private Nairobi residence conceived as a refined retreat for family life, entertaining, and the daily rituals of indoor-outdoor living.',
-    brief:
-      'The client wanted a highly personal home with generous entertaining spaces, discreet private wings, and a strong relationship to mature landscape.',
-    concept:
-      'A sequence of courts, verandas, and deep thresholds filters daylight and frames the garden while maintaining privacy from neighboring plots.',
-    context:
-      'Set within leafy Karen, the residence responds to Nairobi light, seasonal rain, privacy, and the relaxed formality of contemporary Kenyan living.',
-    clientGoals: 'Create a timeless private home with calm arrival, natural light, warm materiality, and effortless entertaining.',
-    challenges: 'Balance openness with privacy while coordinating service routes, guest movement, cross ventilation, and garden continuity.',
-    materials: ['local stone', 'lime plaster', 'timber screens', 'bronze metalwork', 'travertine'],
-    renders: ['arrival court', 'double-height salon', 'garden veranda'],
-    floorPlans: ['arrival sequence', 'family wing plan', 'courtyard and veranda diagram'],
-    details: [
-      'The home unfolds gradually from a quiet entry court into a generous garden-facing living volume.',
-      'Stone, timber, and mineral plaster create a tactile palette that feels calm rather than decorative.',
-      'Deep overhangs and shaded outdoor rooms allow the house to live comfortably between interior and landscape.'
-    ]
-  },
-  {
-    id: 'diani-coastal-villa',
-    name: 'Diani Coastal Villa',
-    category: 'Coastal Villa',
-    location: 'Diani, Kenya',
-    year: '2025',
-    status: 'Concept design',
-    hero: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    imagePosition: 'center 50%',
-    excerpt: 'A breezy coastal villa with carved shade, tactile stone, and slow transitions toward the Indian Ocean.',
-    overview:
-      'A luxury coastal home for private holidays and intimate hosting, designed around shade, sea breeze, and relaxed elegance.',
-    brief:
-      'The villa needed to feel effortless and durable, with privacy for guests, generous outdoor rooms, and a strong sense of coastal ease.',
-    concept:
-      'Layered pavilions open to courtyards, water, and wind, creating a house that can shift from quiet family use to hosting.',
-    context:
-      'The design draws from Swahili coastal thresholds, Mediterranean calm, and contemporary tropical planning.',
-    clientGoals: 'Build a private coastal sanctuary with high comfort, low visual noise, and generous exterior living.',
-    challenges: 'Resolve humidity, salt air, privacy, and large openings without losing architectural restraint.',
-    materials: ['coral stone', 'white limewash', 'teak', 'woven screens', 'sand-toned terrazzo'],
-    renders: ['pool terrace', 'master suite deck', 'open dining pavilion'],
-    floorPlans: ['guest wing plan', 'pool and garden strategy', 'breeze and shade diagram'],
-    details: [
-      'The villa relies on deep shade, operable screens, and courtyard planting to soften coastal heat.',
-      'A restrained material palette allows the landscape and ocean light to carry the atmosphere.',
-      'Bedrooms are arranged as private suites connected by shaded garden walks.'
-    ]
-  },
-  {
-    id: 'mara-safari-residence',
-    slug: 'mara-safari',
-    name: 'Mara Safari Residence',
-    category: 'Safari Residence',
-    location: 'Maasai Mara, Kenya',
-    year: '2025',
-    status: 'Private retreat concept',
-    hero: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    imagePosition: 'center 52%',
-    excerpt: 'A low-impact private retreat where wide horizons, silence, and deep verandas define the experience.',
-    overview:
-      'A landscape-led private residence for extended stays in the Mara, combining retreat-level comfort with the intimacy of a home.',
-    brief:
-      'The project called for a discreet family retreat with private suites, contemplative shared spaces, and a light visual presence in the landscape.',
-    concept:
-      'The house is planned as a quiet constellation of pavilions, each oriented toward view, shade, privacy, and evening gathering.',
-    context:
-      'Architecture is kept low and horizontal, allowing the horizon and vegetation to remain the primary experience.',
-    clientGoals: 'Create an intimate safari home with private retreat comfort and an understated environmental attitude.',
-    challenges: 'Balance remoteness, service access, heat, wind, guest comfort, and the need for a minimal footprint.',
-    materials: ['rammed earth', 'reclaimed timber', 'canvas screens', 'stone plinths', 'brushed brass'],
-    renders: ['horizon lounge', 'family fire deck', 'private suite'],
-    floorPlans: ['pavilion plan', 'arrival and service route', 'view corridor study'],
-    details: [
-      'Shared rooms gather around a fire terrace, while suites sit apart for privacy and uninterrupted views.',
-      'Natural materials help the residence recede into the landscape without feeling rustic.',
-      'The architectural language is quiet, horizontal, and deeply tied to the horizon.'
-    ]
-  },
-  {
-    id: 'rosslyn-family-estate',
-    name: 'Rosslyn Family Estate',
-    category: 'Family Estate',
-    location: 'Rosslyn, Nairobi, Kenya',
-    year: '2026',
-    status: 'Residential master planning',
-    hero: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    imagePosition: 'center 47%',
-    excerpt: 'A multi-generational estate organized around gardens, wellness, guest privacy, and long-term family life.',
-    overview:
-      'A private estate framework for a family planning phased construction across a large Nairobi site.',
-    brief:
-      'The owners needed a master plan that could support a main house, guest suites, staff areas, garden rooms, and future expansion.',
-    concept:
-      'Buildings are arranged as a loose garden composition, separating quiet private life from social spaces and service movement.',
-    context:
-      'The estate responds to mature trees, arrival hierarchy, slope, privacy, and the desire for a resort-like domestic atmosphere.',
-    clientGoals: 'Plan a refined family compound with flexible phasing, high privacy, and a calm landscape-led identity.',
-    challenges: 'Coordinate multiple buildings, security, service access, family privacy, and future development without cluttering the site.',
-    materials: ['cut stone', 'aged timber', 'olive-toned metal', 'textured render', 'natural clay tile'],
-    renders: ['main house veranda', 'guest pavilion', 'wellness court'],
-    floorPlans: ['estate framework', 'privacy zoning', 'phasing strategy'],
-    details: [
-      'The estate is conceived as a sequence of gardens rather than a single oversized building.',
-      'Guest and family zones remain connected but independent, supporting both privacy and gathering.',
-      'A consistent material language gives the compound coherence across phases.'
+      'The double-height entrance gives the house ceremony without losing domestic scale.',
+      'Timber fins and deep reveals soften the sun and moderate privacy.',
+      'Openings are placed with restraint so the house reads as mass, shade, and measured transparency.'
     ]
   }
 ];
 
-export default projects;
+const projectDisplayOrder = [
+  'ukwala-residence',
+  'earthen-threshold',
+  'saika-house',
+  'kiserian-house'
+];
+
+const orderedProjects = [
+  ...projectDisplayOrder.map((id) => projects.find((project) => project.id === id)).filter(Boolean),
+  ...projects.filter((project) => !projectDisplayOrder.includes(project.id))
+];
+
+export default orderedProjects;

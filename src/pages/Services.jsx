@@ -9,18 +9,18 @@ function Services() {
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
         title="Luxury Residential Architecture Services in Kenya"
-        description="Studio 39+ offers bespoke residential architecture, luxury villa design, interior architecture, landscape integration, visualization, master planning, and renovations in Kenya."
+        description="We design thoughtfully crafted private homes, villas, and residential estates across Kenya, with focused architecture, interiors, renovation, and visualization services."
       />
       <section className="content-container space-y-12 py-16 sm:py-20 md:py-28">
-        <SectionHeading as="h1" eyebrow="Services" title="Residential architecture services for exceptional private homes." copy="Dedicated service paths for clients seeking a refined studio for private residences, coastal villas, family estates, interior architecture, renovations, and presentation-ready visual direction." />
+        <SectionHeading as="h1" eyebrow="Services" title="Architecture for private homes." copy="We provide architecture, interiors, renovations, and visualization services for clients seeking thoughtful, lasting homes." />
       </section>
 
-      <section className="content-container grid gap-x-10 pb-20 md:grid-cols-2 lg:grid-cols-3">
+      <section className="content-container grid gap-x-14 gap-y-2 pb-24 md:grid-cols-2">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}
       </section>
-      <CTASection title="Have a site, residence brief, villa concept, or family estate to discuss?" />
+      <CTASection title="Have a private home, villa, or residential estate to discuss?" />
     </div>
   );
 }

@@ -5,31 +5,31 @@ import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 
 const slides = [
   {
-    label: 'Luxury Residential Architecture / Kenya',
-    title: 'Designing Exceptional Homes Rooted in Place.',
+    label: 'Residential Architecture / Kenya',
+    title: 'Homes with a Sense of Belonging.',
     description:
-      'Studio 39+ creates refined residential spaces that blend contemporary architecture with climate, culture, and lifestyle across East Africa.',
+      'We design homes rooted in comfort, character, and belonging.',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=82',
     position: 'center 48%',
-    accent: 'Private residences, villas, and family estates'
+    accent: 'Private residences and family homes'
   },
   {
-    label: 'Coastal Villas / Private Retreats',
-    title: 'Bespoke Architecture for Modern Living.',
+    label: 'Villas / Private Retreats',
+    title: 'Architecture Rooted in Place.',
     description:
-      'Homes composed through shade, breeze, natural light, tactility, and a quiet sense of occasion.',
+      'We design architecture shaped by climate, culture, and place.',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=82',
     position: 'center 50%',
-    accent: 'Coastal villas and retreat-style homes'
+    accent: 'Coastal villas and private retreats'
   },
   {
     label: 'Estate Living / East Africa',
-    title: 'Architecture with the Stillness of a Private Retreat.',
+    title: 'Architecture with a Quiet Permanence.',
     description:
-      'Contextual homes for clients seeking calm, privacy, generosity, and an enduring relationship with landscape.',
+      'We design homes that feel calm, personal, and that belong.',
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=82',
     position: 'center 47%',
-    accent: 'Residential master planning and private compounds'
+    accent: 'Site planning and private compounds'
   }
 ];
 
@@ -92,10 +92,10 @@ function HeroSlideshow() {
           <p className="hero-copy text-ivory/84">{slide.description}</p>
           <div className="hero-actions flex flex-col gap-3 text-sm uppercase tracking-[0.24em] sm:flex-row">
             <Link to="/projects" className="btn-primary hero-button">
-              View Projects
+              Explore our Work
             </Link>
             <Link to="/contact" className="btn-secondary hero-button">
-              Start Your Project
+              Begin a Conversation
             </Link>
           </div>
         </motion.div>

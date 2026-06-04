@@ -72,12 +72,3 @@ export function trackContactFormSubmission() {
     event_label: 'contact_form'
   });
 }
-
-export function trackContactFileUploadAttempt({ count = 0, types = [], source = 'contact_form' } = {}) {
-  trackEvent('contact_file_upload_attempt', {
-    event_category: 'contact',
-    event_label: source,
-    file_count: count,
-    file_types: types.join(', ')
-  });
-}

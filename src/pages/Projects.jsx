@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 import CTASection from '../components/CTASection';
 import projects from '../data/projects';
 
-const categories = ['All', 'Private Residence', 'Contemporary Private Residence', 'Outdoor WC Pavilion', 'Coastal Villa', 'Safari Residence', 'Family Estate'];
+const categories = ['All', 'Private Residence', 'Contemporary Private Residence', 'Outdoor WC Pavilion', 'Contemporary 3-Bedroom Bungalow'];
 
 function Projects() {
   const [active, setActive] = useState('All');
@@ -18,14 +18,14 @@ function Projects() {
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
         title="Featured Residences | Luxury Homes and Villas in Kenya"
-        description="Browse Studio 39+ luxury residential architecture studies across private homes, coastal villas, safari residences, and family estates in Kenya."
+        description="Browse Studio 39+ residential architecture studies across private homes, villas, and compact residential commissions in Kenya."
       />
       <section className="content-container space-y-12 py-16 sm:py-20 md:py-28">
         <SectionHeading
           as="h1"
           eyebrow="Featured Residences"
-          title="A curated portfolio of homes, villas, retreats, and private estates."
-          copy="Each residence study moves beyond imagery into design intent, site response, material atmosphere, lifestyle, and spatial narrative."
+          title="Selected homes, villas, and residential studies."
+          copy="Each project presents the site, brief, design intent, and the decisions that shape the finished work."
         />
         <div className="flex gap-3 overflow-x-auto pb-3 text-xs uppercase tracking-[0.2em] text-charcoal/70 dark:text-sand" role="list" aria-label="Filter projects by category">
           {categories.map((category) => (
@@ -51,7 +51,7 @@ function Projects() {
           <ProjectCard key={project.id} project={project} />
         ))}
       </section>
-      <CTASection title="Planning a private residence, villa, or estate in Kenya?" />
+      <CTASection title="Planning a private residence, villa, or compact home in Kenya?" />
     </div>
   );
 }

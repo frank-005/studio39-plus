@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
 function CTASection({
-  eyebrow = 'Begin Your Project',
-  title = 'Bring your site, brief, or early idea into a private studio conversation.',
-  copy = 'Studio 39+ helps residential clients clarify the next intelligent move before design begins.'
+  eyebrow = 'Start a Project',
+  title = 'Bring the site, brief, or first idea into a focused studio conversation.',
+  copy = 'Studio 39+ helps clients define the right next step before design begins.'
 }) {
   return (
     <section className="content-container py-16 sm:py-20 md:py-24">
@@ -18,10 +18,10 @@ function CTASection({
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <Link className="btn-primary" to="/contact">
-              Start Your Project
+              Discuss Your Project
             </Link>
             <Link className="btn-secondary" to="/projects">
-              View Portfolio
+              Explore our Work
             </Link>
           </div>
         </div>

@@ -15,9 +15,9 @@ export const site = {
     longitude: 36.8797
   },
   keywords: [
-    'Luxury Residential Architect Kenya',
+    'Residential Architect Kenya',
     'Modern Villa Architect Nairobi',
-    'High-End Residential Design Kenya',
+    'Private Residential Design Kenya',
     'Contemporary Home Architect East Africa',
     'Bespoke Villa Design Kenya',
     'Private Residence Architect Nairobi'

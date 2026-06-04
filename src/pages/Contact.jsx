@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useForm } from '@formspree/react';
 import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
-import FileUpload from '../components/FileUpload';
 import { site } from '../data/site';
 import { trackContactFormSubmission, trackEmailClick, trackPhoneClick } from '../utils/analytics';
 
@@ -17,13 +16,12 @@ const initialFormState = {
   message: ''
 };
 
-const projectTypes = ['Private Residence', 'Coastal Villa', 'Safari Residence', 'Family Estate', 'Luxury Retreat', 'Renovation / Extension', 'Residential Development'];
+const projectTypes = ['Private Residence', 'Villa / Retreat', 'Compact Home', 'Interior Architecture', 'Renovation / Extension', 'Residential Development', 'Site Planning'];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
   const [state, handleFormspreeSubmit] = useForm(FORMSPREE_FORM_ID);
   const [formData, setFormData] = useState(initialFormState);
-  const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState({});
   const [statusMessage, setStatusMessage] = useState('');
   const [statusType, setStatusType] = useState('');
@@ -56,7 +54,6 @@ function Contact() {
       setStatusType('success');
       setStatusMessage('Thank you - your inquiry has been submitted successfully. We will reply shortly.');
       setFormData(initialFormState);
-      setFiles([]);
       setErrors({});
     } else if (Array.isArray(state.errors) && state.errors.length > 0) {
       setStatusType('error');
@@ -76,15 +73,15 @@ function Contact() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
-        title="Begin Your Luxury Residential Project in Kenya"
-        description="Contact Studio 39+ to discuss luxury homes, villas, private residences, family estates, renovations, and bespoke residential architecture in Kenya."
+        title="Begin a Residential Project in Kenya"
+        description="Contact Studio 39+ to discuss private homes, villas, renovations, interior architecture, and residential design work in Kenya."
       />
       <section className="content-container space-y-12 py-16 md:py-24">
         <SectionHeading
           as="h1"
-          eyebrow="Begin Your Project"
-          title="A considered inquiry for a private residential commission."
-          copy="Share your location, project type, timeline, and budget range so Studio 39+ can respond with a thoughtful next step."
+          eyebrow="Start a Project"
+          title="A focused inquiry for a private residential commission."
+          copy="Share the location, project type, timeline, and budget range so Studio 39+ can respond with a clear next step."
         />
       </section>
 
@@ -117,7 +114,7 @@ function Contact() {
                   ))}
                 </select>
               </Field>
-              <Field id="budget" label="Estimated Budget Range" error={errors.budget}>
+              <Field id="budget" label="Budget Range" error={errors.budget}>
                 <select id="budget" name="budget" value={formData.budget} onChange={handleChange} className="form-field" aria-invalid={Boolean(errors.budget)} aria-describedby={errors.budget ? 'budget-error' : undefined}>
                   <option value="">Select a range</option>
                   <option value="KES 25M - 50M">KES 25M - 50M</option>
@@ -129,7 +126,7 @@ function Contact() {
               </Field>
             </div>
 
-            <Field id="timeline" label="Estimated Timeline" error={errors.timeline}>
+            <Field id="timeline" label="Timeline" error={errors.timeline}>
               <select id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} className="form-field" aria-invalid={Boolean(errors.timeline)} aria-describedby={errors.timeline ? 'timeline-error' : undefined}>
                 <option value="">Select a timeline</option>
                 <option value="Immediate consultation">Immediate consultation</option>
@@ -140,18 +137,9 @@ function Contact() {
               </select>
             </Field>
 
-            <Field id="message" label="Message / Project Brief" error={errors.message}>
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about the site, lifestyle, family needs, atmosphere, and any private priorities." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
+            <Field id="message" label="Project Brief" error={errors.message}>
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" placeholder="Tell us about the site, rooms required, family needs, priorities, and any constraints." className="form-field" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
             </Field>
-
-            <input type="hidden" name="fileNames" value={files.map((file) => file.name).join(', ')} />
-            <div>
-              <p className="eyebrow">Reference Files</p>
-              <div className="mt-4">
-                <FileUpload files={files} onFilesChange={setFiles} />
-                <p className="mt-3 text-xs leading-6 text-charcoal/60 dark:text-sand/60">Optional: add title deeds, survey drawings, site photos, inspiration imagery, sketches, or PDFs. File names are included with the inquiry.</p>
-              </div>
-            </div>
 
             {statusMessage && (
               <div role="status" className={`border px-6 py-5 text-sm ${statusType === 'success' ? 'border-sage/30 bg-sage/10 text-charcoal dark:bg-sage/20 dark:text-ivory' : 'border-rose-200/70 bg-rose-100 text-rose-800 dark:border-rose-300/40 dark:bg-rose-900/10 dark:text-rose-200'}`}>
@@ -160,7 +148,7 @@ function Contact() {
             )}
 
             <button type="submit" disabled={state.submitting} className="btn-primary disabled:cursor-not-allowed disabled:opacity-60">
-              {state.submitting ? 'Preparing inquiry...' : 'Begin Your Project'}
+              {state.submitting ? 'Preparing inquiry...' : 'Submit Inquiry'}
             </button>
           </form>
         </div>

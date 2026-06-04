@@ -50,16 +50,22 @@ function ServiceDetail() {
           <div>
             <p className="eyebrow">Process</p>
             <h2 id="service-process-title" className="mt-4 max-w-xl text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-              A restrained workflow that moves from private brief to clear residential design decisions.
+              A clear workflow from private brief to considered design decisions.
             </h2>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {service.process.map((step, index) => (
-              <article key={step} className="border-t border-charcoal/15 pt-6 dark:border-ivory/15">
+          <div className="grid gap-8 sm:grid-cols-2">
+            {service.process.map((step, index) => {
+              const title = typeof step === 'string' ? step : step.title;
+              const copy = typeof step === 'string' ? null : step.copy;
+
+              return (
+              <article key={title} className="border-t border-charcoal/15 pt-6 dark:border-ivory/15">
                 <p className="text-xs uppercase tracking-[0.24em] text-charcoal/55 dark:text-sand/70">0{index + 1}</p>
-                <h3 className="mt-4 text-xl font-semibold text-charcoal dark:text-ivory">{step}</h3>
+                <h3 className="mt-4 text-xl font-semibold text-charcoal dark:text-ivory">{title}</h3>
+                {copy && <p className="mt-4 text-sm leading-7 text-charcoal/68 dark:text-sand/82">{copy}</p>}
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </Reveal>
@@ -74,7 +80,7 @@ function ServiceDetail() {
               </h2>
             </div>
             <Link to="/projects" className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand">
-              View residences
+              Explore our Work
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -87,7 +93,7 @@ function ServiceDetail() {
 
       <CTASection
         title={`Begin a conversation about ${service.shortTitle.toLowerCase()} work.`}
-        copy="Share the project location, timeline, budget range, and any early drawings or references. Studio 39+ will respond with a considered next step."
+        copy="Share the project location, timeline, budget range, and any early drawings or references. We will respond with a clear next step."
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { absoluteUrl, defaultImage, site } from '../data/site';
 
@@ -27,11 +27,11 @@ function setLink(rel, href) {
   element.setAttribute('href', href);
 }
 
-function SEO({ title, description, image = defaultImage, type = 'website', schema = [], keywords }) {
+function SEO({ title, description, image = defaultImage, type = 'website', schema, keywords }) {
   const location = useLocation();
   const canonical = absoluteUrl(location.pathname);
   const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
-  const schemas = Array.isArray(schema) ? schema : [schema];
+  const schemas = useMemo(() => (Array.isArray(schema) ? schema : [schema].filter(Boolean)), [schema]);
 
   useEffect(() => {
     document.title = fullTitle;
