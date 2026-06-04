@@ -29,7 +29,7 @@ function ServiceDetail() {
 
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
-      <SEO title={`${service.seoTitle} | Studio 39+`} description={service.seoDescription} />
+      <SEO title={`${service.metaTitle || service.seoTitle} | Studio 39+`} description={service.seoDescription} />
       <section className="content-container grid gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
         <SectionHeading as="h1" eyebrow="Service" title={service.seoTitle} copy={service.description} />
         <div className="border-t border-charcoal/15 pt-7 dark:border-ivory/15">
@@ -59,16 +59,36 @@ function ServiceDetail() {
               const copy = typeof step === 'string' ? null : step.copy;
 
               return (
-              <article key={title} className="border-t border-charcoal/15 pt-6 dark:border-ivory/15">
-                <p className="text-xs uppercase tracking-[0.24em] text-charcoal/55 dark:text-sand/70">0{index + 1}</p>
-                <h3 className="mt-4 text-xl font-semibold text-charcoal dark:text-ivory">{title}</h3>
-                {copy && <p className="mt-4 text-sm leading-7 text-charcoal/68 dark:text-sand/82">{copy}</p>}
-              </article>
+                <article key={title} className="border-t border-charcoal/15 pt-7 dark:border-ivory/15">
+                  <p className="text-xs uppercase tracking-[0.24em] text-charcoal/55 dark:text-sand/70">0{index + 1}</p>
+                  <h3 className="mt-5 text-xl font-semibold leading-tight text-charcoal dark:text-ivory">{title}</h3>
+                  {copy && <p className="mt-5 text-sm leading-7 text-charcoal/68 dark:text-sand/82">{copy}</p>}
+                </article>
               );
             })}
           </div>
         </div>
       </Reveal>
+
+      {service.deliverables?.length > 0 && (
+        <Reveal as="section" className="content-container py-14 md:py-20" aria-labelledby="service-deliverables-title">
+          <div className="grid gap-10 border-y border-charcoal/15 py-12 dark:border-ivory/15 lg:grid-cols-[0.85fr_1.15fr] md:py-16">
+            <div>
+              <p className="eyebrow">What's Included</p>
+              <h2 id="service-deliverables-title" className="mt-4 max-w-xl text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
+                Core architectural deliverables for a clear residential process.
+              </h2>
+            </div>
+            <div className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
+              {service.deliverables.map((item) => (
+                <div key={item} className="border-t border-charcoal/12 pt-5 dark:border-ivory/12">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-charcoal/72 dark:text-sand">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      )}
 
       {relatedProjects.length > 0 && (
         <Reveal as="section" className="content-container py-14 md:py-20" aria-labelledby="related-projects-title">

@@ -5,7 +5,7 @@ import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 
 const slides = [
   {
-    label: 'Residential Architecture / Kenya',
+    label: 'Residential Design',
     title: 'Homes with a Sense of Belonging.',
     description:
       'We design homes rooted in comfort, character, and belonging.',
@@ -14,22 +14,22 @@ const slides = [
     accent: 'Private residences and family homes'
   },
   {
-    label: 'Villas / Private Retreats',
+    label: 'Villas',
     title: 'Architecture Rooted in Place.',
     description:
       'We design architecture shaped by climate, culture, and place.',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=82',
     position: 'center 50%',
-    accent: 'Coastal villas and private retreats'
+    accent: 'Places to retreat, reconnect, and live slowly.'
   },
   {
-    label: 'Estate Living / East Africa',
+    label: 'Estates',
     title: 'Architecture with a Quiet Permanence.',
     description:
       'We design homes that feel calm, personal, and that belong.',
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=82',
     position: 'center 47%',
-    accent: 'Site planning and private compounds'
+    accent: 'Private compounds shaped by landscape and privacy.'
   }
 ];
 
