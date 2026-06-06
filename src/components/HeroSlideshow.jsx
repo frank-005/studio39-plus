@@ -6,7 +6,7 @@ import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 const slides = [
   {
     label: 'Residential Design',
-    title: 'Homes with a Sense of Belonging.',
+    title: 'Designing Homes with a Sense of Belonging.',
     description:
       'We design homes rooted in comfort, character, and belonging.',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=82',
