@@ -12,7 +12,7 @@ function Footer() {
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-ivory">Studio 39+</p>
             <p className="mt-5 max-w-lg text-sm leading-8 text-sand/82">
-             Kenyan-based architects for bespoke residences, interior architecture, renovations, and site-led design.
+             Kenyan-based architects for bespoke residences, Interior Design, renovations, and site-led design.
             </p>
             <p className="mt-7 max-w-md text-base leading-8 text-ivory">
               Currently accepting selected residential commissions.

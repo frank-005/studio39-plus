@@ -16,7 +16,7 @@ const initialFormState = {
   message: ''
 };
 
-const projectTypes = ['Private Residence', 'Villa / Retreat', 'Compact Home', 'Interior Architecture', 'Renovation / Extension', 'Residential Development', 'Site Planning'];
+const projectTypes = ['Private Residence', 'Villa / Retreat', 'Compact Home', 'Interior Design', 'Renovation / Extension', 'Residential Development', 'Site Planning'];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
@@ -74,14 +74,14 @@ function Contact() {
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
         title="Begin a Residential Project in Kenya"
-        description="Contact Studio 39+ to discuss private homes, villas, renovations, interior architecture, and residential design work in Kenya."
+        description="Contact Studio 39+ to discuss private homes, villas, renovations, Interior Design, and residential design work in Kenya."
       />
       <section className="content-container space-y-12 py-16 md:py-24">
         <SectionHeading
           as="h1"
-          eyebrow="Start a Project"
-          title="A focused inquiry for a private residential commission."
-          copy="Share the location, project type, timeline, and budget range so Studio 39+ can respond with a clear next step."
+          eyebrow="Let's Talk"
+          title="Tell Us About Your Home."
+          copy="Have a plot, an idea, or simply a feeling about what you want to create? Share a little about your vision — you don't need to have everything figured out. That's what we're here for."
         />
       </section>
 

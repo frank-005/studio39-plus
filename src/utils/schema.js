@@ -40,7 +40,7 @@ export const localBusinessSchema = {
 export const professionalServiceSchema = {
   ...baseBusiness,
   '@type': 'ProfessionalService',
-  serviceType: 'Residential architecture, villa design, interior architecture, landscape integration, renovation, site planning, and architectural visualization'
+  serviceType: 'Residential architecture, villa design, Interior Design, landscape integration, renovation, site planning, and architectural visualization'
 };
 
 export function projectSchema(project) {

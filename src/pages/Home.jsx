@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
-import ProjectCard from '../components/ProjectCard';
 import ServiceCard from '../components/ServiceCard';
 import HeroSlideshow from '../components/HeroSlideshow';
 import CTASection from '../components/CTASection';
 import TestimonialSection from '../components/TestimonialSection';
 import Reveal from '../components/Reveal';
+import CinematicProjectShowcase from '../components/CinematicProjectShowcase';
 import projects from '../data/projects';
 import services from '../data/services';
 import { site } from '../data/site';
@@ -15,9 +15,9 @@ import { architecturalFirmSchema, localBusinessSchema, professionalServiceSchema
 import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 
 const philosophy = [
-  ['Light & Climate', 'Rooms shaped by daylight, shade, airflow, and seasonal comfort.'],
-  ['Material & Craft', 'Natural materials selected for longevity, texture, and quiet character.'],
-  ['Living & Landscape', 'Homes connected to gardens, daily rituals, and the rhythms of family life.']
+  ['Light & Climate', 'How sunlight, shade, and air shape the way your home feels throughout the day. Good architecture makes you feel the seasons change.'],
+  ['Material & Time', 'Natural materials that age beautifully and improve with use. Your home should become more comfortable and more beautiful as time passes.'],
+  ['Living & Connection', 'Spaces designed around how you actually live — family gatherings, quiet mornings, everyday rituals. The architecture serves your life, not the other way around.']
 ];
 
 const process = [
@@ -49,33 +49,29 @@ function Home() {
       />
       <HeroSlideshow />
 
-      <motion.section initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.75 }} className="mobile-section content-container space-y-14 py-24 sm:py-28 md:py-36">
-        <SectionHeading
+      <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.75 }}>
+        <CinematicProjectShowcase
+          projects={projects}
+          variant="section"
           eyebrow="Featured Residences"
           title="Selected private homes, villas, and residential studies."
-          copy="Work shaped by site, privacy, climate, and the daily rituals of modern East African life."
         />
-        <div className="project-gallery grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      </motion.section>
+      </motion.div>
 
       <Reveal as="section" className="mobile-section content-container py-24 sm:py-28 md:py-36" aria-labelledby="about-residential-studio">
         <div className="grid gap-12 border-y border-charcoal/15 py-16 dark:border-ivory/15 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="eyebrow">Architecture Rooted in Place</p>
+            <p className="eyebrow">Before We Design</p>
             <h2 id="about-residential-studio" className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-tight text-charcoal dark:text-ivory sm:text-5xl">
-              We design thoughtful homes shaped around privacy, comfort, and everyday life.
+              We Want to Understand How You Live.
             </h2>
           </div>
           <div className="space-y-7 text-base leading-9 text-charcoal/72 dark:text-sand">
             <p>
-              Each project is approached as a personal commission where privacy, light, materials, and the way a home should feel over time are carefully considered.
+              Your daily rhythms, the light in your favourite room, how your family gathers, what makes you feel at home — these are the things that shape the architecture. Every detail matters because it's your life that lives there.
             </p>
             <Link className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand" to="/about">
-              Our Approach
+              How We Work
             </Link>
           </div>
         </div>
@@ -84,9 +80,9 @@ function Home() {
       <section className="services-section mobile-section border-y border-charcoal/10 bg-neutral-100/45 dark:border-ivory/10 dark:bg-black/10">
         <div className="content-container grid gap-16 py-28 sm:py-32 md:py-44 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <SectionHeading
-            eyebrow="Residential Services"
-            title="Architecture for private homes."
-            copy="We provide architecture, interiors, renovations, and visualization services for clients seeking thoughtful, lasting homes."
+            eyebrow="How We Help"
+            title="Services for Creating Your Home."
+            copy="Whether you\'re starting from scratch, reimagining a space, or bringing a vision to life, we\'ll guide you through the process."
           />
           <div className="grid gap-x-14 gap-y-2 md:grid-cols-2">
             {services.map((service) => (
@@ -98,9 +94,9 @@ function Home() {
 
       <section className="mobile-section content-container py-28 sm:py-32 md:py-44">
         <SectionHeading
-          eyebrow="Design Philosophy"
-          title="Homes designed around climate, comfort, and place."
-          copy="We believe lasting homes are defined by comfort, privacy, and a strong sense of place."
+          eyebrow="Your Home"
+          title="What Makes a Home Feel Right."
+          copy="The best homes aren\'t defined by style or budget — they\'re defined by how they serve your life. Light, comfort, connection to place, and materials that age beautifully. These are the things that matter."
         />
         <div className="mt-16 grid gap-10 md:grid-cols-3 lg:gap-14">
           {philosophy.map(([title, copy]) => (

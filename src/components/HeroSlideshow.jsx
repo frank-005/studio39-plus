@@ -5,31 +5,31 @@ import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 
 const slides = [
   {
-    label: 'Residential Design',
-    title: 'Designing Homes with a Sense of Belonging.',
+    label: 'Your Home',
+    title: 'Your Home Should Feel Like It Belongs to You.',
     description:
-      'We design homes rooted in comfort, character, and belonging.',
+      'From the first conversation to the final detail, we\'ll help you create a home shaped around how you live, the place you love, and the life you want to build.',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=82',
     position: 'center 48%',
-    accent: 'Private residences and family homes'
+    accent: 'Private homes and family residences'
   },
   {
-    label: 'Villas',
-    title: 'Architecture Rooted in Place.',
+    label: 'Your Vision',
+    title: 'A Home Shaped by You and Your Place.',
     description:
-      'We design architecture shaped by climate, culture, and place.',
+      'Whether you\'re building in Nairobi, along the coast, or deep in the countryside, your home should respond to where it stands and how you want to live there.',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=82',
     position: 'center 50%',
-    accent: 'Places to retreat, reconnect, and live slowly.'
+    accent: 'Homes rooted in landscape, climate, and family life'
   },
   {
-    label: 'Estates',
-    title: 'Architecture with a Quiet Permanence.',
+    label: 'Your Everyday',
+    title: 'Architecture That Serves Your Daily Life.',
     description:
-      'We design homes that feel calm, personal, and that belong.',
+      'Good architecture doesn\'t announce itself. It quietly makes your everyday easier, more comfortable, more connected to the people and places you care about.',
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=82',
     position: 'center 47%',
-    accent: 'Private compounds shaped by landscape and privacy.'
+    accent: 'Homes designed for how you actually live'
   }
 ];
 
@@ -91,11 +91,11 @@ function HeroSlideshow() {
           </h1>
           <p className="hero-copy text-ivory/84">{slide.description}</p>
           <div className="hero-actions flex flex-col gap-3 text-sm uppercase tracking-[0.24em] sm:flex-row">
-            <Link to="/projects" className="btn-primary hero-button">
-              Explore our Work
+            <Link to="/contact" className="btn-primary hero-button">
+              Start a Conversation
             </Link>
-            <Link to="/contact" className="btn-secondary hero-button">
-              Begin a Conversation
+            <Link to="/projects" className="btn-secondary hero-button">
+              Explore Our Work
             </Link>
           </div>
         </motion.div>

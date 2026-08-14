@@ -16,7 +16,7 @@ const projects = [
     materialPalette: 'Textured plaster, warm stone cladding, charcoal frames, concrete shading devices, timber soffit tones, muted roof finish',
     hero: '/projects/kiserian-house/render-front.png',
     imagePosition: 'center 50%',
-    excerpt: 'A compact Kajiado bungalow with a low roofline, stone plinth, shaded openings, and an efficient family plan.',
+    excerpt: 'A simple family home designed to feel cool, calm, and connected to the landscape — with shaded spaces that make everyday life feel effortless.',
     overview:
       'Kiserian House is a compact family bungalow with a direct plan and a quiet street presence. A mono-pitched roof, stone base, recessed windows, and shaded paths give the home order without excess.',
     brief:
@@ -134,7 +134,7 @@ const projects = [
     materialPalette: 'Mazeras stone, textured plaster, timber tones, vertical screens, terracotta roof tones',
     hero: '/projects/saika-house/hero.jpg',
     imagePosition: 'center 48%',
-    excerpt: 'A Nairobi family home organized around garden paths, stonework, verandas, and protected courtyard edges.',
+    excerpt: 'A home designed for family life, where courtyards and gardens become part of everyday living — quiet, private, and rooted to place.',
     overview:
       'Saika House turns a suburban plot into a sequence of protected garden rooms. Mazeras stone, plaster, timber-toned soffits, screens, and terracotta roofs give the house a familiar weight suited to Nairobi family life.',
     brief:
@@ -300,7 +300,7 @@ const projects = [
     area: 'TBC',
     hero: '/projects/earthen-threshold/hero.jpg',
     imagePosition: 'center 48%',
-    excerpt: 'A compact brick WC pavilion where privacy, air, and daylight are handled through mass and perforation.',
+    excerpt: 'A small building that proves good architecture isn\'t about size — it\'s about how thoughtfully a space is designed to be used and experienced.',
     overview:
       'Earthen Threshold gives a simple outdoor WC the dignity of a small pavilion. Brick mass, perforated walls, frosted glass, and narrow passages turn a service brief into a precise study of privacy and air.',
     brief:
@@ -437,7 +437,7 @@ const projects = [
     area: 'TBC',
     hero: '/projects/ukwala/hero.jpg',
     imagePosition: 'center 48%',
-    excerpt: 'A tropical-modern residence in Siaya defined by a tall entry volume, stone mass, timber fins, and tempered daylight.',
+    excerpt: 'A home designed around an expansive entry and bold material presence — where light, privacy, and confidence come together in a single composition.',
     overview:
       'Ukwala Residence is organized around a tall entry volume and a clear material contrast. Stone, timber fins, plaster, and large glazed openings give the house a formal presence while responding to the heat and light of western Kenya.',
     brief:

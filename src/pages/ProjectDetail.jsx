@@ -674,7 +674,7 @@ function ProjectDetail() {
             <h3 className="eyebrow">Studio Scope</h3>
             <ul className="mt-5 space-y-3 text-base leading-8 text-charcoal/72 dark:text-sand">
               <li>Architecture</li>
-              <li>Interior Architecture</li>
+              <li>Interior Design</li>
               <li>Architectural Visualization</li>
               <li>Documentation Strategy</li>
             </ul>

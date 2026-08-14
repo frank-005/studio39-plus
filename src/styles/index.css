@@ -557,13 +557,12 @@ h3,
   inset: 0;
   z-index: 1;
   content: "";
-  background:
-    linear-gradient(
-      to bottom,
-      rgb(18 14 11 / 0.05) 20%,
-      rgb(24 18 14 / 0.34) 68%,
-      rgb(22 16 12 / 0.64) 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    rgb(18 14 11 / 0.05) 20%,
+    rgb(24 18 14 / 0.34) 68%,
+    rgb(22 16 12 / 0.64) 100%
+  );
   pointer-events: none;
 }
 
@@ -589,13 +588,12 @@ h3,
 }
 
 .project-card--bright-image .project-card-media::after {
-  background:
-    linear-gradient(
-      to bottom,
-      rgb(18 14 11 / 0.08) 18%,
-      rgb(24 18 14 / 0.42) 66%,
-      rgb(22 16 12 / 0.76) 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    rgb(18 14 11 / 0.08) 18%,
+    rgb(24 18 14 / 0.42) 66%,
+    rgb(22 16 12 / 0.76) 100%
+  );
 }
 
 .project-card-image-title {
@@ -860,7 +858,6 @@ h3,
   .project-card-media {
     aspect-ratio: 4 / 3;
   }
-
 }
 
 @media (min-width: 1600px) {
@@ -1198,6 +1195,35 @@ html:not(.dark) .light-surface-overlay {
   }
 }
 
+/* Cinematic Project Showcase Styles */
+.cinematic-showcase {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #2f2c28;
+}
+
+.cinematic-showcase img {
+  will-change: transform;
+}
+
+/* Ensure smooth animations */
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-showcase {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* High performance for large images */
+@supports (content-visibility: auto) {
+  .cinematic-showcase {
+    content-visibility: auto;
+  }
+}
+
 @media (max-width: 374px) {
   .hero-title {
     font-size: clamp(2.18rem, 9vw, 3rem);
@@ -1211,7 +1237,9 @@ html:not(.dark) .light-surface-overlay {
 
 /* Editorial refinement layer */
 body {
-  font-feature-settings: "liga" 1, "kern" 1;
+  font-feature-settings:
+    "liga" 1,
+    "kern" 1;
 }
 
 .home-hero {
@@ -1221,7 +1249,12 @@ body {
 
 .home-hero .hero-overlay {
   background:
-    linear-gradient(90deg, rgb(16 14 11 / 0.78), rgb(16 14 11 / 0.44) 52%, rgb(16 14 11 / 0.18)),
+    linear-gradient(
+      90deg,
+      rgb(16 14 11 / 0.78),
+      rgb(16 14 11 / 0.44) 52%,
+      rgb(16 14 11 / 0.18)
+    ),
     linear-gradient(180deg, rgb(16 14 11 / 0.08), rgb(16 14 11 / 0.76));
 }
 
@@ -1350,7 +1383,11 @@ body {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, rgb(47 44 40 / 0.04), rgb(47 44 40 / 0.58));
+  background: linear-gradient(
+    180deg,
+    rgb(47 44 40 / 0.04),
+    rgb(47 44 40 / 0.58)
+  );
   pointer-events: none;
 }
 
@@ -1511,7 +1548,11 @@ body {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, rgb(31 22 17 / 0.02), rgb(31 22 17 / 0.58));
+  background: linear-gradient(
+    180deg,
+    rgb(31 22 17 / 0.02),
+    rgb(31 22 17 / 0.58)
+  );
   pointer-events: none;
 }
 
@@ -1530,8 +1571,7 @@ body {
 .earthen-drawing-section {
   background:
     linear-gradient(rgb(47 44 40 / 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(47 44 40 / 0.045) 1px, transparent 1px),
-    #f7efe3;
+    linear-gradient(90deg, rgb(47 44 40 / 0.045) 1px, transparent 1px), #f7efe3;
   background-size: 4rem 4rem;
 }
 
@@ -1648,7 +1688,11 @@ body {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, rgb(45 36 29 / 0.02), rgb(45 36 29 / 0.56));
+  background: linear-gradient(
+    180deg,
+    rgb(45 36 29 / 0.02),
+    rgb(45 36 29 / 0.56)
+  );
   pointer-events: none;
 }
 
@@ -1667,8 +1711,7 @@ body {
 .saika-drawing-section {
   background:
     linear-gradient(rgb(47 44 40 / 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(47 44 40 / 0.04) 1px, transparent 1px),
-    #f8efe2;
+    linear-gradient(90deg, rgb(47 44 40 / 0.04) 1px, transparent 1px), #f8efe2;
   background-size: 4rem 4rem;
 }
 
@@ -1736,7 +1779,11 @@ body {
   position: absolute;
   inset: 0;
   content: "";
-  background: radial-gradient(circle at 8% 52%, rgb(10 8 6 / 0.28), transparent 34%);
+  background: radial-gradient(
+    circle at 8% 52%,
+    rgb(10 8 6 / 0.28),
+    transparent 34%
+  );
   pointer-events: none;
 }
 
@@ -1749,8 +1796,18 @@ body {
 .kiserian-hero-overlay {
   z-index: 1;
   background:
-    linear-gradient(90deg, rgb(13 10 8 / 0.78), rgb(13 10 8 / 0.38) 37%, rgb(13 10 8 / 0.1) 70%),
-    linear-gradient(180deg, rgb(13 10 8 / 0.12), rgb(13 10 8 / 0.32) 55%, rgb(13 10 8 / 0.78));
+    linear-gradient(
+      90deg,
+      rgb(13 10 8 / 0.78),
+      rgb(13 10 8 / 0.38) 37%,
+      rgb(13 10 8 / 0.1) 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(13 10 8 / 0.12),
+      rgb(13 10 8 / 0.32) 55%,
+      rgb(13 10 8 / 0.78)
+    );
 }
 
 .kiserian-hero-content {
@@ -1894,7 +1951,11 @@ body {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, rgb(30 27 23 / 0.04), rgb(30 27 23 / 0.58));
+  background: linear-gradient(
+    180deg,
+    rgb(30 27 23 / 0.04),
+    rgb(30 27 23 / 0.58)
+  );
   pointer-events: none;
 }
 
@@ -2663,7 +2724,12 @@ body {
 
   .home-hero .hero-overlay {
     background:
-      linear-gradient(180deg, rgb(20 17 14 / 0.5), rgb(20 17 14 / 0.82) 64%, rgb(20 17 14 / 0.9)),
+      linear-gradient(
+        180deg,
+        rgb(20 17 14 / 0.5),
+        rgb(20 17 14 / 0.82) 64%,
+        rgb(20 17 14 / 0.9)
+      ),
       linear-gradient(90deg, rgb(20 17 14 / 0.48), rgb(20 17 14 / 0.24));
   }
 

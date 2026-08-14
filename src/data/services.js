@@ -3,7 +3,7 @@ const services = [
     id: 'bespoke-residential-architecture',
     title: 'Residential Architecture',
     shortTitle: 'Residential',
-    description: 'Private homes, villas, and residential estates shaped by climate, landscape, and everyday living.',
+    description: 'Design Your Home from the Ground Up. Have the idea but don\'t know where to begin? We\'ll turn it into a home that works beautifully for how you want to live.',
     seoTitle: 'Residential Architecture',
     metaTitle: 'Residential Architecture Kenya',
     seoDescription:
@@ -50,13 +50,13 @@ const services = [
   },
   {
     id: 'interior-architecture',
-    title: 'Interior Architecture',
+    title: 'Interior Design',
     shortTitle: 'Interiors',
-    description: 'Interior spaces designed around comfort, material, light, and atmosphere.',
-    seoTitle: 'Interior Architecture',
-    metaTitle: 'Luxury Interior Architecture Nairobi',
+    description: 'Make the Details Matter. From materials and lighting to joinery and finishes, we\'ll help you make decisions that give your home its unique character.',
+    seoTitle: 'Interior Design',
+    metaTitle: 'Luxury Interior Design Nairobi',
     seoDescription:
-      'Interior architecture in Nairobi for private residences, apartments, villas, and carefully resolved living spaces.',
+      'Interior Design in Nairobi for private residences, apartments, villas, and carefully resolved living spaces.',
     audience: 'For homeowners seeking interiors that feel cohesive, comfortable, and deeply connected to the architecture.',
     keywords: ['Private Homes', 'Villas', 'Renovations', 'New Builds', 'Turnkey Interiors'],
     process: [
@@ -103,7 +103,7 @@ const services = [
     id: 'renovation-extensions',
     title: 'Renovation & Extensions',
     shortTitle: 'Renovation',
-    description: 'Thoughtful transformations that improve how existing homes function, feel, and age.',
+    description: 'Reimagine Your Space. Whether you\'re extending, reconfiguring, or refreshing, we\'ll help your existing home work better and feel better.',
     seoTitle: 'Renovation & Extensions',
     metaTitle: 'Luxury Home Renovation Architect Nairobi',
     seoDescription:
