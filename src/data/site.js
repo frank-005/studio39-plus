@@ -1,7 +1,7 @@
 export const site = {
   name: 'Studio 39+',
   legalName: 'Studio 39+ Architecture Studio',
-  url: 'https://www.studio39ke.com',
+  url: 'https://studio39ke.com',
   email: 'hello@studio39ke.com',
   phone: '+254703906562',
   displayPhone: '+254 703 906 562',

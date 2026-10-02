@@ -7,7 +7,6 @@ const wrapIndex = (index, length) => (index + length) % length;
 
 function CinematicProjectShowcase({
   projects = [],
-  onProjectChange = null,
   variant = 'page',
   eyebrow = 'Featured Residences',
   title = 'Selected private homes, villas, and residential studies.'
@@ -33,9 +32,8 @@ function CinematicProjectShowcase({
       const nextIndex = wrapIndex(index, projects.length);
       setDirection(nextDirection);
       setActiveIndex(nextIndex);
-      onProjectChange?.(nextIndex);
     },
-    [onProjectChange, projects.length]
+    [projects.length]
   );
 
   const paginate = useCallback(

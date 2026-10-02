@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -118,13 +118,56 @@ function EmotionalProjectCTA({ title, image, buttonText = 'Discuss Your Project'
 }
 
 function Lightbox({ item, onClose }) {
+  const closeButtonRef = useRef(null);
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    if (!item) return undefined;
+
+    const previouslyFocused = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab' || !dialogRef.current) return;
+
+      const focusable = Array.from(dialogRef.current.querySelectorAll('a[href], button:not([disabled])'));
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+      previouslyFocused?.focus?.();
+    };
+  }, [item, onClose]);
+
   if (!item) return null;
 
   const isPdf = item.src.endsWith('.pdf');
 
   return (
-    <div className="project-lightbox fixed inset-0 z-[100] bg-charcoal/92 p-4 backdrop-blur-sm sm:p-8" role="dialog" aria-modal="true" aria-label={item.alt || item.title}>
-      <button type="button" onClick={onClose} className="project-lightbox-close" aria-label="Close fullscreen preview">
+    <div ref={dialogRef} className="project-lightbox fixed inset-0 z-[100] bg-charcoal/92 p-4 backdrop-blur-sm sm:p-8" role="dialog" aria-modal="true" aria-label={item.alt || item.title}>
+      <button ref={closeButtonRef} type="button" onClick={onClose} className="project-lightbox-close" aria-label="Close fullscreen preview">
         Close
       </button>
       <div className="flex h-full items-center justify-center pt-14">

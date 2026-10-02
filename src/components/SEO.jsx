@@ -27,7 +27,7 @@ function setLink(rel, href) {
   element.setAttribute('href', href);
 }
 
-function SEO({ title, description, image = defaultImage, type = 'website', schema, keywords }) {
+function SEO({ title, description, image = defaultImage, type = 'website', schema, keywords, robots = 'index, follow' }) {
   const location = useLocation();
   const canonical = absoluteUrl(location.pathname);
   const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
@@ -36,6 +36,7 @@ function SEO({ title, description, image = defaultImage, type = 'website', schem
   useEffect(() => {
     document.title = fullTitle;
     setMeta('meta[name="description"]', { name: 'description', content: description });
+    setMeta('meta[name="robots"]', { name: 'robots', content: robots });
     setMeta('meta[name="keywords"]', { name: 'keywords', content: keywords || site.keywords.join(', ') });
     setMeta('meta[property="og:title"]', { property: 'og:title', content: fullTitle });
     setMeta('meta[property="og:description"]', { property: 'og:description', content: description });
@@ -56,7 +57,7 @@ function SEO({ title, description, image = defaultImage, type = 'website', schem
       script.textContent = JSON.stringify(item);
       document.head.appendChild(script);
     });
-  }, [canonical, description, fullTitle, image, keywords, schemas, type]);
+  }, [canonical, description, fullTitle, image, keywords, robots, schemas, type]);
 
   return null;
 }

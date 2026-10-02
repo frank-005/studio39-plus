@@ -20,8 +20,8 @@ export default {
         accent: '#A8B39F'
       },
       fontFamily: {
-        sans: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif']
+        sans: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'serif']
       },
       boxShadow: {
         soft: '0 24px 80px rgba(47, 44, 40, 0.08)'

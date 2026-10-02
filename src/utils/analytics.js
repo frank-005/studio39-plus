@@ -33,12 +33,12 @@ export function trackPageView(path, title = document.title) {
 
   initAnalytics();
 
-  const pagePath = path || `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const pagePath = path || window.location.pathname;
   if (pagePath === lastPagePath) return;
 
   window.gtag?.('event', 'page_view', {
     page_title: title,
-    page_location: window.location.href,
+    page_location: `${window.location.origin}${window.location.pathname}`,
     page_path: pagePath
   });
 

@@ -5,46 +5,16 @@ import navigation from '../data/navigation';
 import { site } from '../data/site';
 import { trackEmailClick, trackPhoneClick } from '../utils/analytics';
 
-function ThemeToggle({ theme, onToggle, className = '' }) {
-  const isDark = theme === 'dark';
-
-  return (
-    <button
-      type="button"
-      onClick={onToggle}
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      aria-pressed={isDark}
-      className={`theme-toggle inline-flex items-center ${isDark ? 'is-dark' : ''} ${className}`}
-    >
-      <span className="theme-toggle-track">
-        <span className="theme-toggle-thumb" />
-      </span>
-    </button>
-  );
-}
-
 function Navbar() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState('light');
   const location = useLocation();
   const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const nextTheme = storedTheme || (prefersDark ? 'dark' : 'light');
-    setTheme(nextTheme);
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
   }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
-  };
 
   useEffect(() => {
     setOpen(false);
@@ -110,7 +80,6 @@ function Navbar() {
           <Link to="/contact" className="site-nav-book" aria-label="Book an architecture consultation">
             Inquire
           </Link>
-          <ThemeToggle theme={theme} onToggle={toggleTheme} className="ml-3" />
         </nav>
 
         <div className={`site-nav-mobile-controls flex items-center lg:hidden ${open ? 'hidden' : ''}`}>
@@ -186,9 +155,6 @@ function Navbar() {
               <Link to="/contact" onClick={() => setOpen(false)} className="site-nav-mobile-book">
                 Start a Project
               </Link>
-              <div className="flex justify-center pt-1">
-                <ThemeToggle theme={theme} onToggle={toggleTheme} />
-              </div>
               <div className="flex items-center justify-center gap-5 pt-2">
                 <a href={`tel:${site.phone}`} onClick={() => trackPhoneClick('mobile_nav')}>Call</a>
                 <a href={`mailto:${site.email}`} onClick={() => trackEmailClick('mobile_nav')}>Email</a>

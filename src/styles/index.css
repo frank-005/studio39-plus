@@ -3,26 +3,31 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  font-family: "Manrope", "Inter", system-ui, sans-serif;
-  background-color: #f2eee6;
-  color: #2f2c28;
-}
-
-html.dark {
+  --background: #0b0d0c;
+  --background-soft: #121513;
+  --surface: #161b18;
+  --surface-elevated: #1b201d;
+  --panel: rgba(255, 255, 255, 0.02);
+  --ink: #f2f0eb;
+  --ink-soft: #cfcac2;
+  --ink-muted: #9b968f;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --accent: #a5b59c;
+  --accent-strong: #c4d2be;
+  --ivory: #f3efe8;
+  --sand: #d7c8b0;
   color-scheme: dark;
-}
-
-html.dark body {
-  background: #2f2c28;
-  color: #f2eee6;
+  font-family: "Montserrat", "Inter", system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--ink);
 }
 
 html {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  background: var(--background);
 }
 
 body {
@@ -30,10 +35,11 @@ body {
   max-width: 100%;
   margin: 0;
   min-height: 100vh;
-  background: #f2eee6;
-  overflow-x: hidden;
+  background: var(--background);
+  color: var(--ink);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", "Inter", system-ui, sans-serif;
 }
 
 * {
@@ -43,16 +49,16 @@ body {
 button,
 a {
   transition:
-    color 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    opacity 0.2s ease,
-    transform 0.2s ease;
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
 }
 
 button:hover,
 a:hover {
-  opacity: 0.92;
+  opacity: 1;
 }
 
 .site-nav-menu-button:hover {
@@ -60,23 +66,23 @@ a:hover {
 }
 
 .site-nav {
-  border-top: 1px solid rgb(47 44 40 / 0.78);
-  border-bottom: 1px solid rgb(47 44 40 / 0.14);
-  background: rgb(242 238 230 / 0.86);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(31, 27, 24, 0.7);
+  border-bottom: 1px solid var(--line);
+  background: rgba(243, 239, 232, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .site-nav-inner {
   position: relative;
-  min-height: 3.85rem;
+  min-height: 3.7rem;
 }
 
 .dark .site-nav {
   border-top-color: rgb(255 255 255 / 0.08);
   border-bottom-color: rgb(255 255 255 / 0.06);
-  background: rgb(10 10 10 / 0.72);
-  box-shadow: 0 18px 55px rgb(0 0 0 / 0.18);
+  background: rgba(18, 16, 14, 0.78);
+  box-shadow: 0 18px 55px rgb(0 0 0 / 0.12);
 }
 
 .site-nav-brand,
@@ -88,20 +94,20 @@ a:hover {
   min-height: 2.75rem;
   align-items: center;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   transition:
-    color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
 }
 
 .site-nav-brand {
   display: inline-flex;
-  padding: 1.12rem 0;
-  color: #2f2c28;
-  font-size: 0.9rem;
+  padding: 1.05rem 0;
+  color: var(--ink);
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
@@ -494,10 +500,9 @@ a:hover {
 }
 
 .content-container {
-  width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
+  width: min(100% - 1.5rem, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2.75rem);
 }
 
 .content-container > * {
@@ -509,9 +514,9 @@ a:hover {
 }
 
 .hero-title {
-  font-size: clamp(2.35rem, 9.4vw, 3.8rem);
-  line-height: 0.98;
-  max-width: 10.9ch;
+  font-size: clamp(2.5rem, 11vw, 5rem);
+  line-height: 0.96;
+  max-width: 10.5ch;
   overflow-wrap: break-word;
 }
 
@@ -730,65 +735,73 @@ h3,
 }
 
 .eyebrow {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   line-height: 1.4;
   text-transform: uppercase;
-  letter-spacing: 0.24em;
-  color: rgb(47 44 40 / 0.7);
+  letter-spacing: 0.22em;
+  color: rgba(31, 27, 24, 0.68);
 }
 
 .dark .eyebrow {
-  color: #d5cabc;
+  color: rgba(243, 239, 232, 0.76);
 }
 
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: 3rem;
+  min-width: min(100%, 18rem);
   align-items: center;
   justify-content: center;
-  border-radius: 0;
-  padding: 0.8rem 1.35rem;
-  font-size: 0.75rem;
+  border-radius: 9999px;
+  padding: 0.85rem 1.25rem;
+  font-size: clamp(0.64rem, 1.7vw, 0.74rem);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn-primary {
-  border: 1px solid #2f2c28;
-  background: #2f2c28;
-  color: #f2eee6;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--ivory);
+  box-shadow: 0 12px 24px rgba(16, 14, 12, 0.18);
 }
 
 .btn-primary:hover {
-  background: #3a372f;
+  background: #332f2b;
+  transform: translateY(-1px);
 }
 
 .dark .btn-primary {
-  border-color: #d5cabc;
-  background: #d5cabc;
-  color: #2f2c28;
+  border-color: rgba(243, 239, 232, 0.8);
+  background: rgba(243, 239, 232, 0.92);
+  color: #1b1714;
 }
 
 .btn-secondary {
-  border: 1px solid #2f2c28;
-  color: #2f2c28;
+  border: 1px solid rgba(243, 239, 232, 0.35);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .btn-secondary:hover {
-  background: #2f2c28;
-  color: #f2eee6;
+  background: rgba(243, 239, 232, 0.04);
+  border-color: rgba(243, 239, 232, 0.6);
 }
 
 .dark .btn-secondary {
-  border-color: #d5cabc;
-  color: #d5cabc;
+  border-color: rgba(243, 239, 232, 0.35);
+  color: var(--ivory);
+  background: rgba(255, 255, 255, 0.01);
 }
 
 .dark .btn-secondary:hover {
-  background: #d5cabc;
-  color: #2f2c28;
+  background: rgba(243, 239, 232, 0.05);
+  border-color: rgba(243, 239, 232, 0.7);
 }
 
 .form-field {
@@ -825,17 +838,46 @@ h3,
   text-wrap: balance;
 }
 
+@media (min-width: 768px) {
+  .hero-actions {
+    display: flex;
+    width: auto;
+    max-width: none;
+    gap: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .hero-button {
+    width: auto;
+    min-width: 0;
+  }
+}
+
 @media (min-width: 1280px) {
   .content-container {
     padding: 0 2.5rem;
   }
+
+  .btn-primary,
+  .btn-secondary {
+    min-height: 3.2rem;
+    padding-inline: 1.6rem;
+  }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .content-container {
-    padding: 0 1.75rem;
+    width: min(100% - 1.75rem, 1440px);
   }
 
+  .hero-title {
+    max-width: 11.5ch;
+    font-size: clamp(3rem, 9vw, 6rem);
+  }
+}
+
+@media (min-width: 768px) {
   .site-nav-inner {
     min-height: 4.15rem;
   }
@@ -844,14 +886,9 @@ h3,
     min-height: calc(96svh - 5rem);
   }
 
-  .hero-title {
-    max-width: 14ch;
-    font-size: clamp(3rem, 7vw, 5rem);
-  }
-
   .hero-copy {
     max-width: 42rem;
-    font-size: 1.125rem;
+    font-size: clamp(1.08rem, 2vw, 1.35rem);
     line-height: 1.8;
   }
 
@@ -888,10 +925,10 @@ h3,
   *,
   *::before,
   *::after {
-    animation-duration: 0.001ms !important;
+    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
   }
 }
 
@@ -914,6 +951,21 @@ html:not(.dark) .light-surface-overlay {
     width: 100%;
     max-width: 100%;
     padding-inline: clamp(1.25rem, 5vw, 2rem);
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .hero-button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .site-nav {
@@ -1264,16 +1316,16 @@ body {
 }
 
 .home-hero .hero-title {
-  max-width: 12.2ch;
-  font-size: clamp(3.1rem, 8.4vw, 8.1rem);
-  line-height: 0.94;
-  letter-spacing: 0;
+  max-width: 11.5ch;
+  font-size: clamp(3.1rem, 7vw, 7.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
 }
 
 .home-hero .hero-copy {
-  max-width: 43rem;
-  font-size: clamp(1.06rem, 2vw, 1.35rem);
-  line-height: 1.75;
+  max-width: 42rem;
+  font-size: clamp(1.02rem, 1.8vw, 1.28rem);
+  line-height: 1.7;
 }
 
 .home-hero .btn-primary {

@@ -1,4 +1,4 @@
-import { useMemo, useState, useCallback } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import CinematicProjectShowcase from '../components/CinematicProjectShowcase';
@@ -14,10 +14,6 @@ function Projects() {
     return active === 'All' ? projects : projects.filter((project) => project.category === active);
   }, [active]);
 
-  const handleProjectChange = useCallback((index) => {
-    // Handler for project navigation
-  }, []);
-
   return (
     <div>
       <SEO
@@ -26,7 +22,8 @@ function Projects() {
       />
 
       {/* Cinematic showcase - full width hero */}
-      <CinematicProjectShowcase projects={filtered} onProjectChange={handleProjectChange} />
+      <h1 className="sr-only">Featured residences</h1>
+      <CinematicProjectShowcase projects={filtered} />
 
       {/* Category filter section - minimal and restrained */}
       <section className="bg-neutral-100 dark:bg-charcoal">

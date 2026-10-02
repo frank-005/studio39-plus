@@ -38,16 +38,6 @@ function HeroSlideshow() {
   const prefersReducedMotion = useReducedMotion();
   const slide = slides[active];
 
-  useEffect(() => {
-    if (prefersReducedMotion) return undefined;
-
-    const interval = window.setInterval(() => {
-      setActive((current) => (current + 1) % slides.length);
-    }, 8200);
-
-    return () => window.clearInterval(interval);
-  }, [prefersReducedMotion]);
-
   return (
     <section className="home-hero relative overflow-hidden bg-charcoal text-ivory" aria-labelledby="home-hero-title">
       <div className="absolute inset-0">
@@ -57,7 +47,7 @@ function HeroSlideshow() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.15, ease: 'easeOut' }}
+            transition={{ duration: 0.32, ease: 'easeOut' }}
             className="absolute inset-0"
           >
             <motion.img
@@ -68,9 +58,9 @@ function HeroSlideshow() {
               fetchPriority={active === 0 ? 'high' : 'auto'}
               decoding="async"
               style={{ objectPosition: slide.position }}
-              initial={prefersReducedMotion ? false : { scale: 1.02, y: 0 }}
-              animate={prefersReducedMotion ? undefined : { scale: 1.09, y: active % 2 === 0 ? -10 : 10 }}
-              transition={{ duration: 9, ease: 'linear' }}
+              initial={prefersReducedMotion ? false : { scale: 1.02 }}
+              animate={prefersReducedMotion ? undefined : { scale: 1.06 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
               className="h-full w-full object-cover opacity-85"
             />
             <div className="hero-overlay absolute inset-0" />
@@ -80,9 +70,9 @@ function HeroSlideshow() {
 
       <div className="content-container hero-mobile relative z-10 flex flex-col justify-end py-10 sm:py-16 md:py-24 xl:py-28">
         <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 22 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, ease: 'easeOut' }}
+          transition={{ duration: 0.38, ease: 'easeOut' }}
           className="hero-statement max-w-6xl space-y-7 sm:space-y-9"
         >
           <p className="eyebrow text-ivory/76">{slide.label}</p>
@@ -106,7 +96,7 @@ function HeroSlideshow() {
               type="button"
               key={item.label}
               onClick={() => setActive(index)}
-              className={`text-left transition ${index === active ? 'text-ivory' : 'text-ivory/56 hover:text-ivory'}`}
+              className={`text-left transition duration-200 ${index === active ? 'text-ivory' : 'text-ivory/56 hover:text-ivory'}`}
               aria-label={`Select hero slide ${index + 1}: ${item.label}`}
               aria-current={index === active}
             >
