@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
+import ContentLink from './ContentLink';
 
 function CTASection({
   eyebrow = 'Ready to Begin',
   title = "Let's Talk About Your Home.",
-  copy = "Whether you have a clear vision or just the beginning of an idea, we'd love to hear about what you're imagining. Get in touch and let's start a conversation."
+  copy = "Whether you have a clear vision or just the beginning of an idea, we'd love to hear about what you're imagining. Get in touch and let's start a conversation.",
+  primaryButtonText = 'Start a Conversation',
+  primaryButtonUrl = '/contact',
+  secondaryButtonText = 'Explore Our Work',
+  secondaryButtonUrl = '/projects'
 }) {
   return (
     <section className="content-container py-16 sm:py-20 md:py-24">
@@ -17,12 +21,12 @@ function CTASection({
             <p className="mt-6 max-w-2xl text-base leading-8 text-charcoal/72 dark:text-sand">{copy}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <Link className="btn-primary" to="/contact">
-              Start a Conversation
-            </Link>
-            <Link className="btn-secondary" to="/projects">
-              Explore Our Work
-            </Link>
+            <ContentLink className="btn-primary" href={primaryButtonUrl}>
+              {primaryButtonText}
+            </ContentLink>
+            <ContentLink className="btn-secondary" href={secondaryButtonUrl}>
+              {secondaryButtonText}
+            </ContentLink>
           </div>
         </div>
       </div>

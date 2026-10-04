@@ -1,0 +1,211 @@
+backend:
+  name: github
+  repo: frank-005/studio39-plus
+  branch: main
+  # After deploying a GitHub OAuth proxy, set its origin here, for example:
+  # base_url: https://your-auth-proxy.example.com
+  # The proxy's registered callback must be https://your-auth-proxy.example.com/callback
+
+local_backend: false
+publish_mode: simple
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: homepage
+        label: Homepage
+        file: src/content/homepage.json
+        format: json
+        fields:
+          - { label: Hero slides, name: heroSlides, widget: list, summary: '{{fields.label}} — {{fields.title}}', fields: [{label: Label, name: label, widget: string}, {label: Heading, name: title, widget: string}, {label: Supporting text, name: description, widget: text}, {label: Image, name: image, widget: image}, {label: Image position, name: position, widget: string, required: false}, {label: Accent, name: accent, widget: string, required: false}] }
+          - { label: Primary button text, name: heroPrimaryButtonText, widget: string }
+          - { label: Primary button URL, name: heroPrimaryButtonUrl, widget: string }
+          - { label: Secondary button text, name: heroSecondaryButtonText, widget: string }
+          - { label: Secondary button URL, name: heroSecondaryButtonUrl, widget: string }
+          - { label: Featured projects, name: featuredProjects, widget: relation, collection: projects, value_field: slug, search_fields: [name], display_fields: [name], multiple: true }
+          - { label: Featured services, name: featuredServices, widget: relation, collection: services, value_field: slug, search_fields: [title], display_fields: [title], multiple: true }
+          - label: Featured projects heading
+            name: featuredProjectsHeading
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}]
+          - label: Introduction
+            name: introduction
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Body copy, name: copy, widget: text}, {label: Button text, name: buttonText, widget: string}, {label: Button URL, name: buttonUrl, widget: string}]
+          - label: Services heading
+            name: servicesHeading
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Supporting text, name: copy, widget: text}]
+          - label: Philosophy heading
+            name: philosophyHeading
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Supporting text, name: copy, widget: text}]
+          - { label: Philosophy points, name: philosophy, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Copy, name: copy, widget: text}] }
+          - label: Materials section
+            name: materials
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Copy, name: copy, widget: text}, {label: Image, name: image, widget: image}, {label: Image alt text, name: imageAlt, widget: string}, {label: Principles, name: principles, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Copy, name: copy, widget: text}]}]
+          - label: Process heading
+            name: processHeading
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Supporting text, name: copy, widget: text}]
+          - { label: Process steps, name: process, widget: list, fields: [{label: Number, name: number, widget: string}, {label: Title, name: title, widget: string}, {label: Copy, name: copy, widget: text}] }
+          - label: Testimonials
+            name: testimonials
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Quotes, name: items, widget: list, fields: [{label: Quote, name: quote, widget: text}, {label: Name, name: name, widget: string}, {label: Context, name: context, widget: string}]}]
+          - label: Call to action
+            name: cta
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Supporting text, name: copy, widget: text}, {label: Primary button text, name: primaryButtonText, widget: string}, {label: Primary button URL, name: primaryButtonUrl, widget: string}, {label: Secondary button text, name: secondaryButtonText, widget: string}, {label: Secondary button URL, name: secondaryButtonUrl, widget: string}]
+
+      - name: about
+        label: About
+        file: src/content/about.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Founder, name: founder, widget: string }
+          - { label: Role, name: role, widget: string }
+          - { label: Statement lines, name: statementLines, widget: list, field: {label: Line, name: line, widget: string} }
+          - { label: Introduction paragraphs, name: paragraphs, widget: list, field: {label: Paragraph, name: paragraph, widget: text} }
+          - { label: Location, name: location, widget: string }
+          - { label: Capabilities, name: capabilities, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Image alt text, name: imageAlt, widget: string }
+          - label: Call to action
+            name: cta
+            widget: object
+            fields: [{label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: title, widget: string}, {label: Supporting text, name: copy, widget: text}, {label: Primary button text, name: primaryButtonText, widget: string}, {label: Primary button URL, name: primaryButtonUrl, widget: string}, {label: Secondary button text, name: secondaryButtonText, widget: string}, {label: Secondary button URL, name: secondaryButtonUrl, widget: string}]
+
+      - name: settings
+        label: Site settings and SEO
+        file: src/content/site-settings.json
+        format: json
+        fields:
+          - { label: Studio name, name: name, widget: string }
+          - { label: Legal name, name: legalName, widget: string }
+          - { label: Website URL, name: url, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Display phone, name: displayPhone, widget: string }
+          - { label: Location, name: location, widget: string }
+          - label: Address
+            name: address
+            widget: object
+            fields: [{label: Street, name: streetAddress, widget: string}, {label: City, name: addressLocality, widget: string}, {label: Country code, name: addressCountry, widget: string}]
+          - label: Map coordinates
+            name: geo
+            widget: object
+            fields: [{label: Latitude, name: latitude, widget: number, value_type: float}, {label: Longitude, name: longitude, widget: number, value_type: float}]
+          - { label: SEO keywords, name: keywords, widget: list, field: {label: Keyword, name: keyword, widget: string} }
+          - { label: WhatsApp link, name: whatsapp, widget: string }
+          - { label: Copyright text, name: copyright, widget: string }
+          - label: Social links
+            name: socialLinks
+            widget: object
+            fields: [{label: Instagram URL, name: instagram, widget: string}, {label: Behance URL, name: behance, widget: string}, {label: LinkedIn URL, name: linkedin, widget: string}]
+          - { label: Default SEO title, name: defaultSeoTitle, widget: string }
+          - { label: Default SEO description, name: defaultSeoDescription, widget: text }
+          - { label: Default social image, name: defaultOgImage, widget: image }
+          - label: Page SEO
+            name: pageSeo
+            widget: object
+            fields:
+              - { label: Homepage SEO, name: home, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Social image, name: ogImage, widget: image, required: false}] }
+              - { label: About SEO, name: about, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Social image, name: ogImage, widget: image, required: false}] }
+              - { label: Projects SEO, name: projects, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Social image, name: ogImage, widget: image, required: false}] }
+              - { label: Services SEO, name: services, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Social image, name: ogImage, widget: image, required: false}] }
+              - { label: Contact SEO, name: contact, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Social image, name: ogImage, widget: image, required: false}] }
+
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: src/content/projects
+    format: json
+    create: true
+    extension: json
+    slug: '{{slug}}'
+    summary: '{{name}} — {{location}} ({{year}})'
+    fields:
+      - { label: Internal ID, name: id, widget: string, required: false }
+      - { label: Title, name: name, widget: string }
+      - { label: URL slug, name: slug, widget: string, hint: Keep existing slugs to preserve project URLs. }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - { label: Card subtitle, name: cardSubtitle, widget: string, required: false }
+      - { label: Country, name: country, widget: string }
+      - { label: Location, name: location, widget: string }
+      - { label: Year, name: year, widget: string }
+      - { label: Category, name: category, widget: select, options: [Residential, Hospitality, Commercial, 'Mixed Use', 'Interior Design', Conceptual, 'Private Residence', 'Contemporary Private Residence', 'Outdoor WC Pavilion', 'Contemporary 3-Bedroom Bungalow', Other] }
+      - { label: Status, name: status, widget: string }
+      - { label: Short description, name: excerpt, widget: text }
+      - { label: Full description, name: overview, widget: text }
+      - { label: Project brief, name: brief, widget: text, required: false }
+      - { label: Design concept, name: concept, widget: text, required: false }
+      - { label: Site context, name: context, widget: text, required: false }
+      - { label: Client goals, name: clientGoals, widget: text, required: false }
+      - { label: Design challenges, name: challenges, widget: text, required: false }
+      - { label: Cover image, name: hero, widget: image }
+      - { label: Image position, name: imagePosition, widget: string, required: false }
+      - { label: Gallery images, name: gallery, widget: list, summary: '{{fields.title}}', fields: [{label: Image, name: src, widget: image}, {label: Caption, name: title, widget: string}, {label: Alt text, name: alt, widget: string}] }
+      - { label: Drawings, name: drawings, widget: list, fields: [{label: Image or PDF path, name: src, widget: string}, {label: Title, name: title, widget: string}, {label: Alt text, name: alt, widget: string}] }
+      - { label: Materials, name: materials, widget: list, field: {label: Material, name: material, widget: string} }
+      - { label: Renders, name: renders, widget: list, field: {label: Image path, name: image, widget: string}, required: false }
+      - { label: Floor plans, name: floorPlans, widget: list, field: {label: Drawing path, name: drawing, widget: string}, required: false }
+      - { label: Palette, name: palette, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Description, name: copy, widget: text}, {label: Image, name: src, widget: string}, {label: Alt text, name: alt, widget: string}] }
+      - { label: Project details, name: details, widget: list, field: {label: Detail, name: detail, widget: string} }
+      - { label: Spatial experience, name: spatialExperience, widget: list, field: {label: Item, name: item, widget: string}, required: false }
+      - { label: Technical documentation, name: technicalDocumentation, widget: list, field: {label: Item, name: item, widget: string}, required: false }
+      - { label: Typology, name: typology, widget: string, required: false }
+      - { label: Material language, name: materialLanguage, widget: string, required: false }
+      - { label: Area, name: area, widget: string, required: false }
+      - { label: Plot information, name: plotInformation, widget: string, required: false }
+      - { label: Spatial program, name: spatialProgram, widget: list, field: {label: Item, name: item, widget: string}, required: false }
+      - { label: Site features, name: siteFeatures, widget: list, field: {label: Item, name: item, widget: string}, required: false }
+      - { label: Material palette, name: materialPalette, widget: list, field: {label: Item, name: item, widget: string}, required: false }
+      - { label: Client, name: client, widget: string, required: false }
+      - { label: Studio role, name: studioRole, widget: string, required: false }
+      - { label: Collaborators, name: collaborators, widget: list, field: {label: Collaborator, name: collaborator, widget: string}, required: false }
+      - { label: Services, name: services, widget: relation, collection: services, value_field: slug, search_fields: [title], display_fields: [title], multiple: true }
+      - { label: Architect, name: architect, widget: string, required: false }
+      - { label: Design team, name: designTeam, widget: string, required: false }
+      - { label: Studio, name: studio, widget: string, required: false }
+      - { label: Featured on homepage, name: featured, widget: boolean, default: false }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Display order, name: order, widget: number, value_type: int, default: 100 }
+      - { label: SEO title, name: seoTitle, widget: string, required: false }
+      - { label: SEO description, name: seoDescription, widget: text, required: false }
+      - { label: Social / OG image, name: socialImage, widget: image, required: false }
+      - { label: SEO keywords, name: seoKeywords, widget: list, field: {label: Keyword, name: keyword, widget: string}, required: false }
+      - { label: Case study labels, name: caseStudy, widget: object, required: false, fields: [{label: Location label, name: location, widget: string, required: false}, {label: Overview heading, name: overviewHeading, widget: string, required: false}, {label: Gallery heading, name: galleryHeading, widget: string, required: false}, {label: Experience label, name: experienceLabel, widget: string, required: false}, {label: Experience heading, name: experienceHeading, widget: string, required: false}, {label: Technical eyebrow, name: technicalEyebrow, widget: string, required: false}, {label: Technical heading, name: technicalHeading, widget: string, required: false}, {label: CTA title, name: ctaTitle, widget: string, required: false}, {label: CTA button text, name: ctaButtonText, widget: string, required: false}] }
+
+  - name: services
+    label: Services
+    label_singular: Service
+    folder: src/content/services
+    format: json
+    create: true
+    extension: json
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    fields:
+      - { label: Internal ID, name: id, widget: string, required: false }
+      - { label: Service name, name: title, widget: string }
+      - { label: Short title, name: shortTitle, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Short description, name: description, widget: text }
+      - { label: Full description, name: fullDescription, widget: text }
+      - { label: Image, name: image, widget: image }
+      - { label: Process, name: process, widget: list, fields: [{label: Step title, name: title, widget: string}, {label: Description, name: copy, widget: text}] }
+      - { label: Deliverables, name: deliverables, widget: list, field: {label: Deliverable, name: deliverable, widget: string} }
+      - { label: Keywords, name: keywords, widget: list, field: {label: Keyword, name: keyword, widget: string} }
+      - { label: Featured, name: featured, widget: boolean, default: false }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Display order, name: order, widget: number, value_type: int, default: 100 }
+      - { label: SEO title, name: seoTitle, widget: string, required: false }
+      - { label: Meta title, name: metaTitle, widget: string, required: false }
+      - { label: SEO description, name: seoDescription, widget: text, required: false }
+      - { label: Social / OG image, name: socialImage, widget: image, required: false }

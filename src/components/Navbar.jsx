@@ -67,8 +67,8 @@ function Navbar() {
         Skip to content
       </a>
       <div className="content-container site-nav-inner flex items-center justify-between">
-        <Link to="/" className="site-nav-brand" aria-label="Studio 39+ home">
-          <img src="/studio39logo-nav.png" alt="Studio 39+" className="site-nav-logo" />
+        <Link to="/" className="site-nav-brand" aria-label={`${site.name} home`}>
+          <img src="/studio39logo-nav.png" alt={site.name} className="site-nav-logo" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10" aria-label="Primary navigation">
@@ -119,9 +119,9 @@ function Navbar() {
                   to="/"
                   onClick={() => setOpen(false)}
                   className="site-nav-mobile-brand"
-                  aria-label="Studio 39+ home"
+                  aria-label={`${site.name} home`}
                 >
-                  <img src="/studio39logo-nav.png" alt="Studio 39+" className="site-nav-mobile-logo" />
+                  <img src="/studio39logo-nav.png" alt={site.name} className="site-nav-mobile-logo" />
                 </Link>
                 <span className="site-nav-mobile-tagline">Residential Architecture</span>
               </div>

@@ -1,0 +1,58 @@
+{
+  "id": "architectural-visualization",
+  "title": "Architectural Visualization",
+  "shortTitle": "Visualization",
+  "description": "Photorealistic imagery that communicates design intent before construction begins.",
+  "seoTitle": "Architectural Visualization",
+  "metaTitle": "Residential Architectural Visualization",
+  "seoDescription": "Architectural visualization for luxury homes, villas, private residences, and residential developments in Kenya.",
+  "keywords": [
+    "Exterior Visualizations",
+    "Interior Visualizations",
+    "Aerial Views",
+    "Concept Imagery",
+    "Marketing Visuals"
+  ],
+  "process": [
+    {
+      "title": "Project Brief & Scope",
+      "copy": "We define objectives, required views, references, deliverables, and presentation goals."
+    },
+    {
+      "title": "Design Review & View Selection",
+      "copy": "Key spaces, camera positions, atmosphere, and storytelling opportunities are identified."
+    },
+    {
+      "title": "Visualization Development",
+      "copy": "Models, materials, lighting, landscape, and architectural details are developed into realistic imagery."
+    },
+    {
+      "title": "Draft Presentation",
+      "copy": "Preliminary visuals are reviewed and refined through feedback."
+    },
+    {
+      "title": "Final Image Production",
+      "copy": "High-resolution visuals are completed for presentations, approvals, marketing, or investor communication."
+    },
+    {
+      "title": "Delivery & Support",
+      "copy": "Images are prepared for digital, print, and presentation use."
+    }
+  ],
+  "deliverables": [
+    "Exterior Renderings",
+    "Interior Renderings",
+    "Aerial Views",
+    "Daylight Studies",
+    "Sunset Visualizations",
+    "Concept Imagery",
+    "Marketing Visuals",
+    "Presentation Boards",
+    "High-Resolution Image Packages"
+  ],
+  "slug": "architectural-visualization",
+  "fullDescription": "For homeowners, developers, and design teams who want to understand a project before construction begins.",
+  "image": "",
+  "featured": true,
+  "order": 4
+}

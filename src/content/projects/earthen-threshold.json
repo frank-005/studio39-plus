@@ -1,0 +1,175 @@
+{
+  "id": "earthen-threshold",
+  "name": "Earthen Threshold",
+  "subtitle": "Outdoor Brick WC Pavilion",
+  "cardSubtitle": "Experimental Brick Pavilion",
+  "category": "Outdoor WC Pavilion",
+  "location": "Bomachoge, Kisii, Kenya",
+  "year": "2026",
+  "status": "Concept Design",
+  "studio": "Studio 39+",
+  "architect": "Franklin Ombui",
+  "designTeam": "Franklin Ombui, Studio 39+",
+  "typology": "Outdoor WC Pavilion",
+  "materialLanguage": "Exposed face brick, perforated masonry, natural light, textured surfaces",
+  "area": "TBC",
+  "hero": "/projects/earthen-threshold/hero.jpg",
+  "imagePosition": "center 48%",
+  "excerpt": "A small building that proves good architecture isn't about size — it's about how thoughtfully a space is designed to be used and experienced.",
+  "overview": "Earthen Threshold gives a simple outdoor WC the dignity of a small pavilion. Brick mass, perforated walls, frosted glass, and narrow passages turn a service brief into a precise study of privacy and air.",
+  "brief": "The commission called for a compact washroom that could remain durable, private, and easy to build while carrying more presence than its size suggests.",
+  "concept": "A brick volume is opened by a perforated screen, allowing air and daylight through without exposing the interior. The plan relies on compression: a small entry, a narrow corridor, and rooms held in shadow.",
+  "context": "Set in Bomachoge, Kisii, the pavilion uses a direct local material logic: brick, openings, shade, and weathering.",
+  "clientGoals": "Create a durable outdoor WC pavilion with privacy, ventilation, sculptural presence, and minimal maintenance.",
+  "challenges": "Turn a small service building into a resolved piece of work while balancing openness, privacy, ventilation, and construction simplicity.",
+  "materials": [
+    "exposed red brick",
+    "perforated masonry",
+    "frosted glazing",
+    "mono-pitch roof",
+    "filtered daylight",
+    "natural ventilation"
+  ],
+  "renders": [
+    "brick threshold",
+    "perforated exterior screen",
+    "interior corridor",
+    "shower space",
+    "basin wall"
+  ],
+  "floorPlans": [
+    "floor plan",
+    "roof plan",
+    "elevations",
+    "sections"
+  ],
+  "seoKeywords": [
+    "Brick pavilion architecture",
+    "Contemporary African architecture",
+    "Minimal brick architecture",
+    "Architectural pavilion Kenya",
+    "Studio 39+",
+    "Perforated brick architecture"
+  ],
+  "gallery": [
+    {
+      "src": "/projects/earthen-threshold/exterior-threshold.jpg",
+      "title": "Brick threshold",
+      "alt": "Earthen Threshold outdoor brick WC pavilion exterior with exposed red brick, frosted glazing, and perforated masonry screen in Bomachoge Kisii"
+    },
+    {
+      "src": "/projects/earthen-threshold/brick-screen-exterior.jpg",
+      "title": "Perforated screen",
+      "alt": "Perforated brick facade of Earthen Threshold filtering daylight and ventilation through exposed masonry"
+    },
+    {
+      "src": "/projects/earthen-threshold/corridor-filtered.jpg",
+      "title": "Filtered corridor",
+      "alt": "Interior brick corridor of Earthen Threshold with perforated masonry ceiling and wall filtering light and air"
+    },
+    {
+      "src": "/projects/earthen-threshold/shower-brick-light.jpg",
+      "title": "Shower chamber",
+      "alt": "Outdoor WC shower space enclosed by tactile exposed red brick surfaces with natural overhead light"
+    },
+    {
+      "src": "/projects/earthen-threshold/corridor-warm.jpg",
+      "title": "Warm passage",
+      "alt": "Warm brick corridor with basin, timber doors, frosted glazing, and shadow play inside Earthen Threshold pavilion"
+    },
+    {
+      "src": "/projects/earthen-threshold/basin-screen.jpg",
+      "title": "Basin and screen",
+      "alt": "Basin area beside perforated brick screen showing filtered daylight and natural ventilation in a minimal brick pavilion"
+    },
+    {
+      "src": "/projects/earthen-threshold/muted-exterior.jpg",
+      "title": "Muted monolith",
+      "alt": "Muted exterior render of Earthen Threshold emphasizing monolithic brick mass and sculptural pavilion presence"
+    }
+  ],
+  "drawings": [
+    {
+      "title": "Floor Plan",
+      "src": "/projects/earthen-threshold/floor-plan.pdf",
+      "alt": "Floor plan drawing for Earthen Threshold outdoor brick WC pavilion by Studio 39+"
+    },
+    {
+      "title": "Roof Plan",
+      "src": "/projects/earthen-threshold/roof-plan.pdf",
+      "alt": "Roof plan drawing showing the mono-pitch roof strategy for Earthen Threshold"
+    },
+    {
+      "title": "Elevation 01",
+      "src": "/projects/earthen-threshold/elevation-01.pdf",
+      "alt": "Architectural elevation drawing of Earthen Threshold brick pavilion"
+    },
+    {
+      "title": "Elevation 02",
+      "src": "/projects/earthen-threshold/elevation-02.pdf",
+      "alt": "Architectural elevation drawing showing perforated masonry language of Earthen Threshold"
+    },
+    {
+      "title": "Section 01",
+      "src": "/projects/earthen-threshold/section-01.pdf",
+      "alt": "Architectural section drawing through Earthen Threshold outdoor WC pavilion"
+    },
+    {
+      "title": "Section 02",
+      "src": "/projects/earthen-threshold/section-02.pdf",
+      "alt": "Architectural section drawing showing roof, brick enclosure, and interior thresholds"
+    }
+  ],
+  "palette": [
+    {
+      "title": "Exposed red brick",
+      "copy": "Clay brick gives the pavilion weight, tactility, and a direct relationship to the hand.",
+      "src": "/projects/earthen-threshold/shower-brick-light.jpg",
+      "alt": "Close view of exposed red brick walls and filtered light inside Earthen Threshold"
+    },
+    {
+      "title": "Perforated masonry",
+      "copy": "Open joints admit air and shadow while keeping the interior protected.",
+      "src": "/projects/earthen-threshold/basin-screen.jpg",
+      "alt": "Perforated masonry screen with filtered daylight and ventilation in Earthen Threshold"
+    },
+    {
+      "title": "Frosted threshold",
+      "copy": "Translucent glass protects the entry while keeping the surface light.",
+      "src": "/projects/earthen-threshold/exterior-threshold.jpg",
+      "alt": "Frosted glass entry set within exposed brick at Earthen Threshold pavilion"
+    },
+    {
+      "title": "Mono-pitch light",
+      "copy": "A single roof pitch gathers rain, shade, and overhead light in one move.",
+      "src": "/projects/earthen-threshold/corridor-filtered.jpg",
+      "alt": "Perforated brick ceiling and mono-pitch roof edge filtering light inside Earthen Threshold"
+    }
+  ],
+  "details": [
+    "A utilitarian brief becomes dignified through proportion, air, and shadow.",
+    "Perforated masonry lets the pavilion breathe without giving away privacy.",
+    "The design relies on few elements: brick, glass, roof, and carefully held openings."
+  ],
+  "slug": "earthen-threshold",
+  "country": "Kenya",
+  "client": "",
+  "studioRole": "Architecture, interior direction, visualization, material strategy",
+  "collaborators": [],
+  "services": [
+    "architectural-visualization"
+  ],
+  "featured": true,
+  "published": true,
+  "order": 2,
+  "socialImage": "/projects/earthen-threshold/hero.jpg",
+  "seoTitle": "Earthen Threshold | Brick Pavilion Architecture Kenya | Studio 39+",
+  "seoDescription": "Earthen Threshold by Studio 39+: a compact brick WC pavilion in Bomachoge, Kisii, shaped by perforated masonry, privacy, air, and shadow.",
+  "caseStudy": {
+    "location": "Bomachoge, Kisii",
+    "overviewHeading": "A service structure held by brick, air, and shadow.",
+    "galleryHeading": "Brick mass, narrow passages, perforation, and shade.",
+    "ctaTitle": "Discuss a small project with architectural care.",
+    "ctaButtonText": "Begin a Conversation"
+  }
+}

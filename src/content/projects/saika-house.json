@@ -1,0 +1,205 @@
+{
+  "id": "saika-house",
+  "name": "Saika House",
+  "cardSubtitle": "Contemporary Residential Architecture",
+  "category": "Contemporary Private Residence",
+  "location": "Saika, Nairobi, Kenya",
+  "year": "2026",
+  "status": "Construction Drawings / Residential Development",
+  "studio": "Studio 39+",
+  "architect": "Franklin Ombui",
+  "designTeam": "Franklin Ombui, Studio 39+",
+  "typology": "Contemporary Private Residence",
+  "siteFeatures": "Landscaped courtyards, paved circulation, semi-outdoor verandas, garden-facing rooms",
+  "materialPalette": "Mazeras stone, textured plaster, timber tones, vertical screens, terracotta roof tones",
+  "hero": "/projects/saika-house/hero.jpg",
+  "imagePosition": "center 48%",
+  "excerpt": "A home designed for family life, where courtyards and gardens become part of everyday living — quiet, private, and rooted to place.",
+  "overview": "Saika House turns a suburban plot into a sequence of protected garden rooms. Mazeras stone, plaster, timber-toned soffits, screens, and terracotta roofs give the house a familiar weight suited to Nairobi family life.",
+  "brief": "The project required a private home with secure arrival, generous family rooms, garden access, and a relaxed sense of permanence.",
+  "concept": "Courtyard paths, verandas, and framed openings guide movement through the site. Rooms remain close to planting and daylight while the perimeter protects privacy.",
+  "context": "Set within Saika, the residence uses an inward-facing plan to manage privacy, access, service areas, and the intensity of Nairobi sun.",
+  "clientGoals": "Deliver a family home with clear circulation, usable outdoor rooms, secure access, and a composed residential presence.",
+  "challenges": "Coordinate privacy, garage access, service areas, courtyard movement, and pitched roofs without cluttering the plan.",
+  "materials": [
+    "Mazeras stone cladding",
+    "decorative concrete columns",
+    "vertical screening",
+    "textured plaster",
+    "terracotta roof tones",
+    "courtyard landscaping"
+  ],
+  "renders": [
+    "front garden elevation",
+    "courtyard path",
+    "garage approach",
+    "aerial view",
+    "landscaped circulation"
+  ],
+  "floorPlans": [
+    "site plan",
+    "ground floor plan",
+    "elevations",
+    "sections",
+    "window schedule",
+    "door schedule"
+  ],
+  "seoKeywords": [
+    "Contemporary house Nairobi",
+    "Residential architecture Kenya",
+    "Modern African house",
+    "Mazeras stone architecture",
+    "Studio 39+",
+    "Luxury residential design Kenya"
+  ],
+  "gallery": [
+    {
+      "src": "/projects/saika-house/hero.jpg",
+      "title": "Garden frontage",
+      "alt": "Saika House contemporary private residence in Nairobi with Mazeras stone cladding, pitched terracotta roof, vertical screening, and landscaped garden frontage"
+    },
+    {
+      "src": "/projects/saika-house/garden-arrival.jpg",
+      "title": "Framed arrival",
+      "alt": "Saika House exterior render showing planted arrival path, Mazeras stone, textured plaster, and warm residential proportions"
+    },
+    {
+      "src": "/projects/saika-house/courtyard-path.jpg",
+      "title": "Courtyard circulation",
+      "alt": "Landscaped courtyard path at Saika House with garden-facing rooms, textured plaster walls, and terracotta roof tones"
+    },
+    {
+      "src": "/projects/saika-house/courtyard-wide.jpg",
+      "title": "Quiet courtyard",
+      "alt": "Wide courtyard perspective of Saika House showing human-scaled circulation, planted edges, and refined residential planning"
+    },
+    {
+      "src": "/projects/saika-house/garage-approach.jpg",
+      "title": "Garage approach",
+      "alt": "Garage and front approach view of Saika House with vertical black screens, paved circulation, stone cladding, and pitched roof"
+    },
+    {
+      "src": "/projects/saika-house/aerial-courtyard.jpg",
+      "title": "Aerial organization",
+      "alt": "Aerial render of Saika House showing courtyard-style spatial organization, terracotta roofs, perimeter wall, and landscaped outdoor rooms"
+    },
+    {
+      "src": "/projects/saika-house/landscape-edge.jpg",
+      "title": "Garden edge",
+      "alt": "Saika House garden edge showing textured plaster walls, landscaped planting, paved path, and warm residential courtyard atmosphere"
+    },
+    {
+      "src": "/projects/saika-house/courtyard-living.jpg",
+      "title": "Indoor-outdoor threshold",
+      "alt": "Saika House courtyard living threshold with Mazeras stone, vertical screening, paved circulation, and garden-facing spaces"
+    },
+    {
+      "src": "/projects/saika-house/screened-service.jpg",
+      "title": "Screened service edge",
+      "alt": "Screened service and circulation zone at Saika House with timber tones, stone wall, and landscaped courtyard movement"
+    }
+  ],
+  "drawings": [
+    {
+      "title": "Site Plan",
+      "src": "/projects/saika-house/site-plan.pdf",
+      "alt": "Site plan drawing for Saika House contemporary private residence in Saika Nairobi"
+    },
+    {
+      "title": "Ground Floor Plan",
+      "src": "/projects/saika-house/ground-floor-plan.pdf",
+      "alt": "Ground floor plan drawing for Saika House by Studio 39+"
+    },
+    {
+      "title": "North Elevation",
+      "src": "/projects/saika-house/north-elevation.pdf",
+      "alt": "North elevation drawing showing Saika House roof proportions, wall surfaces, and residential facade rhythm"
+    },
+    {
+      "title": "South Elevation",
+      "src": "/projects/saika-house/south-elevation.pdf",
+      "alt": "South elevation drawing for Saika House with contemporary residential proportions"
+    },
+    {
+      "title": "Section 01",
+      "src": "/projects/saika-house/section-01.pdf",
+      "alt": "Architectural section drawing through Saika House showing roof and spatial relationships"
+    },
+    {
+      "title": "Section 02",
+      "src": "/projects/saika-house/section-02.pdf",
+      "alt": "Architectural section drawing showing Saika House construction and residential development details"
+    },
+    {
+      "title": "Window Schedule",
+      "src": "/projects/saika-house/window-schedule.pdf",
+      "alt": "Window schedule drawing for Saika House construction drawings"
+    },
+    {
+      "title": "Door Schedule",
+      "src": "/projects/saika-house/door-schedule.pdf",
+      "alt": "Door schedule drawing for Saika House construction drawings"
+    }
+  ],
+  "palette": [
+    {
+      "title": "Mazeras stone",
+      "copy": "Layered stonework gives the house a durable base and an immediate sense of weight.",
+      "src": "/projects/saika-house/garden-arrival.jpg",
+      "alt": "Mazeras stone cladding and landscaped garden frontage at Saika House"
+    },
+    {
+      "title": "Vertical screens",
+      "copy": "Slender screens temper views, protect privacy, and add vertical order.",
+      "src": "/projects/saika-house/courtyard-living.jpg",
+      "alt": "Vertical screening elements and garden-facing spaces at Saika House"
+    },
+    {
+      "title": "Terracotta roof tones",
+      "copy": "Pitched roof planes bring shade, familiarity, and a gentle domestic profile.",
+      "src": "/projects/saika-house/aerial-courtyard.jpg",
+      "alt": "Terracotta pitched roof planes and courtyard organization at Saika House"
+    },
+    {
+      "title": "Paved garden paths",
+      "copy": "Daily movement is held by planting, paving, shade, and low garden edges.",
+      "src": "/projects/saika-house/courtyard-path.jpg",
+      "alt": "Paved courtyard circulation and landscaped paths at Saika House"
+    }
+  ],
+  "spatialExperience": [
+    "A courtyard layout creates protected outdoor rooms between arrival and family spaces.",
+    "Verandas and screens allow air and shade without exposing the house.",
+    "Garden-facing routes keep daily movement close to planting and daylight.",
+    "The proportions are domestic, tactile, and intentionally informal."
+  ],
+  "details": [
+    "Stone, plaster, timber tones, and terracotta roofs give the house depth without excess.",
+    "Garden paths define arrival and everyday use.",
+    "Screens and framed openings balance privacy with courtyard life."
+  ],
+  "slug": "saika-house",
+  "country": "Kenya",
+  "client": "",
+  "studioRole": "Architecture, interior direction, visualization, material strategy",
+  "collaborators": [],
+  "services": [
+    "bespoke-residential-architecture",
+    "interior-architecture",
+    "renovation-extensions"
+  ],
+  "featured": true,
+  "published": true,
+  "order": 3,
+  "socialImage": "/projects/saika-house/hero.jpg",
+  "seoTitle": "Saika House | Contemporary House Nairobi | Studio 39+",
+  "seoDescription": "Saika House by Studio 39+: a Nairobi private residence organized around garden paths, Mazeras stone, verandas, and protected courtyard edges.",
+  "caseStudy": {
+    "location": "Saika, Nairobi",
+    "overviewHeading": "A family residence organized by courtyard paths, stonework, and shaded verandas.",
+    "galleryHeading": "Garden frontage, courtyard routes, garage approach, and roof organization.",
+    "experienceLabel": "Daily Life",
+    "experienceHeading": "Family rooms, garden paths, verandas, and privacy held in balance.",
+    "ctaTitle": "Design a home around privacy, garden life, and daily ease."
+  }
+}

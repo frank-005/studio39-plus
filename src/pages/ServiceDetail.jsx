@@ -25,16 +25,16 @@ function ServiceDetail() {
     );
   }
 
-  const relatedProjects = projects.filter((project) => service.projectIds.includes(project.id));
+  const relatedProjects = projects.filter((project) => project.services.includes(service.id) || project.services.includes(service.slug));
 
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
-      <SEO title={`${service.metaTitle || service.seoTitle} | Studio 39+`} description={service.seoDescription} />
+      <SEO title={service.metaTitle || service.seoTitle} description={service.seoDescription} image={service.socialImage || service.image || undefined} />
       <section className="content-container grid gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
         <SectionHeading as="h1" eyebrow="Service" title={service.seoTitle} copy={service.description} />
         <div className="border-t border-charcoal/15 pt-7 dark:border-ivory/15">
           <p className="eyebrow">Who it is for</p>
-          <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{service.audience}</p>
+          <p className="mt-5 text-base leading-9 text-charcoal/72 dark:text-sand">{service.fullDescription}</p>
           <div className="mt-7 flex flex-wrap gap-3">
             {service.keywords.map((keyword) => (
               <span key={keyword} className="border border-charcoal/15 px-4 py-2 text-xs uppercase tracking-[0.18em] text-charcoal/70 dark:border-ivory/15 dark:text-sand">

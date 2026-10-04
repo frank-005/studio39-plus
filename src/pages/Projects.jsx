@@ -5,10 +5,9 @@ import CinematicProjectShowcase from '../components/CinematicProjectShowcase';
 import CTASection from '../components/CTASection';
 import projects from '../data/projects';
 
-const categories = ['All', 'Private Residence', 'Contemporary Private Residence', 'Outdoor WC Pavilion', 'Contemporary 3-Bedroom Bungalow'];
-
 function Projects() {
   const [active, setActive] = useState('All');
+  const categories = ['All', ...new Set(projects.map((project) => project.category))];
 
   const filtered = useMemo(() => {
     return active === 'All' ? projects : projects.filter((project) => project.category === active);
@@ -17,6 +16,7 @@ function Projects() {
   return (
     <div>
       <SEO
+        page="projects"
         title="Featured Residences | Luxury Homes and Villas in Kenya"
         description="Browse Studio 39+ residential architecture studies across private homes, villas, and compact residential commissions in Kenya."
       />

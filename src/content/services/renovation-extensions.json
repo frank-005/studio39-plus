@@ -1,0 +1,57 @@
+{
+  "id": "renovation-extensions",
+  "title": "Renovation & Extensions",
+  "shortTitle": "Renovation",
+  "description": "Reimagine Your Space. Whether you're extending, reconfiguring, or refreshing, we'll help your existing home work better and feel better.",
+  "seoTitle": "Renovation & Extensions",
+  "metaTitle": "Luxury Home Renovation Architect Nairobi",
+  "seoDescription": "Architectural renovation and extension design for high-end homes, villas, and private residences in Nairobi and Kenya.",
+  "keywords": [
+    "Renovations",
+    "Extensions",
+    "Interior Upgrades",
+    "Home Reconfiguration",
+    "Adaptive Reuse"
+  ],
+  "process": [
+    {
+      "title": "Discovery & Existing Home Review",
+      "copy": "We assess the existing house, understand how it is used, and identify the goals driving the renovation."
+    },
+    {
+      "title": "Site & Building Analysis",
+      "copy": "Structure, circulation, light, ventilation, services, and future opportunities are evaluated."
+    },
+    {
+      "title": "Renovation Strategy",
+      "copy": "A clear design approach is developed to improve space, function, comfort, and long-term value."
+    },
+    {
+      "title": "Design Development",
+      "copy": "Layouts, extensions, interiors, materials, and architectural interventions are refined into a coordinated proposal."
+    },
+    {
+      "title": "Documentation & Approvals",
+      "copy": "Detailed drawings and information are prepared for approvals, pricing, and construction."
+    },
+    {
+      "title": "Construction Support",
+      "copy": "We remain involved during implementation to support quality and ensure design intent is maintained."
+    }
+  ],
+  "deliverables": [
+    "Existing Building Assessment",
+    "Space Replanning",
+    "Extension Design",
+    "Interior Reconfiguration",
+    "Material Strategy",
+    "3D Visualizations",
+    "Approval Drawings",
+    "Construction Documentation"
+  ],
+  "slug": "renovation-extensions",
+  "fullDescription": "For homeowners looking to improve, extend, or reimagine an existing home through thoughtful design.",
+  "image": "",
+  "featured": true,
+  "order": 3
+}

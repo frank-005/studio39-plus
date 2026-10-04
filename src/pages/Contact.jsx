@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
 import { site } from '../data/site';
 import { trackContactFormSubmission, trackEmailClick, trackPhoneClick } from '../utils/analytics';
+import ContentLink from '../components/ContentLink';
 
 const initialFormState = {
   fullName: '',
@@ -73,6 +74,7 @@ function Contact() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
+        page="contact"
         title="Begin a Residential Project in Kenya"
         description="Contact Studio 39+ to discuss private homes, villas, renovations, Interior Design, and residential design work in Kenya."
       />
@@ -159,19 +161,23 @@ function Contact() {
           <div>
             <p className="eyebrow">Follow</p>
             <div className="mt-4 flex flex-wrap gap-4 text-sm uppercase tracking-[0.24em] text-charcoal/70 dark:text-sand">
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://www.behance.net/" target="_blank" rel="noreferrer">Behance</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              {[
+                ['Instagram', site.socialLinks.instagram],
+                ['Behance', site.socialLinks.behance],
+                ['LinkedIn', site.socialLinks.linkedin]
+              ].filter(([, href]) => href).map(([label, href]) => (
+                <ContentLink key={label} href={href} target="_blank" rel="noreferrer">{label}</ContentLink>
+              ))}
             </div>
           </div>
           <div className="border border-mist bg-ivory p-6 text-charcoal/70 dark:border-neutral-800 dark:bg-charcoal dark:text-sand sm:p-8">
             <p className="eyebrow">Location</p>
             <div className="mt-4 space-y-3">
-              <p className="text-base font-semibold text-charcoal dark:text-ivory">Imaara Mall</p>
-              <p className="text-sm text-charcoal/70 dark:text-sand">Nairobi, Kenya</p>
+              <p className="text-base font-semibold text-charcoal dark:text-ivory">{site.address.streetAddress}</p>
+              <p className="text-sm text-charcoal/70 dark:text-sand">{site.location}</p>
             </div>
             <div className="mt-6 overflow-hidden border border-mist bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-950">
-              <iframe title="Imaara Mall, Nairobi, Kenya" src="https://maps.google.com/maps?q=Imaara%20Mall%20Nairobi%20Kenya&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-[260px] w-full min-h-[260px]" />
+              <iframe title={`${site.address.streetAddress}, ${site.location}`} src={`https://maps.google.com/maps?q=${encodeURIComponent(`${site.address.streetAddress} ${site.location}`)}&t=&z=15&ie=UTF8&iwloc=&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-[260px] w-full min-h-[260px]" />
             </div>
           </div>
         </aside>

@@ -1,0 +1,153 @@
+{
+  "id": "kiserian-house",
+  "name": "Kiserian House",
+  "cardSubtitle": "Contemporary Residential Architecture",
+  "category": "Contemporary 3-Bedroom Bungalow",
+  "location": "Kiserian, Kajiado, Kenya",
+  "year": "2026",
+  "status": "Residential Visualization & Development",
+  "studio": "Studio 39+",
+  "architect": "Franklin Ombui",
+  "designTeam": "Franklin Ombui, Studio 39+",
+  "typology": "Contemporary 3-Bedroom Bungalow",
+  "plotInformation": "Suburban residential plot with front arrival, parking, service yard, septic zone, and garden circulation",
+  "spatialProgram": "Entry porch, lounge, kitchen and dining, pantry, three bedrooms, master suite, shared bathrooms, powder room, back veranda",
+  "materialPalette": "Textured plaster, warm stone cladding, charcoal frames, concrete shading devices, timber soffit tones, muted roof finish",
+  "hero": "/projects/kiserian-house/render-front.png",
+  "imagePosition": "center 50%",
+  "excerpt": "A simple family home designed to feel cool, calm, and connected to the landscape — with shaded spaces that make everyday life feel effortless.",
+  "overview": "Kiserian House is a compact family bungalow with a direct plan and a quiet street presence. A mono-pitched roof, stone base, recessed windows, and shaded paths give the home order without excess.",
+  "brief": "The brief called for a three-bedroom home that could be practical, modest in scale, and still feel carefully composed.",
+  "concept": "The roof sets a low horizontal line across the site. Deep reveals, side lighting, and stepping-stone paths keep the rooms protected while connecting daily movement to the garden.",
+  "context": "In Kiserian, the design responds to strong daylight, suburban privacy, service access, and the need for a durable home with a grounded domestic scale.",
+  "clientGoals": "Create a three-bedroom bungalow with clear planning, a sheltered entry, simple maintenance, and a strong exterior identity.",
+  "challenges": "Keep the plan compact while giving the facade depth, shade, and a complete architectural character.",
+  "materials": [
+    "stone cladding base",
+    "textured plaster walls",
+    "deep recessed openings",
+    "concrete window shading devices",
+    "timber soffit tones",
+    "outdoor stepping-stone circulation"
+  ],
+  "renders": [
+    "front approach render",
+    "entry porch render",
+    "garden circulation render"
+  ],
+  "floorPlans": [
+    "front approach render",
+    "entry porch render",
+    "garden circulation render"
+  ],
+  "seoKeywords": [
+    "Contemporary bungalow Kenya",
+    "Modern house Kiserian",
+    "Residential architecture Kenya",
+    "3-bedroom bungalow design",
+    "Minimal tropical architecture",
+    "Studio 39+",
+    "Modern African residential architecture"
+  ],
+  "gallery": [
+    {
+      "src": "/projects/kiserian-house/render-front.png",
+      "title": "Front approach",
+      "alt": "Kiserian House contemporary 3-bedroom bungalow exterior render in Kajiado Kenya with mono-pitched roof, textured plaster, stone cladding, and warm evening light"
+    },
+    {
+      "src": "/projects/kiserian-house/render-entry.png",
+      "title": "Entry porch",
+      "alt": "Kiserian House entry porch render with mono-pitched roof, textured plaster, stepping stones, garden edge, and warm interior light"
+    },
+    {
+      "src": "/projects/kiserian-house/render-garden.png",
+      "title": "Garden circulation",
+      "alt": "Kiserian House garden circulation render showing stepping-stone paths, textured walls, shaded openings, and landscape edge"
+    }
+  ],
+  "drawings": [
+    {
+      "title": "Front Approach",
+      "src": "/projects/kiserian-house/render-front.png",
+      "alt": "Front approach render for Kiserian House contemporary bungalow by Studio 39+"
+    },
+    {
+      "title": "Entry Porch",
+      "src": "/projects/kiserian-house/render-entry.png",
+      "alt": "Entry porch render for Kiserian House showing sheltered arrival and stepping-stone landscape"
+    },
+    {
+      "title": "Garden Circulation",
+      "src": "/projects/kiserian-house/render-garden.png",
+      "alt": "Garden circulation render for Kiserian House showing side path, wall lights, roof overhang, and planted edge"
+    }
+  ],
+  "palette": [
+    {
+      "title": "Stone base",
+      "copy": "A low stone datum anchors the walls and gives the small house visual weight.",
+      "src": "/projects/kiserian-house/render-front.png",
+      "alt": "Stone cladding base and textured plaster walls on Kiserian House exterior"
+    },
+    {
+      "title": "Textured plaster",
+      "copy": "Mineral plaster softens the geometry and catches the changing Kajiado light.",
+      "src": "/projects/kiserian-house/render-entry.png",
+      "alt": "Warm textured plaster surfaces and recessed windows at Kiserian House"
+    },
+    {
+      "title": "Mono-pitched roof",
+      "copy": "One roof line resolves shade, rain, and proportion with quiet efficiency.",
+      "src": "/projects/kiserian-house/render-garden.png",
+      "alt": "Mono-pitched roof and deep overhang visible in Kiserian House garden render"
+    },
+    {
+      "title": "Garden threshold",
+      "copy": "Stepping stones, low planting, and wall lights give the perimeter a measured domestic rhythm.",
+      "src": "/projects/kiserian-house/render-garden.png",
+      "alt": "Garden threshold render for Kiserian House with stepping stones and textured plaster walls"
+    }
+  ],
+  "spatialExperience": [
+    "A compact entry porch creates a shaded pause before the lounge.",
+    "The lounge, kitchen, and dining areas form an efficient family core with easy daily movement.",
+    "Bedrooms are arranged along a clear corridor, separating quiet rooms from social spaces while keeping circulation simple.",
+    "Outdoor paths and service routes are kept legible, practical, and close to the garden."
+  ],
+  "technicalDocumentation": [
+    "Exterior renders clarify the massing, wall finish, roof overhangs, and landscape approach.",
+    "Entry and garden views show how the house works around a compact footprint.",
+    "The visual set establishes a clear exterior character before detailed delivery."
+  ],
+  "details": [
+    "Clean geometry and durable finishes keep the bungalow modest but considered.",
+    "Recessed openings and concrete shading devices control glare and strengthen the facade.",
+    "The render set defines arrival, garden movement, and the exterior language."
+  ],
+  "slug": "kiserian-house",
+  "country": "Kenya",
+  "client": "",
+  "studioRole": "Architecture, interior direction, visualization, material strategy",
+  "collaborators": [],
+  "services": [
+    "bespoke-residential-architecture",
+    "architectural-visualization"
+  ],
+  "featured": true,
+  "published": true,
+  "order": 4,
+  "socialImage": "/projects/kiserian-house/render-front.png",
+  "seoTitle": "Kiserian House | Contemporary Bungalow Kenya | Studio 39+",
+  "seoDescription": "Kiserian House by Studio 39+: a compact three-bedroom bungalow in Kajiado, Kenya, shaped by a mono-pitched roof, stone base, shaded openings, and efficient planning.",
+  "caseStudy": {
+    "location": "Kiserian, Kajiado",
+    "overviewHeading": "A compact bungalow shaped by a low roofline, stone base, and practical family planning.",
+    "galleryHeading": "Front approach, sheltered entry, garden route, and exterior character.",
+    "experienceLabel": "Daily Life",
+    "experienceHeading": "Clear circulation, protected rooms, natural light, and a modest suburban scale.",
+    "technicalEyebrow": "Visual Direction",
+    "technicalHeading": "The visual set clarifies entry, roofline, garden edges, and exterior character.",
+    "ctaTitle": "Start a compact home with a clear architectural direction."
+  }
+}

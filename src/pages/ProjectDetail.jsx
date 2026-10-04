@@ -28,7 +28,7 @@ function DetailTable({ project }) {
     ['Typology', project.category],
     ['Year', project.year],
     ['Status', project.status],
-    ['Studio role', 'Architecture, interior direction, visualization, material strategy']
+    ['Studio role', project.studioRole || 'Architecture, interior direction, visualization, material strategy']
   ];
 
   return (
@@ -188,6 +188,7 @@ function Lightbox({ item, onClose }) {
 function UkwalaCaseStudy({ project }) {
   const [lightboxItem, setLightboxItem] = useState(null);
   const { previousProject, nextProject } = getAdjacentProjects(project);
+  const copy = project.caseStudy;
   const facts = [
     ['Location', project.location],
     ['Typology', project.typology],
@@ -200,9 +201,9 @@ function UkwalaCaseStudy({ project }) {
   return (
     <div className="ukwala-case-study bg-ivory text-charcoal dark:bg-charcoal dark:text-ivory">
       <SEO
-        title="Ukwala Residence | Luxury Residence Kenya | Studio 39+"
-        description="Ukwala Residence by Studio 39+: a private residence in Siaya, Kenya, shaped by stone mass, timber fins, tall glazing, and passive comfort."
-        image={project.hero}
+        title={project.seoTitle || 'Ukwala Residence | Luxury Residence Kenya | Studio 39+'}
+        description={project.seoDescription || 'Ukwala Residence by Studio 39+: a private residence in Siaya, Kenya, shaped by stone mass, timber fins, tall glazing, and passive comfort.'}
+        image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
         keywords={project.seoKeywords?.join(', ')}
@@ -211,7 +212,7 @@ function UkwalaCaseStudy({ project }) {
       <section className="ukwala-hero relative min-h-[86svh] overflow-hidden">
         <img
           src={project.hero}
-          alt="Ukwala Residence exterior hero render with stone, timber fins, glass, and a double-volume entry by Studio 39+"
+          alt={project.gallery?.[0]?.alt || `${project.name} exterior hero image`}
           fetchPriority="high"
           decoding="async"
           className="ukwala-hero-image absolute inset-0 h-full w-full object-cover"
@@ -223,7 +224,7 @@ function UkwalaCaseStudy({ project }) {
           <p className="eyebrow text-ivory/78">{project.studio}</p>
           <h1 className="mt-5 max-w-5xl font-serif text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">{project.name}</h1>
           <div className="mt-7 flex flex-wrap gap-x-8 gap-y-2 text-sm uppercase tracking-[0.22em] text-ivory/78">
-            <span>Ukwala, Siaya</span>
+            <span>{copy.location || 'Ukwala, Siaya'}</span>
             <span>Studio 39+</span>
           </div>
         </motion.div>
@@ -232,7 +233,7 @@ function UkwalaCaseStudy({ project }) {
       <section className="content-container grid gap-12 py-20 md:py-28 lg:grid-cols-[1.12fr_.88fr]">
         <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <p className="eyebrow">Project Overview</p>
-          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">A tropical-modern residence anchored by stone, shade, and a tall entry volume.</h2>
+          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.overviewHeading || 'A tropical-modern residence anchored by stone, shade, and a tall entry volume.'}</h2>
           <p className="mt-8 text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
           <p className="mt-6 text-base leading-9 text-charcoal/72 dark:text-sand">{project.concept}</p>
         </motion.div>
@@ -248,11 +249,11 @@ function UkwalaCaseStudy({ project }) {
         </motion.aside>
       </section>
 
-      <CinematicRenderBreak src={project.gallery?.[1]?.src || project.hero} alt="Ukwala Residence entrance render with timber fins, tall glazing, and stone mass" variant="project-cinematic-break--ukwala" />
+      <CinematicRenderBreak src={project.gallery?.[1]?.src || project.hero} alt={project.gallery?.[1]?.alt || `${project.name} entrance image`} variant="project-cinematic-break--ukwala" />
 
       <section className="content-container project-gallery-section pb-20 md:pb-32" aria-labelledby="featured-gallery">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <SectionHeading eyebrow="Featured Gallery" title="Arrival, facade depth, timber screening, and garden edges." />
+          <SectionHeading eyebrow="Featured Gallery" title={copy.galleryHeading || 'Arrival, facade depth, timber screening, and garden edges.'} />
           <Link to="/projects" className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-sand">
             All projects
           </Link>
@@ -271,7 +272,7 @@ function UkwalaCaseStudy({ project }) {
       <div className="content-container pb-8 md:pb-10">
         <ProjectNavLink label="View More Projects" className="text-charcoal/68 hover:text-charcoal dark:text-sand/76 dark:hover:text-ivory" />
       </div>
-      <EmotionalProjectCTA title="Begin a private residence with clarity and restraint." image={project.gallery?.[0]?.src || project.hero} variant="project-final-cta--ukwala" />
+      <EmotionalProjectCTA title={copy.ctaTitle || 'Begin a private residence with clarity and restraint.'} buttonText={copy.ctaButtonText || 'Discuss Your Project'} image={project.gallery?.[0]?.src || project.hero} variant="project-final-cta--ukwala" />
       <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
     </div>
   );
@@ -280,6 +281,7 @@ function UkwalaCaseStudy({ project }) {
 function EarthenThresholdCaseStudy({ project }) {
   const [lightboxItem, setLightboxItem] = useState(null);
   const { previousProject, nextProject } = getAdjacentProjects(project);
+  const copy = project.caseStudy;
   const facts = [
     ['Location', project.location],
     ['Typology', project.typology],
@@ -292,9 +294,9 @@ function EarthenThresholdCaseStudy({ project }) {
   return (
     <div className="earthen-case-study bg-[#f4ecdf] text-charcoal dark:bg-[#211b17] dark:text-ivory">
       <SEO
-        title="Earthen Threshold | Brick Pavilion Architecture Kenya | Studio 39+"
-        description="Earthen Threshold by Studio 39+: a compact brick WC pavilion in Bomachoge, Kisii, shaped by perforated masonry, privacy, air, and shadow."
-        image={project.hero}
+        title={project.seoTitle || 'Earthen Threshold | Brick Pavilion Architecture Kenya | Studio 39+'}
+        description={project.seoDescription || 'Earthen Threshold by Studio 39+: a compact brick WC pavilion in Bomachoge, Kisii, shaped by perforated masonry, privacy, air, and shadow.'}
+        image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
         keywords={project.seoKeywords?.join(', ')}
@@ -303,7 +305,7 @@ function EarthenThresholdCaseStudy({ project }) {
       <section className="earthen-hero relative overflow-hidden">
         <img
           src={project.hero}
-          alt="Earthen Threshold outdoor brick WC pavilion exterior with perforated masonry, frosted glazing, and warm clay brick"
+          alt={project.gallery?.[0]?.alt || `${project.name} exterior hero image`}
           fetchPriority="high"
           decoding="async"
           className="earthen-hero-image absolute inset-0 h-full w-full object-cover"
@@ -312,11 +314,11 @@ function EarthenThresholdCaseStudy({ project }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#24160f]/68 via-[#24160f]/18 to-[#24160f]/4" />
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeOut' }} className="content-container relative z-10 flex flex-col justify-end pb-14 pt-32 text-ivory sm:pb-20">
           <ProjectNavLink className="mb-6 text-ivory/78 hover:text-ivory" />
-          <p className="eyebrow text-ivory/74">Outdoor Brick WC Pavilion</p>
+          <p className="eyebrow text-ivory/74">{project.category || 'Outdoor Brick WC Pavilion'}</p>
           <h1 className="mt-5 max-w-5xl font-serif text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">{project.name}</h1>
           <div className="mt-7 flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[0.24em] text-ivory/76 sm:text-sm">
             <span>{project.subtitle}</span>
-            <span>Bomachoge, Kisii</span>
+            <span>{copy.location || 'Bomachoge, Kisii'}</span>
           </div>
         </motion.div>
       </section>
@@ -324,7 +326,7 @@ function EarthenThresholdCaseStudy({ project }) {
       <section className="content-container grid gap-14 py-20 md:py-28 lg:grid-cols-[1fr_.86fr]">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.75 }} className="max-w-3xl">
           <p className="eyebrow text-[#8e4a32] dark:text-[#d8aa86]">Introduction</p>
-          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">A service structure held by brick, air, and shadow.</h2>
+          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.overviewHeading || 'A service structure held by brick, air, and shadow.'}</h2>
           <p className="mt-8 text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
           <p className="mt-6 text-base leading-9 text-charcoal/72 dark:text-sand">{project.concept}</p>
         </motion.div>
@@ -340,12 +342,12 @@ function EarthenThresholdCaseStudy({ project }) {
         </motion.aside>
       </section>
 
-      <CinematicRenderBreak src={project.gallery?.[2]?.src || project.hero} alt="Earthen Threshold cinematic brick pavilion render with filtered masonry light" variant="project-cinematic-break--earthen" />
+      <CinematicRenderBreak src={project.gallery?.[2]?.src || project.hero} alt={project.gallery?.[2]?.alt || `${project.name} pavilion image`} variant="project-cinematic-break--earthen" />
 
       <section className="content-container project-gallery-section pb-20 md:pb-32" aria-labelledby="earthen-gallery">
         <div className="mb-10 max-w-4xl">
           <p className="eyebrow text-[#8e4a32] dark:text-[#d8aa86]">Featured Gallery</p>
-          <h2 id="earthen-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Brick mass, narrow passages, perforation, and shade.</h2>
+          <h2 id="earthen-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.galleryHeading || 'Brick mass, narrow passages, perforation, and shade.'}</h2>
         </div>
         <div className="project-editorial-gallery project-editorial-gallery--earthen">
           {project.gallery.map((image, index) => (
@@ -361,7 +363,7 @@ function EarthenThresholdCaseStudy({ project }) {
       <div className="content-container pb-8 md:pb-10">
         <ProjectNavLink label="View More Projects" className="text-charcoal/68 hover:text-charcoal dark:text-sand/76 dark:hover:text-ivory" />
       </div>
-      <EmotionalProjectCTA title="Discuss a small project with architectural care." image={project.gallery?.[0]?.src || project.hero} buttonText="Begin a Conversation" variant="project-final-cta--earthen" />
+      <EmotionalProjectCTA title={copy.ctaTitle || 'Discuss a small project with architectural care.'} image={project.gallery?.[0]?.src || project.hero} buttonText={copy.ctaButtonText || 'Begin a Conversation'} variant="project-final-cta--earthen" />
       <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
     </div>
   );
@@ -370,6 +372,7 @@ function EarthenThresholdCaseStudy({ project }) {
 function SaikaHouseCaseStudy({ project }) {
   const [lightboxItem, setLightboxItem] = useState(null);
   const { previousProject, nextProject } = getAdjacentProjects(project);
+  const copy = project.caseStudy;
   const facts = [
     ['Location', project.location],
     ['Typology', project.typology],
@@ -382,9 +385,9 @@ function SaikaHouseCaseStudy({ project }) {
   return (
     <div className="saika-case-study bg-[#f4eadc] text-charcoal dark:bg-[#26221d] dark:text-ivory">
       <SEO
-        title="Saika House | Contemporary House Nairobi | Studio 39+"
-        description="Saika House by Studio 39+: a Nairobi private residence organized around garden paths, Mazeras stone, verandas, and protected courtyard edges."
-        image={project.hero}
+        title={project.seoTitle || 'Saika House | Contemporary House Nairobi | Studio 39+'}
+        description={project.seoDescription || 'Saika House by Studio 39+: a Nairobi private residence organized around garden paths, Mazeras stone, verandas, and protected courtyard edges.'}
+        image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
         keywords={project.seoKeywords?.join(', ')}
@@ -396,7 +399,7 @@ function SaikaHouseCaseStudy({ project }) {
       >
         <img
           src={project.hero}
-          alt="Saika House exterior render with Mazeras stone cladding, pitched terracotta roof, vertical screening, and landscaped garden frontage"
+          alt={project.gallery?.[0]?.alt || `${project.name} exterior hero image`}
           fetchPriority="high"
           decoding="async"
           className="saika-hero-image absolute inset-0 h-full w-full object-cover"
@@ -405,10 +408,10 @@ function SaikaHouseCaseStudy({ project }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#2d241d]/84 via-[#2d241d]/24 to-[#2d241d]/4" />
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.95, ease: 'easeOut' }} className="content-container relative z-10 flex flex-col justify-end pb-14 pt-32 text-ivory sm:pb-20">
           <ProjectNavLink className="mb-6 text-ivory/78 hover:text-ivory" />
-          <p className="eyebrow text-ivory/76">Studio 39+</p>
+          <p className="eyebrow text-ivory/76">{project.studio || 'Studio 39+'}</p>
           <h1 className="mt-5 max-w-5xl font-serif text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">{project.name}</h1>
           <div className="mt-7 flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[0.24em] text-ivory/78 sm:text-sm">
-            <span>Saika, Nairobi</span>
+            <span>{copy.location || 'Saika, Nairobi'}</span>
             <span>Studio 39+</span>
           </div>
         </motion.div>
@@ -417,7 +420,7 @@ function SaikaHouseCaseStudy({ project }) {
       <section className="content-container grid gap-14 py-20 md:py-28 lg:grid-cols-[1fr_.9fr]">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.75 }} className="max-w-3xl">
           <p className="eyebrow text-[#9a5e32] dark:text-[#d6aa7c]">Project Overview</p>
-          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">A family residence organized by courtyard paths, stonework, and shaded verandas.</h2>
+          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.overviewHeading || 'A family residence organized by courtyard paths, stonework, and shaded verandas.'}</h2>
           <p className="mt-8 text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
           <p className="mt-6 text-base leading-9 text-charcoal/72 dark:text-sand">{project.concept}</p>
         </motion.div>
@@ -433,12 +436,12 @@ function SaikaHouseCaseStudy({ project }) {
         </motion.aside>
       </section>
 
-      <CinematicRenderBreak src={project.gallery?.[1]?.src || project.hero} alt="Saika House garden and courtyard render with stonework, planting, and shaded circulation" variant="project-cinematic-break--saika" />
+      <CinematicRenderBreak src={project.gallery?.[1]?.src || project.hero} alt={project.gallery?.[1]?.alt || `${project.name} garden image`} variant="project-cinematic-break--saika" />
 
       <section className="content-container project-gallery-section pb-20 md:pb-32" aria-labelledby="saika-gallery">
         <div className="mb-10 max-w-4xl">
           <p className="eyebrow text-[#9a5e32] dark:text-[#d6aa7c]">Featured Gallery</p>
-          <h2 id="saika-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Garden frontage, courtyard routes, garage approach, and roof organization.</h2>
+          <h2 id="saika-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.galleryHeading || 'Garden frontage, courtyard routes, garage approach, and roof organization.'}</h2>
         </div>
         <div className="project-editorial-gallery project-editorial-gallery--saika">
           {project.gallery.map((image, index) => (
@@ -453,8 +456,8 @@ function SaikaHouseCaseStudy({ project }) {
       <section className="content-container pb-20 md:pb-28" aria-labelledby="saika-spatial">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="eyebrow text-[#9a5e32] dark:text-[#d6aa7c]">Daily Life</p>
-            <h2 id="saika-spatial" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Family rooms, garden paths, verandas, and privacy held in balance.</h2>
+            <p className="eyebrow text-[#9a5e32] dark:text-[#d6aa7c]">{copy.experienceLabel || 'Daily Life'}</p>
+            <h2 id="saika-spatial" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.experienceHeading || 'Family rooms, garden paths, verandas, and privacy held in balance.'}</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {project.spatialExperience.map((item) => (
@@ -470,7 +473,7 @@ function SaikaHouseCaseStudy({ project }) {
       <div className="content-container pb-8 md:pb-10">
         <ProjectNavLink label="View More Projects" className="text-charcoal/68 hover:text-charcoal dark:text-sand/76 dark:hover:text-ivory" />
       </div>
-      <EmotionalProjectCTA title="Design a home around privacy, garden life, and daily ease." image={project.gallery?.[0]?.src || project.hero} variant="project-final-cta--saika" />
+      <EmotionalProjectCTA title={copy.ctaTitle || 'Design a home around privacy, garden life, and daily ease.'} image={project.gallery?.[0]?.src || project.hero} buttonText={copy.ctaButtonText || 'Discuss Your Project'} variant="project-final-cta--saika" />
       <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
     </div>
   );
@@ -478,6 +481,7 @@ function SaikaHouseCaseStudy({ project }) {
 
 function KiserianHouseCaseStudy({ project }) {
   const [lightboxItem, setLightboxItem] = useState(null);
+  const copy = project.caseStudy;
   const projectIndex = projects.findIndex((item) => item.id === project.id);
   const previousProject = projects[(projectIndex - 1 + projects.length) % projects.length];
   const nextProject = projects[(projectIndex + 1) % projects.length];
@@ -493,9 +497,9 @@ function KiserianHouseCaseStudy({ project }) {
   return (
     <div className="saika-case-study bg-[#f5ecdf] text-charcoal dark:bg-[#27231f] dark:text-ivory">
       <SEO
-        title="Kiserian House | Contemporary Bungalow Kenya | Studio 39+"
-        description="Kiserian House by Studio 39+: a compact three-bedroom bungalow in Kajiado, Kenya, shaped by a mono-pitched roof, stone base, shaded openings, and efficient planning."
-        image={project.hero}
+        title={project.seoTitle || 'Kiserian House | Contemporary Bungalow Kenya | Studio 39+'}
+        description={project.seoDescription || 'Kiserian House by Studio 39+: a compact three-bedroom bungalow in Kajiado, Kenya, shaped by a mono-pitched roof, stone base, shaded openings, and efficient planning.'}
+        image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
         keywords={project.seoKeywords?.join(', ')}
@@ -507,7 +511,7 @@ function KiserianHouseCaseStudy({ project }) {
       >
         <img
           src={project.hero}
-          alt="Kiserian House contemporary bungalow exterior render with mono-pitched roof, textured plaster, stone cladding, recessed windows, and warm Kajiado landscape"
+          alt={project.gallery?.[0]?.alt || `${project.name} exterior hero image`}
           fetchPriority="high"
           decoding="async"
           className="saika-hero-image kiserian-hero-image absolute inset-0 h-full w-full object-cover"
@@ -516,10 +520,10 @@ function KiserianHouseCaseStudy({ project }) {
         <div className="kiserian-hero-overlay absolute inset-0" />
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.05, ease: 'easeOut' }} className="content-container kiserian-hero-content relative z-10 flex flex-col justify-end pb-14 pt-32 text-ivory sm:pb-20">
           <ProjectNavLink className="mb-6 text-ivory/78 hover:text-ivory" />
-          <p className="eyebrow text-ivory/76">Studio 39+</p>
+          <p className="eyebrow text-ivory/76">{project.studio || 'Studio 39+'}</p>
           <h1 className="kiserian-hero-title mt-7 max-w-5xl font-serif text-5xl font-medium leading-[0.98] sm:text-6xl lg:text-7xl">{project.name}</h1>
           <div className="mt-9 flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[0.24em] text-ivory/84 sm:text-sm">
-            <span>Kiserian, Kajiado</span>
+            <span>{copy.location || 'Kiserian, Kajiado'}</span>
             <span>Studio 39+</span>
           </div>
         </motion.div>
@@ -528,7 +532,7 @@ function KiserianHouseCaseStudy({ project }) {
       <section className="content-container kiserian-overview grid gap-14 py-24 md:py-36 lg:grid-cols-[1fr_.9fr]">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.75 }} className="max-w-3xl">
           <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Project Overview</p>
-          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">A compact bungalow shaped by a low roofline, stone base, and practical family planning.</h2>
+          <h2 className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.overviewHeading || 'A compact bungalow shaped by a low roofline, stone base, and practical family planning.'}</h2>
           <p className="mt-8 text-base leading-9 text-charcoal/72 dark:text-sand">{project.overview}</p>
           <p className="mt-6 text-base leading-9 text-charcoal/72 dark:text-sand">{project.concept}</p>
         </motion.div>
@@ -545,13 +549,13 @@ function KiserianHouseCaseStudy({ project }) {
       </section>
 
       <motion.section initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.24 }} transition={{ duration: 0.95, ease: 'easeOut' }} className="kiserian-cinematic-pause" aria-label="Kiserian House cinematic exterior render">
-        <img src="/projects/kiserian-house/render-entry.png" alt="Kiserian House sheltered entry porch with textured plaster, warm light, and garden stepping stones" loading="lazy" decoding="async" />
+        <img src={project.gallery?.[1]?.src || project.hero} alt={project.gallery?.[1]?.alt || `${project.name} entry image`} loading="lazy" decoding="async" />
       </motion.section>
 
       <section className="content-container kiserian-gallery-section pb-24 md:pb-36" aria-labelledby="kiserian-gallery">
         <div className="mb-14 max-w-4xl md:mb-18">
           <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Featured Gallery</p>
-          <h2 id="kiserian-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Front approach, sheltered entry, garden route, and exterior character.</h2>
+          <h2 id="kiserian-gallery" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.galleryHeading || 'Front approach, sheltered entry, garden route, and exterior character.'}</h2>
         </div>
         <div className="saika-gallery kiserian-editorial-gallery">
           {project.gallery.map((image, index) => (
@@ -566,8 +570,8 @@ function KiserianHouseCaseStudy({ project }) {
       <section className="content-container kiserian-spatial-section pb-24 md:pb-40" aria-labelledby="kiserian-spatial">
         <div className="grid gap-16 lg:grid-cols-[0.86fr_1.14fr] lg:gap-20">
           <div>
-            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Daily Life</p>
-            <h2 id="kiserian-spatial" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">Clear circulation, protected rooms, natural light, and a modest suburban scale.</h2>
+            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">{copy.experienceLabel || 'Daily Life'}</p>
+            <h2 id="kiserian-spatial" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.experienceHeading || 'Clear circulation, protected rooms, natural light, and a modest suburban scale.'}</h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {project.spatialExperience.map((item) => (
@@ -582,8 +586,8 @@ function KiserianHouseCaseStudy({ project }) {
       <section className="bg-[#efe3d2]/70 py-20 md:py-28 dark:bg-black/10" aria-labelledby="kiserian-technical">
         <div className="content-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
-            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">Visual Direction</p>
-            <h2 id="kiserian-technical" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">The visual set clarifies entry, roofline, garden edges, and exterior character.</h2>
+            <p className="eyebrow text-[#94613b] dark:text-[#d5ae83]">{copy.technicalEyebrow || 'Visual Direction'}</p>
+            <h2 id="kiserian-technical" className="mt-5 font-serif text-3xl font-medium leading-tight text-charcoal sm:text-4xl dark:text-ivory">{copy.technicalHeading || 'The visual set clarifies entry, roofline, garden edges, and exterior character.'}</h2>
           </div>
           <div className="grid gap-5 sm:grid-cols-3">
             {project.technicalDocumentation.map((item) => (
@@ -599,7 +603,7 @@ function KiserianHouseCaseStudy({ project }) {
       <div className="content-container pb-8 md:pb-10">
         <ProjectNavLink label="View More Projects" className="text-charcoal/68 hover:text-charcoal dark:text-sand/76 dark:hover:text-ivory" />
       </div>
-      <EmotionalProjectCTA title="Start a compact home with a clear architectural direction." image="/projects/kiserian-house/render-garden.png" variant="project-final-cta--kiserian" />
+      <EmotionalProjectCTA title={copy.ctaTitle || 'Start a compact home with a clear architectural direction.'} image={project.gallery?.[2]?.src || project.hero} buttonText={copy.ctaButtonText || 'Discuss Your Project'} variant="project-final-cta--kiserian" />
       <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
     </div>
   );
@@ -652,9 +656,9 @@ function ProjectDetail() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
-        title={`${project.name} Case Study`}
-        description={`${project.name} by Studio 39+: ${project.excerpt}`}
-        image={optimizedImageUrl(project.hero, 1600)}
+        title={project.seoTitle || `${project.name} Case Study`}
+        description={project.seoDescription || `${project.name} by Studio 39+: ${project.excerpt}`}
+        image={optimizedImageUrl(project.socialImage || project.hero, 1600)}
         type="article"
         schema={projectSchema(project)}
       />

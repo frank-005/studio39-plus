@@ -8,6 +8,7 @@ function Services() {
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
+        page="services"
         title="Luxury Residential Architecture Services in Kenya"
         description="We design thoughtfully crafted private homes, villas, and residential estates across Kenya, with focused architecture, interiors, renovation, and visualization services."
       />

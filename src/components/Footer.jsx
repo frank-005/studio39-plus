@@ -3,6 +3,7 @@ import { site } from '../data/site';
 import services from '../data/services';
 import projects from '../data/projects';
 import { trackEmailClick, trackPhoneClick } from '../utils/analytics';
+import ContentLink from './ContentLink';
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
       <div className="content-container border-t border-mist/40 pt-12 pb-20 sm:pt-16 sm:pb-24">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_.75fr_.75fr_.8fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-ivory">Studio 39+</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-ivory">{site.name}</p>
             <p className="mt-5 max-w-lg text-sm leading-8 text-sand/82">
              Kenyan-based architects for bespoke residences, Interior Design, renovations, and site-led design.
             </p>
@@ -40,7 +41,8 @@ function Footer() {
           <div className="space-y-8">
             <address className="not-italic text-sm leading-8 text-sand/82">
               <p className="eyebrow mb-3 text-sand">Contact</p>
-              Nairobi, Kenya<br />
+              {site.address.streetAddress}<br />
+              {site.location}<br />
               <a href={`mailto:${site.email}`} className="hover:text-ivory" onClick={() => trackEmailClick('footer')}>{site.email}</a><br />
               <a href={`tel:${site.phone}`} className="hover:text-ivory" onClick={() => trackPhoneClick('footer')}>{site.displayPhone}</a>
             </address>
@@ -53,13 +55,17 @@ function Footer() {
               <Link to="/contact" className="hover:text-ivory">Contact</Link>
             </nav>
             <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.22em] text-sand/72">
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="hover:text-ivory">Instagram</a>
-              <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="hover:text-ivory">Behance</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="hover:text-ivory">LinkedIn</a>
+              {[
+                ['Instagram', site.socialLinks.instagram],
+                ['Behance', site.socialLinks.behance],
+                ['LinkedIn', site.socialLinks.linkedin]
+              ].filter(([, href]) => href).map(([label, href]) => (
+                <ContentLink key={label} href={href} target="_blank" rel="noreferrer" className="hover:text-ivory">{label}</ContentLink>
+              ))}
             </div>
           </div>
         </div>
-        <p className="mt-14 border-t border-ivory/10 pt-8 text-xs text-sand/60">(c) 2026 Studio 39+. Architecture, interiors, and visualization.</p>
+        <p className="mt-14 border-t border-ivory/10 pt-8 text-xs text-sand/60">{site.copyright}</p>
       </div>
     </footer>
   );

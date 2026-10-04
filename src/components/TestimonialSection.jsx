@@ -13,17 +13,21 @@ const testimonials = [
   }
 ];
 
-function TestimonialSection() {
+function TestimonialSection({
+  eyebrow = 'Client Notes',
+  title = 'Designed for clients who expect discretion, clarity, and careful work.',
+  items = testimonials
+}) {
   return (
     <section className="content-container py-16 sm:py-20 md:py-24" aria-labelledby="testimonials-title">
       <div className="max-w-2xl">
-        <p className="eyebrow">Client Notes</p>
+        <p className="eyebrow">{eyebrow}</p>
         <h2 id="testimonials-title" className="mt-4 text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-          Designed for clients who expect discretion, clarity, and careful work.
+          {title}
         </h2>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {testimonials.map((item) => (
+        {items.map((item) => (
           <figure key={item.context} className="border-l border-charcoal/20 pl-6 dark:border-ivory/20">
             <blockquote className="text-lg leading-9 text-charcoal/75 dark:text-sand">"{item.quote}"</blockquote>
             <figcaption className="mt-6 text-sm font-semibold uppercase tracking-[0.24em] text-charcoal dark:text-ivory">

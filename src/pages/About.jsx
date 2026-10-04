@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import SEO from '../components/SEO';
 import CTASection from '../components/CTASection';
+import { aboutContent } from '../data/content';
 
 const statementLines = ['YOUR HOME STARTS', 'WITH YOUR STORY.'];
 
@@ -17,6 +18,7 @@ function About() {
   return (
     <div className="pb-16 pt-24 sm:pt-28 md:pt-32">
       <SEO
+        page="about"
         title="About Studio 39+ | Luxury Residential Architect Kenya"
         description="Learn about Studio 39+, a Nairobi-based residential architecture studio designing homes, villas, and retreat environments across Kenya."
       />
@@ -29,8 +31,8 @@ function About() {
           >
             <div className="h-full min-h-[28rem] sm:min-h-[32rem] lg:min-h-[38rem] xl:min-h-[42rem]">
               <img
-                src="/about/nairobi-kenya.jpg"
-                alt="Nairobi, Kenya map artwork with fine city linework and coordinates"
+                src={aboutContent.image || '/about/nairobi-kenya.jpg'}
+                alt={aboutContent.imageAlt || 'Nairobi, Kenya map artwork with fine city linework and coordinates'}
                 decoding="async"
                 className="block h-full w-full object-cover object-center"
                 style={{ objectPosition: 'center center' }}
@@ -44,7 +46,7 @@ function About() {
                 {...reveal(0.12, 14)}
                 className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-charcoal/58 dark:text-sand sm:text-[0.72rem]"
               >
-                Getting to Know Us
+                {aboutContent.eyebrow || 'Getting to Know Us'}
               </motion.p>
 
               <motion.div {...reveal(0.24, 16)} className="mt-12 sm:mt-14">
@@ -52,17 +54,17 @@ function About() {
                   id="about-founder-title"
                   className="font-serif text-5xl font-medium leading-none text-charcoal dark:text-ivory sm:text-6xl md:text-7xl"
                 >
-                  Franklin Ombui
+                  {aboutContent.founder || 'Franklin Ombui'}
                 </h1>
                 <p className="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-charcoal/65 dark:text-sand/76 sm:text-sm">
-                  Founder & Principal Designer
+                  {aboutContent.role || 'Founder & Principal Designer'}
                 </p>
               </motion.div>
             </div>
 
             <div>
               <h2 className="max-w-[13ch] font-serif text-[clamp(3rem,7.8vw,7.8rem)] font-medium leading-[0.92] text-charcoal dark:text-ivory">
-                {statementLines.map((line, index) => (
+                {(aboutContent.statementLines.length ? aboutContent.statementLines : statementLines).map((line, index) => (
                   <motion.span
                     key={line}
                     {...reveal(0.38 + index * 0.12, 26)}
@@ -77,29 +79,29 @@ function About() {
                 {...reveal(0.78, 18)}
                 className="mt-12 max-w-2xl text-base leading-8 text-charcoal/72 dark:text-sand sm:text-lg sm:leading-9"
               >
-                Before we draw anything, we want to understand the life you want to build. What do your mornings look like? Where does your family naturally gather? What does home mean to you? These conversations shape the design.
+                {aboutContent.paragraphs[0] || 'Before we draw anything, we want to understand the life you want to build. What do your mornings look like? Where does your family naturally gather? What does home mean to you? These conversations shape the design.'}
               </motion.p>
 
               <motion.p
                 {...reveal(0.88, 18)}
                 className="mt-6 max-w-2xl text-base leading-8 text-charcoal/72 dark:text-sand/90 sm:text-lg sm:leading-9"
               >
-                Based in Nairobi and working across Kenya, Franklin collaborates closely with clients to turn ideas, needs, and aspirations into homes that feel genuinely their own. Every project is an opportunity to create a place where you want to spend your life.
+                {aboutContent.paragraphs[1] || 'Based in Nairobi and working across Kenya, Franklin collaborates closely with clients to turn ideas, needs, and aspirations into homes that feel genuinely their own. Every project is an opportunity to create a place where you want to spend your life.'}
               </motion.p>
 
               <motion.div
                 {...reveal(0.95, 14)}
                 className="mt-10 space-y-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-charcoal/65 dark:text-sand/70 sm:text-xs"
               >
-                <p>Nairobi · Kenya</p>
-                <p>Residential Architecture · Interiors · Thoughtful Design</p>
+                <p>{aboutContent.location || 'Nairobi · Kenya'}</p>
+                <p>{aboutContent.capabilities || 'Residential Architecture · Interiors · Thoughtful Design'}</p>
               </motion.div>
             </div>
           </div>
         </div>
       </section>
 
-      <CTASection />
+      <CTASection {...aboutContent.cta} />
     </div>
   );
 }

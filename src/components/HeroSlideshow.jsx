@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { imageSrcSet, optimizedImageUrl } from '../utils/images';
+import ContentLink from './ContentLink';
 
 const slides = [
   {
@@ -33,10 +33,18 @@ const slides = [
   }
 ];
 
-function HeroSlideshow() {
+function HeroSlideshow({
+  slides: contentSlides = [],
+  primaryButtonText = 'Start a Conversation',
+  primaryButtonUrl = '/contact',
+  secondaryButtonText = 'Explore Our Work',
+  secondaryButtonUrl = '/projects'
+}) {
   const [active, setActive] = useState(0);
   const prefersReducedMotion = useReducedMotion();
-  const slide = slides[active];
+  const slidesToShow = contentSlides.length > 0 ? contentSlides : slides;
+  const activeSlide = Math.min(active, slidesToShow.length - 1);
+  const slide = slidesToShow[activeSlide];
 
   return (
     <section className="home-hero relative overflow-hidden bg-charcoal text-ivory" aria-labelledby="home-hero-title">
@@ -81,24 +89,24 @@ function HeroSlideshow() {
           </h1>
           <p className="hero-copy text-ivory/84">{slide.description}</p>
           <div className="hero-actions flex flex-col gap-3 text-sm uppercase tracking-[0.24em] sm:flex-row">
-            <Link to="/contact" className="btn-primary hero-button">
-              Start a Conversation
-            </Link>
-            <Link to="/projects" className="btn-secondary hero-button">
-              Explore Our Work
-            </Link>
+            <ContentLink href={primaryButtonUrl} className="btn-primary hero-button">
+              {primaryButtonText}
+            </ContentLink>
+            <ContentLink href={secondaryButtonUrl} className="btn-secondary hero-button">
+              {secondaryButtonText}
+            </ContentLink>
           </div>
         </motion.div>
 
         <div className="hero-index mt-14 grid gap-5 border-t border-ivory/20 pt-7 text-ivory/74 sm:grid-cols-3 lg:mt-24">
-          {slides.map((item, index) => (
+          {slidesToShow.map((item, index) => (
             <button
               type="button"
               key={item.label}
               onClick={() => setActive(index)}
               className={`text-left transition duration-200 ${index === active ? 'text-ivory' : 'text-ivory/56 hover:text-ivory'}`}
               aria-label={`Select hero slide ${index + 1}: ${item.label}`}
-              aria-current={index === active}
+              aria-current={index === activeSlide}
             >
               <span className="eyebrow block text-inherit">0{index + 1} / {item.label}</span>
               <span className="mt-3 block max-w-xs text-sm leading-7">{item.accent}</span>

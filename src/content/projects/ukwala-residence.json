@@ -1,0 +1,161 @@
+{
+  "id": "ukwala-residence",
+  "name": "Ukwala Residence",
+  "category": "Private Residence",
+  "location": "Ukwala, Siaya, Kenya",
+  "year": "2026",
+  "status": "Approval drawings / concept development",
+  "studio": "Studio 39+",
+  "architect": "Franklin Ombui",
+  "designTeam": "Franklin Ombui, Studio 39+",
+  "typology": "Private Residence",
+  "area": "TBC",
+  "hero": "/projects/ukwala/hero.jpg",
+  "imagePosition": "center 48%",
+  "excerpt": "A home designed around an expansive entry and bold material presence — where light, privacy, and confidence come together in a single composition.",
+  "overview": "Ukwala Residence is organized around a tall entry volume and a clear material contrast. Stone, timber fins, plaster, and large glazed openings give the house a formal presence while responding to the heat and light of western Kenya.",
+  "brief": "The residence called for a confident private home with a memorable arrival, generous daylight, durable finishes, and a controlled public face.",
+  "concept": "The double-height entrance anchors the composition. Screens, overhangs, and framed openings reduce glare while maintaining clear connections between rooms, terraces, and garden edges.",
+  "context": "Located in Ukwala, Siaya, the house responds to warm daylight, prevailing breezes, street privacy, and the client’s desire for a modern home with local weight.",
+  "clientGoals": "Create a private residence with a double-height entrance, strong exterior identity, daylight, privacy, and garden connection.",
+  "challenges": "Balance generous glazing with passive comfort, resolve the tall facade, and keep the palette disciplined rather than stark.",
+  "materials": [
+    "natural stone cladding",
+    "vertical timber fins",
+    "textured plaster",
+    "large glazed openings",
+    "warm earthy tones"
+  ],
+  "renders": [
+    "arrival facade",
+    "double-volume entry",
+    "rear terrace screen",
+    "gate approach",
+    "material close-up"
+  ],
+  "floorPlans": [
+    "ground floor plan",
+    "first floor plan",
+    "roof plan",
+    "elevations",
+    "sections"
+  ],
+  "seoKeywords": [
+    "Luxury residence Kenya",
+    "Modern tropical architecture",
+    "Studio 39+",
+    "Architectural design Kenya",
+    "Contemporary African residence"
+  ],
+  "gallery": [
+    {
+      "src": "/projects/ukwala/arrival-wide.jpg",
+      "title": "Arrival facade",
+      "alt": "Ukwala Residence exterior arrival facade with natural stone cladding, timber screens, textured plaster, and glazed double-volume entry"
+    },
+    {
+      "src": "/projects/ukwala/entrance.jpg",
+      "title": "Double-volume entrance",
+      "alt": "Double-volume entrance composition at Ukwala Residence with vertical timber door, tall glazing, and warm plaster surfaces"
+    },
+    {
+      "src": "/projects/ukwala/material-closeup.jpg",
+      "title": "Filtered facade detail",
+      "alt": "Close-up of vertical timber fins, textured plaster, stone, and filtered light at Ukwala Residence"
+    },
+    {
+      "src": "/projects/ukwala/rear-screen.jpg",
+      "title": "Rear terrace screen",
+      "alt": "Rear elevation of Ukwala Residence showing timber privacy fins, glazed openings, balcony, and garden continuity"
+    },
+    {
+      "src": "/projects/ukwala/gate.jpg",
+      "title": "Gate approach",
+      "alt": "Gate approach to Ukwala Residence with timber slatted boundary wall, warm light, landscaping, and stone surfaces"
+    },
+    {
+      "src": "/projects/ukwala/garden-elevation.jpg",
+      "title": "Garden elevation",
+      "alt": "Garden elevation of Ukwala Residence with balcony planting, glazed rooms, vertical timber accents, and textured plaster"
+    }
+  ],
+  "drawings": [
+    {
+      "title": "Ground Floor Plan",
+      "src": "/projects/ukwala/ground-floor-plan.pdf",
+      "alt": "Ground floor architectural plan for Ukwala Residence by Studio 39+"
+    },
+    {
+      "title": "First Floor Plan",
+      "src": "/projects/ukwala/first-floor-plan.pdf",
+      "alt": "First floor architectural plan for Ukwala Residence by Studio 39+"
+    },
+    {
+      "title": "Roof Plan",
+      "src": "/projects/ukwala/roof-plan.pdf",
+      "alt": "Roof plan drawing for Ukwala Residence by Studio 39+"
+    },
+    {
+      "title": "Elevations",
+      "src": "/projects/ukwala/elevation-01.pdf",
+      "alt": "Elevation drawing for Ukwala Residence showing contemporary tropical facade proportions"
+    },
+    {
+      "title": "Sections",
+      "src": "/projects/ukwala/section-01.pdf",
+      "alt": "Section drawing for Ukwala Residence showing vertical spatial relationships and double-volume areas"
+    }
+  ],
+  "palette": [
+    {
+      "title": "Natural stone",
+      "copy": "A vertical stone mass gives the facade weight and a clear point of arrival.",
+      "src": "/projects/ukwala/arrival-wide.jpg",
+      "alt": "Natural stone cladding and tall glazed opening at Ukwala Residence"
+    },
+    {
+      "title": "Timber fins",
+      "copy": "Timber slats temper sun, protect privacy, and sharpen the facade rhythm.",
+      "src": "/projects/ukwala/material-closeup.jpg",
+      "alt": "Vertical timber fins filtering light on the Ukwala Residence facade"
+    },
+    {
+      "title": "Textured plaster",
+      "copy": "Mineral plaster softens the modern geometry with a handmade surface.",
+      "src": "/projects/ukwala/entrance.jpg",
+      "alt": "Textured plaster and timber entrance surfaces at Ukwala Residence"
+    },
+    {
+      "title": "Glazed openings",
+      "copy": "Tall apertures draw light deep into the house while keeping the elevations ordered.",
+      "src": "/projects/ukwala/rear-screen.jpg",
+      "alt": "Large glazed openings and balcony screen at Ukwala Residence"
+    }
+  ],
+  "details": [
+    "The double-height entrance gives the house ceremony without losing domestic scale.",
+    "Timber fins and deep reveals soften the sun and moderate privacy.",
+    "Openings are placed with restraint so the house reads as mass, shade, and measured transparency."
+  ],
+  "slug": "ukwala-residence",
+  "country": "Kenya",
+  "client": "",
+  "studioRole": "Architecture, interior direction, visualization, material strategy",
+  "collaborators": [],
+  "services": [
+    "bespoke-residential-architecture",
+    "interior-architecture"
+  ],
+  "featured": true,
+  "published": true,
+  "order": 1,
+  "socialImage": "/projects/ukwala/hero.jpg",
+  "seoTitle": "Ukwala Residence | Luxury Residence Kenya | Studio 39+",
+  "seoDescription": "Ukwala Residence by Studio 39+: a private residence in Siaya, Kenya, shaped by stone mass, timber fins, tall glazing, and passive comfort.",
+  "caseStudy": {
+    "location": "Ukwala, Siaya",
+    "overviewHeading": "A tropical-modern residence anchored by stone, shade, and a tall entry volume.",
+    "galleryHeading": "Arrival, facade depth, timber screening, and garden edges.",
+    "ctaTitle": "Begin a private residence with clarity and restraint."
+  }
+}

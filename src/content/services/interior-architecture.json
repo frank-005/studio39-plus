@@ -1,0 +1,59 @@
+{
+  "id": "interior-architecture",
+  "title": "Interior Design",
+  "shortTitle": "Interiors",
+  "description": "Make the Details Matter. From materials and lighting to joinery and finishes, we'll help you make decisions that give your home its unique character.",
+  "seoTitle": "Interior Design",
+  "metaTitle": "Luxury Interior Design Nairobi",
+  "seoDescription": "Interior Design in Nairobi for private residences, apartments, villas, and carefully resolved living spaces.",
+  "keywords": [
+    "Private Homes",
+    "Villas",
+    "Renovations",
+    "New Builds",
+    "Turnkey Interiors"
+  ],
+  "process": [
+    {
+      "title": "Discovery & Interior Brief",
+      "copy": "We begin by understanding lifestyle, routines, aspirations, furniture requirements, and project goals."
+    },
+    {
+      "title": "Concept & Spatial Planning",
+      "copy": "Layouts, atmosphere, circulation, references, and design direction are established."
+    },
+    {
+      "title": "Design Development",
+      "copy": "Materials, joinery, furniture planning, kitchens, bathrooms, and lighting are refined into a coordinated proposal."
+    },
+    {
+      "title": "Specification & Visualization",
+      "copy": "Material palettes, schedules, joinery details, and visualizations communicate the design clearly."
+    },
+    {
+      "title": "Documentation & Procurement Support",
+      "copy": "Detailed information is prepared for pricing, fabrication, purchasing, and installation."
+    },
+    {
+      "title": "Site Coordination",
+      "copy": "We remain involved during implementation to support design quality and consistency."
+    }
+  ],
+  "deliverables": [
+    "Space Planning",
+    "Material Palette Development",
+    "Joinery Design",
+    "Kitchen Design",
+    "Bathroom Design",
+    "Furniture Layouts",
+    "Lighting Design",
+    "3D Visualizations",
+    "Interior Documentation",
+    "Procurement Guidance"
+  ],
+  "slug": "interior-architecture",
+  "fullDescription": "For homeowners seeking interiors that feel cohesive, comfortable, and deeply connected to the architecture.",
+  "image": "",
+  "featured": true,
+  "order": 2
+}

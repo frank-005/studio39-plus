@@ -1,0 +1,57 @@
+{
+  "id": "bespoke-residential-architecture",
+  "title": "Residential Architecture",
+  "shortTitle": "Residential",
+  "description": "Design Your Home from the Ground Up. Have the idea but don't know where to begin? We'll turn it into a home that works beautifully for how you want to live.",
+  "seoTitle": "Residential Architecture",
+  "metaTitle": "Residential Architecture Kenya",
+  "seoDescription": "Residential architecture in Kenya for private homes, villas, holiday residences, new build houses, and residential estates across Nairobi and East Africa.",
+  "keywords": [
+    "Private Homes",
+    "Villas",
+    "Estates",
+    "Retreats",
+    "Renovations"
+  ],
+  "process": [
+    {
+      "title": "Discovery & Brief",
+      "copy": "We begin by understanding the site, lifestyle, goals, budget, and aspirations that will shape the project."
+    },
+    {
+      "title": "Site & Context Analysis",
+      "copy": "Climate, landscape, access, views, and local conditions are studied to inform the design direction."
+    },
+    {
+      "title": "Concept Design",
+      "copy": "Spatial organization, plans, massing, and architectural ideas are developed into a clear design concept."
+    },
+    {
+      "title": "Design Development",
+      "copy": "Architecture, interiors, materials, landscape integration, and consultant input are refined into a coordinated proposal."
+    },
+    {
+      "title": "Construction Documentation",
+      "copy": "Detailed drawings and project information are prepared for approvals, pricing, and construction."
+    },
+    {
+      "title": "Construction Support",
+      "copy": "Where required, we remain involved during construction to clarify drawings and support project delivery."
+    }
+  ],
+  "deliverables": [
+    "Site Analysis",
+    "Concept Design",
+    "Floor Plans",
+    "Elevations & Sections",
+    "Material Direction",
+    "3D Visualizations",
+    "Approval Drawings",
+    "Construction Documentation"
+  ],
+  "slug": "bespoke-residential-architecture",
+  "fullDescription": "For homeowners and private clients seeking thoughtful residential architecture shaped by climate, landscape, and everyday living.",
+  "image": "",
+  "featured": true,
+  "order": 1
+}
