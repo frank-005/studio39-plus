@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" role="img" aria-labelledby="title desc">
+  <title id="title">Founder avatar placeholder</title>
+  <desc id="desc">A neutral grey head-and-shoulders silhouette on a light grey background.</desc>
+  <rect width="350" height="350" fill="#d7d7d9"/>
+  <path
+    fill="#bfc1c5"
+    d="M51 350c6-51 38-79 83-88v-22c-22-13-35-39-36-72-8-4-13-16-13-29 0-11 4-20 11-24 2-51 30-79 79-79s77 28 79 79c7 4 11 13 11 24 0 13-5 25-13 29-1 33-14 59-36 72v22c45 9 77 37 83 88H51z"
+  />
+</svg>
