@@ -8,17 +8,19 @@ import { trackEmailClick, trackPhoneClick } from '../utils/analytics';
 function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const primaryNavigation = navigation.filter((item) => item.href !== '/contact');
   const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
-
-  useEffect(() => {
-    document.documentElement.classList.add('dark');
-    document.documentElement.classList.remove('light');
-  }, []);
+  const wasOpenRef = useRef(false);
 
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (wasOpenRef.current && !open) menuButtonRef.current?.focus();
+    wasOpenRef.current = open;
+  }, [open]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -33,7 +35,6 @@ function Navbar() {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         setOpen(false);
-        menuButtonRef.current?.focus();
       }
 
       if (event.key !== 'Tab' || !menuRef.current) return;
@@ -72,7 +73,7 @@ function Navbar() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10" aria-label="Primary navigation">
-          {navigation.map((item) => (
+          {primaryNavigation.map((item) => (
             <NavLink key={item.label} to={item.href} className={({ isActive }) => `site-nav-link ${isActive ? 'is-active' : ''}`}>
               {item.label}
             </NavLink>
@@ -89,7 +90,7 @@ function Navbar() {
             onClick={() => setOpen(!open)}
             className="site-nav-menu-button"
             aria-expanded={open}
-            aria-controls="mobile-navigation"
+            aria-controls={open ? 'mobile-navigation' : undefined}
             aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           >
             <span aria-hidden="true" className="menu-icon">
@@ -123,7 +124,7 @@ function Navbar() {
                 >
                   <img src="/studio39logo-nav.png" alt={site.name} className="site-nav-mobile-logo" />
                 </Link>
-                <span className="site-nav-mobile-tagline">Residential Architecture</span>
+                <span className="site-nav-mobile-tagline">Architecture · Interiors · Visualization</span>
               </div>
               <button
                 type="button"
@@ -140,7 +141,7 @@ function Navbar() {
             </div>
 
             <div className="site-nav-mobile-links flex flex-1 flex-col items-center justify-center gap-10 text-center px-6">
-              {navigation.map((item) => (
+              {primaryNavigation.map((item) => (
                 <NavLink
                   key={item.label}
                   to={item.href}

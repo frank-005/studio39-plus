@@ -8,8 +8,8 @@ const wrapIndex = (index, length) => (index + length) % length;
 function CinematicProjectShowcase({
   projects = [],
   variant = 'page',
-  eyebrow = 'Featured Residences',
-  title = 'Selected private homes, villas, and residential studies.'
+  eyebrow = 'Selected Work',
+  title = 'Spaces shaped by context, clarity, and everyday life.'
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -165,8 +165,8 @@ function CinematicProjectShowcase({
                   srcSet={imageSrcSet(activeProject.hero, [720, 1200, 1600, 1920, 2400])}
                   sizes={isSection ? '(min-width: 1024px) 92vw, 100vw' : '100vw'}
                   alt={`${activeProject.name}, ${activeProject.category.toLowerCase()} by Studio 39+ in ${location}`}
-                  loading={activeIndex === 0 ? 'eager' : 'lazy'}
-                  fetchPriority={activeIndex === 0 ? 'high' : 'auto'}
+                  loading={!isSection && activeIndex === 0 ? 'eager' : 'lazy'}
+                  fetchPriority={!isSection && activeIndex === 0 ? 'high' : 'auto'}
                   decoding="async"
                   style={{ objectPosition: activeProject.imagePosition || 'center center' }}
                   className="h-full min-h-[inherit] w-full object-cover"

@@ -16,9 +16,9 @@ function ProjectCard({ project }) {
             src={optimizedImageUrl(project.hero, 900)}
             srcSet={imageSrcSet(project.hero, [480, 720, 960])}
             sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-            alt={`${project.name}, luxury ${project.category.toLowerCase()} by Studio 39+ in ${project.location}`}
-            loading={isFeaturedLocal ? 'eager' : 'lazy'}
-            fetchPriority={isFeaturedLocal ? 'high' : 'auto'}
+            alt={`${project.name}, ${project.category.toLowerCase()} by Studio 39+ in ${project.location}`}
+            loading="lazy"
+            fetchPriority="auto"
             decoding="async"
             style={{ objectPosition: project.imagePosition || 'center center' }}
             className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.045]"

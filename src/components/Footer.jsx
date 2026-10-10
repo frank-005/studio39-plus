@@ -6,6 +6,12 @@ import { trackEmailClick, trackPhoneClick } from '../utils/analytics';
 import ContentLink from './ContentLink';
 
 function Footer() {
+  const socialLinks = [
+    ['Instagram', site.socialLinks.instagram],
+    ['Behance', site.socialLinks.behance],
+    ['LinkedIn', site.socialLinks.linkedin]
+  ].filter(([, href]) => href);
+
   return (
     <footer className="bg-charcoal text-sand">
       <div className="content-container border-t border-mist/40 pt-12 pb-20 sm:pt-16 sm:pb-24">
@@ -13,10 +19,10 @@ function Footer() {
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-ivory">{site.name}</p>
             <p className="mt-5 max-w-lg text-sm leading-8 text-sand/82">
-             Kenyan-based architects for bespoke residences, Interior Design, renovations, and site-led design.
+              Nairobi-based architecture and interior design for residential, hospitality, and commercial projects.
             </p>
             <p className="mt-7 max-w-md text-base leading-8 text-ivory">
-              Currently accepting selected residential commissions.
+              Thoughtful design shaped around each project brief.
             </p>
           </div>
 
@@ -54,15 +60,11 @@ function Footer() {
               <Link to="/services" className="hover:text-ivory">Services</Link>
               <Link to="/contact" className="hover:text-ivory">Contact</Link>
             </nav>
-            <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.22em] text-sand/72">
-              {[
-                ['Instagram', site.socialLinks.instagram],
-                ['Behance', site.socialLinks.behance],
-                ['LinkedIn', site.socialLinks.linkedin]
-              ].filter(([, href]) => href).map(([label, href]) => (
+            {socialLinks.length > 0 ? <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.22em] text-sand/72">
+              {socialLinks.map(([label, href]) => (
                 <ContentLink key={label} href={href} target="_blank" rel="noreferrer" className="hover:text-ivory">{label}</ContentLink>
               ))}
-            </div>
+            </div> : null}
           </div>
         </div>
         <p className="mt-14 border-t border-ivory/10 pt-8 text-xs text-sand/60">{site.copyright}</p>

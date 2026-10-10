@@ -1,11 +1,12 @@
 {
   "id": "architectural-visualization",
   "title": "Architectural Visualization",
-  "shortTitle": "Visualization",
-  "description": "Photorealistic imagery that communicates design intent before construction begins.",
+  "shortTitle": "03 · 3D Visualization",
+  "title": "3D Visualization",
+  "description": "Architectural modeling, photorealistic exterior and interior renders, and visual presentations that help clients understand designs before construction.",
   "seoTitle": "Architectural Visualization",
-  "metaTitle": "Residential Architectural Visualization",
-  "seoDescription": "Architectural visualization for luxury homes, villas, private residences, and residential developments in Kenya.",
+  "metaTitle": "Architectural Visualization in Kenya | Studio 39+",
+  "seoDescription": "Architectural visualization for residential, hospitality, and commercial projects in Kenya, from interior and exterior renders to presentation imagery.",
   "keywords": [
     "Exterior Visualizations",
     "Interior Visualizations",
@@ -51,7 +52,7 @@
     "High-Resolution Image Packages"
   ],
   "slug": "architectural-visualization",
-  "fullDescription": "For homeowners, developers, and design teams who want to understand a project before construction begins.",
+  "fullDescription": "For clients, developers, and design teams who want to understand residential, hospitality, or commercial projects before construction begins.",
   "image": "",
   "featured": true,
   "order": 4

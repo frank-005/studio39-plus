@@ -206,7 +206,6 @@ function UkwalaCaseStudy({ project }) {
         image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
-        keywords={project.seoKeywords?.join(', ')}
       />
 
       <section className="ukwala-hero relative min-h-[86svh] overflow-hidden">
@@ -261,7 +260,7 @@ function UkwalaCaseStudy({ project }) {
         <div className="project-editorial-gallery project-editorial-gallery--ukwala">
           {project.gallery.map((image, index) => (
             <motion.button initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75, delay: index * 0.06, ease: 'easeOut' }} key={image.src} type="button" onClick={() => setLightboxItem(image)} className={`project-editorial-gallery-item group ${index === 0 ? 'is-wide is-dominant' : ''} ${index === 2 ? 'is-tall' : ''}`} aria-label={`Open ${image.title} render`}>
-              <img src={image.src} alt={image.alt} loading={index < 2 ? 'eager' : 'lazy'} decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.04]" />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.04]" />
               <span>{image.title}</span>
             </motion.button>
           ))}
@@ -299,7 +298,6 @@ function EarthenThresholdCaseStudy({ project }) {
         image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
-        keywords={project.seoKeywords?.join(', ')}
       />
 
       <section className="earthen-hero relative overflow-hidden">
@@ -352,7 +350,7 @@ function EarthenThresholdCaseStudy({ project }) {
         <div className="project-editorial-gallery project-editorial-gallery--earthen">
           {project.gallery.map((image, index) => (
             <motion.button initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75, delay: index * 0.06, ease: 'easeOut' }} key={image.src} type="button" onClick={() => setLightboxItem(image)} className={`project-editorial-gallery-item group ${index === 0 || index === 2 ? 'is-large' : ''} ${index === 1 ? 'is-tall' : ''}`} aria-label={`Open ${image.title} image`}>
-              <img src={image.src} alt={image.alt} loading={index < 2 ? 'eager' : 'lazy'} decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
               <span>{image.title}</span>
             </motion.button>
           ))}
@@ -390,7 +388,6 @@ function SaikaHouseCaseStudy({ project }) {
         image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
-        keywords={project.seoKeywords?.join(', ')}
       />
 
       <section
@@ -446,7 +443,7 @@ function SaikaHouseCaseStudy({ project }) {
         <div className="project-editorial-gallery project-editorial-gallery--saika">
           {project.gallery.map((image, index) => (
             <motion.button initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75, delay: index * 0.06, ease: 'easeOut' }} key={image.src} type="button" onClick={() => setLightboxItem(image)} className={`project-editorial-gallery-item group ${index === 0 || index === 5 ? 'is-large' : ''} ${index === 2 ? 'is-tall' : ''}`} aria-label={`Open ${image.title} image`}>
-              <img src={image.src} alt={image.alt} loading={index < 2 ? 'eager' : 'lazy'} decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
               <span>{image.title}</span>
             </motion.button>
           ))}
@@ -502,7 +499,6 @@ function KiserianHouseCaseStudy({ project }) {
         image={project.socialImage || project.hero}
         type="article"
         schema={projectSchema(project)}
-        keywords={project.seoKeywords?.join(', ')}
       />
 
       <section
@@ -560,7 +556,7 @@ function KiserianHouseCaseStudy({ project }) {
         <div className="saika-gallery kiserian-editorial-gallery">
           {project.gallery.map((image, index) => (
             <motion.button initial={{ opacity: 0, y: 26 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, delay: index * 0.08, ease: 'easeOut' }} key={image.src} type="button" onClick={() => setLightboxItem(image)} className={`saika-gallery-item kiserian-gallery-item group ${index === 0 ? 'is-large is-dominant' : ''} ${index === 2 ? 'is-wide' : ''}`} aria-label={`Open ${image.title} image`}>
-              <img src={image.src} alt={image.alt} loading={index < 3 ? 'eager' : 'lazy'} fetchPriority={index < 3 ? 'high' : 'auto'} decoding={index < 3 ? 'sync' : 'async'} className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.035]" />
               <span>{image.title}</span>
             </motion.button>
           ))}
@@ -621,7 +617,7 @@ function ProjectDetail() {
   if (!project) {
     return (
       <div className="pt-32 pb-24 content-container">
-        <SEO title="Residence Not Found" description="The requested Studio 39+ residence study could not be found." />
+        <SEO title="Residence Not Found" description="The requested Studio 39+ residence study could not be found." robots="noindex, follow" />
         <p className="eyebrow">Project not found</p>
         <button type="button" onClick={() => navigate('/projects')} className="btn-secondary mt-6">
           Back to projects
@@ -630,11 +626,7 @@ function ProjectDetail() {
     );
   }
 
-  const gallery = [
-    project.hero,
-    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80&fm=webp',
-    'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80&fm=webp'
-  ];
+  const gallery = project.gallery.filter((image) => image.src);
   const { previousProject, nextProject } = getAdjacentProjects(project);
 
   if (project.id === 'ukwala-residence') {
@@ -729,7 +721,7 @@ function ProjectDetail() {
         </aside>
       </section>
 
-      <CinematicRenderBreak src={gallery[1]} alt={`${project.name} architectural study`} variant="project-cinematic-break--generic" />
+      {gallery.length > 1 ? <CinematicRenderBreak src={gallery[1].src} alt={gallery[1].alt || `${project.name} architectural study`} variant="project-cinematic-break--generic" /> : null}
 
       <section className="content-container project-gallery-section pb-20 md:pb-32" aria-labelledby="gallery-title">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -740,12 +732,12 @@ function ProjectDetail() {
         </div>
         <div className="project-editorial-gallery project-editorial-gallery--generic">
           {gallery.map((image, index) => (
-            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75, delay: index * 0.06, ease: 'easeOut' }} key={image} className={`project-editorial-gallery-item ${index === 0 ? 'is-dominant' : ''} overflow-hidden bg-mist dark:bg-charcoal`}>
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75, delay: index * 0.06, ease: 'easeOut' }} key={image.src} className={`project-editorial-gallery-item ${index === 0 ? 'is-dominant' : ''} overflow-hidden bg-mist dark:bg-charcoal`}>
               <img
-                src={optimizedImageUrl(image, 900)}
-                srcSet={imageSrcSet(image, [480, 720, 960])}
+                src={optimizedImageUrl(image.src, 900)}
+                srcSet={imageSrcSet(image.src, [480, 720, 960])}
                 sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
-                alt={`${project.name} render ${index + 1}`}
+                alt={image.alt || `${project.name} render ${index + 1}`}
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover transition duration-700 hover:scale-105"

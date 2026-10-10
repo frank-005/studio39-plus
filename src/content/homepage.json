@@ -1,103 +1,155 @@
 {
   "heroSlides": [
     {
-      "label": "Your Home",
-      "title": "Your Home Should Feel Like It Belongs to You.",
-      "description": "From the first conversation to the final detail, we'll help you create a home shaped around how you live, the place you love, and the life you want to build.",
-      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=82",
+      "label": "ARCHITECTURE / INTERIORS / VISUALIZATION",
+      "title": "Architecture. Interiors. Spaces that feel like you.",
+      "description": "Thoughtful design for residential, hospitality and commercial spaces. From concept and spatial planning to detailed drawings and visualizations.",
+      "image": "/projects/ukwala/arrival-wide.jpg",
       "position": "center 48%",
-      "accent": "Private homes and family residences"
-    },
-    {
-      "label": "Your Vision",
-      "title": "A Home Shaped by You and Your Place.",
-      "description": "Whether you're building in Nairobi, along the coast, or deep in the countryside, your home should respond to where it stands and how you want to live there.",
-      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=82",
-      "position": "center 50%",
-      "accent": "Homes rooted in landscape, climate, and family life"
-    },
-    {
-      "label": "Your Everyday",
-      "title": "Architecture That Serves Your Daily Life.",
-      "description": "Good architecture doesn't announce itself. It quietly makes your everyday easier, more comfortable, more connected to the people and places you care about.",
-      "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=82",
-      "position": "center 47%",
-      "accent": "Homes designed for how you actually live"
+      "accent": "Residential, hospitality and commercial design"
     }
   ],
-  "heroPrimaryButtonText": "Start a Conversation",
+  "heroPrimaryButtonText": "Start a Project",
   "heroPrimaryButtonUrl": "/contact",
   "heroSecondaryButtonText": "Explore Our Work",
   "heroSecondaryButtonUrl": "/projects",
-  "featuredProjects": ["kiserian-house", "saika-house", "earthen-threshold", "ukwala-residence"],
-  "featuredServices": ["bespoke-residential-architecture", "interior-architecture", "renovation-extensions", "architectural-visualization"],
+  "featuredProjects": [
+    "kiserian-house",
+    "saika-house",
+    "earthen-threshold",
+    "ukwala-residence"
+  ],
+  "featuredServices": [
+    "bespoke-residential-architecture",
+    "interior-architecture",
+    "architectural-visualization"
+  ],
   "featuredProjectsHeading": {
-    "eyebrow": "Featured Residences",
-    "title": "Selected private homes, villas, and residential studies."
+    "eyebrow": "Selected Work",
+    "title": "Spaces shaped by context, clarity, and everyday life."
   },
   "introduction": {
-    "eyebrow": "Before We Design",
-    "title": "We Want to Understand How You Live.",
-    "copy": "Your daily rhythms, the light in your favourite room, how your family gathers, what makes you feel at home — these are the things that shape the architecture. Every detail matters because it's your life that lives there.",
+    "eyebrow": "Our Approach",
+    "title": "Design begins with listening to the people and place.",
+    "copy": "We begin by understanding the brief and site, then develop a concept and spatial arrangement. Materials, technical drawings, and visualizations are refined to match the agreed scope.",
     "buttonText": "How We Work",
     "buttonUrl": "/about"
   },
   "servicesHeading": {
-    "eyebrow": "How We Help",
-    "title": "Services for Creating Your Home.",
-    "copy": "Whether you're starting from scratch, reimagining a space, or bringing a vision to life, we'll guide you through the process."
+    "eyebrow": "What We Do",
+    "title": "Architecture, interiors, and visualization.",
+    "copy": "Design support for residential, hospitality, and commercial projects, shaped around each brief."
   },
   "philosophyHeading": {
-    "eyebrow": "Your Home",
-    "title": "What Makes a Home Feel Right.",
-    "copy": "The best homes aren't defined by style or budget — they're defined by how they serve your life. Light, comfort, connection to place, and materials that age beautifully. These are the things that matter."
+    "eyebrow": "Why Studio 39+",
+    "title": "Thoughtful spaces, carefully resolved.",
+    "copy": "Our work brings function, context, materiality, and technical precision into the same design conversation."
   },
   "philosophy": [
-    {"title": "Light & Climate", "copy": "How sunlight, shade, and air shape the way your home feels throughout the day. Good architecture makes you feel the seasons change."},
-    {"title": "Material & Time", "copy": "Natural materials that age beautifully and improve with use. Your home should become more comfortable and more beautiful as time passes."},
-    {"title": "Living & Connection", "copy": "Spaces designed around how you actually live — family gatherings, quiet mornings, everyday rituals. The architecture serves your life, not the other way around."}
+    {
+      "title": "Light & Climate",
+      "copy": "Sunlight, shade, and air shape how a space feels throughout the day. Good architecture responds to climate and makes the most of its setting."
+    },
+    {
+      "title": "Material & Time",
+      "copy": "Materials that age gracefully and improve with use bring character and longevity to a project."
+    },
+    {
+      "title": "Living & Connection",
+      "copy": "Spaces shaped around the people who use them, their routines, and the connections they make. Architecture should serve its users."
+    }
   ],
   "materials": {
     "eyebrow": "Materials",
     "title": "Materials chosen for climate, character, and longevity.",
-    "copy": "Our material palettes are guided by climate, craftsmanship, and the way a home is lived in over time. We favour natural materials that weather gracefully, create warmth, and bring lasting character to a home.",
+    "copy": "Material palettes are guided by climate, craftsmanship, and how each space will be used. We consider materials that weather gracefully, create a clear atmosphere, and bring lasting character to a project.",
     "image": "/projects/ukwala/material-closeup.jpg",
     "imageAlt": "Ukwala Residence material detail with stone, timber fins, textured plaster, and filtered daylight",
     "principles": [
-      {"title": "Light", "copy": "Materials selected for how they receive and shape daylight."},
-      {"title": "Locality", "copy": "Regional materials that connect a home to its landscape."},
-      {"title": "Texture", "copy": "Natural surfaces that add depth without excess ornament."},
-      {"title": "Longevity", "copy": "Finishes chosen to age gracefully over time."},
-      {"title": "Craft", "copy": "Carefully detailed materials shaped through skilled making."},
-      {"title": "Permanence", "copy": "A restrained palette designed to remain relevant for decades."}
+      {
+        "title": "Light",
+        "copy": "Materials selected for how they receive and shape daylight."
+      },
+      {
+        "title": "Locality",
+        "copy": "Regional materials that connect a project to its landscape."
+      },
+      {
+        "title": "Texture",
+        "copy": "Natural surfaces that add depth without excess ornament."
+      },
+      {
+        "title": "Longevity",
+        "copy": "Finishes chosen to age gracefully over time."
+      },
+      {
+        "title": "Craft",
+        "copy": "Carefully detailed materials shaped through skilled making."
+      },
+      {
+        "title": "Permanence",
+        "copy": "A restrained palette designed to remain relevant for decades."
+      }
     ]
   },
   "processHeading": {
     "eyebrow": "Our Process",
     "title": "A measured process from first conversation to build-ready drawings.",
-    "copy": "Structured for homeowners, diaspora clients, and developers who need clarity, discretion, and careful design work."
+    "copy": "Structured for private clients, businesses, organizations, and developers who need clarity and careful design work."
   },
   "process": [
-    {"number": "01", "title": "Discovery & Brief", "copy": "We begin by understanding the site, lifestyle, goals, budget, and aspirations that will shape the project."},
-    {"number": "02", "title": "Site & Context Analysis", "copy": "Climate, topography, views, access, landscape, and local conditions inform the design direction."},
-    {"number": "03", "title": "Concept Design", "copy": "Plans, spatial organization, massing, and early design ideas are developed into a clear architectural concept."},
-    {"number": "04", "title": "Design Development", "copy": "Architecture, interiors, materials, landscape integration, and technical requirements are refined into a coordinated design."},
-    {"number": "05", "title": "Construction Documentation", "copy": "Detailed drawings and project information are prepared for approvals, pricing, and construction."},
-    {"number": "06", "title": "Construction Support", "copy": "We remain involved during construction to clarify drawings, review progress, and support the realization of the design."}
+    {
+      "number": "01",
+      "title": "Discovery & Brief",
+      "copy": "We begin by understanding the site, lifestyle, goals, budget, and aspirations that will shape the project."
+    },
+    {
+      "number": "02",
+      "title": "Site & Context Analysis",
+      "copy": "Climate, topography, views, access, landscape, and local conditions inform the design direction."
+    },
+    {
+      "number": "03",
+      "title": "Concept Design",
+      "copy": "Plans, spatial organization, massing, and early design ideas are developed into a clear architectural concept."
+    },
+    {
+      "number": "04",
+      "title": "Design Development",
+      "copy": "Architecture, interiors, materials, landscape integration, and technical requirements are refined into a coordinated design."
+    },
+    {
+      "number": "05",
+      "title": "Construction Documentation",
+      "copy": "Detailed drawings and project information are prepared for approvals, pricing, and construction."
+    },
+    {
+      "number": "06",
+      "title": "Construction Support",
+      "copy": "We remain involved during construction to clarify drawings, review progress, and support the realization of the design."
+    }
   ],
   "testimonials": {
     "eyebrow": "Client Notes",
     "title": "Designed for clients who expect discretion, clarity, and careful work.",
     "items": [
-      {"quote": "The studio gave our brief structure and translated it into a home that felt personal, quiet, and connected to the site.", "name": "Private residential client", "context": "Karen residence"},
-      {"quote": "The process helped our family make decisions with clarity before committing to build in Kenya.", "name": "Diaspora homeowner", "context": "Coastal villa concept"}
+      {
+        "quote": "The studio gave our brief structure and translated it into a home that felt personal, quiet, and connected to the site.",
+        "name": "Private residential client",
+        "context": "Karen residence"
+      },
+      {
+        "quote": "The process helped our family make decisions with clarity before committing to build in Kenya.",
+        "name": "Diaspora homeowner",
+        "context": "Coastal villa concept"
+      }
     ]
   },
   "cta": {
     "eyebrow": "Start a Project",
-    "title": "A private home deserves a measured beginning.",
-    "copy": "Share the site, location, timeline, and ambition with Studio 39+. You can also reach the studio directly on",
-    "primaryButtonText": "Start a Conversation",
+    "title": "Let's discuss your project.",
+    "copy": "Tell us about your residential, hospitality, or commercial brief. You can also reach the studio directly on",
+    "primaryButtonText": "Let's Discuss Your Project",
     "primaryButtonUrl": "/contact",
     "secondaryButtonText": "Explore Our Work",
     "secondaryButtonUrl": "/projects"

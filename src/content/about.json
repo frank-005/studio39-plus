@@ -2,19 +2,19 @@
   "eyebrow": "Getting to Know Us",
   "founder": "Franklin Ombui",
   "role": "Founder & Principal Designer",
-  "statementLines": ["YOUR HOME STARTS", "WITH YOUR STORY."],
+  "statementLines": ["EVERY PROJECT STARTS", "WITH A CONVERSATION."],
   "paragraphs": [
-    "Before we draw anything, we want to understand the life you want to build. What do your mornings look like? Where does your family naturally gather? What does home mean to you? These conversations shape the design.",
-    "Based in Nairobi and working across Kenya, Franklin collaborates closely with clients to turn ideas, needs, and aspirations into homes that feel genuinely their own. Every project is an opportunity to create a place where you want to spend your life."
+    "Before we draw anything, we listen. We learn about the brief, the site, the people who will use the space, and the ambitions behind the project. These conversations give the design a clear starting point.",
+    "Based in Nairobi and working across Kenya, Franklin collaborates with clients and project teams to turn ideas, needs, and aspirations into thoughtful spaces. Each project is shaped by its context, purpose, and agreed scope."
   ],
   "location": "Nairobi · Kenya",
-  "capabilities": "Residential Architecture · Interiors · Thoughtful Design",
+  "capabilities": "Architecture · Interiors · Visualization",
   "image": "/about/nairobi-kenya.jpg",
   "imageAlt": "Nairobi, Kenya map artwork with fine city linework and coordinates",
   "cta": {
     "eyebrow": "Ready to Begin",
-    "title": "Let's Talk About Your Home.",
-    "copy": "Whether you have a clear vision or just the beginning of an idea, we'd love to hear about what you're imagining. Get in touch and let's start a conversation.",
+    "title": "Let's Talk About Your Project.",
+    "copy": "Whether you have a clear brief or just the beginning of an idea, we'd love to hear what you're planning. Get in touch and let's start a conversation.",
     "primaryButtonText": "Start a Conversation",
     "primaryButtonUrl": "/contact",
     "secondaryButtonText": "Explore Our Work",

@@ -3,7 +3,7 @@ import SEO from '../components/SEO';
 import CTASection from '../components/CTASection';
 import { aboutContent } from '../data/content';
 
-const statementLines = ['YOUR HOME STARTS', 'WITH YOUR STORY.'];
+const statementLines = ['EVERY PROJECT STARTS', 'WITH A CONVERSATION.'];
 
 function About() {
   const shouldReduceMotion = useReducedMotion();
@@ -19,8 +19,8 @@ function About() {
     <div className="pb-16 pt-24 sm:pt-28 md:pt-32">
       <SEO
         page="about"
-        title="About Studio 39+ | Luxury Residential Architect Kenya"
-        description="Learn about Studio 39+, a Nairobi-based residential architecture studio designing homes, villas, and retreat environments across Kenya."
+        title="About Studio 39+ | Nairobi Architecture & Design Studio"
+        description="Meet Studio 39+, a Nairobi architecture and interior design studio working on residential, hospitality, and commercial projects across Kenya."
       />
 
       <section className="bg-neutral-100 text-charcoal dark:bg-charcoal dark:text-ivory" aria-labelledby="about-founder-title">
@@ -79,14 +79,14 @@ function About() {
                 {...reveal(0.78, 18)}
                 className="mt-12 max-w-2xl text-base leading-8 text-charcoal/72 dark:text-sand sm:text-lg sm:leading-9"
               >
-                {aboutContent.paragraphs[0] || 'Before we draw anything, we want to understand the life you want to build. What do your mornings look like? Where does your family naturally gather? What does home mean to you? These conversations shape the design.'}
+                {aboutContent.paragraphs[0] || 'Before we draw anything, we listen. We learn about the brief, the site, the people who will use the space, and the ambitions behind the project.'}
               </motion.p>
 
               <motion.p
                 {...reveal(0.88, 18)}
                 className="mt-6 max-w-2xl text-base leading-8 text-charcoal/72 dark:text-sand/90 sm:text-lg sm:leading-9"
               >
-                {aboutContent.paragraphs[1] || 'Based in Nairobi and working across Kenya, Franklin collaborates closely with clients to turn ideas, needs, and aspirations into homes that feel genuinely their own. Every project is an opportunity to create a place where you want to spend your life.'}
+                {aboutContent.paragraphs[1] || 'Based in Nairobi and working across Kenya, Franklin collaborates with clients and project teams to turn ideas and needs into thoughtful spaces shaped by context, purpose, and agreed scope.'}
               </motion.p>
 
               <motion.div
@@ -94,7 +94,7 @@ function About() {
                 className="mt-10 space-y-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-charcoal/65 dark:text-sand/70 sm:text-xs"
               >
                 <p>{aboutContent.location || 'Nairobi · Kenya'}</p>
-                <p>{aboutContent.capabilities || 'Residential Architecture · Interiors · Thoughtful Design'}</p>
+                <p>{aboutContent.capabilities || 'Architecture · Interiors · Visualization'}</p>
               </motion.div>
             </div>
           </div>

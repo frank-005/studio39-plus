@@ -31,15 +31,15 @@ export const aboutContent = {
   founder: 'Franklin Ombui',
   role: 'Founder & Principal Designer',
   eyebrow: 'Getting to Know Us',
-  statementLines: ['YOUR HOME STARTS', 'WITH YOUR STORY.'],
+  statementLines: ['EVERY PROJECT STARTS', 'WITH A CONVERSATION.'],
   image: '/about/nairobi-kenya.jpg',
   paragraphs: [
-    'Before we draw anything, we want to understand the life you want to build. What do your mornings look like? Where does your family naturally gather? What does home mean to you? These conversations shape the design.',
-    'Based in Nairobi and working across Kenya, Franklin collaborates closely with clients to turn ideas, needs, and aspirations into homes that feel genuinely their own. Every project is an opportunity to create a place where you want to spend your life.'
+    'Before we draw anything, we listen. We learn about the brief, the site, the people who will use the space, and the ambitions behind the project. These conversations give the design a clear starting point.',
+    'Based in Nairobi and working across Kenya, Franklin collaborates with clients and project teams to turn ideas, needs, and aspirations into thoughtful spaces. Each project is shaped by its context, purpose, and agreed scope.'
   ],
   location: 'Nairobi · Kenya',
-  capabilities: 'Residential Architecture · Interiors · Thoughtful Design',
+  capabilities: 'Architecture · Interiors · Visualization',
   ...aboutData,
-  statementLines: Array.isArray(aboutData.statementLines) ? aboutData.statementLines : ['YOUR HOME STARTS', 'WITH YOUR STORY.'],
+  statementLines: Array.isArray(aboutData.statementLines) ? aboutData.statementLines : ['EVERY PROJECT STARTS', 'WITH A CONVERSATION.'],
   paragraphs: Array.isArray(aboutData.paragraphs) ? aboutData.paragraphs : []
 };

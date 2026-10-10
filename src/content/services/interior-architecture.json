@@ -1,17 +1,17 @@
 {
   "id": "interior-architecture",
   "title": "Interior Design",
-  "shortTitle": "Interiors",
-  "description": "Make the Details Matter. From materials and lighting to joinery and finishes, we'll help you make decisions that give your home its unique character.",
+  "shortTitle": "02 · Interiors",
+  "description": "Interior layouts, material and finish selection, lighting, furniture coordination, and detailed interior design solutions.",
   "seoTitle": "Interior Design",
-  "metaTitle": "Luxury Interior Design Nairobi",
-  "seoDescription": "Interior Design in Nairobi for private residences, apartments, villas, and carefully resolved living spaces.",
+  "metaTitle": "Interior Design in Nairobi & Kenya | Studio 39+",
+  "seoDescription": "Interior design for residential, hospitality, and commercial spaces in Nairobi and across Kenya, including spatial planning, materials, lighting, and fit-out coordination.",
   "keywords": [
-    "Private Homes",
-    "Villas",
-    "Renovations",
-    "New Builds",
-    "Turnkey Interiors"
+    "Residential Interiors",
+    "Hospitality Interiors",
+    "Commercial Interiors",
+    "Retail Fit-Out",
+    "Workplace Design"
   ],
   "process": [
     {
@@ -52,7 +52,7 @@
     "Procurement Guidance"
   ],
   "slug": "interior-architecture",
-  "fullDescription": "For homeowners seeking interiors that feel cohesive, comfortable, and deeply connected to the architecture.",
+  "fullDescription": "For clients seeking cohesive, functional interiors for homes, hotels, restaurants, workplaces, and retail spaces.",
   "image": "",
   "featured": true,
   "order": 2

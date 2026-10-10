@@ -1,5 +1,5 @@
 export function optimizedImageUrl(url, width = 1200) {
-  if (!url.includes('images.unsplash.com')) return url;
+  if (typeof url !== 'string' || !url.includes('images.unsplash.com')) return url || '';
 
   const imageUrl = new URL(url, typeof window === 'undefined' ? 'https://www.studio39ke.com' : window.location.origin);
   imageUrl.searchParams.set('auto', 'format');
@@ -11,5 +11,6 @@ export function optimizedImageUrl(url, width = 1200) {
 }
 
 export function imageSrcSet(url, widths = [640, 960, 1280, 1600]) {
+  if (typeof url !== 'string' || !url.includes('images.unsplash.com')) return undefined;
   return widths.map((width) => `${optimizedImageUrl(url, width)} ${width}w`).join(', ');
 }

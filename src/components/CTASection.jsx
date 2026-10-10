@@ -2,12 +2,13 @@ import ContentLink from './ContentLink';
 
 function CTASection({
   eyebrow = 'Ready to Begin',
-  title = "Let's Talk About Your Home.",
+  title = "Let's Talk About Your Project.",
   copy = "Whether you have a clear vision or just the beginning of an idea, we'd love to hear about what you're imagining. Get in touch and let's start a conversation.",
   primaryButtonText = 'Start a Conversation',
   primaryButtonUrl = '/contact',
   secondaryButtonText = 'Explore Our Work',
-  secondaryButtonUrl = '/projects'
+  secondaryButtonUrl = '/projects',
+  showSecondaryButton = true
 }) {
   return (
     <section className="content-container py-16 sm:py-20 md:py-24">
@@ -20,13 +21,15 @@ function CTASection({
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-charcoal/72 dark:text-sand">{copy}</p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <ContentLink className="btn-primary" href={primaryButtonUrl}>
+          <div className="cta-actions flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <ContentLink className="btn-primary cta-button cta-button-primary" href={primaryButtonUrl}>
               {primaryButtonText}
             </ContentLink>
-            <ContentLink className="btn-secondary" href={secondaryButtonUrl}>
-              {secondaryButtonText}
-            </ContentLink>
+            {showSecondaryButton ? (
+              <ContentLink className="btn-secondary cta-button cta-button-secondary" href={secondaryButtonUrl}>
+                {secondaryButtonText}
+              </ContentLink>
+            ) : null}
           </div>
         </div>
       </div>

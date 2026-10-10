@@ -4,8 +4,8 @@
   "shortTitle": "Renovation",
   "description": "Reimagine Your Space. Whether you're extending, reconfiguring, or refreshing, we'll help your existing home work better and feel better.",
   "seoTitle": "Renovation & Extensions",
-  "metaTitle": "Luxury Home Renovation Architect Nairobi",
-  "seoDescription": "Architectural renovation and extension design for high-end homes, villas, and private residences in Nairobi and Kenya.",
+  "metaTitle": "Renovation & Adaptive Reuse Design | Studio 39+",
+  "seoDescription": "Renovation, extension, and refurbishment design for residential, hospitality, and commercial buildings in Nairobi and across Kenya.",
   "keywords": [
     "Renovations",
     "Extensions",
@@ -15,8 +15,8 @@
   ],
   "process": [
     {
-      "title": "Discovery & Existing Home Review",
-      "copy": "We assess the existing house, understand how it is used, and identify the goals driving the renovation."
+      "title": "Discovery & Existing Building Review",
+      "copy": "We assess the existing building, understand how it is used, and identify the goals driving the renovation."
     },
     {
       "title": "Site & Building Analysis",
@@ -50,7 +50,7 @@
     "Construction Documentation"
   ],
   "slug": "renovation-extensions",
-  "fullDescription": "For homeowners looking to improve, extend, or reimagine an existing home through thoughtful design.",
+  "fullDescription": "For clients looking to improve, extend, or adapt an existing home, hospitality venue, or commercial building through thoughtful design.",
   "image": "",
   "featured": true,
   "order": 3

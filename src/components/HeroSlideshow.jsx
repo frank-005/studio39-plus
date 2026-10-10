@@ -5,31 +5,31 @@ import ContentLink from './ContentLink';
 
 const slides = [
   {
-    label: 'Your Home',
-    title: 'Your Home Should Feel Like It Belongs to You.',
+    label: 'Your Project',
+    title: 'Spaces shaped around people and place.',
     description:
-      'From the first conversation to the final detail, we\'ll help you create a home shaped around how you live, the place you love, and the life you want to build.',
+      'From the first conversation to the final detail, we develop thoughtful architecture and interiors shaped by the brief, the place, and the people who use each space.',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=82',
     position: 'center 48%',
-    accent: 'Private homes and family residences'
+    accent: 'Residential, hospitality, and commercial design'
   },
   {
     label: 'Your Vision',
-    title: 'A Home Shaped by You and Your Place.',
+    title: 'Design that responds to its context.',
     description:
-      'Whether you\'re building in Nairobi, along the coast, or deep in the countryside, your home should respond to where it stands and how you want to live there.',
+      'Across Nairobi and Kenya, each project begins with its setting, purpose, users, and the conditions that shape it.',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=82',
     position: 'center 50%',
-    accent: 'Homes rooted in landscape, climate, and family life'
+    accent: 'Ideas grounded in landscape, climate, and use'
   },
   {
     label: 'Your Everyday',
-    title: 'Architecture That Serves Your Daily Life.',
+    title: 'Architecture that works for everyday life.',
     description:
-      'Good architecture doesn\'t announce itself. It quietly makes your everyday easier, more comfortable, more connected to the people and places you care about.',
+      'Good architecture brings function, context, materiality, and technical precision into the same design conversation.',
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=82',
     position: 'center 47%',
-    accent: 'Homes designed for how you actually live'
+    accent: 'Spaces designed around how they are used'
   }
 ];
 
@@ -98,7 +98,7 @@ function HeroSlideshow({
           </div>
         </motion.div>
 
-        <div className="hero-index mt-14 grid gap-5 border-t border-ivory/20 pt-7 text-ivory/74 sm:grid-cols-3 lg:mt-24">
+        {slidesToShow.length > 1 ? <div className="hero-index mt-14 grid gap-5 border-t border-ivory/20 pt-7 text-ivory/74 sm:grid-cols-3 lg:mt-24">
           {slidesToShow.map((item, index) => (
             <button
               type="button"
@@ -112,7 +112,7 @@ function HeroSlideshow({
               <span className="mt-3 block max-w-xs text-sm leading-7">{item.accent}</span>
             </button>
           ))}
-        </div>
+        </div> : null}
       </div>
     </section>
   );

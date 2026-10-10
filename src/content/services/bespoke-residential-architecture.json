@@ -1,17 +1,17 @@
 {
   "id": "bespoke-residential-architecture",
-  "title": "Residential Architecture",
-  "shortTitle": "Residential",
-  "description": "Design Your Home from the Ground Up. Have the idea but don't know where to begin? We'll turn it into a home that works beautifully for how you want to live.",
-  "seoTitle": "Residential Architecture",
-  "metaTitle": "Residential Architecture Kenya",
-  "seoDescription": "Residential architecture in Kenya for private homes, villas, holiday residences, new build houses, and residential estates across Nairobi and East Africa.",
+  "title": "Architecture",
+  "shortTitle": "01 · Architecture",
+  "description": "Architectural design, spatial planning, floor plans, design development, technical drawings, and construction documentation, scoped to each project.",
+  "seoTitle": "Architecture",
+  "metaTitle": "Architecture Services in Nairobi & Kenya | Studio 39+",
+  "seoDescription": "Architecture services for residential, hospitality, and commercial projects in Nairobi and across Kenya, from concept design to technical drawings and construction documentation.",
   "keywords": [
-    "Private Homes",
-    "Villas",
-    "Estates",
-    "Retreats",
-    "Renovations"
+    "Residential Design",
+    "Hospitality Design",
+    "Commercial Design",
+    "Site Planning",
+    "Technical Documentation"
   ],
   "process": [
     {
@@ -50,7 +50,7 @@
     "Construction Documentation"
   ],
   "slug": "bespoke-residential-architecture",
-  "fullDescription": "For homeowners and private clients seeking thoughtful residential architecture shaped by climate, landscape, and everyday living.",
+  "fullDescription": "For individuals, businesses, developers, and organizations planning residential, hospitality, or commercial spaces shaped by context and use.",
   "image": "",
   "featured": true,
   "order": 1

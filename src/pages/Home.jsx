@@ -12,7 +12,7 @@ import projects from '../data/projects';
 import services from '../data/services';
 import { site } from '../data/site';
 import { homepage } from '../data/content';
-import { architecturalFirmSchema, localBusinessSchema, professionalServiceSchema } from '../utils/schema';
+import { professionalServiceSchema, websiteSchema } from '../utils/schema';
 import { imageSrcSet, optimizedImageUrl } from '../utils/images';
 
 function selectItems(items, selectedIds) {
@@ -30,9 +30,9 @@ function Home() {
     <div>
       <SEO
         page="home"
-        title="Residential Architect Kenya | Private Homes and Villas"
-        description="Studio 39+ is a Nairobi-based architecture practice designing private homes, villas, residences, and retreat environments across Kenya and East Africa."
-        schema={[architecturalFirmSchema, localBusinessSchema, professionalServiceSchema]}
+        title="Studio 39+ | Architecture, Interiors & Visualization"
+        description="Studio 39+ is an architecture and interior design studio creating residential, hospitality, and commercial spaces, with technical drawings and 3D visualization."
+        schema={[professionalServiceSchema, websiteSchema]}
       />
       <HeroSlideshow
         slides={homepage.heroSlides}
@@ -42,21 +42,36 @@ function Home() {
         secondaryButtonUrl={homepage.heroSecondaryButtonUrl}
       />
 
+      <section className="services-section mobile-section border-y border-charcoal/10 bg-neutral-100/45 dark:border-ivory/10 dark:bg-black/10">
+        <div className="content-container grid gap-10 py-16 sm:py-20 md:py-24 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <SectionHeading
+            eyebrow={homepage.servicesHeading?.eyebrow || 'What We Do'}
+            title={homepage.servicesHeading?.title || 'Architecture, interiors, and visualization.'}
+            copy={homepage.servicesHeading?.copy}
+          />
+          <div className="grid gap-x-14 gap-y-2 md:grid-cols-3">
+            {featuredServices.map((service) => (
+              <ServiceCard key={service.title} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.75 }}>
         <CinematicProjectShowcase
           projects={featuredProjects}
           variant="section"
           eyebrow={homepage.featuredProjectsHeading?.eyebrow || 'Featured Residences'}
-          title={homepage.featuredProjectsHeading?.title || 'Selected private homes, villas, and residential studies.'}
+          title={homepage.featuredProjectsHeading?.title || 'Spaces shaped by context, clarity, and everyday life.'}
         />
       </motion.div>
 
-      <Reveal as="section" className="mobile-section content-container py-24 sm:py-28 md:py-36" aria-labelledby="about-residential-studio">
+      <Reveal as="section" className="mobile-section content-container py-24 sm:py-28 md:py-36" aria-labelledby="about-studio">
         <div className="grid gap-12 border-y border-charcoal/15 py-16 dark:border-ivory/15 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="eyebrow">{homepage.introduction?.eyebrow || 'Before We Design'}</p>
-            <h2 id="about-residential-studio" className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-tight text-charcoal dark:text-ivory sm:text-5xl">
-              {homepage.introduction?.title || 'We Want to Understand How You Live.'}
+            <h2 id="about-studio" className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-tight text-charcoal dark:text-ivory sm:text-5xl">
+              {homepage.introduction?.title || 'Design begins with listening to people and place.'}
             </h2>
           </div>
           <div className="space-y-7 text-base leading-9 text-charcoal/72 dark:text-sand">
@@ -68,25 +83,10 @@ function Home() {
         </div>
       </Reveal>
 
-      <section className="services-section mobile-section border-y border-charcoal/10 bg-neutral-100/45 dark:border-ivory/10 dark:bg-black/10">
-        <div className="content-container grid gap-16 py-28 sm:py-32 md:py-44 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-          <SectionHeading
-            eyebrow={homepage.servicesHeading?.eyebrow || 'How We Help'}
-            title={homepage.servicesHeading?.title || 'Services for Creating Your Home.'}
-            copy={homepage.servicesHeading?.copy}
-          />
-          <div className="grid gap-x-14 gap-y-2 md:grid-cols-2">
-            {featuredServices.map((service) => (
-              <ServiceCard key={service.title} service={service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="mobile-section content-container py-28 sm:py-32 md:py-44">
         <SectionHeading
-          eyebrow={homepage.philosophyHeading?.eyebrow || 'Your Home'}
-          title={homepage.philosophyHeading?.title || 'What Makes a Home Feel Right.'}
+          eyebrow={homepage.philosophyHeading?.eyebrow || 'Our Approach'}
+          title={homepage.philosophyHeading?.title || 'Thoughtful spaces, carefully resolved.'}
           copy={homepage.philosophyHeading?.copy}
         />
         <div className="mt-16 grid gap-10 md:grid-cols-3 lg:gap-14">
@@ -161,8 +161,7 @@ function Home() {
         copy={`${cta.copy || ''} ${site.displayPhone}`.trim()}
         primaryButtonText={cta.primaryButtonText}
         primaryButtonUrl={cta.primaryButtonUrl}
-        secondaryButtonText={cta.secondaryButtonText}
-        secondaryButtonUrl={cta.secondaryButtonUrl}
+        showSecondaryButton={false}
       />
     </div>
   );

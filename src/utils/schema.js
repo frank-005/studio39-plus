@@ -10,7 +10,6 @@ const baseBusiness = {
   logo: `${site.url}/studio39logo.png`,
   email: site.email,
   telephone: site.phone,
-  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     ...site.address
@@ -20,36 +19,44 @@ const baseBusiness = {
     ...site.geo
   },
   areaServed: ['Nairobi', 'Kenya', 'East Africa'],
-  sameAs: site.social,
+  ...(site.social.length ? { sameAs: site.social } : {}),
   knowsAbout: site.keywords
-};
-
-export const architecturalFirmSchema = {
-  ...baseBusiness,
-  '@type': 'ArchitecturalFirm',
-  description:
-    'Studio 39+ is a Nairobi architecture studio for private homes, villas, interiors, renovations, and residential visualization.'
-};
-
-export const localBusinessSchema = {
-  ...baseBusiness,
-  '@type': 'LocalBusiness',
-  description: 'Residential architects in Nairobi creating private homes, villas, interiors, and site-led commissions across Kenya and East Africa.'
 };
 
 export const professionalServiceSchema = {
   ...baseBusiness,
   '@type': 'ProfessionalService',
-  serviceType: 'Residential architecture, villa design, Interior Design, landscape integration, renovation, site planning, and architectural visualization'
+  serviceType: 'Architecture, interior design, renovation, and architectural visualization'
 };
+
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  publisher: { '@id': `${site.url}/#studio` }
+};
+
+export function serviceSchema(service) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    serviceType: service.title,
+    description: service.seoDescription || service.description,
+    url: absoluteUrl(`/services/${service.slug || service.id}`),
+    provider: { '@id': `${site.url}/#studio` },
+    areaServed: ['Nairobi', 'Kenya']
+  };
+}
 
 export function projectSchema(project) {
   return {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     name: project.name,
-    url: absoluteUrl(`/projects/${project.id}`),
-    image: project.hero,
+    url: absoluteUrl(`/projects/${project.slug || project.id}`),
+    image: absoluteUrl(project.hero),
     creator: { '@id': `${site.url}/#studio` },
     about: project.category,
     locationCreated: project.location,

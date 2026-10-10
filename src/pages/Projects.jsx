@@ -36,7 +36,7 @@ function Projects() {
                 type="button"
                 onClick={() => setActive(category)}
                 whileHover={{ backgroundColor: active === category ? undefined : 'rgba(47, 44, 40, 0.08)' }}
-                className={`shrink-0 rounded-full border px-4 py-2 text-xs font-light uppercase tracking-[0.2em] transition ${
+                className={`min-h-11 shrink-0 rounded-full border px-4 py-2 text-xs font-light uppercase tracking-[0.2em] transition ${
                   active === category
                     ? 'border-charcoal bg-charcoal text-ivory dark:border-ivory dark:bg-ivory dark:text-charcoal'
                     : 'border-charcoal/20 text-charcoal/70 hover:border-charcoal/40 dark:border-ivory/20 dark:text-ivory/70 dark:hover:border-ivory/40'
@@ -52,7 +52,7 @@ function Projects() {
 
       {/* CTA Section */}
       <section className="bg-neutral-100 dark:bg-charcoal">
-        <CTASection title="Planning a private residence, villa, or compact home in Kenya?" />
+      <CTASection title="Have a project to discuss?" />
       </section>
     </div>
   );

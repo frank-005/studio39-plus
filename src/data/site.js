@@ -4,27 +4,27 @@ const settingsFiles = import.meta.glob('../content/site-settings.json', {
 });
 
 const settings = settingsFiles['../content/site-settings.json'] || {};
-const fallbackImage = 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80&fm=webp';
+const fallbackImage = 'https://studio39ke.com/projects/ukwala/arrival-wide.jpg';
 const fallbackPageSeo = {
   home: {
-    title: 'Residential Architect Kenya | Private Homes and Villas',
-    description: 'Studio 39+ is a Nairobi-based architecture practice designing private homes, villas, residences, and retreat environments across Kenya and East Africa.'
+    title: 'Architecture & Interior Design Nairobi | Studio 39+',
+    description: 'Nairobi-based architecture and interior design studio for residential, hospitality and commercial spaces, including technical drawings and 3D visualisation.'
   },
   about: {
-    title: 'About Studio 39+ | Luxury Residential Architect Kenya',
-    description: 'Learn about Studio 39+, a Nairobi-based residential architecture studio designing homes, villas, and retreat environments across Kenya.'
+    title: 'About Studio 39+ | Nairobi Architecture Studio',
+    description: 'Meet Studio 39+, a Nairobi architecture and interior design studio working on residential, hospitality, and commercial projects across Kenya.'
   },
   projects: {
-    title: 'Featured Residences | Luxury Homes and Villas in Kenya',
-    description: 'Browse Studio 39+ residential architecture studies across private homes, villas, and compact residential commissions in Kenya.'
+    title: 'Architecture & Interior Projects in Kenya | Studio 39+',
+    description: 'Explore architecture and interior design projects by Studio 39+, with project locations, design details, and visualisations.'
   },
   services: {
-    title: 'Luxury Residential Architecture Services in Kenya',
-    description: 'We design thoughtfully crafted private homes, villas, and residential estates across Kenya, with focused architecture, interiors, renovation, and visualization services.'
+    title: 'Architecture, Interiors & 3D Visualisation | Studio 39+',
+    description: 'Explore Studio 39+ services for residential, hospitality, and commercial projects, from architecture and interiors to renovation, documentation, and 3D visualisation.'
   },
   contact: {
-    title: 'Begin a Residential Project in Kenya',
-    description: 'Contact Studio 39+ to discuss private homes, villas, renovations, Interior Design, and residential design work in Kenya.'
+    title: 'Contact Studio 39+ | Start a Design Project',
+    description: 'Contact Studio 39+ in Nairobi to discuss a residential, hospitality, commercial, architecture, interior design, or visualisation project.'
   }
 };
 
@@ -46,21 +46,20 @@ export const site = {
     longitude: 36.8797
   },
   keywords: [
-    'Residential Architect Kenya',
-    'Modern Villa Architect Nairobi',
-    'Private Residential Design Kenya',
-    'Contemporary Home Architect East Africa',
-    'Bespoke Villa Design Kenya',
-    'Private Residence Architect Nairobi'
+    'Architecture Nairobi',
+    'Architectural design Kenya',
+    'Residential architecture',
+    'Interior design Kenya',
+    'Architectural visualization',
+    'Technical drawings'
   ],
-  social: ['https://www.instagram.com/', 'https://www.behance.net/', 'https://www.linkedin.com/'],
   socialLinks: {
-    instagram: 'https://www.instagram.com/',
-    behance: 'https://www.behance.net/',
-    linkedin: 'https://www.linkedin.com/'
+    instagram: '',
+    behance: '',
+    linkedin: ''
   },
-  defaultSeoTitle: 'Luxury Residential Architect Kenya | Bespoke Villa Design | Studio 39+',
-  defaultSeoDescription: 'Studio 39+ is a Nairobi-based architecture practice designing luxury homes, villas, private residences, family estates, and bespoke living environments across Kenya and East Africa.',
+  defaultSeoTitle: 'Architecture & Interior Design Nairobi | Studio 39+',
+  defaultSeoDescription: 'Nairobi-based architecture and interior design studio for residential, hospitality and commercial spaces, including technical drawings and 3D visualisation.',
   defaultOgImage: fallbackImage,
   pageSeo: fallbackPageSeo,
   copyright: '(c) 2026 Studio 39+. Architecture, interiors, and visualization.',
@@ -68,15 +67,12 @@ export const site = {
   ...settings,
   address: { streetAddress: 'Imaara Mall', addressLocality: 'Nairobi', addressCountry: 'KE', ...settings.address },
   geo: { latitude: -1.3284, longitude: 36.8797, ...settings.geo },
-  social: [
-    settings.socialLinks?.instagram || 'https://www.instagram.com/',
-    settings.socialLinks?.behance || 'https://www.behance.net/',
-    settings.socialLinks?.linkedin || 'https://www.linkedin.com/'
-  ].filter(Boolean),
+  social: [settings.socialLinks?.instagram, settings.socialLinks?.behance, settings.socialLinks?.linkedin]
+    .filter((href) => typeof href === 'string' && href.trim()),
   socialLinks: {
-    instagram: 'https://www.instagram.com/',
-    behance: 'https://www.behance.net/',
-    linkedin: 'https://www.linkedin.com/',
+    instagram: '',
+    behance: '',
+    linkedin: '',
     ...settings.socialLinks
   },
   pageSeo: {

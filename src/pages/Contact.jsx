@@ -17,7 +17,78 @@ const initialFormState = {
   message: ''
 };
 
-const projectTypes = ['Private Residence', 'Villa / Retreat', 'Compact Home', 'Interior Design', 'Renovation / Extension', 'Residential Development', 'Site Planning'];
+const projectTypeGroups = [
+  {
+    label: 'Residential Architecture',
+    options: [
+      'Private Residence',
+      'Villa / Luxury Residence',
+      'Compact Home / Small-Space Living',
+      'Apartment Building / High-Rise Residential',
+      'Multi-Residential Development',
+      'Gated Community / Housing Estate',
+      'Affordable Housing Development',
+      'Residential Renovation / Extension'
+    ]
+  },
+  {
+    label: 'Hospitality & Leisure',
+    options: [
+      'Hotel / Resort',
+      'Safari Lodge / Tented Camp',
+      'Boutique Hotel / Guesthouse',
+      'Restaurant / Café / Bar',
+      'Spa / Wellness Retreat',
+      'Leisure / Entertainment Facility'
+    ]
+  },
+  {
+    label: 'Commercial & Retail',
+    options: [
+      'Office Building / Corporate Workspace',
+      'Shopping Mall / Retail Centre',
+      'Supermarket / Hypermarket',
+      'Retail Store / Showroom',
+      'Mixed-Use Commercial Development',
+      'Business Park',
+      'Industrial / Warehouse Facility'
+    ]
+  },
+  {
+    label: 'Mixed-Use & Urban Development',
+    options: [
+      'Mixed-Use Development',
+      'High-Rise Mixed-Use Tower',
+      'Master Planning / Urban Design',
+      'Township / Large-Scale Development',
+      'Estate / Precinct Planning',
+      'Site Planning / Development Feasibility'
+    ]
+  },
+  {
+    label: 'Institutional & Public Buildings',
+    options: [
+      'School / Educational Facility',
+      'University / Campus',
+      'Healthcare Facility / Hospital / Clinic',
+      'Religious Building',
+      'Civic / Government Building',
+      'Community / Cultural Facility',
+      'Sports / Recreation Facility'
+    ]
+  },
+  {
+    label: 'Interior Design & Fit-Out',
+    options: [
+      'Residential Interior Design',
+      'Hospitality Interior Design',
+      'Commercial Interior Design',
+      'Retail Interior Design / Fit-Out',
+      'Office Interior Design / Fit-Out',
+      'Interior Renovation / Refurbishment'
+    ]
+  }
+];
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || 'xjgzbjll';
 
 function Contact() {
@@ -26,6 +97,11 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [statusMessage, setStatusMessage] = useState('');
   const [statusType, setStatusType] = useState('');
+  const socialLinks = [
+    ['Instagram', site.socialLinks.instagram],
+    ['Behance', site.socialLinks.behance],
+    ['LinkedIn', site.socialLinks.linkedin]
+  ].filter(([, href]) => href);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -56,7 +132,7 @@ function Contact() {
       setStatusMessage('Thank you - your inquiry has been submitted successfully. We will reply shortly.');
       setFormData(initialFormState);
       setErrors({});
-    } else if (Array.isArray(state.errors) && state.errors.length > 0) {
+    } else if (state.errors) {
       setStatusType('error');
       setStatusMessage('There was a problem submitting your inquiry. Please try again later.');
     }
@@ -75,14 +151,14 @@ function Contact() {
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
       <SEO
         page="contact"
-        title="Begin a Residential Project in Kenya"
-        description="Contact Studio 39+ to discuss private homes, villas, renovations, Interior Design, and residential design work in Kenya."
+        title="Contact Studio 39+ | Start a Design Project"
+        description="Contact Studio 39+ in Nairobi to discuss an architecture, interior design, renovation, hospitality, or commercial project."
       />
       <section className="content-container space-y-12 py-16 md:py-24">
         <SectionHeading
           as="h1"
           eyebrow="Let's Talk"
-          title="Tell Us About Your Home."
+          title="Tell Us About Your Project."
           copy="Have a plot, an idea, or simply a feeling about what you want to create? Share a little about your vision — you don't need to have everything figured out. That's what we're here for."
         />
       </section>
@@ -111,18 +187,22 @@ function Contact() {
             <div className="grid gap-6 md:grid-cols-2">
               <Field id="projectType" label="Project Type">
                 <select id="projectType" name="projectType" value={formData.projectType} onChange={handleChange} className="form-field">
-                  {projectTypes.map((type) => (
-                    <option key={type} value={type}>{type}</option>
+                  {projectTypeGroups.map(({ label, options }) => (
+                    <optgroup key={label} label={label}>
+                      {options.map((type) => (
+                        <option key={type} value={type}>{type}</option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </Field>
               <Field id="budget" label="Budget Range" error={errors.budget}>
                 <select id="budget" name="budget" value={formData.budget} onChange={handleChange} className="form-field" aria-invalid={Boolean(errors.budget)} aria-describedby={errors.budget ? 'budget-error' : undefined}>
                   <option value="">Select a range</option>
+                  <option value="KES 1M - 10M">KES 1M - 10M</option>
+                  <option value="KES 10M - 25M">KES 10M - 25M</option>
                   <option value="KES 25M - 50M">KES 25M - 50M</option>
                   <option value="KES 50M - 100M">KES 50M - 100M</option>
-                  <option value="KES 100M - 250M">KES 100M - 250M</option>
-                  <option value="KES 250M+">KES 250M+</option>
                   <option value="To be discussed privately">To be discussed privately</option>
                 </select>
               </Field>
@@ -158,18 +238,14 @@ function Contact() {
         <aside className="space-y-10 border border-mist bg-sand/70 p-6 shadow-soft dark:border-neutral-700 dark:bg-charcoal sm:p-8 md:p-10">
           <ContactItem label="Email" href={`mailto:${site.email}`} value={site.email} onClick={() => trackEmailClick('contact_sidebar')} />
           <ContactItem label="Phone" href={`tel:${site.phone}`} value={site.displayPhone} onClick={() => trackPhoneClick('contact_sidebar')} />
-          <div>
+          {socialLinks.length > 0 ? <div>
             <p className="eyebrow">Follow</p>
             <div className="mt-4 flex flex-wrap gap-4 text-sm uppercase tracking-[0.24em] text-charcoal/70 dark:text-sand">
-              {[
-                ['Instagram', site.socialLinks.instagram],
-                ['Behance', site.socialLinks.behance],
-                ['LinkedIn', site.socialLinks.linkedin]
-              ].filter(([, href]) => href).map(([label, href]) => (
+              {socialLinks.map(([label, href]) => (
                 <ContentLink key={label} href={href} target="_blank" rel="noreferrer">{label}</ContentLink>
               ))}
             </div>
-          </div>
+          </div> : null}
           <div className="border border-mist bg-ivory p-6 text-charcoal/70 dark:border-neutral-800 dark:bg-charcoal dark:text-sand sm:p-8">
             <p className="eyebrow">Location</p>
             <div className="mt-4 space-y-3">
@@ -191,7 +267,7 @@ function Field({ id, label, error, children }) {
     <div>
       <label htmlFor={id} className="eyebrow">{label}</label>
       <div className="mt-4">{children}</div>
-      {error && <p id={`${id}-error`} className="mt-3 text-sm text-rose-600 dark:text-rose-300">{error}</p>}
+      {error && <p id={`${id}-error`} role="alert" className="mt-3 text-sm text-rose-600 dark:text-rose-300">{error}</p>}
     </div>
   );
 }

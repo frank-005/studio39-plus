@@ -7,6 +7,7 @@ import CTASection from '../components/CTASection';
 import Reveal from '../components/Reveal';
 import services from '../data/services';
 import projects from '../data/projects';
+import { serviceSchema } from '../utils/schema';
 
 function ServiceDetail() {
   const { serviceId } = useParams();
@@ -16,7 +17,7 @@ function ServiceDetail() {
   if (!service) {
     return (
       <div className="content-container pt-32 pb-24">
-        <SEO title="Service Not Found" description="The requested Studio 39+ service page could not be found." />
+        <SEO title="Service Not Found" description="The requested Studio 39+ service page could not be found." robots="noindex, follow" />
         <p className="eyebrow">Service not found</p>
         <button type="button" onClick={() => navigate('/services')} className="btn-secondary mt-6">
           Back to services
@@ -29,7 +30,7 @@ function ServiceDetail() {
 
   return (
     <div className="pt-24 pb-16 sm:pt-28 md:pt-32">
-      <SEO title={service.metaTitle || service.seoTitle} description={service.seoDescription} image={service.socialImage || service.image || undefined} />
+      <SEO title={service.metaTitle || service.seoTitle} description={service.seoDescription} image={service.socialImage || service.image || undefined} schema={serviceSchema(service)} />
       <section className="content-container grid gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
         <SectionHeading as="h1" eyebrow="Service" title={service.seoTitle} copy={service.description} />
         <div className="border-t border-charcoal/15 pt-7 dark:border-ivory/15">
@@ -50,7 +51,7 @@ function ServiceDetail() {
           <div>
             <p className="eyebrow">Process</p>
             <h2 id="service-process-title" className="mt-4 max-w-xl text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-              A clear workflow from private brief to considered design decisions.
+              A clear workflow from first brief to carefully resolved design decisions.
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
@@ -76,7 +77,7 @@ function ServiceDetail() {
             <div>
               <p className="eyebrow">What's Included</p>
               <h2 id="service-deliverables-title" className="mt-4 max-w-xl text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-                Core architectural deliverables for a clear residential process.
+                Project deliverables shaped around the agreed scope.
               </h2>
             </div>
             <div className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
@@ -96,7 +97,7 @@ function ServiceDetail() {
             <div>
               <p className="eyebrow">Relevant Work</p>
               <h2 id="related-projects-title" className="mt-4 text-3xl font-semibold leading-tight text-charcoal dark:text-ivory sm:text-4xl">
-                Related residences
+                Related work
               </h2>
             </div>
             <Link to="/projects" className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.22em] text-charcoal dark:text-sand">
