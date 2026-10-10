@@ -36,6 +36,7 @@ function Home() {
       />
       <HeroSlideshow
         slides={homepage.heroSlides}
+        images={homepage.heroImages}
         primaryButtonText={homepage.heroPrimaryButtonText}
         primaryButtonUrl={homepage.heroPrimaryButtonUrl}
         secondaryButtonText={homepage.heroSecondaryButtonText}

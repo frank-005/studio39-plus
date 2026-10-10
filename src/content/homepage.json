@@ -1,12 +1,42 @@
 {
   "heroSlides": [
     {
-      "label": "ARCHITECTURE / INTERIORS / VISUALIZATION",
-      "title": "Architecture. Interiors. Spaces that feel like you.",
+      "label": "Architecture & Interior Design",
+      "title": "Spaces that feel like you.",
       "description": "Thoughtful design for residential, hospitality and commercial spaces. From concept and spatial planning to detailed drawings and visualizations.",
-      "image": "/projects/ukwala/arrival-wide.jpg",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=82",
       "position": "center 48%",
       "accent": "Residential, hospitality and commercial design"
+    }
+  ],
+  "heroImages": [
+    {
+      "src": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 48%"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 50%"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 48%"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 50%"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 48%"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 50%"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2000&q=82",
+      "position": "center 48%"
     }
   ],
   "heroPrimaryButtonText": "Start a Project",

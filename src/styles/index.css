@@ -1329,6 +1329,14 @@ body {
   letter-spacing: -0.04em;
 }
 
+.home-hero .hero-statement > .eyebrow {
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+}
+
 .home-hero .hero-copy {
   max-width: 39rem;
   font-size: clamp(0.98rem, 1.35vw, 1.12rem);
